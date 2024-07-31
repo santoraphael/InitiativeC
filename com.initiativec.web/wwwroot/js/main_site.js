@@ -12,6 +12,17 @@ $(document).ready(function () {
             $('.NavBar.sticky').removeClass('active');
         }
 
+        setTimeout(() => {
+            $('#tippy-tooltip-2').attr('aria-hidden', 'true');
+
+            $('#tippy-tooltip-2').css({
+                'z-index': '9999',
+                'visibility': 'hidden',
+                'transition-duration': '350ms',
+                'position': 'absolute',
+                'will-change': 'transform'
+            });
+        }, 300);
 
 
         //Alterando o cor do logo
@@ -58,7 +69,9 @@ $(document).ready(function () {
 
 
         setTimeout(() => {
+
             $('#' + toolTip).attr('aria-hidden', 'false');
+
             $('#' + toolTip).css({
                 'z-index': '9999',
                 'visibility': 'visible',
@@ -69,6 +82,13 @@ $(document).ready(function () {
                 'left': '0px',
                 'will-change': 'transform'
             });
+
+
+            $('#childToolTip3').css({
+                'transition-duration': '375ms',
+                'bottom': '0px'
+            }).addClass('enter tippy-notransition').removeClass('leave');
+
         }, 300);
 
         // Clique fora do tooltip para escondê-lo
@@ -76,7 +96,9 @@ $(document).ready(function () {
             if (!$(event.target).closest('#' + toolTip).length) {
 
                 setTimeout(() => {
+
                     $('#' + toolTip).attr('aria-hidden', 'false');
+
                     $('#' + toolTip).css({
                         'z-index': '9999',
                         'visibility': 'hidden',
@@ -87,12 +109,63 @@ $(document).ready(function () {
                         'left': '0px',
                         'will-change': 'transform'
                     });
+
+                    $('#childToolTip3').css({
+                        'transition-duration': '375ms',
+                        'bottom': '0px'
+                    }).removeClass('enter tippy-notransition').addClass('leave');
+
                 }, 300);
 
                 $(document).off('click.hideTooltip'); // Remove o evento para evitar múltiplas ligações
             }
         });
     });
+
+    $('.NavBar-link-wrapper').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var toolTip = $(this).attr('aria-describedby');
+        var buttonOffset = $(this).offset(); // Obtém a posição do botão
+        var buttonHeight = $(this).outerHeight(); // Obtém a altura do botão
+
+        setTimeout(() => {
+            $('#' + toolTip).attr('aria-hidden', 'false');
+
+            $('#' + toolTip).css({
+                'z-index': '9999',
+                'visibility': 'visible',
+                'transition-duration': '350ms',
+                'position': 'absolute',
+                'top': (buttonOffset.top - 65) + 'px', // 5px abaixo do botão
+                //'left': buttonOffset.left + 'px',
+                'will-change': 'transform'
+            });
+        }, 300);
+
+        // Clique fora do tooltip para escondê-lo
+        $(document).on('click.hideTooltip', function (event) {
+            if (!$(event.target).closest('#' + toolTip).length) {
+                setTimeout(() => {
+                    $('#' + toolTip).attr('aria-hidden', 'true');
+
+                    $('#' + toolTip).css({
+                        'z-index': '9999',
+                        'visibility': 'hidden',
+                        'transition-duration': '350ms',
+                        'position': 'absolute',
+                        'will-change': 'transform'
+                    });
+                }, 300);
+
+                $(document).off('click.hideTooltip'); // Remove o evento para evitar múltiplas ligações
+            }
+        });
+    });
+
+
+    
 
     // Impede que o clique dentro do tooltip feche ele
     $(document).on('click', '[id^="tippy-tooltip-"]', function (e) {
