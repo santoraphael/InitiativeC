@@ -22,6 +22,11 @@ $(document).ready(function () {
                 'position': 'absolute',
                 'will-change': 'transform'
             });
+
+            $('#childToolTip2').css({
+                'transition-duration': '375ms',
+                'display': 'none'
+            });
         }, 300);
 
 
@@ -122,6 +127,9 @@ $(document).ready(function () {
         });
     });
 
+
+
+
     $('.NavBar-link-wrapper').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -142,6 +150,13 @@ $(document).ready(function () {
                 //'left': buttonOffset.left + 'px',
                 'will-change': 'transform'
             });
+
+            $('#childToolTip2').css({
+                'transition-duration': '375ms',
+                'display': 'block'
+            });
+
+
         }, 300);
 
         // Clique fora do tooltip para escondê-lo
@@ -156,6 +171,12 @@ $(document).ready(function () {
                         'transition-duration': '350ms',
                         'position': 'absolute',
                         'will-change': 'transform'
+                    });
+
+
+                    $('#childToolTip2').css({
+                        'transition-duration': '375ms',
+                        'display': 'none'
                     });
                 }, 300);
 
