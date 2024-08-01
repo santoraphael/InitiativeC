@@ -738,3 +738,46 @@
     </div>
 </div>
         
+
+
+            <style>
+        .Tick {
+            display: inline-block;
+            margin: 0 5px;
+            position: relative;
+            width: 20px;
+            height: 40px;
+        }
+        .upperCard, .lowerCard, .flipCard {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+        }
+        .upperCard {
+            top: 0;
+        }
+        .lowerCard {
+            bottom: 0;
+        }
+        .flipCard {
+            top: 0;
+            height: 100%;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+        }
+        .fold {
+            animation-name: foldAnimation;
+        }
+        .unfold {
+            animation-name: unfoldAnimation;
+        }
+        @@keyframes foldAnimation {
+            0% { transform: rotateX(0); }
+            100% { transform: rotateX(-180deg); }
+        }
+        @@keyframes unfoldAnimation {
+            0% { transform: rotateX(180deg); }
+            100% { transform: rotateX(0); }
+        }
+    </style>

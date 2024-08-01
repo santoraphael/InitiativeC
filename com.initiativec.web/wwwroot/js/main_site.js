@@ -195,3 +195,52 @@ $(document).ready(function () {
 
 
 });
+
+
+$(document).ready(function () {
+    function fetchBountyData() {
+        $.ajax({
+            url: '/static/bounty',
+            method: 'GET',
+            success: function (data) {
+                // Atualizar os tickers com os dados recebidos
+                updateTickers(data);
+            },
+            error: function (error) {
+                console.error('Erro ao buscar dados de bounty:', error);
+            }
+        });
+    }
+
+    function updateTickers(data) {
+        // Supondo que os dados sejam uma lista de números
+        let values = data.values;
+        console.log(values);
+        $('.Tick').each(function (index) {
+            let value = values[index] || 0;
+            let upperCard = $(this).find('.upperCard span');
+            let lowerCard = $(this).find('.lowerCard span');
+            let flipCardFirst = $(this).find('.flipCard.first span');
+            let flipCardSecond = $(this).find('.flipCard.second span');
+
+            // Atualizar valores das cartas
+            upperCard.text(value);
+            lowerCard.text(value - 1);
+            flipCardFirst.text(value - 1);
+            flipCardSecond.text(value);
+
+            // Adicionar classes de animação
+            $(this).find('.flipCard').addClass('fold unfold');
+
+            // Remover classes de animação após a animação terminar
+            setTimeout(() => {
+                $(this).find('.flipCard').removeClass('fold unfold');
+            }, 500);
+        });
+    }
+
+    // Buscar dados a cada X segundos
+    setInterval(fetchBountyData, 5000);
+    // Chamada inicial
+    fetchBountyData();
+});
