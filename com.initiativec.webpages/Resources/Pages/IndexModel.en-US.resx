@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Box1.CTA.Label" xml:space="preserve">
+    <value>Leia Mais</value>
+  </data>
+  <data name="Box1.Resume.Label" xml:space="preserve">
+    <value>Saiba como os tokens são selecionados para serem listados para troca na Hypercube</value>
+  </data>
+  <data name="Box1.Subtitle.Label" xml:space="preserve">
+    <value>Invista em projetos que você ama de uma maneira simples</value>
+  </data>
+  <data name="Box1.Title.First.Label" xml:space="preserve">
+    <value>Hyper</value>
+  </data>
+  <data name="Box1.Title.New.Flag" xml:space="preserve">
+    <value>NOVO</value>
+  </data>
+  <data name="Box1.Title.Second.Label" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Box2.Asset.logo_hypercube" xml:space="preserve">
+    <value>/img/logo_hypercube.png</value>
+  </data>
+  <data name="Box2.CTA.Label" xml:space="preserve">
+    <value>Ir para a troca</value>
+  </data>
+  <data name="Box2.Resume.Label" xml:space="preserve">
+    <value>Inumeros Tokens, taxas mais baixas e vantagens exclusivas.</value>
+  </data>
+  <data name="Box2.Subtitle.Label" xml:space="preserve">
+    <value>Troque tokens por um preço baixo</value>
+  </data>
+  <data name="Box2.Title.First.Label" xml:space="preserve">
+    <value>Exchange</value>
+  </data>
+  <data name="Box2.Title.Second.Label" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Box3.Asset.image" xml:space="preserve">
+    <value>/img/dance_pizza_tokenomics.png</value>
+  </data>
+  <data name="Box3.Asset.Label1" xml:space="preserve">
+    <value>55% Recompensa</value>
+  </data>
+  <data name="Box3.Asset.Label2" xml:space="preserve">
+    <value>20% Venda Publica</value>
+  </data>
+  <data name="Box3.Asset.Label3" xml:space="preserve">
+    <value>10% Pre Venda</value>
+  </data>
+  <data name="Box3.Asset.Label4" xml:space="preserve">
+    <value>10% Time</value>
+  </data>
+  <data name="Box3.Asset.Label5" xml:space="preserve">
+    <value>3% Investidores</value>
+  </data>
+  <data name="Box3.Asset.Label6" xml:space="preserve">
+    <value>2% Parceiros</value>
+  </data>
+  <data name="Box3.CTA.Label" xml:space="preserve">
+    <value>Veja mais detalhes</value>
+  </data>
+  <data name="Box3.Resume.Label" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Box3.Subtitle.Label" xml:space="preserve">
+    <value>Como o $CUBE é distribuido</value>
+  </data>
+  <data name="Box3.Subtitle2.Label" xml:space="preserve">
+    <value>Distribuição Total 300.000.000</value>
+  </data>
+  <data name="Box3.Title.First.Label" xml:space="preserve">
+    <value>Tokenomics</value>
+  </data>
+  <data name="Box3.Title.Second.Label" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Box4.Asset.image" xml:space="preserve">
+    <value>/img/cardano-adas.png</value>
+  </data>
+  <data name="Box4.CTA.Label" xml:space="preserve">
+    <value>Conheça os Ganhos Comuns</value>
+  </data>
+  <data name="Box4.Resume.Label" xml:space="preserve">
+    <value>&lt;ul class="MuiBox-root jss842 jss820 jss836"&gt;
+                        &lt;li class="jss92 jss843 jss41 jss65 jss821 jss771"&gt;
+                            The value is collected and added to a pool.
+                        &lt;/li&gt;
+                        &lt;li class="jss92 jss844 jss41 jss65 jss821 jss771"&gt;
+                            This pool receives the fees collected for 6 months.
+                        &lt;/li&gt;
+                        &lt;li class="jss92 jss845 jss41 jss65 jss821 jss771"&gt;
+                           The total pool is divided between 300M $DANCE
+                        &lt;/li&gt;
+                        &lt;li class="jss92 jss846 jss41 jss65 jss821 jss771"&gt;
+                            After the withdrawal period, the remaining ADA goes into the pool for the next period
+                        &lt;/li&gt;
+                    &lt;/ul&gt;</value>
+  </data>
+  <data name="Box4.Subtitle.Label" xml:space="preserve">
+    <value>Cardance® &lt;strong class="MuiBox-root jss841"&gt;Community Earn&lt;/strong&gt; collects &lt;strong class="MuiBox-root jss841"&gt;0,5₳ ADA&lt;/strong&gt; from each transaction to distribute to the community.</value>
+  </data>
+  <data name="Box4.Title.First.Label" xml:space="preserve">
+    <value>Ganhos</value>
+  </data>
+  <data name="Box4.Title.Second.Label" xml:space="preserve">
+    <value>Comuns</value>
+  </data>
+  <data name="Box5.CTA.Label" xml:space="preserve">
+    <value>Ir para Aplicativo</value>
+  </data>
+  <data name="Box5.Subtitle1.Label" xml:space="preserve">
+    <value>Valor total Investido</value>
+  </data>
+  <data name="Box5.Subtitle2.Label" xml:space="preserve">
+    <value>Volume Últimas 24H</value>
+  </data>
+  <data name="Box5.Subtitle3.Label" xml:space="preserve">
+    <value>Total de Pools</value>
+  </data>
+  <data name="Box5.Title.First.Label" xml:space="preserve">
+    <value>Investimentos</value>
+  </data>
+  <data name="Box5.Title.Second.Label" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cardance_exchange" xml:space="preserve">
+    <value>/img/cardance_exchange.png</value>
+  </data>
+  <data name="Header.Feature.Button.Text" xml:space="preserve">
+    <value>DANCE POR CUBE</value>
+  </data>
+  <data name="Header.Feature.Label.Text" xml:space="preserve">
+    <value>Troque seus Tokens Cardance por Tokens da Hypercube</value>
+  </data>
+  <data name="Header.Main.Button.Text" xml:space="preserve">
+    <value>Nossos Produtos</value>
+  </data>
+  <data name="Header.Main.Pt1.Text" xml:space="preserve">
+    <value>Cardance Swap</value>
+  </data>
+  <data name="Header.Main.Pt2.Text" xml:space="preserve">
+    <value>agora é</value>
+  </data>
+  <data name="Header.Main.Pt3.Text" xml:space="preserve">
+    <value>Hypercube Dex</value>
+  </data>
+  <data name="Header.Main.Subtitle.Text" xml:space="preserve">
+    <value>Um novo projeto, o mesmo sonho...</value>
+  </data>
+  <data name="imagem_fundo_site_logo" xml:space="preserve">
+    <value>/img/imagem_fundo_site_logo.png</value>
+  </data>
+  <data name="Link.App..Btn.Url" xml:space="preserve">
+    <value>https://app.hypercubedex.com/market/trade?swap_from=0fdaa1b8699080ed281faec8dfae54531d07f37fe9a4bdd8f0733e2e44414e4345&amp;swap_to=edf70e2a4ca89fbd8f0920081e740ab3796feef8510a4080474aa05143554245&amp;mode=swap</value>
+  </data>
+  <data name="Link.App.Url" xml:space="preserve">
+    <value>https://app.hypercubedex.com</value>
+  </data>
+  <data name="nossos-produtos-secao" xml:space="preserve">
+    <value>nossos-produtos-secao</value>
+  </data>
+  <data name="Page.Subititle.Pt1.Label" xml:space="preserve">
+    <value>Um lugar projetado para fazer</value>
+  </data>
+  <data name="Page.Subititle.Pt2.Label" xml:space="preserve">
+    <value>coisas difíceis mais fáceis</value>
+  </data>
+  <data name="Page.Subititle.Pt3.Label" xml:space="preserve">
+    <value>para todos.</value>
+  </data>
+  <data name="Page.TradeSection.Label" xml:space="preserve">
+    <value>&lt;strong class="MuiBox-root jss1020"&gt;Trending Tokens:&lt;/strong&gt;and Liquidity Pools</value>
+  </data>
+  <data name="Page.TradeSection.Table.Columns.Label" xml:space="preserve">
+    <value>&lt;tr&gt;
+                &lt;th&gt;Token&lt;/th&gt;
+                &lt;th&gt;Preço&lt;/th&gt;
+                &lt;th&gt;Market Cap&lt;/th&gt;
+                &lt;th&gt;Volume 24H&lt;/th&gt;
+                &lt;th&gt;TVL&lt;/th&gt;
+                &lt;th&gt;APR%&lt;/th&gt;
+            &lt;/tr&gt;</value>
+  </data>
+  <data name="Section.One.Label" xml:space="preserve">
+    <value>Para você</value>
+  </data>
+  <data name="Section.Three.Label" xml:space="preserve">
+    <value>Para empresas</value>
+  </data>
+  <data name="Section.Two.Label" xml:space="preserve">
+    <value>Para investidores</value>
+  </data>
+  <data name="test.html.entrada" xml:space="preserve">
+    <value>Q is tomorrow’s payment network</value>
+  </data>
+</root>
