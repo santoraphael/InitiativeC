@@ -71,6 +71,10 @@ $(document).ready(function () {
         e.stopPropagation();
 
         var toolTip = $(this).attr('aria-describedby');
+        var buttonOffset = $(this).offset(); // Obtém a posição do botão
+        var buttonHeight = $(this).outerHeight(); // Obtém a altura do botão
+
+        var toolTip = $(this).attr('aria-describedby');
 
 
         setTimeout(() => {
@@ -83,7 +87,7 @@ $(document).ready(function () {
                 'transition-duration': '350ms',
                 'position': 'absolute',
                 'transform': 'translate3d(333px, 63px, 0px)',
-                'top': '0px',
+                'top': (buttonOffset.top) + 'px',
                 'left': '0px',
                 'will-change': 'transform'
             });
@@ -130,7 +134,7 @@ $(document).ready(function () {
 
 
 
-    $('.NavBar-link-wrapper').on('click', function (e) {
+    $('.NavBar-link-wrapper.js-tooltip-language').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -262,3 +266,25 @@ $(document).ready(function () {
     // Chama a função getBounty para iniciar o processo
     getBounty();
 });
+
+
+function setCulture(element) {
+    var culture = element.getAttribute('data-culture');
+
+    fetch('/SetCulture', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value // Token de verificação antifalsificação
+        },
+        body: JSON.stringify({ culture: culture })
+    })
+        .then(response => {
+            if (response.ok) {
+                window.location.reload(); // Recarrega a página para aplicar a nova cultura
+            } else {
+                console.error('Erro ao definir a cultura');
+            }
+        })
+        .catch(error => console.error('Erro na solicitação:', error));
+}

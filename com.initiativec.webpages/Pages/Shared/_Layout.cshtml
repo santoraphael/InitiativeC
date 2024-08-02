@@ -8,6 +8,7 @@
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 
 @inject IOptions<RequestLocalizationOptions> LocOptions
+@Html.AntiForgeryToken()
 
 
 @{
@@ -17,37 +18,35 @@
         .ToList();
 
 
-    try
-    {
-        var cult = HttpContextAccessor?.HttpContext?.Request.Cookies["globalization"];
+    // try
+    // {
+    //     var cult = HttpContextAccessor?.HttpContext?.Request.Cookies["globalization"];
 
-        if (String.IsNullOrEmpty(cult))
-        {
+    //     if (String.IsNullOrEmpty(cult))
+    //     {
+    //         CultureInfo customCulture = new CultureInfo("en-US");
 
-            HttpContextAccessor?.HttpContext?.Response.Cookies.Append("globalization", "en-US");
-        }
-        else
-        {
-            CultureInfo customCulture = new CultureInfo(cult);
-            //CultureInfo.DefaultThreadCurrentCulture = customCulture;
-            //CultureInfo.DefaultThreadCurrentUICulture = customCulture;
-            //CultureInfo.CurrentCulture = customCulture;
-            //CultureInfo.CurrentUICulture = customCulture;
+    //         HttpContextAccessor?.HttpContext?.Response.Cookies.Append(
+    //             CookieRequestCultureProvider.DefaultCookieName,
+    //             CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(customCulture)),
+    //             new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+    //         );
+    //     }
+    //     else
+    //     {
+    //         CultureInfo customCulture = new CultureInfo(cult);
 
-            //CultureInfo.CurrentUICulture = new CultureInfo(cult);
-            //System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(cult);
-
-            HttpContextAccessor?.HttpContext?.Response.Cookies.Append(
-                CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(customCulture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-            );
-        }
-    }
-    catch
-    {
-        HttpContextAccessor?.HttpContext?.Response.Cookies.Append("globalization", "en-US");
-    }
+    //         HttpContextAccessor?.HttpContext?.Response.Cookies.Append(
+    //             CookieRequestCultureProvider.DefaultCookieName,
+    //             CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(customCulture)),
+    //             new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+    //         );
+    //     }
+    // }
+    // catch
+    // {
+    //     HttpContextAccessor?.HttpContext?.Response.Cookies.Append("globalization", "en-US");
+    // }
 }
 
 
@@ -90,13 +89,18 @@
                         </svg>
                     </a>
                     <div class="menu">
-                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">O que é a Initiative Q?</a></div>
-                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;"><a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge"><span class="label">Saiba mais</span><span type="bottom" class="Icon icon-bottom"></span></a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">Linha Cronológica</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">Perguntas frequentes</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">Descrição</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("Entrar")</a></div>
-                        <div class="NavBar-link-wrapper" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
+                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
+                            <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
+                                <span class="label">@sharedLocalizer.Get("learn_more")</span>
+                                <span type="bottom" class="Icon icon-bottom"></span>
+                            </a>
+                        </div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
+                        <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
                     </div>
                     <div class="NavBar-mobile">
                         <div class="mobile-btn"><i></i><i></i><i></i></div>
@@ -112,14 +116,19 @@
                         </svg>
                     </a>
                     <div class="menu">
-                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">O que é a Initiative Q?</a></div>
-                        <div class="NavBar-link-wrapper" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;"><a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge"><span class="label">Saiba mais</span><span type="bottom" class="Icon icon-bottom"></span></a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">Linha Cronológica</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">Perguntas frequentes</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">Descrição</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">Entrar</a></div>
-                        <div class="NavBar-link-wrapper" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
-                        <div class="NavBar-link-wrapper btn"><a href="#sign-up" class="Button Button-small Button-primary"><span class="label">Seja convidado </span></a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
+                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
+                            <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
+                                <span class="label">@sharedLocalizer.Get("learn_more")</span>
+                                <span type="bottom" class="Icon icon-bottom"></span>
+                            </a>
+                        </div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
+                        <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
+                        <div class="NavBar-link-wrapper btn"><a href="#sign-up" class="Button Button-small Button-primary"><span class="label">@sharedLocalizer.Get("getinvited") </span></a></div>
                     </div>
                     <div class="NavBar-mobile">
                         <div class="mobile-btn"><i></i><i></i><i></i></div>
@@ -149,11 +158,26 @@
                             </svg>
                         </a>
                     </div>
-                    <nav><a class="ScrollToLink Footer-link" href="/#what">O que é a Initiative Q?</a><a class="Footer-link" aria-current="false" href="/knowledge/economic-model">Modelo econômico</a><a class="Footer-link" aria-current="false" href="/knowledge/payment-network">A Rede de Pagamento Q</a><a class="Footer-link" aria-current="false" href="/login">Entrar</a></nav>
-                    <nav><a class="Footer-link" aria-current="false" href="/timeline">Linha Cronológica</a><a class="Footer-link" aria-current="false" href="/FAQ">Perguntas frequentes</a><a class="Footer-link" href="mailto:info@initiativeq.com">Contato</a><a class="Footer-link" aria-current="false" href="/terms">Termos de uso</a><a class="Footer-link" aria-current="false" href="/privacy">Privacidade</a></nav>
                     <nav>
-                        <a class="Footer-link" aria-current="false" href="/about">Descrição</a><a class="Footer-link" href="https://web.archive.org/web/20181106174256/https://facebook.com/InitiativeQ" target="_blank" rel="noopener noreferrer">Facebook</a><a class="Footer-link" href="https://web.archive.org/web/20181106174256/https://twitter.com/InitiativeQ" target="_blank" rel="noopener noreferrer">Twitter</a>
-                        <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-6" data-original-title="undefined" style="display: inline;"><a class="Footer-link lang">Português</a></div>
+                        <a class="ScrollToLink Footer-link" href="/#what">@sharedLocalizer.Get("what_is")</a>
+                        <a class="Footer-link" aria-current="false" href="/knowledge/economic-model">@sharedLocalizer.Get("model")</a>
+                        <a class="Footer-link" aria-current="false" href="/knowledge/payment-network">@sharedLocalizer.Get("future")</a>
+                        <a class="Footer-link" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a>
+                    </nav>
+                    <nav>
+                        <a class="Footer-link" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a>
+                        <a class="Footer-link" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a>
+                        <a class="Footer-link" href="mailto:info@initiativeq.com">@sharedLocalizer.Get("contact")</a>
+                        <a class="Footer-link" aria-current="false" href="/terms">@sharedLocalizer.Get("terms")</a>
+                        <a class="Footer-link" aria-current="false" href="/privacy">@sharedLocalizer.Get("privacy")</a>
+                    </nav>
+                    <nav>
+                        <a class="Footer-link" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a>
+                        <a class="Footer-link" href="https://web.archive.org/web/20181106174256/https://facebook.com/InitiativeQ" target="_blank" rel="noopener noreferrer">@sharedLocalizer.Get("facebook")</a>
+                        <a class="Footer-link" href="https://web.archive.org/web/20181106174256/https://twitter.com/InitiativeQ" target="_blank" rel="noopener noreferrer">@sharedLocalizer.Get("twitter")</a>
+                        <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-6" data-original-title="undefined" style="display: inline;">
+                            <a class="Footer-link lang">Português</a>
+                        </div>
                     </nav>
                 </article>
                 <svg class="img" width="210" height="224" viewBox="0 0 210 224" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -224,8 +248,8 @@
                 </svg>
             </footer>
             <div class="Cookie">
-                <p>Este site utiliza cookies para garantir que você tenha a melhor experiência no site</p>
-                <div class="Button Button-small Button-white"><span class="label">Entendi</span></div>
+                <p>@sharedLocalizer.Get("cookie.message")</p>
+                <div class="Button Button-small Button-white"><span class="label">@sharedLocalizer.Get("cookie.click")</span></div>
             </div>
         </div>
     </div>
@@ -238,7 +262,7 @@
             <div class="arrow-regular" x-arrow="" style="left: 298px;"></div>
             <div class="tippy-tooltip-content">
                 <div class="dropDown-menu ltr">
-                    <a class="dropDown-menu-link" aria-current="false" href="/web/20181107030112mp_/https://initiativeq.com/knowledge/economic-model">
+                    <a class="dropDown-menu-link" aria-current="false" href="/knowledge/economic-model">
                         <svg class="img" width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
                             <g id="Artboard" fill="none" fill-rule="evenodd">
                                 <g id="Group-2" transform="translate(19 20)">
@@ -267,7 +291,7 @@
                             <span class="body">Conheça as teorias econômicas e a política monetária por trás da Initiative Q, e como estimar o valor da moeda Q que estará reservada para você quando você ingressar.</span>
                         </span>
                     </a>
-                    <a class="dropDown-menu-link" aria-current="false" href="/web/20181107030112mp_/https://initiativeq.com/knowledge/payment-network">
+                    <a class="dropDown-menu-link" aria-current="false" href="/knowledge/payment-network">
                         <svg class="img" width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
                             <g id="Artboard" fill="none" fill-rule="evenodd">
                                 <g id="Group-11" transform="translate(5 12)" stroke="#000">
@@ -323,7 +347,7 @@
             <div class="arrow-regular" x-arrow="" style="left: 83px;"></div>
             <div class="tippy-tooltip-content">
                 <div class="LanguagesMenu">
-                    <div class="LanguagesMenu-link">
+                    <div class="LanguagesMenu-link" data-culture="en-US" onclick="setCulture(this)">
                         <span>English</span>
                         <img src="data:image/jpeg;base64,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" alt="en">
                     </div>
@@ -343,7 +367,7 @@
                         <span>Français</span>
                         <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAKgAgAEAAAAAQAAAC+gAwAEAAAAAQAAACgAAAAA/+EJIWh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD94cGFja2V0IGVuZD0idyI/PgD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/+IM6ElDQ19QUk9GSUxFAAEBAAAM2GFwcGwCEAAAbW50clJHQiBYWVogB+IAAQACAAsABwAsYWNzcEFQUEwAAAAAQVBQTAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARZGVz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" alt="fr">
                     </div>
-                    <div class="LanguagesMenu-link active">
+                    <div class="LanguagesMenu-link active" data-culture="pt-BR" onclick="setCulture(this)">
                         <span>Português</span>
                         <img src="/web/20210628144545im_/https://quahl.com/static/media/pt-flag.8ef46f80.jpg" alt="pt">
                     </div>

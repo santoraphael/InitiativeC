@@ -1,3 +1,4 @@
+using com.initiativec.webpages;
 using com.initiativec.webpages.Services;
 using Microsoft.Extensions.Options;
 
@@ -14,46 +15,27 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 builder.Services.Configure<RequestLocalizationOptions>(
     options =>
     {
-        //var supportedCultures = new List<CultureInfo>
-        //{
-        //    new CultureInfo("en-US"),
-        //    new CultureInfo("pt-BR")
-        //};
-
-        //options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
-        //options.SupportedCultures = supportedCultures;
-        //options.SupportedUICultures = supportedCultures;
-
-
-
         var supportedCultures = new[] { "en-US", "pt-BR" };
         options.SetDefaultCulture(supportedCultures[0])
-            .AddSupportedCultures(supportedCultures)
-            .AddSupportedUICultures(supportedCultures);
-
-
-
-        //options.AddSupportedUICultures("en-US", "pt-BR");
-        //options.SetDefaultCulture("en-US");
-        //options.FallBackToParentUICultures = true;
-        //options.RequestCultureProviders.Clear();
+               .AddSupportedCultures(supportedCultures)
+               .AddSupportedUICultures(supportedCultures);
     }
 );
 
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
-
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<SharedResourceService>();
 
 var app = builder.Build();
+app.UseMiddleware<CultureMiddleware>();
 
+//using (var scope = app.Services.CreateScope())
+//{
+//    var services = scope.ServiceProvider;
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-
-    var localizationOptions = services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
-    app.UseRequestLocalization(localizationOptions);
-}
+//    var localizationOptions = services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
+//    app.UseRequestLocalization(localizationOptions);
+//}
 
 
 // Configure the HTTP request pipeline.
@@ -65,10 +47,15 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Registrar o CultureMiddleware antes do middleware de localização
+
+
+app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
+
 app.UseAuthorization();
 
 app.MapRazorPages();
-
+app.MapControllers();
 
 
 //PODE DAR ERRO

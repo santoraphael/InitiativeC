@@ -117,7 +117,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Entrar" xml:space="preserve">
-    <value>Enter</value>
+  <data name="about" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="close_account" xml:space="preserve">
+    <value>Close account</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="cookie.click" xml:space="preserve">
+    <value>Got it</value>
+  </data>
+  <data name="cookie.message" xml:space="preserve">
+    <value>This website uses cookies to ensure you get the best experience on our website</value>
+  </data>
+  <data name="dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="faq" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="future" xml:space="preserve">
+    <value>The Q Payment Network</value>
+  </data>
+  <data name="future_text" xml:space="preserve">
+    <value>Get a glimpse of the payment technologies and innovations that will become ubiquitous once Initiative Q succeeds.</value>
+  </data>
+  <data name="getinvited" xml:space="preserve">
+    <value>Get invited</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="languages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="learn_more" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="model" xml:space="preserve">
+    <value>Economic Model</value>
+  </data>
+  <data name="model_text" xml:space="preserve">
+    <value>Learn about the economic theories and monetary policy behind Initiative Q, and how to estimate the value of the Q currency that will be reserved for you when you join.</value>
+  </data>
+  <data name="notFound" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
+  <data name="press" xml:space="preserve">
+    <value>Press</value>
+  </data>
+  <data name="privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="terms" xml:space="preserve">
+    <value>Terms of use</value>
+  </data>
+  <data name="timeline" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="twitter" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="what_is" xml:space="preserve">
+    <value>What is Initiative Q?</value>
   </data>
 </root>
