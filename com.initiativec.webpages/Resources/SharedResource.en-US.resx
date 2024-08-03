@@ -180,6 +180,9 @@
   <data name="privacy" xml:space="preserve">
     <value>Privacy</value>
   </data>
+  <data name="sellers" xml:space="preserve">
+    <value>Sellers</value>
+  </data>
   <data name="settings" xml:space="preserve">
     <value>Settings</value>
   </data>

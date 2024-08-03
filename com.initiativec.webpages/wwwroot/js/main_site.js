@@ -264,7 +264,7 @@ $(document).ready(function () {
     }
 
     // Chama a função getBounty para iniciar o processo
-    getBounty();
+    //getBounty();
 });
 
 
