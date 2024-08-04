@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,198 +117,303 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Box1.CTA.Label" xml:space="preserve">
-    <value>Leia Mais</value>
+  <data name="home.h1" xml:space="preserve">
+    <value>&lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;é&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt;</value>
   </data>
-  <data name="Box1.Resume.Label" xml:space="preserve">
-    <value>Saiba como os tokens são selecionados para serem listados para troca na Hypercube</value>
+  <data name="home.h2Alt" xml:space="preserve">
+    <value>Todos nós sabemos que o dinheiro somente tem valor devido a um comum acordo. A Initiative Q é uma maneira genial de fazer com que todos concordem com uma nova moeda</value>
   </data>
-  <data name="Box1.Subtitle.Label" xml:space="preserve">
-    <value>Invista em projetos que você ama de uma maneira simples</value>
+  <data name="home.h2" xml:space="preserve">
+    <value>Garanta um valor futuro estimado de</value>
   </data>
-  <data name="Box1.Title.First.Label" xml:space="preserve">
-    <value>Hyper</value>
+  <data name="home.welcome" xml:space="preserve">
+    <value>Bem-vindo à Initiative Q, um esforço global para modernizar os pagamentos!</value>
   </data>
-  <data name="Box1.Title.New.Flag" xml:space="preserve">
-    <value>NOVO</value>
+  <data name="home.it_makes" xml:space="preserve">
+    <value>Criação da moeda global em 7 passos</value>
   </data>
-  <data name="Box1.Title.Second.Label" xml:space="preserve">
-    <value>Blog</value>
+  <data name="home.join" xml:space="preserve">
+    <value>A Initiative Q está construindo um sistema de pagamento social. Ingresse agora gratuitamente e</value>
   </data>
-  <data name="Box2.Asset.logo_hypercube" xml:space="preserve">
-    <value>/img/logo_hypercube.png</value>
+  <data name="home.join_2" xml:space="preserve">
+    <value>garanta um valor futuro estimado de</value>
   </data>
-  <data name="Box2.CTA.Label" xml:space="preserve">
-    <value>Ir para a troca</value>
+  <data name="home.secure" xml:space="preserve">
+    <value>Valor futuro estimado da próxima vaga:</value>
   </data>
-  <data name="Box2.Resume.Label" xml:space="preserve">
-    <value>Inumeros Tokens, taxas mais baixas e vantagens exclusivas.</value>
+  <data name="home.what" xml:space="preserve">
+    <value>Você sabe o que torna esta grande recompensa possível?</value>
   </data>
-  <data name="Box2.Subtitle.Label" xml:space="preserve">
-    <value>Troque tokens por um preço baixo</value>
+  <data name="home.network" xml:space="preserve">
+    <value>Para incentivarmos milhões de pessoas a ingressarem, estamos distribuindo nossa futura moeda</value>
   </data>
-  <data name="Box2.Title.First.Label" xml:space="preserve">
-    <value>Exchange</value>
+  <data name="home.no_1" xml:space="preserve">
+    <value>Não.</value>
   </data>
-  <data name="Box2.Title.Second.Label" xml:space="preserve">
-    <value />
+  <data name="home.no_2" xml:space="preserve">
+    <value>Parece bom demais para ser verdade.</value>
   </data>
-  <data name="Box3.Asset.image" xml:space="preserve">
-    <value>/img/dance_pizza_tokenomics.png</value>
+  <data name="home.yes_1" xml:space="preserve">
+    <value>Sim.</value>
   </data>
-  <data name="Box3.Asset.Label1" xml:space="preserve">
-    <value>55% Recompensa</value>
+  <data name="home.yes_2" xml:space="preserve">
+    <value>Pode me cadastrar!</value>
   </data>
-  <data name="Box3.Asset.Label2" xml:space="preserve">
-    <value>20% Venda Publica</value>
+  <data name="home.vid_captions" xml:space="preserve">
+    <value>Legendado em portugues</value>
   </data>
-  <data name="Box3.Asset.Label3" xml:space="preserve">
-    <value>10% Pre Venda</value>
+  <data name="home.possible" xml:space="preserve">
+    <value>Leia o que torna isso possível</value>
   </data>
-  <data name="Box3.Asset.Label4" xml:space="preserve">
-    <value>10% Time</value>
+  <data name="home.how_does_it_work" xml:space="preserve">
+    <value>Saiba mais</value>
   </data>
-  <data name="Box3.Asset.Label5" xml:space="preserve">
-    <value>3% Investidores</value>
+  <data name="home.what_is_based_on" xml:space="preserve">
+    <value>(Quais são os fundamentos dessa estimativa?)</value>
   </data>
-  <data name="Box3.Asset.Label6" xml:space="preserve">
-    <value>2% Parceiros</value>
+  <data name="home.what_is_based_on_alt" xml:space="preserve">
+    <value>(No que se baseia esta estimativa?)</value>
   </data>
-  <data name="Box3.CTA.Label" xml:space="preserve">
+  <data name="home.based_p_1" xml:space="preserve">
+    <value>Com base em um valor pretendido de um USD por Q (</value>
+  </data>
+  <data name="home.based_link" xml:space="preserve">
+    <value>leia por quê</value>
+  </data>
+  <data name="home.based_p_2" xml:space="preserve">
+    <value>).</value>
+  </data>
+  <data name="home.based_p_3" xml:space="preserve">
+    <value> (</value>
+  </data>
+  <data name="home.based_p_4" xml:space="preserve">
+    <value>%) serão reservadas após o cadastro, </value>
+  </data>
+  <data name="home.based_p_5" xml:space="preserve">
+    <value>% após convidar </value>
+  </data>
+  <data name="home.based_p_6" xml:space="preserve">
+    <value> amigos, e o resto para tarefas futuras.</value>
+  </data>
+  <data name="home.only_requires" xml:space="preserve">
+    <value>Somente nome, e-mail e senha são necessários. Nada de spam: você somente receberá atualizações sobre o sistema.</value>
+  </data>
+  <data name="home.paragraphs.what_is_title" xml:space="preserve">
+    <value>Um sistema de pagamento de última geração</value>
+  </data>
+  <data name="home.paragraphs.what_is_text" xml:space="preserve">
+    <value>A Initiative Q é um esforço mundial para modernizar os pagamentos. A razão pela qual ainda estamos presos a uma tecnologia de pagamento com décadas de existência é a “barreira da adoção”: o desafio de convencer os compradores a adotar uma nova tecnologia que os vendedores ainda não usam, e vice-versa.</value>
+  </data>
+  <data name="home.paragraphs.concept_title" xml:space="preserve">
+    <value>Um conceito simples, mas poderoso</value>
+  </data>
+  <data name="home.paragraphs.concept_text" xml:space="preserve">
+    <value>A Initiative Q usa uma moeda dedicada, a Q, para derrubar a “barreira da adoção”. São reservadas grandes quantidades de Q para os primeiros usuários. Uma ampla base de usuários possibilitará a implementação das melhores tecnologias de pagamento, tornando a Initiative Q a forma de pagamento preferencial em todo o mundo e a moeda Q altamente valiosa. É uma profecia autorrealizável. </value>
+  </data>
+  <data name="home.paragraphs.video_link" xml:space="preserve">
+    <value>A Initiative Q em 97 segundos</value>
+  </data>
+  <data name="home.press.h3" xml:space="preserve">
+    <value>Na imprensa:</value>
+  </data>
+  <data name="home.press.quote_1" xml:space="preserve">
+    <value>“Challenging Visa through a global currency for the future”</value>
+  </data>
+  <data name="home.press.read" xml:space="preserve">
+    <value>Ler artigo</value>
+  </data>
+  <data name="home.points.more" xml:space="preserve">
+    <value>Mais</value>
+  </data>
+  <data name="home.points.point_1" xml:space="preserve">
+    <value>Os sistemas de pagamento atuais (cartões de crédito, dinheiro vivo, transferências eletrônicas) são antigos e ultrapassados, o que significa que todos nós estamos arcando com custos desnecessários.</value>
+  </data>
+  <data name="home.points.point_1_more_p_1" xml:space="preserve">
+    <value>Por exemplo, abra a sua carteira e conte quantos cartões diferentes você tem e quanto dinheiro vivo você precisa carregar por aí. Já existe a tecnologia para substituir a sua carteira por uma forma de pagamento digital rápida e segura.</value>
+  </data>
+  <data name="home.points.point_1_more_p_2_1" xml:space="preserve">
+    <value>Além disso, as redes de pagamento atuais foram projetadas </value>
+  </data>
+  <data name="home.points.point_1_more_p_2_link" xml:space="preserve">
+    <value>&lt;a href="https://web.archive.org/web/20210628143752/https://en.wikipedia.org/wiki/Credit_card#BankAmericard_and_Master_Charge" target="_blank"&gt;décadas atrás&lt;/a&gt;</value>
+  </data>
+  <data name="home.points.point_1_more_p_2_2" xml:space="preserve">
+    <value> e seu uso causa um processamento ineficiente, fraude e inflexibilidade — todos os quais se traduzem em custos elevados.</value>
+  </data>
+  <data name="home.points.point_2" xml:space="preserve">
+    <value>Há muitas inovações e tecnologias de pagamento avançadas esperando ser implementadas.</value>
+  </data>
+  <data name="home.points.point_2_more_p_1_1" xml:space="preserve">
+    <value>Veja alguns exemplos: </value>
+  </data>
+  <data name="home.points.point_2_more_p_1_2" xml:space="preserve">
+    <value> em smartphones em vez de um cartão de plástico para autenticar os titulares da conta; </value>
+  </data>
+  <data name="home.points.point_2_more_p_1_link_2" xml:space="preserve">
+    <value>Métodos de autenticação de múltiplos fatores</value>
+  </data>
+  <data name="home.points.point_2_more_p_1_3" xml:space="preserve">
+    <value> para tornar os pagamentos mais seguros; IA para reduzir fraude, uma única moeda global para eliminar taxas de câmbio entre moedas; transações digitais para tornar as transações mais rápidas, seguras e baratas. </value>
+  </data>
+  <data name="home.points.point_2_more_p_1_link_3" xml:space="preserve">
     <value>Veja mais detalhes</value>
   </data>
-  <data name="Box3.Resume.Label" xml:space="preserve">
+  <data name="home.points.point_2_more_p_1_4" xml:space="preserve">
+    <value> sobre as melhorias e inovações que um sistema de pagamento modernizado poderia oferecer.
+</value>
+  </data>
+  <data name="home.points.point_3" xml:space="preserve">
+    <value>Então, por que nós ainda não temos sistemas mais novos e melhores? Porque há uma barreira como a do “ovo e a galinha”: nenhum comprador ingressa em uma nova rede de pagamento em que não há vendedores, e nenhum vendedor oferece uma nova opção de pagamento que nenhum comprador utiliza.</value>
+  </data>
+  <data name="home.points.point_3_more_p_1" xml:space="preserve">
+    <value>Um sistema de pagamento somente é útil se for usado por um número significativo de compradores e vendedores. O desafio é atingir essa massa crítica de usuários, pois as pessoas inicialmente serão relutantes em adotar o novo sistema de pagamento.
+</value>
+  </data>
+  <data name="home.points.point_3_more_p_2" xml:space="preserve">
+    <value>Historicamente, essa barreira tem sido a razão por que as tentativas anteriores de implementar novos sistemas de pagamento tiveram um êxito limitado ou nulo, apesar de oferecerem uma funcionalidade superior. 
+</value>
+  </data>
+  <data name="home.points.point_4" xml:space="preserve">
+    <value>Se alguém construísse um sistema de pagamento moderno que implementasse essas tecnologias e, de alguma forma, conseguisse que compradores e vendedores o adotassem, esse sistema rapidamente se tornaria popular. Ele poderia, eventualmente, registrar 20 trilhões de dólares em transações por ano.</value>
+  </data>
+  <data name="home.points.point_4_more_p_1_1" xml:space="preserve">
+    <value>Os cartões de crédito já representam aproximadamente </value>
+  </data>
+  <data name="home.points.point_4_more_p_1_link_1" xml:space="preserve">
+    <value>US$ 20 trilhões</value>
+  </data>
+  <data name="home.points.point_4_more_p_1_2" xml:space="preserve">
+    <value> em transações. Uma vez que os compradores e vendedores tiverem uma opção melhor do que os cartões de créditos, eles naturalmente darão preferência a ela sempre que possível, e ela eventualmente alcançaria ou superaria aquele nível.
+</value>
+  </data>
+  <data name="home.points.point_5" xml:space="preserve">
+    <value>Agora, image SE esse sistema criasse uma moeda global exclusiva (única). Vamos chamá-la de Q. De acordo com os modelos econômicos, o valor de todas as Qs seria de vários trilhões de dólares.</value>
+  </data>
+  <data name="home.points.point_5_more_p_1_1" xml:space="preserve">
+    <value>De acordo com a </value>
+  </data>
+  <data name="home.points.point_5_more_p_1_link_1" xml:space="preserve">
+    <value>equação de trocas</value>
+  </data>
+  <data name="home.points.point_5_more_p_1_2" xml:space="preserve">
+    <value> da Economia, calcula-se o valor de uma moeda usando-se a quantidade de dinheiro circulante e a frequência com que ele é usado (conhecida como a ”</value>
+  </data>
+  <data name="home.points.point_5_more_p_1_link_2" xml:space="preserve">
+    <value>velocidade de circulação da moeda</value>
+  </data>
+  <data name="home.points.point_5_more_p_1_3" xml:space="preserve">
+    <value>”). </value>
+  </data>
+  <data name="home.points.point_5_more_p_2_1" xml:space="preserve">
+    <value>Assim, estimando US$ 20 trilhões em transações e usando a velocidade média global de circulação da moeda, teríamos um valor de vários trilhões de dólares para todas as Qs em circulação. Leia uma </value>
+  </data>
+  <data name="home.points.point_5_more_p_2_link_1" xml:space="preserve">
+    <value>análise econômica</value>
+  </data>
+  <data name="home.points.point_5_more_p_2_2" xml:space="preserve">
+    <value> detalhada, em coautoria com o </value>
+  </data>
+  <data name="home.points.point_5_more_p_2_link_2" xml:space="preserve">
+    <value>Prof. Lawrence H. White</value>
+  </data>
+  <data name="home.points.point_5_more_p_2_3" xml:space="preserve">
+    <value>, especialista em Teoria Monetária.
+</value>
+  </data>
+  <data name="home.points.point_6" xml:space="preserve">
+    <value>A Initiative Q está reservando essas moedas Q para as pessoas que ingressarem hoje — quanto antes você ingressar, mais Qs você poderá reservar!</value>
+  </data>
+  <data name="home.points.point_6_more_p_1_1" xml:space="preserve">
+    <value>Os incentivos para ingressar são bastante altos no início. Quem tiver a visão de ingressar logo no começo terá o direito de reservar mais de um milhão de Qs, que terão um valor futuro de US$ 1 milhão, de acordo com o nosso  </value>
+  </data>
+  <data name="home.points.point_6_more_p_1_link_1" xml:space="preserve">
+    <value>modelo econômico</value>
+  </data>
+  <data name="home.points.point_6_more_p_1_2" xml:space="preserve">
+    <value>. À medida que a Initiative Q for sendo adotada de forma mais generalizada e for exigindo menos motivação para ingressar, esses incentivos serão reduzidos proporcionalmente. </value>
+  </data>
+  <data name="home.points.point_6_more_p_2_1" xml:space="preserve">
+    <value>Eventualmente, a expectativa é de que haverá detentores — compradores e vendedores potenciais — suficientes de Q para fazer com que a adesão à Initiative Q seja suficientemente recompensadora sem a necessidade de incentivos de natureza externa. As pessoas participarão simplesmente porque é uma maneira mais rápida, barata e segura de efetuar transações. Veja uma explicação detalhada </value>
+  </data>
+  <data name="home.points.point_6_more_p_2_link_1" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="home.points.point_6_more_p_2_2" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="home.points.point_7" xml:space="preserve">
+    <value>É como uma profecia autorrealizável. À medida que milhões de pessoas vão aderindo, são implementadas tecnologias avançadas de pagamento, o sistema de pagamento torna-se ainda mais popular, a moeda Q adquire valor, e as recompensas concedidas aos usuários iniciais atingem seu valor potencial.</value>
+  </data>
+  <data name="home.points.point_7_more_p_1_1" xml:space="preserve">
+    <value>Assista ao nosso </value>
+  </data>
+  <data name="home.points.point_7_more_p_1_link_1" xml:space="preserve">
+    <value>vídeo explicativo</value>
+  </data>
+  <data name="home.points.point_7_more_p_1_2" xml:space="preserve">
+    <value> ou leia as nossas </value>
+  </data>
+  <data name="home.points.point_7_more_p_1_link_2" xml:space="preserve">
+    <value>Perguntas Frequentes</value>
+  </data>
+  <data name="home.points.point_7_more_p_1_3" xml:space="preserve">
+    <value>s, </value>
+  </data>
+  <data name="home.points.point_7_more_p_1_link_3" xml:space="preserve">
+    <value>Modelo econômico</value>
+  </data>
+  <data name="home.points.point_7_more_p_1_4" xml:space="preserve">
+    <value> e documentos da </value>
+  </data>
+  <data name="home.points.point_7_more_p_1_link_4" xml:space="preserve">
+    <value>Rede de Pagamento Q</value>
+  </data>
+  <data name="home.points.point_7_more_p_1_5" xml:space="preserve">
+    <value>.
+</value>
+  </data>
+  <data name="home.point_more" xml:space="preserve">
+    <value>Saiba mais</value>
+  </data>
+  <data name="home.win.h2" xml:space="preserve">
+    <value>Vamos fazer acontecer</value>
+  </data>
+  <data name="home.win.win_1_h4" xml:space="preserve">
+    <value>Grátis</value>
+  </data>
+  <data name="home.win.win_1_txt" xml:space="preserve">
+    <value>Basta se cadastrar que as suas Qs estarão reservadas.</value>
+  </data>
+  <data name="home.win.win_2_h4" xml:space="preserve">
+    <value>Simples</value>
+  </data>
+  <data name="home.win.win_2_txt" xml:space="preserve">
+    <value>Tudo o que você precisa fornecer são o seu nome e endereço de e-mail.</value>
+  </data>
+  <data name="home.win.win_3_h4" xml:space="preserve">
+    <value>Por que não?</value>
+  </data>
+  <data name="home.win.win_3_txt" xml:space="preserve">
+    <value>Pense nisso como se fosse conseguir bitcoin de graça sete anos atrás.</value>
+  </data>
+  <data name="home.alert_message.h3" xml:space="preserve">
+    <value>A Initiative Q está tendo um aumento repentino de cadastros.</value>
+  </data>
+  <data name="home.alert_message.text" xml:space="preserve">
+    <value>Estamos atualizando o serviço e voltaremos em breve. Agradecemos sua paciência.</value>
+  </data>
+  <data name="home.button.getinvited" xml:space="preserve">
+    <value>Seja convidado</value>
+  </data>
+  <data name="home.button.getinvited.link" xml:space="preserve">
+    <value>&lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Seja convidado&lt;/span&gt;&lt;/a&gt;</value>
+  </data>
+  <data name="String1" xml:space="preserve">
     <value />
-  </data>
-  <data name="Box3.Subtitle.Label" xml:space="preserve">
-    <value>Como o $CUBE é distribuido</value>
-  </data>
-  <data name="Box3.Subtitle2.Label" xml:space="preserve">
-    <value>Distribuição Total 300.000.000</value>
-  </data>
-  <data name="Box3.Title.First.Label" xml:space="preserve">
-    <value>Tokenomics</value>
-  </data>
-  <data name="Box3.Title.Second.Label" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Box4.Asset.image" xml:space="preserve">
-    <value>/img/cardano-adas.png</value>
-  </data>
-  <data name="Box4.CTA.Label" xml:space="preserve">
-    <value>Conheça os Ganhos Comuns</value>
-  </data>
-  <data name="Box4.Resume.Label" xml:space="preserve">
-    <value>&lt;ul class="MuiBox-root jss842 jss820 jss836"&gt;
-                        &lt;li class="jss92 jss843 jss41 jss65 jss821 jss771"&gt;
-                            The value is collected and added to a pool.
-                        &lt;/li&gt;
-                        &lt;li class="jss92 jss844 jss41 jss65 jss821 jss771"&gt;
-                            This pool receives the fees collected for 6 months.
-                        &lt;/li&gt;
-                        &lt;li class="jss92 jss845 jss41 jss65 jss821 jss771"&gt;
-                           The total pool is divided between 300M $DANCE
-                        &lt;/li&gt;
-                        &lt;li class="jss92 jss846 jss41 jss65 jss821 jss771"&gt;
-                            After the withdrawal period, the remaining ADA goes into the pool for the next period
-                        &lt;/li&gt;
-                    &lt;/ul&gt;</value>
-  </data>
-  <data name="Box4.Subtitle.Label" xml:space="preserve">
-    <value>Cardance® &lt;strong class="MuiBox-root jss841"&gt;Community Earn&lt;/strong&gt; collects &lt;strong class="MuiBox-root jss841"&gt;0,5₳ ADA&lt;/strong&gt; from each transaction to distribute to the community.</value>
-  </data>
-  <data name="Box4.Title.First.Label" xml:space="preserve">
-    <value>Ganhos</value>
-  </data>
-  <data name="Box4.Title.Second.Label" xml:space="preserve">
-    <value>Comuns</value>
-  </data>
-  <data name="Box5.CTA.Label" xml:space="preserve">
-    <value>Ir para Aplicativo</value>
-  </data>
-  <data name="Box5.Subtitle1.Label" xml:space="preserve">
-    <value>Valor total Investido</value>
-  </data>
-  <data name="Box5.Subtitle2.Label" xml:space="preserve">
-    <value>Volume Últimas 24H</value>
-  </data>
-  <data name="Box5.Subtitle3.Label" xml:space="preserve">
-    <value>Total de Pools</value>
-  </data>
-  <data name="Box5.Title.First.Label" xml:space="preserve">
-    <value>Investimentos</value>
-  </data>
-  <data name="Box5.Title.Second.Label" xml:space="preserve">
-    <value />
-  </data>
-  <data name="cardance_exchange" xml:space="preserve">
-    <value>/img/cardance_exchange.png</value>
-  </data>
-  <data name="Header.Feature.Button.Text" xml:space="preserve">
-    <value>DANCE POR CUBE</value>
-  </data>
-  <data name="Header.Feature.Label.Text" xml:space="preserve">
-    <value>Troque seus Tokens Cardance por Tokens da Hypercube</value>
-  </data>
-  <data name="Header.Main.Button.Text" xml:space="preserve">
-    <value>Nossos Produtos</value>
-  </data>
-  <data name="Header.Main.Pt1.Text" xml:space="preserve">
-    <value>Cardance Swap</value>
-  </data>
-  <data name="Header.Main.Pt2.Text" xml:space="preserve">
-    <value>agora é</value>
-  </data>
-  <data name="Header.Main.Pt3.Text" xml:space="preserve">
-    <value>Hypercube Dex</value>
-  </data>
-  <data name="Header.Main.Subtitle.Text" xml:space="preserve">
-    <value>Um novo projeto, o mesmo sonho...</value>
-  </data>
-  <data name="imagem_fundo_site_logo" xml:space="preserve">
-    <value>/img/imagem_fundo_site_logo.png</value>
-  </data>
-  <data name="Link.App..Btn.Url" xml:space="preserve">
-    <value>https://app.hypercubedex.com/market/trade?swap_from=0fdaa1b8699080ed281faec8dfae54531d07f37fe9a4bdd8f0733e2e44414e4345&amp;swap_to=edf70e2a4ca89fbd8f0920081e740ab3796feef8510a4080474aa05143554245&amp;mode=swap</value>
-  </data>
-  <data name="Link.App.Url" xml:space="preserve">
-    <value>https://app.hypercubedex.com</value>
-  </data>
-  <data name="nossos-produtos-secao" xml:space="preserve">
-    <value>nossos-produtos-secao</value>
-  </data>
-  <data name="Page.Subititle.Pt1.Label" xml:space="preserve">
-    <value>Um lugar projetado para fazer</value>
-  </data>
-  <data name="Page.Subititle.Pt2.Label" xml:space="preserve">
-    <value>coisas difíceis mais fáceis</value>
-  </data>
-  <data name="Page.Subititle.Pt3.Label" xml:space="preserve">
-    <value>para todos.</value>
-  </data>
-  <data name="Page.TradeSection.Label" xml:space="preserve">
-    <value>&lt;strong class="MuiBox-root jss1020"&gt;Trending Tokens:&lt;/strong&gt;and Liquidity Pools</value>
-  </data>
-  <data name="Page.TradeSection.Table.Columns.Label" xml:space="preserve">
-    <value>&lt;tr&gt;
-                &lt;th&gt;Token&lt;/th&gt;
-                &lt;th&gt;Preço&lt;/th&gt;
-                &lt;th&gt;Market Cap&lt;/th&gt;
-                &lt;th&gt;Volume 24H&lt;/th&gt;
-                &lt;th&gt;TVL&lt;/th&gt;
-                &lt;th&gt;APR%&lt;/th&gt;
-            &lt;/tr&gt;</value>
-  </data>
-  <data name="Section.One.Label" xml:space="preserve">
-    <value>Para você</value>
-  </data>
-  <data name="Section.Three.Label" xml:space="preserve">
-    <value>Para empresas</value>
-  </data>
-  <data name="Section.Two.Label" xml:space="preserve">
-    <value>Para investidores</value>
-  </data>
-  <data name="test.html.entrada" xml:space="preserve">
-    <value>&lt;span&gt;&lt;span&gt;Q&lt;/span&gt;&lt;/span&gt; &lt;span&gt;é&lt;/span&gt; &lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;p&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;g&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;t&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;h&lt;/span&gt;ã&lt;/span&gt;</value>
   </data>
 </root>

@@ -120,71 +120,70 @@
 
   <data name="home.h1" xml:space="preserve">
     <value>&lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;is&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;the&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;memecoin&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;of&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;هي&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;الميمكوين&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;لـ&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;Cardano&lt;/span&gt;&lt;/span&gt;</value>
   </data>
   <data name="home.h2Alt" xml:space="preserve">
-    <value>We all know that money only has value due to a common agreement. Initiative Q is a genius way to get everyone to agree on a new currency</value>
+    <value>كلنا نعلم أن المال له قيمة فقط بسبب اتفاق مشترك. مبادرة Q هي طريقة عبقرية لجعل الجميع يتفقون على عملة جديدة</value>
   </data>
   <data name="home.h2" xml:space="preserve">
-    <value>Secure an estimated future value of</value>
+    <value>احصل على قيمة مستقبلية تقديرية</value>
   </data>
   <data name="home.welcome" xml:space="preserve">
-    <value>Welcome to Initiative Q, a global effort to modernize payments!</value>
+    <value>مرحبًا بكم في مبادرة Q، جهد عالمي لتحديث المدفوعات!</value>
   </data>
   <data name="home.it_makes" xml:space="preserve">
-    <value>Creating the global currency in 7 steps</value>
+    <value>إنشاء العملة العالمية في 7 خطوات</value>
   </data>
   <data name="home.join" xml:space="preserve">
-    <value>Initiative Q is building a social payment system. Join now for free and</value>
+    <value>تقوم مبادرة Q ببناء نظام دفع اجتماعي. انضم الآن مجانًا و</value>
   </data>
   <data name="home.join_2" xml:space="preserve">
-    <value>secure an estimated future value of</value>
+    <value>احصل على قيمة مستقبلية تقديرية</value>
   </data>
   <data name="home.secure" xml:space="preserve">
-    <value>Estimated future value of the next slot:</value>
+    <value>القيمة المستقبلية التقديرية للشريحة التالية:</value>
   </data>
   <data name="home.what" xml:space="preserve">
-    <value>Do you know what makes this great reward possible?</value>
+    <value>هل تعرف ما الذي يجعل هذه المكافأة الكبيرة ممكنة؟</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>To encourage millions of people to join, we are distributing our future currency</value>
+    <value>لتشجيع ملايين الأشخاص على الانضمام، نحن نوزع عملتنا المستقبلية</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
-    <value>No.</value>
+    <value>لا.</value>
   </data>
   <data name="home.no_2" xml:space="preserve">
-    <value>Seems too good to be true.</value>
+    <value>يبدو جيدا جدا ليكون صحيحا.</value>
   </data>
   <data name="home.yes_1" xml:space="preserve">
-    <value>Yes.</value>
+    <value>نعم.</value>
   </data>
   <data name="home.yes_2" xml:space="preserve">
-    <value>Sign me up!</value>
+    <value>سجلني!</value>
   </data>
   <data name="home.vid_captions" xml:space="preserve">
-    <value>Subtitled in Portuguese</value>
+    <value>مترجم بالبرتغالية</value>
   </data>
   <data name="home.possible" xml:space="preserve">
-    <value>Read what makes this possible</value>
+    <value>اقرأ ما يجعل هذا ممكنا</value>
   </data>
   <data name="home.how_does_it_work" xml:space="preserve">
-    <value>Learn more</value>
+    <value>تعرف على المزيد</value>
   </data>
   <data name="home.what_is_based_on" xml:space="preserve">
-    <value>(What are the foundations of this estimate?)</value>
+    <value>(ما هي الأسس التي يستند إليها هذا التقدير؟)</value>
   </data>
   <data name="home.what_is_based_on_alt" xml:space="preserve">
-    <value>(What is this estimate based on?)</value>
+    <value>(على ماذا يستند هذا التقدير؟)</value>
   </data>
   <data name="home.based_p_1" xml:space="preserve">
-    <value>Based on an intended value of one USD per Q (</value>
+    <value>استنادًا إلى قيمة مقصودة لكل Q بالدولار الأمريكي (</value>
   </data>
   <data name="home.based_link" xml:space="preserve">
-    <value>read why</value>
+    <value>اقرأ لماذا</value>
   </data>
   <data name="home.based_p_2" xml:space="preserve">
     <value>).</value>
@@ -193,60 +192,60 @@
     <value> (</value>
   </data>
   <data name="home.based_p_4" xml:space="preserve">
-    <value>%) will be reserved after registration, </value>
+    <value>%) سيتم حجزها بعد التسجيل،</value>
   </data>
   <data name="home.based_p_5" xml:space="preserve">
-    <value>% after inviting </value>
+    <value>% بعد دعوة </value>
   </data>
   <data name="home.based_p_6" xml:space="preserve">
-    <value> friends, and the rest for future tasks.</value>
+    <value> أصدقاء، والباقي للمهام المستقبلية.</value>
   </data>
   <data name="home.only_requires" xml:space="preserve">
-    <value>Only name, email, and password are required. No spam: you will only receive updates about the system.</value>
+    <value>فقط الاسم والبريد الإلكتروني وكلمة المرور مطلوبة. لا توجد رسائل غير مرغوب فيها: ستتلقى فقط تحديثات حول النظام.</value>
   </data>
   <data name="home.paragraphs.what_is_title" xml:space="preserve">
-    <value>A next-generation payment system</value>
+    <value>نظام الدفع من الجيل التالي</value>
   </data>
   <data name="home.paragraphs.what_is_text" xml:space="preserve">
-    <value>Initiative Q is a worldwide effort to modernize payments. The reason we are still stuck with decades-old payment technology is the &#39;adoption barrier&#39;: the challenge of convincing buyers to adopt a new technology that sellers do not yet use, and vice versa.</value>
+    <value>مبادرة Q هي جهد عالمي لتحديث المدفوعات. السبب في أننا لا نزال عالقين في تكنولوجيا الدفع القديمة هو &#39;حاجز التبني&#39;: التحدي المتمثل في إقناع المشترين باعتماد تكنولوجيا جديدة لم يستخدمها البائعون بعد، والعكس صحيح.</value>
   </data>
   <data name="home.paragraphs.concept_title" xml:space="preserve">
-    <value>A simple but powerful concept</value>
+    <value>مفهوم بسيط ولكنه قوي</value>
   </data>
   <data name="home.paragraphs.concept_text" xml:space="preserve">
-    <value>Initiative Q uses a dedicated currency, the Q, to break down the &#39;adoption barrier&#39;.</value>
+    <value>تستخدم مبادرة Q عملة مخصصة، Q، لتجاوز &#39;حاجز التبني&#39;.</value>
   </data>
   <data name="home.point_more" xml:space="preserve">
-    <value>Learn more</value>
+    <value>تعرف على المزيد</value>
   </data>
   <data name="home.win.h2" xml:space="preserve">
-    <value>Let&#39;s make it happen</value>
+    <value>دعونا نجعلها تحدث</value>
   </data>
   <data name="home.win.win_1_h4" xml:space="preserve">
-    <value>Free</value>
+    <value>مجاني</value>
   </data>
   <data name="home.win.win_1_txt" xml:space="preserve">
-    <value>Just sign up and your Qs will be reserved.</value>
+    <value>فقط قم بالتسجيل وسيتم حجز Qs الخاصة بك.</value>
   </data>
   <data name="home.win.win_2_h4" xml:space="preserve">
-    <value>Simple</value>
+    <value>بسيط</value>
   </data>
   <data name="home.win.win_2_txt" xml:space="preserve">
-    <value>All you need to provide is your name and email address.</value>
+    <value>كل ما تحتاجه هو تقديم اسمك وعنوان بريدك الإلكتروني.</value>
   </data>
   <data name="home.win.win_3_h4" xml:space="preserve">
-    <value>Why not?</value>
+    <value>لماذا لا؟</value>
   </data>
   <data name="home.win.win_3_txt" xml:space="preserve">
-    <value>Think of it as getting free bitcoin seven years ago.</value>
+    <value>فكر في الأمر على أنه الحصول على بيتكوين مجاني قبل سبع سنوات.</value>
   </data>
   <data name="home.alert_message.h3" xml:space="preserve">
-    <value>Initiative Q is experiencing a sudden increase in sign-ups.</value>
+    <value>تواجه مبادرة Q زيادة مفاجئة في التسجيلات.</value>
   </data>
   <data name="home.alert_message.text" xml:space="preserve">
-    <value>We are updating the service and will be back shortly. Thank you for your patience.</value>
+    <value>نحن نقوم بتحديث الخدمة وسنعود قريبًا. شكرًا لك على صبرك.</value>
   </data>
   <data name="home.button.getinvited" xml:space="preserve">
-    <value>Get invited</value>
+    <value>احصل على دعوة</value>
   </data>
 </root>
