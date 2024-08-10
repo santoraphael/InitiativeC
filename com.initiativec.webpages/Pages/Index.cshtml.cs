@@ -16,7 +16,7 @@ namespace com.initiativec.webpages.Pages
         public void OnGet()
         {
             long number = 2510483431;
-            NumberData = ProcessNumber(number);
+            //NumberData = ProcessNumber(number);
         }
 
         private NumberModel ProcessNumber(long number)

@@ -144,7 +144,7 @@
     <value>garanta um valor futuro estimado de</value>
   </data>
   <data name="home.secure" xml:space="preserve">
-    <value>Quantidade máxima de F para a próxima vaga:</value>
+    <value>Quantidade máxima estimada de F para a próxima vaga:</value>
   </data>
   <data name="home.what" xml:space="preserve">
     <value>Você sabe o que torna esta grande recompensa possível?</value>

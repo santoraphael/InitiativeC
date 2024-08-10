@@ -17,9 +17,9 @@ namespace com.initiativec.webpages.Services
         {
             var data = new
             {
-                amount = 10000000,
-                tick_speed = 400,
-                timestamp = DateTime.UtcNow.ToString("ddd, dd MMM yyyy HH:mm:ss 'GMT'")
+                amount = 1000000,
+                tick_speed = 10000,
+                timestamp = DateTime.UtcNow
             };
 
             return new JsonResult(data);
