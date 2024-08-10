@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="home.h1" xml:space="preserve">
-    <value>&lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;/span&gt; 
+    <value>&lt;span&gt;&lt;span&gt;F&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;é&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; 
@@ -150,7 +150,7 @@
     <value>Você sabe o que torna esta grande recompensa possível?</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>Para incentivarmos milhões de pessoas a ingressarem, estamos distribuindo nossa futura moeda</value>
+    <value>Para garantir que o máximo de pessoas fracassem juntos, estamos distribuindo nossa futura moeda.</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
     <value>Não.</value>
@@ -412,8 +412,5 @@
   </data>
   <data name="home.button.getinvited.link" xml:space="preserve">
     <value>&lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Seja convidado&lt;/span&gt;&lt;/a&gt;</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
 </root>
