@@ -5,6 +5,7 @@
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.Extensions.Options
+@using com.initiativec.webpages.Pages
 
 @inject IStringLocalizer<IndexModel> localizer
 @inject IHtmlLocalizer<IndexModel> htmlLocalizer
@@ -218,7 +219,21 @@
             <div class="Counter withLink small">
                 <article>
                     <span class="dollar">F$</span>
-                    <div class="Tick">
+                    @for (int i = 0; i < Model.NumberData.Cards.Count; i++)
+                    {
+                        <div class="Tick">
+                            <div class="upperCard"><span>@Model.NumberData.Cards[i].UpperValue</span></div>
+                            <div class="lowerCard"><span>@Model.NumberData.Cards[i].LowerValue</span></div>
+                            <div class="flipCard first fold"><span>@Model.NumberData.Cards[i].FirstFlipValue</span></div>
+                            <div class="flipCard second unfold"><span>@Model.NumberData.Cards[i].SecondFlipValue</span></div>
+                        </div>
+
+                        if (Model.NumberData.CommaPositions.Contains(i + 1))
+                        {
+                            <span class="comma">,</span>
+                        }
+                    }
+                    @* <div class="Tick">
                         <div class="upperCard"><span>2</span></div>
                         <div class="lowerCard"><span>3</span></div>
                         <div class="flipCard first fold"><span>3</span></div>
@@ -248,7 +263,7 @@
                         <div class="lowerCard"><span>0</span></div>
                         <div class="flipCard first fold"><span>0</span></div>
                         <div class="flipCard second unfold"><span>9</span></div>
-                    </div>
+                    </div> *@
                 </article>
                 <div class="based">
                     Com base em um valor pretendido de um USD por Q (
