@@ -135,7 +135,7 @@
     <value>Bem-vindo à Initiative Q, um esforço global para modernizar os pagamentos!</value>
   </data>
   <data name="home.it_makes" xml:space="preserve">
-    <value>7 passos para a F ser a moeda do fracasso global</value>
+    <value>Criação da memecoin na Cardano em 7 passos</value>
   </data>
   <data name="home.join" xml:space="preserve">
     <value>A Initiative Q está construindo um sistema de pagamento social. Ingresse agora gratuitamente e</value>
@@ -144,13 +144,13 @@
     <value>garanta um valor futuro estimado de</value>
   </data>
   <data name="home.secure" xml:space="preserve">
-    <value>Quantidade máxima estimada de F para a próxima vaga:</value>
+    <value>Quantidade máxima de F para a próxima vaga:</value>
   </data>
   <data name="home.what" xml:space="preserve">
     <value>Você sabe o que torna esta grande recompensa possível?</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>Para garantir que o máximo de pessoas fracassem juntas, estamos distribuindo nossa moeda.</value>
+    <value>Para incentivarmos milhões de pessoas a ingressarem, estamos distribuindo nossa futura moeda</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
     <value>Não.</value>
@@ -180,7 +180,7 @@
     <value>(No que se baseia esta estimativa?)</value>
   </data>
   <data name="home.based_p_1" xml:space="preserve">
-    <value>Temos uma meta ambiciosa de falhar espetacularmente</value>
+    <value>Você poderá reservar uma quantidade máxima de F (&lt;div class="tooltip" style="display: inline;" data-tooltipped="" aria-describedby="tippy-tooltip-5" data-original-title="undefined"&gt;&lt;span class="underlined noWrap"&gt;leia por quê&lt;/span&gt;&lt;/div&gt;).&lt;br&gt;&lt;span class="noWrap"&gt;&lt;span type="Q" class="Icon Q-icon icon-Q"&gt;&lt;/span&gt;250,984&lt;/span&gt;(&lt;span class="noWrap"&gt;10&lt;/span&gt;%) serão reservadas após o cadastro, &lt;span class="noWrap"&gt;40&lt;/span&gt;% após convidar &lt;span class="noWrap"&gt;5&lt;/span&gt; amigos, e o resto para tarefas futuras.</value>
   </data>
   <data name="home.based_link" xml:space="preserve">
     <value>leia por quê</value>
@@ -231,132 +231,58 @@
     <value>Mais</value>
   </data>
   <data name="home.points.point_1" xml:space="preserve">
-    <value>O sucesso é medido por quão resistente as derrotas uma pessoa é, e uma das provas disso é você estar aqui agora.</value>
+    <value>Nos últimos ciclos cripto, as memecoins eram tokens colocados quase à margem da lei. Poucos davam valor e viam um real motivo para ter um token desse tipo em seu portfólio, mas sejamos sinceros, existem memecoins melhores que tokens de projetos tidos como "sérios"</value>
   </data>
   <data name="home.points.point_1_more_p_1" xml:space="preserve">
-    <value>Por exemplo olhe para o seu portfólio de cripto e conte quantos investimentos brilhantes você fez... Imagino que quase nenhum, mas esqueça tudo isso. A 'F' é a moeda da Lehmoon Brothers e nós prometemos não prometer nada, mas podemos garantir uma coisa: você nunca precisará se preocupar em falhar novamente, porque isso está no nosso DNA!</value>
+    <value>Por exemplo, olhe para o seu portfólio cripto e conte quantos investimentos brilhantes em tokens "sérios" você fez.</value>
   </data>
   <data name="home.points.point_1_more_p_2_1" xml:space="preserve">
-    <value>Projetos criptos super elaborados e complexos? Chatos e ultrapassados. Sabemos que está aqui por pura especulação e a era do fracasso glorioso das memecoins está apenas começando, onde cada transação com a F na rede é um lembrete de que nem todo mundo nasceu para ser um vencedor, e está tudo bem com isso!</value>
+    <value>Então, o questionamento que fica é: por que analisar projetos cripto super elaborados e complexos, se sabemos que o que move o mercado é pura especulação, a maior virtude das memecoins? A era gloriosa das memecoins está apenas começando.</value>
   </data>
   <data name="home.points.point_2" xml:space="preserve">
-    <value>Esqueça todas essas memecoins inspiradas em animais (aliás, por que tantos animais?!).</value>
+    <value>Mas por que todas essas memecoins inspiradas em animais (aliás, por que tantos animais?!) fazem tanto sucesso é um mistério.</value>
   </data>
   <data name="home.points.point_2_more_p_1" xml:space="preserve">
-    <value>F é um Token inspirado nos maiores projetos e empresas fracassadas do planeta. Eu tenho certeza que você deve ter ouvido falar naquela Iniciativa que prometou montar um sistema de pagamento global com uma moeda única (Q) e foi um fiasco, sem falar naquele banco dos irmãos que evaporou junto do dinheiro de metade do mundo.</value>
-  </data>
-  <data name="home.points.point_2_more_p_2" xml:space="preserve">
-    <value>Então gatinhos, cachorrinhos, pôneis, sapos, cobras ou qualquer outro animal, deixe isso para os veterinários. Nós estamos aqui para transformar cada derrota em uma lenda. E o melhor de tudo? Não acho que quem ganhar ou quem perder, nem quem ganhar nem perder, vai ganhar ou perder, vai todo mundo perder.</value>
+    <value>Temos vários exemplos: gatos, cachorros, pôneis, sapos, cobras e quase todo o reino animal; deveríamos deixá-los para os veterinários. Uma memecoin única, que não fosse apenas um token meme, mas um projeto todo meme, com uma comunidade forte, poderia facilmente competir com todos esses animais, não só na rede Cardano, mas em todas as redes.</value>
   </data>
   <data name="home.points.point_3" xml:space="preserve">
-    <value>Então, por que nós ainda não temos sistemas mais novos e melhores? Porque há uma barreira como a do “ovo e a galinha”: nenhum comprador ingressa em uma nova rede de pagamento em que não há vendedores, e nenhum vendedor oferece uma nova opção de pagamento que nenhum comprador utiliza.</value>
+    <value>Então, por que ainda não temos uma grande memecoin que não seja de animal? Porque há uma barreira como a do "ovo e a galinha" (droga, mais animais): nenhum cripto investidor compra um novo token se não houver uma quantidade razoável de detentores, e só existe uma quantidade grande de detentores se as pessoas comprarem.</value>
   </data>
   <data name="home.points.point_3_more_p_1" xml:space="preserve">
-    <value>Um sistema de pagamento somente é útil se for usado por um número significativo de compradores e vendedores. O desafio é atingir essa massa crítica de usuários, pois as pessoas inicialmente serão relutantes em adotar o novo sistema de pagamento.
-</value>
+    <value>Uma memecoin só é realmente usada se tiver uma comunidade com um número significativo de pessoas. O desafio é atingir essa massa crítica de usuários, pois, normalmente, investidores são relutantes em adotar um novo token.</value>
   </data>
   <data name="home.points.point_3_more_p_2" xml:space="preserve">
-    <value>Historicamente, essa barreira tem sido a razão por que as tentativas anteriores de implementar novos sistemas de pagamento tiveram um êxito limitado ou nulo, apesar de oferecerem uma funcionalidade superior. 
-</value>
+    <value>Mas vamos ser sinceros: o mundo cripto é cheio de projetos com promessas vazias ou, como vimos, cheio de animais.</value>
   </data>
   <data name="home.points.point_4" xml:space="preserve">
-    <value>Se alguém construísse um sistema de pagamento moderno que implementasse essas tecnologias e, de alguma forma, conseguisse que compradores e vendedores o adotassem, esse sistema rapidamente se tornaria popular. Ele poderia, eventualmente, registrar 20 trilhões de dólares em transações por ano.</value>
+    <value>Se alguém fizesse não apenas uma memecoin, mas sim um projeto meme, e de alguma forma conseguisse iniciar uma adoção exponencial, tornando esse token popular rapidamente, ele estaria, eventualmente, tendo um enorme sucesso.</value>
   </data>
-  <data name="home.points.point_4_more_p_1_1" xml:space="preserve">
-    <value>Os cartões de crédito já representam aproximadamente </value>
-  </data>
-  <data name="home.points.point_4_more_p_1_link_1" xml:space="preserve">
-    <value>US$ 20 trilhões</value>
-  </data>
-  <data name="home.points.point_4_more_p_1_2" xml:space="preserve">
-    <value> em transações. Uma vez que os compradores e vendedores tiverem uma opção melhor do que os cartões de créditos, eles naturalmente darão preferência a ela sempre que possível, e ela eventualmente alcançaria ou superaria aquele nível.
-</value>
+  <data name="home.points.point_4_more_p_1" xml:space="preserve">
+    <value>As memecoins representam uma parcela considerável da capitalização de mercado. Se os investidores tivessem uma opção que não prometesse nada, que fosse diferente desse zoológico que se tornaram os tokens de diversão, e de alguma forma obtivesse uma grande adoção por parte dos investidores, essa memecoin poderia, eventualmente, alcançar ou até superar esses animais.</value>
   </data>
   <data name="home.points.point_5" xml:space="preserve">
-    <value>Agora, image SE esse sistema criasse uma moeda global exclusiva (única). Vamos chamá-la de Q. De acordo com os modelos econômicos, o valor de todas as Qs seria de vários trilhões de dólares.</value>
+    <value>Agora, imagine SE esse projeto incrivelmente diferente homenageasse outro tipo de animal... quero dizer, celebrasse os investidores fracassados, e fosse inspirado em projetos e empresas fracassadas. Vamos chamá-lo de Lehmoon Brothers. Se ele tivesse um token chamado F, e conseguisse criar um formato de distribuição viral...</value>
   </data>
-  <data name="home.points.point_5_more_p_1_1" xml:space="preserve">
-    <value>De acordo com a </value>
+  <data name="home.points.point_5_more_p_1" xml:space="preserve">
+    <value>Teoricamente, um projeto que busca o fracasso buscará fracassar para obter sucesso (meio confuso, eu sei!), então não prometer nada é a chave para alcançar o objetivo: nenhum.</value>
   </data>
-  <data name="home.points.point_5_more_p_1_link_1" xml:space="preserve">
-    <value>equação de trocas</value>
-  </data>
-  <data name="home.points.point_5_more_p_1_2" xml:space="preserve">
-    <value> da Economia, calcula-se o valor de uma moeda usando-se a quantidade de dinheiro circulante e a frequência com que ele é usado (conhecida como a ”</value>
-  </data>
-  <data name="home.points.point_5_more_p_1_link_2" xml:space="preserve">
-    <value>velocidade de circulação da moeda</value>
-  </data>
-  <data name="home.points.point_5_more_p_1_3" xml:space="preserve">
-    <value>”). </value>
-  </data>
-  <data name="home.points.point_5_more_p_2_1" xml:space="preserve">
-    <value>Assim, estimando US$ 20 trilhões em transações e usando a velocidade média global de circulação da moeda, teríamos um valor de vários trilhões de dólares para todas as Qs em circulação. Leia uma </value>
-  </data>
-  <data name="home.points.point_5_more_p_2_link_1" xml:space="preserve">
-    <value>análise econômica</value>
-  </data>
-  <data name="home.points.point_5_more_p_2_2" xml:space="preserve">
-    <value> detalhada, em coautoria com o </value>
-  </data>
-  <data name="home.points.point_5_more_p_2_link_2" xml:space="preserve">
-    <value>Prof. Lawrence H. White</value>
-  </data>
-  <data name="home.points.point_5_more_p_2_3" xml:space="preserve">
-    <value>, especialista em Teoria Monetária.
-</value>
+  <data name="home.points.point_5_more_p_2" xml:space="preserve">
+    <value>O Lehmoon Brothers poderia ser um projeto meme inspirado nos maiores projetos e empresas fracassadas do planeta. Tenho certeza de que você deve ter ouvido falar naquela iniciativa que prometeu montar um sistema de pagamento global com uma moeda única (Q) e foi um fiasco, sem falar naquele banco dos irmãos que evaporou junto com o dinheiro de metade do mundo.</value>
   </data>
   <data name="home.points.point_6" xml:space="preserve">
-    <value>A Initiative Q está reservando essas moedas Q para as pessoas que ingressarem hoje — quanto antes você ingressar, mais Qs você poderá reservar!</value>
+    <value>A Lehmoon Brothers está reservando seu token F para pessoas que ingressarem hoje — quanto antes ingressar, mais Fs você poderá reservar para o airdrop!</value>
   </data>
-  <data name="home.points.point_6_more_p_1_1" xml:space="preserve">
-    <value>Os incentivos para ingressar são bastante altos no início. Quem tiver a visão de ingressar logo no começo terá o direito de reservar mais de um milhão de Qs, que terão um valor futuro de US$ 1 milhão, de acordo com o nosso  </value>
+  <data name="home.points.point_6_more_p_1" xml:space="preserve">
+    <value>Os incentivos para aderir são bastante elevados no início e, à medida que o F for amplamente adotado e a probabilidade de sucesso for aumentando, tais incentivos vão diminuindo proporcionalmente. A quantidade atual de airdrop está indicada acima.</value>
   </data>
-  <data name="home.points.point_6_more_p_1_link_1" xml:space="preserve">
-    <value>modelo econômico</value>
-  </data>
-  <data name="home.points.point_6_more_p_1_2" xml:space="preserve">
-    <value>. À medida que a Initiative Q for sendo adotada de forma mais generalizada e for exigindo menos motivação para ingressar, esses incentivos serão reduzidos proporcionalmente. </value>
-  </data>
-  <data name="home.points.point_6_more_p_2_1" xml:space="preserve">
-    <value>Eventualmente, a expectativa é de que haverá detentores — compradores e vendedores potenciais — suficientes de Q para fazer com que a adesão à Initiative Q seja suficientemente recompensadora sem a necessidade de incentivos de natureza externa. As pessoas participarão simplesmente porque é uma maneira mais rápida, barata e segura de efetuar transações. Veja uma explicação detalhada </value>
-  </data>
-  <data name="home.points.point_6_more_p_2_link_1" xml:space="preserve">
-    <value>aqui</value>
-  </data>
-  <data name="home.points.point_6_more_p_2_2" xml:space="preserve">
-    <value>.</value>
+  <data name="home.points.point_6_more_p_2" xml:space="preserve">
+    <value>Eventualmente, a expectativa é de que haverá detentores — investidores — suficientes para fazer com que a adesão ao F ganhe valor, simplesmente porque todos estão com ela em suas carteiras. E como a LehmoonBros (para os íntimos) é um projeto que celebra o fracasso, o sucesso do F faz com que ele fracasse em fracassar, tornando-se assim um dos maiores cases de sucesso (!?) do mundo cripto.</value>
   </data>
   <data name="home.points.point_7" xml:space="preserve">
-    <value>É como uma profecia autorrealizável. À medida que milhões de pessoas vão aderindo, são implementadas tecnologias avançadas de pagamento, o sistema de pagamento torna-se ainda mais popular, a moeda Q adquire valor, e as recompensas concedidas aos usuários iniciais atingem seu valor potencial.</value>
+    <value>É como criar uma promessa sem prometer nada. À medida que milhares de pessoas vão aderindo ao F, mais pessoas irão aderir ao F, Lehmoon Brothers se torna ainda mais popular, o token F adquire valor, e as recompensas concedidas aos usuários iniciais atingem um valor incrível.</value>
   </data>
-  <data name="home.points.point_7_more_p_1_1" xml:space="preserve">
-    <value>Assista ao nosso </value>
-  </data>
-  <data name="home.points.point_7_more_p_1_link_1" xml:space="preserve">
-    <value>vídeo explicativo</value>
-  </data>
-  <data name="home.points.point_7_more_p_1_2" xml:space="preserve">
-    <value> ou leia as nossas </value>
-  </data>
-  <data name="home.points.point_7_more_p_1_link_2" xml:space="preserve">
-    <value>Perguntas Frequentes</value>
-  </data>
-  <data name="home.points.point_7_more_p_1_3" xml:space="preserve">
-    <value>s, </value>
-  </data>
-  <data name="home.points.point_7_more_p_1_link_3" xml:space="preserve">
-    <value>Modelo econômico</value>
-  </data>
-  <data name="home.points.point_7_more_p_1_4" xml:space="preserve">
-    <value> e documentos da </value>
-  </data>
-  <data name="home.points.point_7_more_p_1_link_4" xml:space="preserve">
-    <value>Rede de Pagamento Q</value>
-  </data>
-  <data name="home.points.point_7_more_p_1_5" xml:space="preserve">
-    <value>.
-</value>
+  <data name="home.points.point_7_more_p_1" xml:space="preserve">
+    <value>&lt;p&gt;Assista ao nosso &lt;a href="/#" class="VideoBtn underlined" id="555794892"&gt;vídeo explicativo&lt;/a&gt; ou leia as nossas &lt;a href="/FAQ"&gt;Perguntas Frequentes&lt;/a&gt;, &lt;a href="/knowledge/economic-model"&gt;Tokenomics&lt;/a&gt; e documentos da &lt;a href="/knowledge/payment-network"&gt;Lehmoon Brothers e F&lt;/a&gt;.&lt;/p&gt;</value>
   </data>
   <data name="home.point_more" xml:space="preserve">
     <value>Saiba mais</value>
