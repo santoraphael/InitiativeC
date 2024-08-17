@@ -135,7 +135,7 @@
     <value>Bem-vindo à Initiative Q, um esforço global para modernizar os pagamentos!</value>
   </data>
   <data name="home.it_makes" xml:space="preserve">
-    <value>7 passos para criar a 'F', a moeda do fracasso global</value>
+    <value>7 passos para a F ser a moeda do fracasso global</value>
   </data>
   <data name="home.join" xml:space="preserve">
     <value>A Initiative Q está construindo um sistema de pagamento social. Ingresse agora gratuitamente e</value>
@@ -150,7 +150,7 @@
     <value>Você sabe o que torna esta grande recompensa possível?</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>Para garantir que o máximo de pessoas fracassem juntas, estamos distribuindo nossa futura moeda.</value>
+    <value>Para garantir que o máximo de pessoas fracassem juntas, estamos distribuindo nossa moeda.</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
     <value>Não.</value>
@@ -231,41 +231,22 @@
     <value>Mais</value>
   </data>
   <data name="home.points.point_1" xml:space="preserve">
-    <value>Os sistemas de pagamento atuais (cartões de crédito, dinheiro vivo, transferências eletrônicas) são antigos e ultrapassados, o que significa que todos nós estamos arcando com custos desnecessários.</value>
+    <value>O sucesso é medido por quão resistente as derrotas uma pessoa é, e uma das provas disso é você estar aqui agora.</value>
   </data>
   <data name="home.points.point_1_more_p_1" xml:space="preserve">
-    <value>Por exemplo, abra a sua carteira e conte quantos cartões diferentes você tem e quanto dinheiro vivo você precisa carregar por aí. Já existe a tecnologia para substituir a sua carteira por uma forma de pagamento digital rápida e segura.</value>
+    <value>Por exemplo olhe para o seu portfólio de cripto e conte quantos investimentos brilhantes você fez... Imagino que quase nenhum, mas esqueça tudo isso. A 'F' é a moeda da Lehmoon Brothers e nós prometemos não prometer nada, mas podemos garantir uma coisa: você nunca precisará se preocupar em falhar novamente, porque isso está no nosso DNA!</value>
   </data>
   <data name="home.points.point_1_more_p_2_1" xml:space="preserve">
-    <value>Além disso, as redes de pagamento atuais foram projetadas </value>
-  </data>
-  <data name="home.points.point_1_more_p_2_link" xml:space="preserve">
-    <value>&lt;a href="https://web.archive.org/web/20210628143752/https://en.wikipedia.org/wiki/Credit_card#BankAmericard_and_Master_Charge" target="_blank"&gt;décadas atrás&lt;/a&gt;</value>
-  </data>
-  <data name="home.points.point_1_more_p_2_2" xml:space="preserve">
-    <value> e seu uso causa um processamento ineficiente, fraude e inflexibilidade — todos os quais se traduzem em custos elevados.</value>
+    <value>Projetos criptos super elaborados e complexos? Chatos e ultrapassados. Sabemos que está aqui por pura especulação e a era do fracasso glorioso das memecoins está apenas começando, onde cada transação com a F na rede é um lembrete de que nem todo mundo nasceu para ser um vencedor, e está tudo bem com isso!</value>
   </data>
   <data name="home.points.point_2" xml:space="preserve">
-    <value>Há muitas inovações e tecnologias de pagamento avançadas esperando ser implementadas.</value>
+    <value>Esqueça todas essas memecoins inspiradas em animais (aliás, por que tantos animais?!).</value>
   </data>
-  <data name="home.points.point_2_more_p_1_1" xml:space="preserve">
-    <value>Veja alguns exemplos: </value>
+  <data name="home.points.point_2_more_p_1" xml:space="preserve">
+    <value>F é um Token inspirado nos maiores projetos e empresas fracassadas do planeta. Eu tenho certeza que você deve ter ouvido falar naquela Iniciativa que prometou montar um sistema de pagamento global com uma moeda única (Q) e foi um fiasco, sem falar naquele banco dos irmãos que evaporou junto do dinheiro de metade do mundo.</value>
   </data>
-  <data name="home.points.point_2_more_p_1_2" xml:space="preserve">
-    <value> em smartphones em vez de um cartão de plástico para autenticar os titulares da conta; </value>
-  </data>
-  <data name="home.points.point_2_more_p_1_link_2" xml:space="preserve">
-    <value>Métodos de autenticação de múltiplos fatores</value>
-  </data>
-  <data name="home.points.point_2_more_p_1_3" xml:space="preserve">
-    <value> para tornar os pagamentos mais seguros; IA para reduzir fraude, uma única moeda global para eliminar taxas de câmbio entre moedas; transações digitais para tornar as transações mais rápidas, seguras e baratas. </value>
-  </data>
-  <data name="home.points.point_2_more_p_1_link_3" xml:space="preserve">
-    <value>Veja mais detalhes</value>
-  </data>
-  <data name="home.points.point_2_more_p_1_4" xml:space="preserve">
-    <value> sobre as melhorias e inovações que um sistema de pagamento modernizado poderia oferecer.
-</value>
+  <data name="home.points.point_2_more_p_2" xml:space="preserve">
+    <value>Então gatinhos, cachorrinhos, pôneis, sapos, cobras ou qualquer outro animal, deixe isso para os veterinários. Nós estamos aqui para transformar cada derrota em uma lenda. E o melhor de tudo? Não acho que quem ganhar ou quem perder, nem quem ganhar nem perder, vai ganhar ou perder, vai todo mundo perder.</value>
   </data>
   <data name="home.points.point_3" xml:space="preserve">
     <value>Então, por que nós ainda não temos sistemas mais novos e melhores? Porque há uma barreira como a do “ovo e a galinha”: nenhum comprador ingressa em uma nova rede de pagamento em que não há vendedores, e nenhum vendedor oferece uma nova opção de pagamento que nenhum comprador utiliza.</value>

@@ -16,39 +16,7 @@
     var cultureItems = LocOptions.Value.SupportedUICultures!
         .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
         .ToList();
-
-
-    // try
-    // {
-    //     var cult = HttpContextAccessor?.HttpContext?.Request.Cookies["globalization"];
-
-    //     if (String.IsNullOrEmpty(cult))
-    //     {
-    //         CultureInfo customCulture = new CultureInfo("en-US");
-
-    //         HttpContextAccessor?.HttpContext?.Response.Cookies.Append(
-    //             CookieRequestCultureProvider.DefaultCookieName,
-    //             CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(customCulture)),
-    //             new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-    //         );
-    //     }
-    //     else
-    //     {
-    //         CultureInfo customCulture = new CultureInfo(cult);
-
-    //         HttpContextAccessor?.HttpContext?.Response.Cookies.Append(
-    //             CookieRequestCultureProvider.DefaultCookieName,
-    //             CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(customCulture)),
-    //             new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-    //         );
-    //     }
-    // }
-    // catch
-    // {
-    //     HttpContextAccessor?.HttpContext?.Response.Cookies.Append("globalization", "en-US");
-    // }
 }
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -112,16 +80,16 @@
                     </a>
                     <div class="menu">
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
-                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
+                       @*  <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
                             <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
                                 <span class="label">@sharedLocalizer.Get("learn_more")</span>
                                 <span type="bottom" class="Icon icon-bottom"></span>
                             </a>
-                        </div>
+                        </div> *@
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div>
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div> *@
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div> *@
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div> *@
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
                     </div>
@@ -133,32 +101,62 @@
             <div class="NavBar sticky">
                 <nav class="column">
                     <a class="Logo golden active" aria-current="true" href="/">
-                        @* <svg width="30px" viewBox="0 0 30 30" stroke="none" class="Q" fill="none" fill-rule="evenodd">
-                            <path d="M14.015625,24.8415744 C12.1210843,24.8119065 10.4609446,24.4806203 9.03515625,23.8477057 C7.60936787,23.2147911 6.45215288,22.381631 5.56347656,21.3482002 C4.67480024,20.3147694 4.02539268,19.1874072 3.61523438,17.9660799 C3.20507607,16.7447526 3,15.5407496 3,14.3540348 C3,13.098095 3.21728298,11.85948 3.65185547,10.6381527 C4.08642795,9.41682538 4.76269072,8.30182466 5.68066406,7.29311709 C6.5986374,6.28440951 7.7680593,5.48338904 9.18896484,4.89003165 C10.6098704,4.29667425 12.2675687,4 14.1621094,4 C16.1250098,4 17.826653,4.32881396 19.2670898,4.98645174 C20.7075267,5.64408952 21.8525348,6.48713884 22.7021484,7.515625 C23.5517621,8.54411116 24.1767558,9.66405644 24.5771484,10.8754945 C24.9775411,12.0869325 25.1777344,13.2662126 25.1777344,14.4133703 C25.1777344,16.519789 24.5795958,18.512451 23.3833008,20.3914161 C22.1870057,22.2703812 20.3242314,23.5905816 17.7949219,24.352057 C16.3861069,24.7863437 15.0250182,24.8204017 14.015625,24.8415744 Z M20.4316406,14.3540348 C20.4316406,13.2266558 20.3364267,12.1586285 20.1459961,11.1499209 C19.9555655,10.1412133 19.6210961,9.22894 19.1425781,8.41307358 C18.6640601,7.59720715 18.0097698,6.94946838 17.1796875,6.46983782 C16.3496052,5.99020725 15.3242249,5.75039557 14.1035156,5.75039557 C12.804681,5.75039557 11.730473,6.00751325 10.8808594,6.52175633 C10.0312458,7.03599941 9.38427957,7.70104418 8.93994141,8.5169106 C8.49560325,9.33277702 8.18554775,10.2376335 8.00976562,11.2315071 C7.8339835,12.2253808 7.74609375,13.2662129 7.74609375,14.3540348 C7.74609375,15.1649566 7.79980415,16.0154228 7.90722656,16.9054589 C8.01464897,17.795495 8.27099407,18.7201297 8.67626953,19.6793908 C9.081545,20.6386519 9.73095256,21.444617 10.6245117,22.0973101 C11.5180709,22.7500033 12.6874928,23.0763449 14.1328125,23.0763449 C15.5390695,23.0763449 16.6840776,22.7425864 17.5678711,22.0750593 C18.4516646,21.4075323 19.093748,20.5990949 19.4941406,19.6497231 C19.8945333,18.7003513 20.1508783,17.7781888 20.2631836,16.8832081 C20.3754888,15.9882273 20.4316406,15.145178 20.4316406,14.3540348 Z"></path>
-                            <path d="M29.5777537,20.2191846 C29.1871268,20.9608814 28.779416,21.6086201 28.3546092,22.1624204 C27.9298024,22.7162206 27.2779534,23.2230391 26.3990428,23.6828911 C25.5201322,24.1427431 24.4215103,24.3726656 23.1031444,24.3726656 C22.2047024,24.3726656 21.3868395,24.2515237 20.6495311,24.009236 C19.9122227,23.7669484 19.3140842,23.4949971 18.8550975,23.1933737 C18.3961108,22.8917504 17.8931862,22.5085461 17.3463084,22.0437495 C16.4673978,21.2526063 15.7423074,20.7358987 15.1710155,20.493611 C14.5997235,20.2513234 14.0552954,20.1301815 13.5377147,20.1301815 C12.7076324,20.1301815 11.9263902,20.4911351 11.1939647,21.2130533 C10.8131034,21.6086249 10.5152548,21.8805763 10.30041,22.0289156 C10.0855652,22.177255 9.8511925,22.2514235 9.59728499,22.2514235 C9.37267449,22.2514235 9.17248118,22.1747827 8.99669905,22.0214987 C8.82091692,21.8682147 8.73302717,21.6729042 8.73302717,21.4355612 C8.73302717,21.1191039 8.88195146,20.8199574 9.17980452,20.5381126 C9.47765757,20.2562679 9.90001663,19.9274539 10.4468944,19.5516609 C11.7809429,18.7852068 12.6228551,18.5955517 14.3705344,18.7087122 C15.5131182,18.7581587 16.7310685,19.1264213 17.8443553,19.5813286 C19.5045198,20.2538003 20.752066,20.7111731 21.5870311,20.9534607 C22.4219962,21.1957483 23.2886867,21.3168903 24.1871287,21.3168903 C25.7496365,21.3168903 27.0289206,20.9509921 28.0250194,20.2191846 C28.6890852,19.731313 29.2066633,19.731313 29.5777537,20.2191846 Z" transform="translate(19.155390, 21.525627) rotate(20.000000) translate(-19.155390, -21.525627) "></path>
-                        </svg> *@
-                        @* <svg width="30px" viewBox="0 0 30 30" stroke="none" class="Q" fill="none" fill-rule="evenodd">
-                            <path class="cls-2" d="M.06,4.23c-.13-.87,0-1.69.46-2.44C1.11.83,1.98.25,3.09.05c.19-.03.38-.04.57-.04C10.96,0,18.25,0,25.55,0c1.91,0,3.43,1.38,3.64,3.27.12,1.1-.19,2.06-.93,2.87-.28.31-.64.53-1,.74-.84.51-1.72.97-2.57,1.47-2.45,1.46-4.93,2.87-7.41,4.29-.89.51-1.76,1.04-2.65,1.55-.06-.02-.12-.04-.17-.07-.53-.31-1.06-.62-1.59-.92-1.82-1.05-3.63-2.1-5.45-3.15-1.9-1.1-3.8-2.18-5.69-3.29C.79,6.2.25,5.32.06,4.23Z" />
-                            <path class="cls-1" d="M.06,4.23c.19,1.09.73,1.96,1.68,2.53,1.88,1.12,3.79,2.2,5.69,3.29,1.82,1.05,3.63,2.1,5.45,3.15.53.31,1.06.62,1.59.92.05.03.11.04.17.07.58.34,1.16.69,1.75,1.02,1.68.94,2.35,3.08,1.48,4.8-.36.71-.91,1.25-1.61,1.65-2.22,1.27-4.43,2.55-6.64,3.83-1.08.62-2.15,1.26-3.24,1.87-.48.27-.94.59-1.46.78-2.13.8-4.53-.6-4.86-2.85-.05-.37-.05-.74-.05-1.11,0-6.56,0-13.11,0-19.67,0-.09-.05-.2.05-.28Z" />
-                        </svg> *@
+@* 
+                    <svg width="50px" height="40px" viewBox="0 0 30 30" stroke="none" class="Q" fill="none" fill-rule="evenodd">
+                        <path class="cls-1" d="M6.27,17.58v-1.35c.23.02.45.04.67.06.96.09,1.92.08,2.87-.15,1.05-.26,1.89-.81,2.4-1.78.74-1.4.29-3.48-1.36-4.43-.83-.48-1.73-.69-2.67-.74-.63-.03-1.26,0-1.9,0v-1.25c.29,0,.59,0,.88,0,.91,0,1.81,0,2.69-.26,1.57-.45,2.28-1.87,2.17-3.23-.12-1.44-.97-2.35-2.26-2.87-.93-.38-1.92-.43-2.91-.37-.48.03-.96.12-1.44.18-.14.02-.18.08-.18.21,0,.27,0,.54,0,.82h-2.79c-.02-.1-.04-.21-.05-.31-.07-.57-.4-.93-.94-1.05-.35-.08-.72-.07-1.08-.09-.12,0-.24,0-.38,0V0c.09,0,.17,0,.24,0,2.57,0,5.13,0,7.7,0,1.28,0,2.56.1,3.79.52,1.3.45,2.34,1.21,2.92,2.49.94,2.04.14,4.3-1.86,5.34-.13.07-.27.13-.42.21.38.15.76.28,1.11.44,1.3.62,2.08,1.64,2.3,3.06.22,1.45-.28,2.7-1.26,3.75-.84.9-1.92,1.34-3.11,1.54-1.41.24-2.83.22-4.25.22-.29,0-.58,0-.89,0Z"/>
+                        <path class="cls-1" d="M.01,21.05v-.96c.24,0,.47,0,.7,0,.21,0,.42-.02.63-.06.62-.12,1.14-.62,1.14-1.45-.01-1.72,0-3.44,0-5.15,0-2.2,0-4.41,0-6.61,0-.43-.03-.86-.09-1.28-.11-.69-.54-1.05-1.24-1.1-.37-.02-.73,0-1.11,0v-.96h7.69v.95c-.35,0-.69-.01-1.04,0-.18,0-.36.05-.53.11-.56.19-.8.62-.83,1.18-.04.69-.06,1.39-.07,2.08,0,2.49,0,4.97,0,7.46,0,1.17,0,2.35,0,3.52,0,.55.07.65.61.72.53.07,1.07.11,1.6.11,1.25.01,2.51.07,3.76-.02,2.46-.17,4.38-1.26,5.54-3.5.1-.19.19-.25.4-.19.24.07.49.11.75.16-.16.65-.38,1.26-.72,1.82-1.07,1.77-2.63,2.82-4.68,3.1-.58.08-1.17.06-1.76.06-3.51,0-7.03,0-10.54,0-.06,0-.11,0-.19,0Z"/>
+                        <path class="cls-1" d="M1.43,16.4v1.16H0v-.93c.48-.07.99.11,1.43-.23Z"/>
+                    </svg>
+ *@
 
-                        <svg width="50px" height="40px" viewBox="0 0 30 30" stroke="none" class="Q" fill="none" fill-rule="evenodd">
-                          <path class="cls-1" d="M21.54,11.37c-.63-.46-1.41-.74-2.12-1.1-.2-.1-.42-.17-.63-.25v-.15c.29-.14.58-.3.87-.43,3.26-1.49,3.31-5.48.84-7.47C18.79.6,16.81.03,14.67,0c-.63,0-1.25,0-1.88,0,.02.5.01,1.01-.02,1.51,1.43,0,2.81.23,4.01,1.19,1.15.92,1.78,2.09,1.53,3.57-.25,1.46-1.25,2.39-2.61,2.72-1.2.29-2.48.3-3.72.38-.15.01-.26-.01-.36-.05-.04.34-.06.67-.09,1.01.1-.05.23-.06.4-.06,1.99.08,3.89.49,5.58,1.61,1.73,1.15,2.3,2.82,1.99,4.78-.05.33-.15.63-.27.9,0,.04,0,.08,0,.12-.11.57-.32,1.09-.5,1.65-.13.41-.23.88-.4,1.29.87-.18,1.71-.48,2.51-.95,3.22-1.85,3.6-6.19.71-8.31Z"/>
-                          <path class="cls-1" d="M8.29,20.72c-2.44,0-4.88,0-7.32,0-.07,0-.15,0-.22,0-.32-.03-.73,0-.75-.44-.02-.45.36-.6.74-.65.45-.06.91-.1,1.36-.11.65-.02,1.07-.34,1.27-.94.13-.39.23-.81.23-1.22.02-4.72.01-9.43,0-14.15,0-.25-.02-.51-.07-.76-.1-.52-.43-.82-.96-.9-.52-.08-1.04-.18-1.55-.29-.37-.08-.67-.26-.62-.69.05-.41.39-.4.72-.4,2.93,0,5.86,0,8.79,0,.14,0,.32-.03.43.04.17.11.38.28.4.44.01.16-.18.42-.33.48-.37.13-.78.17-1.17.23-.3.05-.62.05-.92.12-.66.15-.95.45-.98,1.12-.11,2.14-.25,4.29-.29,6.43-.05,2.77-.03,5.53-.03,8.3,0,.11,0,.22.01.33.08,1.28.28,1.57,1.57,1.45,1.68-.15,3.37-.23,5.06-.36.69-.05,1.25-.36,1.68-.9.72-.91,1.45-1.83,2.18-2.73.19-.24.41-.47.64-.66.09-.08.29-.12.39-.07.09.04.14.23.15.36.01.12-.04.25-.07.37-.45,1.51-.9,3.03-1.37,4.54-.29.94-.53,1.13-1.54,1.14-2.48.01-4.95,0-7.43,0,0-.03,0-.06,0-.09Z"/>
+
+                        <svg width="50px" height="50px" viewBox="0 0 30 30" stroke="none" class="Q" fill="none" fill-rule="evenodd" style="margin-top:5px;">
+                            <defs>
+                                <style>
+                                    .svgcontrole-1 {
+                                        fill: none;
+                                        stroke: #fff;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: .22px;
+                                    }
+
+                                    .svgcontrole-2 {
+                                        fill: #fff;
+                                    }
+
+                                    .svgcontrole-2, .svgcontrole-3 {
+                                        stroke-width: 0px;
+                                    }
+
+                                    .svgcontrole-3 {
+                                        fill: #3e4f9d;
+                                    }
+                                </style>
+                            </defs>
+                            <g>
+                                <circle class="svgcontrole-3" cx="11.17" cy="11.17" r="11.17" />
+                                <path class="svgcontrole-2" d="M5.47,15.92c.14-.1.28-.27.43-.28.53-.04.78-.36.9-.82.37-1.44.74-2.88,1.1-4.32.31-1.24.6-2.48.89-3.73.12-.5.08-.94-.43-1.24-.12-.07-.14-.3-.26-.57,3.02.74,5.87,1.45,8.75,2.16l-.61,2.47c-.56.05-.78-.17-.83-.73-.1-1.13-.37-1.39-1.46-1.66-.57-.14-1.15-.28-1.76-.44l-1.02,4.15c1.49.73,1.93.63,2.75-.63l.68.17-.86,3.5-.67-.17c-.13-1.66-.02-1.58-2.1-1.98-.33,1.32-.69,2.64-.95,3.97-.05.27.3.63.48.94.1.17.23.32.35.48-.04.05-.09.1-.13.15-.86-.21-1.73-.43-2.59-.64s-1.7-.42-2.55-.63c-.03-.06-.06-.12-.1-.18ZM9.95,6.12l-2.4,9.72,1.3.32,2.4-9.72-1.3-.32Z" />
+                                <circle class="svgcontrole-1" cx="11.17" cy="11.17" r="10.23" />
+                            </g>
+                            <g>
+                                <path class="svgcontrole-2" d="M6.45,9.23c.1.1.17.22.19.35h-.14c-.05-.09-.09-.19-.14-.28.02-.04.02-.08.08-.07Z" />
+                                <path class="svgcontrole-2" d="M6.45,9.23s-.05.05-.08.07c-1.98-2.56-.47-6.03,2.45-6.58,1.38-.26,2.6.12,3.63,1.09.02.02.03.06.03.12-.37-.22-.76-.42-1.17-.55-2.28-.74-4.71.69-5.2,3.05-.2.97-.07,1.9.34,2.79Z" />
+                            </g>
                         </svg>
 
                     </a>
                     <div class="menu">
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
-                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
+                        @* <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
                             <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
                                 <span class="label">@sharedLocalizer.Get("learn_more")</span>
                                 <span type="bottom" class="Icon icon-bottom"></span>
                             </a>
-                        </div>
+                        </div> *@
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div>
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div> *@
+                       @*  <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div> *@
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div> *@
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
                         <div class="NavBar-link-wrapper btn"><a href="#sign-up" class="Button Button-small Button-primary"><span class="label">@sharedLocalizer.Get("getinvited") </span></a></div>
