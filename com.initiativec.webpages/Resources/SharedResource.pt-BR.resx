@@ -135,6 +135,9 @@
   <data name="dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
+  <data name="description" xml:space="preserve">
+    <value>Junte-se a memecoin global da Cardano</value>
+  </data>
   <data name="facebook" xml:space="preserve">
     <value>Facebook</value>
   </data>
