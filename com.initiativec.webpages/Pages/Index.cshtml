@@ -220,53 +220,6 @@
                 <article>
                     <span class="dollar">F$</span>
                     <div id="number-container"></div>
-
-
-                    @* @for (int i = 0; i < Model.NumberData.Cards.Count; i++)
-                    {
-                        <div class="Tick">
-                            <div class="upperCard"><span>@Model.NumberData.Cards[i].UpperValue</span></div>
-                            <div class="lowerCard"><span>@Model.NumberData.Cards[i].LowerValue</span></div>
-                            <div class="flipCard first fold"><span>@Model.NumberData.Cards[i].FirstFlipValue</span></div>
-                            <div class="flipCard second unfold"><span>@Model.NumberData.Cards[i].SecondFlipValue</span></div>
-                        </div>
-
-                        if (Model.NumberData.CommaPositions.Contains(i + 1))
-                        {
-                            <span class="comma">,</span>
-                        }
-                    } *@
-                    @* <div class="Tick">
-                        <div class="upperCard"><span>2</span></div>
-                        <div class="lowerCard"><span>3</span></div>
-                        <div class="flipCard first fold"><span>3</span></div>
-                        <div class="flipCard second unfold"><span>2</span></div>
-                    </div>
-                    <div class="Tick">
-                        <div class="upperCard"><span>9</span></div>
-                        <div class="lowerCard"><span>0</span></div>
-                        <div class="flipCard first fold"><span>0</span></div>
-                        <div class="flipCard second unfold"><span>9</span></div>
-                    </div>
-                    <span class="comma">,</span>
-                    <div class="Tick">
-                        <div class="upperCard"><span>9</span></div>
-                        <div class="lowerCard"><span>0</span></div>
-                        <div class="flipCard first fold"><span>0</span></div>
-                        <div class="flipCard second unfold"><span>9</span></div>
-                    </div>
-                    <div class="Tick">
-                        <div class="upperCard"><span>9</span></div>
-                        <div class="lowerCard"><span>0</span></div>
-                        <div class="flipCard first fold"><span>0</span></div>
-                        <div class="flipCard second unfold"><span>9</span></div>
-                    </div>
-                    <div class="Tick">
-                        <div class="upperCard"><span>9</span></div>
-                        <div class="lowerCard"><span>0</span></div>
-                        <div class="flipCard first fold"><span>0</span></div>
-                        <div class="flipCard second unfold"><span>9</span></div>
-                    </div> *@
                 </article>
                 <div class="based">
                     @htmlLocalizer["home.based_p_1"]
@@ -323,46 +276,47 @@
                             </div>
                         </div>
                     </div>
-                    <div data-index="4" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline: none; width: 527px;">
-                        <div>
-                            <div class="slide" tabindex="-1" style="width: 100%; display: inline-block;">
-                                <div class="Twitt card press">
-                                    <a class="title big" target="_blank" href="https://web.archive.org/web/20210628143752/https://www.vox.com/the-goods/2018/11/8/18075816/initiative-q-email-cryptocurrency-bitcoin-paypal-saar-wilf">Money, as we know it, is evolving.</a>
-                                    <footer><a target="_blank" href="https://web.archive.org/web/20210628143752/https://www.vox.com/the-goods/2018/11/8/18075816/initiative-q-email-cryptocurrency-bitcoin-paypal-saar-wilf"><img src="data:image/png;base64,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" alt=""></a><span class="sub">08 November 2018</span></footer>
+                    @foreach (var item in Model.SlideItems)
+                    {
+                        <div data-index="@Model.SlideItems.IndexOf(item)" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 527px;">
+                            <div>
+                                <div class="slide" tabindex="-1" style="width: 100%; display: inline-block;">
+                                    @if (item.Type == "social")
+                                    {
+                                        <div class="Twitt card social">
+                                            <a class="header" target="_blank" href="@item.Link">
+                                                <div class="BGImg BGImg-cover BGImg-loaded">
+                                                    <div class="BGImg-image" style="background-image: url('@item.Image');"></div>
+                                                </div>
+                                                <span class="header-txt">
+                                                    <span class="name">@item.HeaderText</span>
+                                                    <span class="sub">@item.SubText</span>
+                                                </span>
+                                                <span type="@item.IconType" class="Icon icon-@item.IconType"></span>
+                                            </a>
+                                            <a class="title big" target="_blank" href="@item.Link">@item.Title</a>
+                                            <footer>
+                                                <a target="_blank" href="@item.Link"></a>
+                                                <span class="sub">@item.Date</span>
+                                            </footer>
+                                        </div>
+                                    }
+                                    else if (item.Type == "press")
+                                    {
+                                        <div class="Twitt card press">
+                                            <a class="title big" target="_blank" href="@item.Link">@item.Title</a>
+                                            <footer>
+                                                <a target="_blank" href="@item.Link">
+                                                    <img src="@item.Image" alt="Slide Image">
+                                                </a>
+                                                <span class="sub">@item.Date</span>
+                                            </footer>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 527px;">
-                        <div>
-                            <div class="slide" tabindex="-1" style="width: 100%; display: inline-block;">
-                                <div class="Twitt card press">
-                                    <a class="title big" target="_blank" href="https://web.archive.org/web/20210628143752/https://www.techinasia.com/talk/founder-challenge-visa-global-currency">Challenging Visa through a global currency for the future</a>
-                                    <footer><a target="_blank" href="https://web.archive.org/web/20210628143752/https://www.techinasia.com/talk/founder-challenge-visa-global-currency"><img src="data:image/png;base64,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" alt=""></a><span class="sub">23 August 2018</span></footer>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 527px;">
-                        <div>
-                            <div class="slide" tabindex="-1" style="width: 100%; display: inline-block;">
-                                <div class="Twitt card press">
-                                    <a class="title big" target="_blank" href="https://web.archive.org/web/20210628143752/https://www.techinasia.com/talk/founder-challenge-visa-global-currency">Challenging Visa through a global currency for the future</a>
-                                    <footer><a target="_blank" href="https://web.archive.org/web/20210628143752/https://www.techinasia.com/talk/founder-challenge-visa-global-currency"><img src="data:image/png;base64,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" alt=""></a><span class="sub">23 August 2018</span></footer>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 527px;">
-                        <div>
-                            <div class="slide" tabindex="-1" style="width: 100%; display: inline-block;">
-                                <div class="Twitt card press">
-                                    <a class="title big" target="_blank" href="https://web.archive.org/web/20210628143752/https://www.techinasia.com/talk/founder-challenge-visa-global-currency">Challenging Visa through a global currency for the future</a>
-                                    <footer><a target="_blank" href="https://web.archive.org/web/20210628143752/https://www.techinasia.com/talk/founder-challenge-visa-global-currency"><img src="data:image/png;base64,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" alt=""></a><span class="sub">23 August 2018</span></footer>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>

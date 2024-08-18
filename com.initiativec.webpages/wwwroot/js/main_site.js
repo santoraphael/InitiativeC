@@ -301,7 +301,6 @@ $(document).ready(function () {
             .done(function (data) {
                 isError = false;
                 bounty = data;
-                //bountyAmount = calcBounty(data);
                 processNumber(data.amount);
                 bountyLoop();
                 console.log("Recompensa obtida com sucesso:", bounty);

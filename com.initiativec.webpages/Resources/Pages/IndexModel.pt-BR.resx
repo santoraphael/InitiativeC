@@ -320,4 +320,10 @@
   <data name="home.button.getinvited.link" xml:space="preserve">
     <value>&lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Seja convidado&lt;/span&gt;&lt;/a&gt;</value>
   </data>
+  <data name="slide.tweet_text_1" xml:space="preserve">
+    <value>Esse é um exemplo de Tweet numero 1</value>
+  </data>
+  <data name="slide.tweet_text_2" xml:space="preserve">
+    <value>Esse é um exemplo de Tweet numero 2</value>
+  </data>
 </root>
