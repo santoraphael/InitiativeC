@@ -294,19 +294,19 @@
     <value>Grátis</value>
   </data>
   <data name="home.win.win_1_txt" xml:space="preserve">
-    <value>Basta se cadastrar que as suas Qs estarão reservadas.</value>
+    <value>Basta se cadastrar que as suas Fs estarão reservadas.</value>
   </data>
   <data name="home.win.win_2_h4" xml:space="preserve">
     <value>Simples</value>
   </data>
   <data name="home.win.win_2_txt" xml:space="preserve">
-    <value>Tudo o que você precisa fornecer são o seu nome e endereço de e-mail.</value>
+    <value>Tudo o que você precisa, por enquanto, é conectar sua carteira.</value>
   </data>
   <data name="home.win.win_3_h4" xml:space="preserve">
     <value>Por que não?</value>
   </data>
   <data name="home.win.win_3_txt" xml:space="preserve">
-    <value>Pense nisso como se fosse conseguir bitcoin de graça sete anos atrás.</value>
+    <value>Pense nisso como se fosse conseguir bitcoin muitos anos atrás.</value>
   </data>
   <data name="home.alert_message.h3" xml:space="preserve">
     <value>A Initiative Q está tendo um aumento repentino de cadastros.</value>

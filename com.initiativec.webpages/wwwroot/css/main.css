@@ -1255,11 +1255,11 @@
 
 .Hero h2 {
 	font-size: 3rem;
-	max-width: 400px;
+	/*max-width: 400px;*/
 	margin: 0 auto 1.2vh;
 	font-family: Montserrat, sans-serif;
 	line-height: 1.3;
-	font-weight: 300;
+	font-weight: 700;
 	color: #2c2732
 }
 
@@ -11546,8 +11546,8 @@ only screen and (max-width:880px) {
 }
 
 .Home .Hero {
-	min-height: calc(100vh - 110px);
-	margin-bottom: 60px
+/*	min-height: calc(100vh - 110px);
+	margin-bottom: 60px*/
 }
 
 @media only screen and (max-width:880px) {

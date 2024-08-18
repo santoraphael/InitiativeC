@@ -156,6 +156,27 @@
   <data name="home" xml:space="preserve">
     <value>Início</value>
   </data>
+  <data name="howto.get.invite" xml:space="preserve">
+    <value>Como receber um convite</value>
+  </data>
+  <data name="howto.visit.send.post" xml:space="preserve">
+    <value>Envie um &lt;b&gt;post &lt;/b&gt;nas&lt;b&gt; redes sociais&lt;/b&gt; perguntando aos seus amigos se um deles pode te convidar.</value>
+  </data>
+  <data name="howto.visit.social" xml:space="preserve">
+    <value>Visite a página da Lehmoon Brothers no &lt;a href="https://facebook.com/lehmoonbros" target="_blank" rel="noopener noreferrer"&gt;&lt;b&gt;Facebook&lt;/b&gt;&lt;/a&gt; ou &lt;a href="https://x.com/lehmoonbros" target="_blank" rel="noopener noreferrer"&gt;&lt;b&gt;Twitter (X)&lt;/b&gt;&lt;/a&gt; e veja quais dos seus amigos já segue a Lehmoon Brothers. Pode ser que eles já estejam cadastrados.</value>
+  </data>
+  <data name="howto.why" xml:space="preserve">
+    <value>O ingresso na Lehmoon Brothers é somente por convite (&lt;a class="ScrollToLink" href="/FAQ#Joining"&gt;veja por quê&lt;/a&gt;)&lt;br&gt;Confira duas maneiras simples de receber um convite:</value>
+  </data>
+  <data name="Info.blocks.block.label_1" xml:space="preserve">
+    <value>Conheça o Tokenomics da F e como a quantidade de token diminui no airdrop</value>
+  </data>
+  <data name="Info.blocks.block.label_2" xml:space="preserve">
+    <value>Conheça a inspiração da Lehmoon Brothers e porque somos diferentes</value>
+  </data>
+  <data name="Info.blocks.block.label_3" xml:space="preserve">
+    <value>Leia as nossas perguntas frequentes</value>
+  </data>
   <data name="languages" xml:space="preserve">
     <value>Línguas</value>
   </data>
@@ -200,6 +221,9 @@
   </data>
   <data name="twitter" xml:space="preserve">
     <value>Twitter</value>
+  </data>
+  <data name="want.learn.more" xml:space="preserve">
+    <value>Quer saber mais?</value>
   </data>
   <data name="what_is" xml:space="preserve">
     <value>O que é F?</value>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Localization;
+﻿using Microsoft.AspNetCore.Html;
+using Microsoft.Extensions.Localization;
 using System.Reflection;
 
 namespace com.initiativec.webpages.Services
@@ -17,6 +18,12 @@ namespace com.initiativec.webpages.Services
         public string Get(string key)
         {
             return localizer[key];
+        }
+
+        public HtmlString GetHtml(string key)
+        {
+            var value = localizer[key];
+            return new HtmlString(value);
         }
     }
 }

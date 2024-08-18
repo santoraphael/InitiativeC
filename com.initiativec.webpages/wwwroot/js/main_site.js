@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     // Função para deslizar suavemente para a seção
     $('a[href*="#"]').on('click', function (e) {
-        e.preventDefault();
+        /*e.preventDefault();*/
 
         var target = $(this.hash);
         if (target.length) {
@@ -364,6 +364,16 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+
+
+    $('.slick-track').slick({
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
     // Esconde o conteúdo more-content no carregamento da página
     $('.more-content').hide();
 
