@@ -32,16 +32,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="~/apple-touch-icon.png">
     <link rel="mask-icon" href="~/safari-pinned-tab.svg" color="#5bbad5">
 
-    <meta property="og:url" content="https://initiativec.com/" />
+    <meta property="og:url" content="https://lehmoonbros.fun/" />
     <meta property="og:site_name" content="Lehmoon Brothers" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Lehmoon Brothers" />
-    <meta property="og:image" content="~/images/initiative-q-social-cover.jpeg" />
-    <meta property="og:description" content="@sharedLocalizer["description"]" />
+    <meta property="og:image" content="~/images/lehmoon-brothers-social-cover.png" />
+    <meta property="og:description" content="@sharedLocalizer.Get("og.description")" />
     <meta property="fb:app_id" content="202066333902240" />
-    <meta name="description" content="A modern payment network that will aggregate the best tech to make a new global currency. Overcoming the adoption barrier by offering free Q.">
+    <meta name="description" content="@sharedLocalizer.Get("content.description")">
     
-    <title>Initiative Q</title>
+    <title>Lehmoon Brothers</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:300,400,500" rel="stylesheet">
     @* <link href="~/css/main.2ecc9df6.css" rel="stylesheet"> *@
     <link href="~/css/main.css" rel="stylesheet">
@@ -83,16 +83,16 @@
                     </a>
                     <div class="menu">
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
-                       @*  <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
+                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
                             <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
                                 <span class="label">@sharedLocalizer.Get("learn_more")</span>
                                 <span type="bottom" class="Icon icon-bottom"></span>
                             </a>
-                        </div> *@
+                        </div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div>   
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
-                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div> *@
-                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div> *@
-                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div> *@
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
                     </div>
@@ -104,14 +104,6 @@
             <div class="NavBar sticky">
                 <nav class="column">
                     <a class="Logo golden active" aria-current="true" href="/">
-@* 
-                    <svg width="50px" height="40px" viewBox="0 0 30 30" stroke="none" class="Q" fill="none" fill-rule="evenodd">
-                        <path class="cls-1" d="M6.27,17.58v-1.35c.23.02.45.04.67.06.96.09,1.92.08,2.87-.15,1.05-.26,1.89-.81,2.4-1.78.74-1.4.29-3.48-1.36-4.43-.83-.48-1.73-.69-2.67-.74-.63-.03-1.26,0-1.9,0v-1.25c.29,0,.59,0,.88,0,.91,0,1.81,0,2.69-.26,1.57-.45,2.28-1.87,2.17-3.23-.12-1.44-.97-2.35-2.26-2.87-.93-.38-1.92-.43-2.91-.37-.48.03-.96.12-1.44.18-.14.02-.18.08-.18.21,0,.27,0,.54,0,.82h-2.79c-.02-.1-.04-.21-.05-.31-.07-.57-.4-.93-.94-1.05-.35-.08-.72-.07-1.08-.09-.12,0-.24,0-.38,0V0c.09,0,.17,0,.24,0,2.57,0,5.13,0,7.7,0,1.28,0,2.56.1,3.79.52,1.3.45,2.34,1.21,2.92,2.49.94,2.04.14,4.3-1.86,5.34-.13.07-.27.13-.42.21.38.15.76.28,1.11.44,1.3.62,2.08,1.64,2.3,3.06.22,1.45-.28,2.7-1.26,3.75-.84.9-1.92,1.34-3.11,1.54-1.41.24-2.83.22-4.25.22-.29,0-.58,0-.89,0Z"/>
-                        <path class="cls-1" d="M.01,21.05v-.96c.24,0,.47,0,.7,0,.21,0,.42-.02.63-.06.62-.12,1.14-.62,1.14-1.45-.01-1.72,0-3.44,0-5.15,0-2.2,0-4.41,0-6.61,0-.43-.03-.86-.09-1.28-.11-.69-.54-1.05-1.24-1.1-.37-.02-.73,0-1.11,0v-.96h7.69v.95c-.35,0-.69-.01-1.04,0-.18,0-.36.05-.53.11-.56.19-.8.62-.83,1.18-.04.69-.06,1.39-.07,2.08,0,2.49,0,4.97,0,7.46,0,1.17,0,2.35,0,3.52,0,.55.07.65.61.72.53.07,1.07.11,1.6.11,1.25.01,2.51.07,3.76-.02,2.46-.17,4.38-1.26,5.54-3.5.1-.19.19-.25.4-.19.24.07.49.11.75.16-.16.65-.38,1.26-.72,1.82-1.07,1.77-2.63,2.82-4.68,3.1-.58.08-1.17.06-1.76.06-3.51,0-7.03,0-10.54,0-.06,0-.11,0-.19,0Z"/>
-                        <path class="cls-1" d="M1.43,16.4v1.16H0v-.93c.48-.07.99.11,1.43-.23Z"/>
-                    </svg>
- *@
-
 
                         <svg width="50px" height="50px" viewBox="0 0 30 30" stroke="none" class="Q" fill="none" fill-rule="evenodd" style="margin-top:5px;">
                             <defs>
@@ -150,16 +142,16 @@
                     </a>
                     <div class="menu">
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
-                        @* <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
+                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
                             <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
                                 <span class="label">@sharedLocalizer.Get("learn_more")</span>
                                 <span type="bottom" class="Icon icon-bottom"></span>
                             </a>
-                        </div> *@
+                        </div>
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
-                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div> *@
-                       @*  <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div> *@
-                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div> *@
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div>
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
                         <div class="NavBar-link-wrapper btn"><a href="#sign-up" class="Button Button-small Button-primary"><span class="label">@sharedLocalizer.Get("getinvited") </span></a></div>
@@ -287,9 +279,6 @@
             </div>
         </div>
     </div>
-    @* <script>window.fbAsyncInit = function () { FB.init({ appId: "202066333902240", xfbml: !0, version: "v3.0", status: !0 }), FB.AppEvents.logPageView() }, function (e, t, n) { var s, o = e.getElementsByTagName(t)[0]; e.getElementById(n) || ((s = e.createElement(t)).id = n, s.src = "../../../20181107030136/https_/connect.facebook.net/en_US/sdk.js", o.parentNode.insertBefore(s, o)) }(document, "script", "facebook-jssdk")</script> *@
-
-    @* <script type="text/javascript" src="~/js/main.js"></script> *@
 
     <div class="tippy-popper" role="tooltip" aria-hidden="false" id="tippy-tooltip-1" style="z-index: 9999; visibility: hidden; transition-duration: 350ms; position: absolute; transform: translate3d(419px, 61px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom">
         <div id="childToolTip3" class="tippy-tooltip tippy-tooltip--regular light-theme enter tippy-notransition" data-animation="shift" data-interactive="" style="transition-duration: 375ms; bottom: 0px;">

@@ -363,6 +363,23 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+    // Esconde o conteúdo more-content no carregamento da página
+    $('.more-content').hide();
+
+    // Remove a classe active do botão more no carregamento da página
+    $('.more').removeClass('active');
+
+    // Adiciona o evento de clique
+    $('.more').on('click', function () {
+        // Toggle da classe active no botão more
+        $(this).toggleClass('active');
+
+        // Toggle do conteúdo correspondente ao botão clicado
+        $(this).next('.more-content').slideToggle();
+    });
+});
+
 function setCulture(element) {
     var culture = element.getAttribute('data-culture');
 

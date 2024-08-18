@@ -126,6 +126,9 @@
   <data name="contact" xml:space="preserve">
     <value>Contato</value>
   </data>
+  <data name="content.description" xml:space="preserve">
+    <value>Uma memecoin diferente inspirado pelos principais projetos e empresas que falharam globalmente, superando a barreira de adoção ao reservar Q gratuitamente.</value>
+  </data>
   <data name="cookie.click" xml:space="preserve">
     <value>Entendi</value>
   </data>
@@ -134,9 +137,6 @@
   </data>
   <data name="dashboard" xml:space="preserve">
     <value>Dashboard</value>
-  </data>
-  <data name="description" xml:space="preserve">
-    <value>Junte-se a memecoin global da Cardano</value>
   </data>
   <data name="facebook" xml:space="preserve">
     <value>Facebook</value>
@@ -176,6 +176,9 @@
   </data>
   <data name="notFound" xml:space="preserve">
     <value>Não encontrado</value>
+  </data>
+  <data name="og.description" xml:space="preserve">
+    <value>Junte-se a memecoin global da Cardano, hoje!</value>
   </data>
   <data name="press" xml:space="preserve">
     <value>Imprensa</value>

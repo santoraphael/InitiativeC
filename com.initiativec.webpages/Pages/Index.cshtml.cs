@@ -6,6 +6,7 @@ namespace com.initiativec.webpages.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        public _howtoContentModel HowToContentModel { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -15,6 +16,8 @@ namespace com.initiativec.webpages.Pages
         public NumberModel NumberData { get; set; }
         public void OnGet()
         {
+            HowToContentModel = new _howtoContentModel();
+
             long number = 2510483431;
             //NumberData = ProcessNumber(number);
         }
