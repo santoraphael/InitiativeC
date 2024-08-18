@@ -234,6 +234,9 @@
   <data name="want.learn.more" xml:space="preserve">
     <value>Quer saber mais?</value>
   </data>
+  <data name="website.title_text" xml:space="preserve">
+    <value>Lehmoon Brothers - F a memecoin da Cardano</value>
+  </data>
   <data name="what_is" xml:space="preserve">
     <value>O que é F?</value>
   </data>
