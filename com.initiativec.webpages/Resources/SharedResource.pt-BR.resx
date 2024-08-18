@@ -190,10 +190,19 @@
     <value>Sair</value>
   </data>
   <data name="model" xml:space="preserve">
-    <value>Modelo econômico</value>
+    <value>Tokenomics</value>
+  </data>
+  <data name="model.short.description" xml:space="preserve">
+    <value>Conheça como está distribuído o Token F, qual a quantidade total cunhada, entre outras informações de F.</value>
   </data>
   <data name="model_text" xml:space="preserve">
     <value>Conheça as teorias econômicas e a política monetária por trás da Initiative Q, e como estimar o valor da moeda Q que estará reservada para você quando você ingressar.</value>
+  </data>
+  <data name="network.name" xml:space="preserve">
+    <value>Chega de bichinhos</value>
+  </data>
+  <data name="network.short.description" xml:space="preserve">
+    <value>Veja tudo que não iremos prometer mas que Lehmoon Brothers assim como o token F se tornar sucesso poderíamos fazer.</value>
   </data>
   <data name="notFound" xml:space="preserve">
     <value>Não encontrado</value>
