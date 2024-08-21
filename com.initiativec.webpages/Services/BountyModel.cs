@@ -17,7 +17,7 @@ namespace com.initiativec.webpages.Services
         {
             var data = new
             {
-                amount = 1000000,
+                amount = 20000000000,
                 tick_speed = 10000,
                 timestamp = DateTime.UtcNow
             };

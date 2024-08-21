@@ -121,7 +121,8 @@
     <value>&lt;span&gt;&lt;span&gt;F&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;é&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt;</value>
   </data>
@@ -136,9 +137,6 @@
   </data>
   <data name="home.it_makes" xml:space="preserve">
     <value>Criação da memecoin na Cardano em 7 passos</value>
-  </data>
-  <data name="home.join" xml:space="preserve">
-    <value>A Initiative Q está construindo um sistema de pagamento social. Ingresse agora gratuitamente e</value>
   </data>
   <data name="home.join_2" xml:space="preserve">
     <value>garanta um valor futuro estimado de</value>
@@ -206,17 +204,8 @@
   <data name="home.paragraphs.what_is_title" xml:space="preserve">
     <value>Um sistema de pagamento de última geração</value>
   </data>
-  <data name="home.paragraphs.what_is_text" xml:space="preserve">
-    <value>A Initiative Q é um esforço mundial para modernizar os pagamentos. A razão pela qual ainda estamos presos a uma tecnologia de pagamento com décadas de existência é a “barreira da adoção”: o desafio de convencer os compradores a adotar uma nova tecnologia que os vendedores ainda não usam, e vice-versa.</value>
-  </data>
   <data name="home.paragraphs.concept_title" xml:space="preserve">
     <value>Um conceito simples, mas poderoso</value>
-  </data>
-  <data name="home.paragraphs.concept_text" xml:space="preserve">
-    <value>A Initiative Q usa uma moeda dedicada, a Q, para derrubar a “barreira da adoção”. São reservadas grandes quantidades de Q para os primeiros usuários. Uma ampla base de usuários possibilitará a implementação das melhores tecnologias de pagamento, tornando a Initiative Q a forma de pagamento preferencial em todo o mundo e a moeda Q altamente valiosa. É uma profecia autorrealizável. </value>
-  </data>
-  <data name="home.paragraphs.video_link" xml:space="preserve">
-    <value>A Initiative Q em 97 segundos</value>
   </data>
   <data name="home.press.h3" xml:space="preserve">
     <value>Na imprensa:</value>
@@ -243,7 +232,7 @@
     <value>Mas por que todas essas memecoins inspiradas em animais (aliás, por que tantos animais?!) fazem tanto sucesso é um mistério.</value>
   </data>
   <data name="home.points.point_2_more_p_1" xml:space="preserve">
-    <value>Temos vários exemplos: gatos, cachorros, pôneis, sapos, cobras e quase todo o reino animal; deveríamos deixá-los para os veterinários. Uma memecoin única, que não fosse apenas um token meme, mas um projeto todo meme, com uma comunidade forte, poderia facilmente competir com todos esses animais, não só na rede Cardano, mas em todas as redes.</value>
+    <value>Temos vários exemplos: gatos, cachorros, pôneis, sapos, cobras e quase todo o reino animal; deveríamos deixá-los para os veterinários. Uma memecoin única, que não fosse apenas um token meme, mas um projeto todo meme, com uma comunidade forte, poderia facilmente competir com todos esses animais na rede Cardano.</value>
   </data>
   <data name="home.points.point_3" xml:space="preserve">
     <value>Então, por que ainda não temos uma grande memecoin que não seja de animal? Porque há uma barreira como a do "ovo e a galinha" (droga, mais animais): nenhum cripto investidor compra um novo token se não houver uma quantidade razoável de detentores, e só existe uma quantidade grande de detentores se as pessoas comprarem.</value>
@@ -261,7 +250,7 @@
     <value>As memecoins representam uma parcela considerável da capitalização de mercado. Se os investidores tivessem uma opção que não prometesse nada, que fosse diferente desse zoológico que se tornaram os tokens de diversão, e de alguma forma obtivesse uma grande adoção por parte dos investidores, essa memecoin poderia, eventualmente, alcançar ou até superar esses animais.</value>
   </data>
   <data name="home.points.point_5" xml:space="preserve">
-    <value>Agora, imagine SE esse projeto incrivelmente diferente homenageasse outro tipo de animal... quero dizer, celebrasse os investidores fracassados, e fosse inspirado em projetos e empresas fracassadas. Vamos chamá-lo de Lehmoon Brothers. Se ele tivesse um token chamado F, e conseguisse criar um formato de distribuição viral...</value>
+    <value>Agora, imagine SE esse projeto incrivelmente diferente homenageasse outro tipo de animal... quero dizer, celebrasse os investidores fracassados, e fosse inspirado em projetos e empresas fracassadas. Vamos chamá-lo de Lehmoon Brothers. Se ele tivesse um token chamado F, simples assim, e conseguisse criar um formato de distribuição viral...</value>
   </data>
   <data name="home.points.point_5_more_p_1" xml:space="preserve">
     <value>Teoricamente, um projeto que busca o fracasso buscará fracassar para obter sucesso (meio confuso, eu sei!), então não prometer nada é a chave para alcançar o objetivo: nenhum.</value>
@@ -307,9 +296,6 @@
   </data>
   <data name="home.win.win_3_txt" xml:space="preserve">
     <value>Pense nisso como se fosse conseguir bitcoin muitos anos atrás.</value>
-  </data>
-  <data name="home.alert_message.h3" xml:space="preserve">
-    <value>A Initiative Q está tendo um aumento repentino de cadastros.</value>
   </data>
   <data name="home.alert_message.text" xml:space="preserve">
     <value>Estamos atualizando o serviço e voltaremos em breve. Agradecemos sua paciência.</value>
