@@ -1,5 +1,7 @@
 using com.initiativec.webpages;
+using com.initiativec.webpages.Database;
 using com.initiativec.webpages.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,8 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddRazorPages();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.Configure<RequestLocalizationOptions>(
     options =>

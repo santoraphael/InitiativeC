@@ -168,7 +168,7 @@
 }
 
 .LanguagesMenu .LanguagesMenu-link span {
-	color: #433754;
+	color: #151515;
 	font-size: 1.5rem;
 	opacity: .7
 }
@@ -245,8 +245,8 @@
 	display: inline-block;
 	vertical-align: middle;
 	cursor: pointer;
-	color: #fff;
-	font-family: Montserrat, sans-serif
+	color: #151515;
+	font-family: Modak, sans-serif
 }
 
 .Button.disabled {
@@ -304,10 +304,10 @@
 }
 
 .Button.Button-primary {
-	background: -webkit-linear-gradient(30degdeg, #6112fe, #7813fe);
-	background: -webkit-linear-gradient(240deg, #6112fe, #7813fe);
-	background: -o-linear-gradient(240deg, #6112fe 0, #7813fe 100%);
-	background: linear-gradient(210degdeg, #6112fe, #7813fe);
+	background: -webkit-linear-gradient(30degdeg, #18f2b2, #18f2b2);
+	background: -webkit-linear-gradient(240deg, #18f2b2, #18f2b2);
+	background: -o-linear-gradient(240deg, #18f2b2 0, #18f2b2 100%);
+	background: linear-gradient(210degdeg, #18f2b2, #18f2b2);
 	position: relative
 }
 
@@ -316,24 +316,24 @@
 	position: relative
 }
 
-.Button.Button-primary:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border-radius: inherit;
-	opacity: 0;
-	border: 3px solid transparent;
-	-webkit-transition: opacity .5s;
-	-o-transition: opacity .5s;
-	transition: opacity .5s;
-	background: -webkit-linear-gradient(30degdeg, #7813fe, #4536fe);
-	background: -webkit-linear-gradient(240deg, #7813fe, #4536fe);
-	background: -o-linear-gradient(240deg, #7813fe 0, #4536fe 100%);
-	background: linear-gradient(210degdeg, #7813fe, #4536fe)
-}
+	.Button.Button-primary:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: inherit;
+		opacity: 0;
+		border: 3px solid transparent;
+		-webkit-transition: opacity .5s;
+		-o-transition: opacity .5s;
+		transition: opacity .5s;
+		background: -webkit-linear-gradient(30degdeg, #18deb2, #18deb2);
+		background: -webkit-linear-gradient(240deg, #18deb2, #18deb2);
+		background: -o-linear-gradient(240deg, #18deb2 0, #18deb2 100%);
+		background: linear-gradient(210degdeg, #18deb2, #18deb2)
+	}
 
 .Button.Button-primary:hover:before {
 	opacity: 1
@@ -526,7 +526,7 @@
 	transition: transform .3s;
 	transition: transform .3s, -webkit-transform .3s;
 	height: 2px;
-	background-color: #433754
+	background-color: #151515
 }
 
 .NavBar .UserAvatar {
@@ -592,7 +592,7 @@
 	height: 40px;
 	cursor: pointer;
 	font-size: 1.6rem;
-	color: #433754;
+	color: #151515;
 	position: relative;
 	white-space: nowrap;
 	-webkit-transition: color .3s;
@@ -723,7 +723,7 @@
 	display: flex;
 	-ms-flex-align: center;
 	align-items: center;
-	color: #433754
+	color: #151515
 }
 
 .dropDown-menu .dropDown-menu-link:not(:last-child) {
@@ -749,7 +749,7 @@
 }
 
 .dropDown-menu .dropDown-menu-link .txt>span.title {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
 	font-weight: 700;
 	margin-bottom: 5px;
@@ -806,7 +806,7 @@
 .UserAvatar-menu {
 	min-width: 280px;
 	text-align: left;
-	color: #433754;
+	color: #151515;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-direction: column;
@@ -819,7 +819,7 @@
 
 .UserAvatar-menu .UserAvatar-menu-link {
 	font-size: 1.7rem;
-	color: #433754;
+	color: #151515;
 	cursor: pointer;
 	padding: 10px 25px;
 	display: block;
@@ -859,7 +859,7 @@
 }
 
 .UserAvatar-menu .row .title {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	font-weight: 700
 }
 
@@ -1259,7 +1259,7 @@
 	margin: 0 auto 1.2vh;
 	font-family: Montserrat, sans-serif;
 	line-height: 1.3;
-	font-weight: 700;
+	font-weight: normal;
 	color: #2c2732
 }
 
@@ -2171,7 +2171,7 @@
 }
 
 .popup-aboutQ>header {
-	color: #433754;
+	color: #151515;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-bottom: 10px
@@ -2192,9 +2192,9 @@
 }
 
 .popup-aboutQ>header h4 {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	white-space: nowrap;
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
@@ -2446,7 +2446,7 @@
 
 .Counter .based,
 .Counter .estimate {
-	color: #433754;
+	color: #151515;
 	opacity: .6;
 	font-size: 1.4rem;
 	margin-top: 10px;
@@ -2507,7 +2507,7 @@
 	perspective-origin: 50% 50%;
 	-webkit-perspective: 300px;
 	perspective: 300px;
-	background-color: #433754;
+	background-color: #151515;
 	border-radius: 7px;
 	color: #fff
 }
@@ -2628,7 +2628,7 @@
 	-webkit-transform: rotateX(180deg);
 	-ms-transform: rotateX(180deg);
 	transform: rotateX(180deg);
-	background-color: #433754;
+	background-color: #151515;
 	border: 1px solid #2c2732;
 	border-top: .5px solid #2c2732
 }
@@ -2649,7 +2649,7 @@
 	-webkit-transform: rotateX(0deg);
 	-ms-transform: rotateX(0deg);
 	transform: rotateX(0deg);
-	background-color: #433754;
+	background-color: #151515;
 	border: .5px solid #2c2732;
 	border-bottom: .5px solid #2c2732
 }
@@ -2886,9 +2886,9 @@
 	align-items: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	font-size: 2.5rem;
 	margin: 0 auto 30px
 }
@@ -2948,15 +2948,15 @@
 	align-items: center;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	color: #433754;
+	color: #151515;
 	opacity: .5;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	font-size: 1.6rem;
 	font-weight: 300
 }
@@ -2995,7 +2995,7 @@
 	-ms-flex: 1;
 	flex: 1 1;
 	width: 1px;
-	background-color: #433754
+	background-color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -3120,7 +3120,7 @@
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	color: #433754;
+	color: #151515;
 	padding: 0 6px;
 	background-color: #fff;
 	pointer-events: none;
@@ -3195,7 +3195,7 @@
 	width: 16px;
 	height: 16px;
 	background-color: #efefef;
-	color: #433754;
+	color: #151515;
 	cursor: pointer;
 	-webkit-transition: all .2s;
 	-o-transition: all .2s;
@@ -3233,7 +3233,7 @@
 
 .Help-content p {
 	font-size: 1.3rem;
-	color: #433754
+	color: #151515
 }
 
 .Help-content p:not(:last-child) {
@@ -3241,9 +3241,9 @@
 }
 
 .Help-content .sub {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700
+	font-weight: normal;
 }
 
 .Help-content .sub i {
@@ -3330,7 +3330,7 @@
 }
 
 .TokenLink .Dashboard-card>article {
-	color: #433754;
+	color: #151515;
 	margin-bottom: 20px
 }
 
@@ -3350,7 +3350,7 @@
 
 .TokenLink .share>p {
 	font-size: 1.3rem;
-	color: #433754;
+	color: #151515;
 	opacity: .5;
 	margin: 0 5px
 }
@@ -3462,14 +3462,14 @@
 	-webkit-animation: fromBottom .3s;
 	animation: fromBottom .3s;
 	font-size: 2.2rem;
-	color: #433754;
-	border-color: #433754
+	color: #151515;
+	border-color: #151515
 }
 
 .TokenLink .copiedMessage p {
 	margin-top: 10px;
 	font-size: 1.5rem;
-	color: #433754;
+	color: #151515;
 	opacity: .7;
 	padding: 8px;
 	border-radius: 6px;
@@ -3514,7 +3514,7 @@
 
 .TokenLink .copiedMessage .Icon {
 	position: absolute;
-	color: #433754;
+	color: #151515;
 	font-size: 2rem;
 	top: 5px;
 	right: 5px;
@@ -3619,7 +3619,7 @@
 	animation: softFromBottom .7s .6s backwards;
 	margin: 20px auto;
 	font-size: 1.3rem;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -3743,15 +3743,15 @@
 	align-items: center;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	color: #433754;
+	color: #151515;
 	opacity: .5;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	font-size: 1.6rem;
 	font-weight: 300
 }
@@ -3790,7 +3790,7 @@
 	-ms-flex: 1;
 	flex: 1 1;
 	width: 1px;
-	background-color: #433754
+	background-color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -4020,13 +4020,13 @@
 
 .FAQ .FAQ-nav a {
 	display: block;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	opacity: .7;
 	position: relative;
 	padding: 7px 15px 7px 25px;
-	color: #433754;
+	color: #151515;
 	font-size: 1.8rem;
 	-webkit-transition: all .2s;
 	-o-transition: all .2s;
@@ -4069,7 +4069,7 @@
 }
 
 .FAQ .FAQ-content {
-	color: #433754;
+	color: #151515;
 	padding-left: 350px
 }
 
@@ -4121,9 +4121,9 @@
 	content: "~";
 	display: block;
 	font-size: 3rem;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	font-weight: 400;
 	color: #1bd4a5;
 	margin: 35px 0
@@ -4348,7 +4348,7 @@
 	padding-left: 50px;
 	padding-right: 25px;
 	width: 65%;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:1080px) {
@@ -4373,7 +4373,7 @@
 }
 
 .TimeFrame:not(:last-child) {
-	border-left: 1px dashed #433754;
+	border-left: 1px dashed #151515;
 	padding-bottom: 90px
 }
 
@@ -4392,9 +4392,9 @@
 	height: 40px;
 	z-index: 1;
 	font-size: 2.6rem;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	border-radius: 50%;
 	display: -ms-flexbox;
 	display: flex;
@@ -4403,7 +4403,7 @@
 	-ms-flex-pack: center;
 	justify-content: center;
 	background-color: #fff;
-	color: #433754;
+	color: #151515;
 	border: 1px solid #efefef;
 	-webkit-box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
 	box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
@@ -4641,7 +4641,7 @@
 	padding-right: 50px;
 	padding-left: 25px;
 	width: 60%;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:1080px) {
@@ -4666,7 +4666,7 @@
 }
 
 .rtl .TimeFrame:not(:last-child) {
-	border-right: 1px dashed #433754;
+	border-right: 1px dashed #151515;
 	border-left: none;
 	padding-bottom: 90px
 }
@@ -4687,9 +4687,9 @@
 	height: 40px;
 	z-index: 1;
 	font-size: 2.6rem;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	border-radius: 50%;
 	display: -ms-flexbox;
 	display: flex;
@@ -4698,7 +4698,7 @@
 	-ms-flex-pack: center;
 	justify-content: center;
 	background-color: #fff;
-	color: #433754;
+	color: #151515;
 	border: 1px solid #efefef;
 	-webkit-box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
 	box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
@@ -5324,7 +5324,7 @@
 .PaymentMethod .process_bullet h5 {
 	max-width: 450px;
 	font-size: 1.9rem;
-	color: #433754;
+	color: #151515;
 	font-weight: 400;
 	line-height: 1.3;
 	margin-top: 8px
@@ -5343,9 +5343,9 @@
 	counter-increment: process-counter;
 	min-width: 46px;
 	height: 46px;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	border-radius: 50%;
 	display: -ms-flexbox;
 	display: flex;
@@ -5355,7 +5355,7 @@
 	justify-content: center;
 	font-size: 3rem;
 	background-color: #fff;
-	color: #433754;
+	color: #151515;
 	border: 1px solid #efefef;
 	-webkit-box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
 	box-shadow: 2px 10px 35px rgba(0, 0, 0, .1)
@@ -5504,8 +5504,8 @@
 .EconomicModel .author {
 	max-width: 320px;
 	font-size: 1.5rem;
-	color: #433754;
-	font-family: telugu_mn, Merriweather, serif
+	color: #151515;
+	font-family: telugu_mn, Modak
 }
 
 .EconomicModel .author:before {
@@ -5633,8 +5633,8 @@
 
 .About .tilda-divider {
 	color: #7813fe;
-	font-family: telugu_mn, Merriweather, serif;
-	font-weight: 700;
+	font-family: telugu_mn, Modak;
+	font-weight: normal;
 	text-align: center;
 	display: block;
 	margin: 40px auto 0;
@@ -5740,7 +5740,7 @@
 	-ms-flex: 1;
 	flex: 1 1;
 	margin-left: 30px;
-	color: #433754;
+	color: #151515;
 	opacity: 0;
 	-webkit-transition: all .7s .2s;
 	-o-transition: all .7s .2s;
@@ -5957,7 +5957,7 @@
 	padding-top: 8vh;
 	padding-right: 20px;
 	padding-left: 20px;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:880px) {
@@ -6351,7 +6351,7 @@
 	-o-transition: all .2s;
 	transition: all .2s;
 	font-size: 1.5rem;
-	color: #433754
+	color: #151515
 }
 
 .ProfileLanguages .ProfileLanguages-link:hover {
@@ -6408,7 +6408,7 @@
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 12px 0;
-	color: #433754;
+	color: #151515;
 	-webkit-animation: softFromBottom .2s backwards;
 	animation: softFromBottom .2s backwards
 }
@@ -6605,7 +6605,7 @@
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	color: #433754;
+	color: #151515;
 	cursor: pointer;
 	opacity: .5;
 	-webkit-transition: opacity .2s;
@@ -6671,7 +6671,7 @@
 
 .Balance .sum .max {
 	font-size: 1.8rem;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -6821,7 +6821,7 @@
 
 .Balance .legend>div .label {
 	font-size: 1.4rem;
-	color: #433754;
+	color: #151515;
 	opacity: .5
 }
 
@@ -7213,7 +7213,7 @@
 
 .Tips h4 {
 	padding: 20px 30px 0;
-	color: #433754;
+	color: #151515;
 	font-size: 1.8rem;
 	display: -ms-flexbox;
 	display: flex;
@@ -7251,7 +7251,7 @@
 	top: 50%;
 	border-radius: 50%;
 	font-size: 2.6rem;
-	color: #433754;
+	color: #151515;
 	cursor: pointer;
 	-webkit-transition: all .2s;
 	-o-transition: all .2s;
@@ -7314,7 +7314,7 @@
 .Tips .slide p {
 	font-size: 1.9rem;
 	font-weight: 300;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:580px) {
@@ -7550,7 +7550,7 @@
 
 .WalkThrough .list>article h5 {
 	font-size: 1.7rem;
-	color: #433754;
+	color: #151515;
 	font-weight: 400;
 	line-height: 1.3
 }
@@ -7573,15 +7573,15 @@
 	}
 }
 
-.WalkThrough .list>article:before {
+.WalkThrough .list > article:before {
 	content: counter(process-counter);
 	text-align: center;
 	counter-increment: process-counter;
 	min-width: 46px;
 	height: 46px;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	border-radius: 50%;
 	display: -ms-flexbox;
 	display: flex;
@@ -7591,7 +7591,7 @@
 	justify-content: center;
 	font-size: 3rem;
 	background-color: #fff;
-	color: #433754;
+	color: #151515;
 	border: 1px solid #efefef;
 	-webkit-box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
 	box-shadow: 2px 10px 35px rgba(0, 0, 0, .1)
@@ -7771,7 +7771,7 @@
 	box-shadow: 0 0 20px 5px hsla(0, 0%, 100%, .7);
 	font-size: 1.4rem;
 	background-color: hsla(0, 0%, 100%, .7);
-	color: #433754;
+	color: #151515;
 	font-weight: 400;
 	max-width: calc(100% - 40px);
 	text-align: center;
@@ -7796,7 +7796,7 @@
 	width: 100%;
 	padding: 20px 30px 30px;
 	position: absolute;
-	color: #433754;
+	color: #151515;
 	font-size: 1.8rem;
 	display: -ms-flexbox;
 	display: flex;
@@ -7907,7 +7907,7 @@
 }
 
 .Approve-user .content {
-	color: #433754;
+	color: #151515;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-align: center;
@@ -8057,7 +8057,7 @@
 }
 
 .ApprovalCard>header {
-	color: #433754;
+	color: #151515;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	border-bottom: 1px solid #efefef
@@ -8230,7 +8230,7 @@
 	cursor: pointer;
 	font-size: 1.5rem;
 	padding: 2px;
-	color: #433754;
+	color: #151515;
 	opacity: .6;
 	-webkit-transition: opacity .2s;
 	-o-transition: opacity .2s;
@@ -8388,7 +8388,7 @@
 }
 
 .Poke .content {
-	color: #433754
+	color: #151515
 }
 
 .Poke .content h4 {
@@ -8432,7 +8432,7 @@
 	align-items: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	color: #433754;
+	color: #151515;
 	font-size: 1.5rem
 }
 
@@ -8524,7 +8524,7 @@
 }
 
 .Grandchildren .underline .breakdown-line {
-	color: #433754;
+	color: #151515;
 	font-size: 1.8rem;
 	font-weight: 300;
 	white-space: nowrap;
@@ -8634,7 +8634,7 @@
 }
 
 .Dashboard .Dashboard-hero {
-	color: #433754;
+	color: #151515;
 	margin-top: 5vh;
 	padding: 0 25px;
 	-webkit-animation: softFromBottom .7s backwards;
@@ -8909,7 +8909,7 @@
 	display: flex;
 	-ms-flex-align: center;
 	align-items: center;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -9037,7 +9037,7 @@
 }
 
 .Dashboard-card>header h4 {
-	color: #433754;
+	color: #151515;
 	font-size: 1.8rem;
 	display: -ms-flexbox;
 	display: flex;
@@ -9076,7 +9076,7 @@
 }
 
 .AppInvite.Dashboard-card {
-	color: #433754
+	color: #151515
 }
 
 .AppInvite.Dashboard-card>article {
@@ -9263,7 +9263,7 @@
 	-ms-flex: 1;
 	flex: 1 1;
 	padding: 20px 30px;
-	color: #433754;
+	color: #151515;
 	position: relative
 }
 
@@ -9425,7 +9425,7 @@
 
 .Verification .underlined {
 	font-size: 1.5rem;
-	color: #433754
+	color: #151515
 }
 
 .Verification .safe {
@@ -9666,7 +9666,7 @@
 }
 
 .Invite .message h2 {
-	color: #433754;
+	color: #151515;
 	font-size: 3.6rem
 }
 
@@ -9683,7 +9683,7 @@
 	display: block;
 	font-size: 1.6rem;
 	opacity: .5;
-	color: #433754
+	color: #151515
 }
 
 .Invite .txt {
@@ -9942,7 +9942,7 @@ only screen and (max-width:880px) {
 	cursor: pointer;
 	padding: 5px;
 	font-size: 3rem;
-	color: #433754;
+	color: #151515;
 	opacity: .5;
 	-webkit-transition: all .3s;
 	-o-transition: all .3s;
@@ -10268,7 +10268,7 @@ only screen and (max-width:880px) {
 
 .Footer .Footer-link {
 	display: block;
-	color: #433754;
+	color: #151515;
 	font-size: 1.5rem;
 	padding: 4px 0;
 	cursor: pointer;
@@ -10449,7 +10449,7 @@ only screen and (max-width:880px) {
 }
 
 .MobileMenu>header .Icon {
-	color: #433754;
+	color: #151515;
 	font-size: 3.2rem
 }
 
@@ -10469,7 +10469,7 @@ only screen and (max-width:880px) {
 	cursor: pointer;
 	display: block;
 	padding: 12px 32px;
-	color: #433754;
+	color: #151515;
 	font-size: 1.8rem;
 	border-left: 3px solid transparent
 }
@@ -10694,7 +10694,7 @@ only screen and (max-width:880px) {
 
 .Cookie p {
 	font-size: 1.5rem;
-	font-family: telugu_mn, Merriweather, serif
+	font-family: telugu_mn, Modak
 }
 
 @media only screen and (max-width:680px) {
@@ -10825,7 +10825,7 @@ only screen and (max-width:880px) {
 
 .Alert>article p {
 	font-size: 1.8rem;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -10905,7 +10905,7 @@ only screen and (max-width:880px) {
 }
 
 .Alert .close-btn .Icon {
-	color: #433754;
+	color: #151515;
 	opacity: .6;
 	padding: 2px;
 	font-size: 2.8rem;
@@ -10935,7 +10935,7 @@ only screen and (max-width:880px) {
 .Alert .settings {
 	padding-top: 30px;
 	text-align: left;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -11264,9 +11264,9 @@ only screen and (max-width:880px) {
 }
 
 .Twitts .Twitt .header .name {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	font-size: 1.6rem;
-	font-weight: 700
+	font-weight: normal;
 }
 
 @media only screen and (max-width:680px) {
@@ -11300,7 +11300,7 @@ only screen and (max-width:880px) {
 .Twitts .Twitt .sub {
 	font-size: 1.3rem;
 	opacity: .6;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:680px) {
@@ -11325,9 +11325,9 @@ only screen and (max-width:880px) {
 }
 
 .Twitts .Twitt.social .title.big {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	font-size: 2.1rem;
-	font-weight: 700
+	font-weight: normal;
 }
 
 @media only screen and (max-width:680px) {
@@ -11346,7 +11346,7 @@ only screen and (max-width:880px) {
 }
 
 .Twitts .Twitt.press .title {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	font-size: 1.9rem;
 	font-weight: 700
 }
@@ -11617,7 +11617,7 @@ only screen and (min-width:1720px) {
 
 .Home .Hero>section>p,
 .Home .Hero>section h2 {
-	color: #433754
+	color: #151515
 }
 
 .Home .Hero>section h2 {
@@ -11650,7 +11650,7 @@ only screen and (min-width:1720px) {
 	width: 40px;
 	height: 1px;
 	display: block;
-	background-color: #433754
+	background-color: #151515
 }
 
 @media only screen and (max-width:580px) {
@@ -11794,7 +11794,7 @@ only screen and (min-width:1720px) {
 .Home .Hero .play-video .bg-img {
 	margin: 15px;
 	border-radius: 4px;
-	border: 1px solid #433754;
+	border: 1px solid #151515;
 	-ms-flex: 1;
 	flex: 1 1;
 	background: url(../media/hero-vid.765ea8a6.jpg) 50% no-repeat;
@@ -11847,7 +11847,7 @@ only screen and (min-width:1720px) {
 	box-shadow: 0 0 20px 5px hsla(0, 0%, 100%, .7);
 	font-size: 1.5rem;
 	background-color: hsla(0, 0%, 100%, .7);
-	color: #433754;
+	color: #151515;
 	font-weight: 400;
 	max-width: calc(100% - 40px);
 	text-align: left;
@@ -11931,8 +11931,8 @@ only screen and (min-width:1720px) {
 	margin-right: -1px;
 	width: 30px;
 	border-radius: 0 0 50px 0;
-	border-right: 1px dashed #433754;
-	border-bottom: 1px dashed #433754
+	border-right: 1px dashed #151515;
+	border-bottom: 1px dashed #151515
 }
 
 .Home .list {
@@ -12006,9 +12006,9 @@ only screen and (min-width:1720px) {
 	height: 40px;
 	z-index: 1;
 	font-size: 2.6rem;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	border-radius: 50%;
 	display: -ms-flexbox;
 	display: flex;
@@ -12017,7 +12017,7 @@ only screen and (min-width:1720px) {
 	-ms-flex-pack: center;
 	justify-content: center;
 	background-color: #fff;
-	color: #433754;
+	color: #151515;
 	border: 1px solid #efefef;
 	-webkit-box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
 	box-shadow: 2px 10px 35px rgba(0, 0, 0, .1);
@@ -12212,9 +12212,9 @@ only screen and (min-width:1720px) {
 	left: 0;
 	width: 70px;
 	border-radius: 50px 0 0 50px;
-	border-top: 1px dashed #433754;
-	border-left: 1px dashed #433754;
-	border-bottom: 1px dashed #433754
+	border-top: 1px dashed #151515;
+	border-left: 1px dashed #151515;
+	border-bottom: 1px dashed #151515
 }
 
 @media only screen and (max-width:880px) {
@@ -12255,9 +12255,9 @@ only screen and (min-width:1720px) {
 	right: 0;
 	width: 130px;
 	border-radius: 0 50px 50px 0;
-	border-top: 1px dashed #433754;
-	border-right: 1px dashed #433754;
-	border-bottom: 1px dashed #433754
+	border-top: 1px dashed #151515;
+	border-right: 1px dashed #151515;
+	border-bottom: 1px dashed #151515
 }
 
 @media only screen and (max-width:880px) {
@@ -12385,7 +12385,7 @@ only screen and (min-width:1720px) {
 	text-align: left;
 	padding: 30px;
 	border-color: #ddd8d8;
-	color: #433754;
+	color: #151515;
 	-webkit-box-shadow: inset 0 3px 0 0 #f1104d, 0 0 30px rgba(0, 0, 0, .2);
 	box-shadow: inset 0 3px 0 0 #f1104d, 0 0 30px rgba(0, 0, 0, .2)
 }
@@ -12462,7 +12462,7 @@ only screen and (min-width:1720px) {
 	margin-left: -1px;
 	border-radius: 0 0 0 50px;
 	border-right: none;
-	border-left: 1px dashed #433754
+	border-left: 1px dashed #151515
 }
 
 .rtl .Home .point:nth-child(odd) {
@@ -12489,7 +12489,7 @@ only screen and (min-width:1720px) {
 	width: 70px;
 	border-radius: 0 50px 50px 0;
 	border-left: none;
-	border-right: 1px dashed #433754
+	border-right: 1px dashed #151515
 }
 
 .rtl .Home .point:nth-child(odd):before {
@@ -12520,7 +12520,7 @@ only screen and (min-width:1720px) {
 	left: 0;
 	border-radius: 50px 0 0 50px;
 	border-right: none;
-	border-left: 1px dashed #433754
+	border-left: 1px dashed #151515
 }
 
 .rtl .Home .point:nth-child(2n):before {
@@ -12687,7 +12687,7 @@ only screen and (min-width:1720px) {
 	flex: 1 1;
 	margin-left: 30px;
 	padding-top: 15px;
-	color: #433754;
+	color: #151515;
 	opacity: 0;
 	-webkit-transition: all .7s .2s;
 	-o-transition: all .7s .2s;
@@ -13148,9 +13148,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700
+	font-weight: normal;
 }
 
 .wrapper {
@@ -13170,7 +13170,7 @@ h6 {
 .wrapper.pt h4,
 .wrapper.pt h5,
 .wrapper.pt h6 {
-	font-family: Merriweather, serif
+	font-family: Modak
 }
 
 code,
@@ -13182,13 +13182,13 @@ pre {
 ::-moz-selection {
 	color: #fff;
 	text-shadow: none;
-	background-color: #7813fe
+	background-color: #cfd600
 }
 
 ::selection {
 	color: #fff;
 	text-shadow: none;
-	background-color: #7813fe
+	background-color: #cfd600
 }
 
 a {
@@ -14345,7 +14345,7 @@ div[role=button]:focus:focus {
 h1 {
 	font-size: 6.8rem;
 	max-width: 680px;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (min-width:1720px) {
@@ -14424,14 +14424,14 @@ ol {
 	counter-reset: ol-counter
 }
 
-ol li:before {
-	content: counter(ol-counter);
-	counter-increment: ol-counter;
-	font-family: telugu_mn, Merriweather, serif;
-	line-height: 1.05;
-	font-weight: 700;
-	font-size: 2.6rem
-}
+	ol li:before {
+		content: counter(ol-counter);
+		counter-increment: ol-counter;
+		font-family: telugu_mn, Modak;
+		line-height: 1.05;
+		font-weight: normal;
+		font-size: 2.6rem
+	}
 
 @media only screen and (max-width:880px) {
 	ol li:before {
@@ -14454,7 +14454,7 @@ ul li:before {
 	margin-top: 10px;
 	-ms-flex-item-align: start;
 	align-self: flex-start;
-	background-color: #433754
+	background-color: #151515
 }
 
 @media only screen and (max-width:580px) {
@@ -14472,7 +14472,7 @@ ul li:before {
 }
 
 .Legal .legal-content {
-	color: #433754
+	color: #151515
 }
 
 .Legal .legal-content .section {
@@ -14511,9 +14511,9 @@ ul li:before {
 	content: "~";
 	display: block;
 	font-size: 3rem;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	font-weight: 400;
 	color: #1bd4a5;
 	margin: 35px 0
@@ -14632,7 +14632,7 @@ ul li:before {
 
 .article-section {
 	padding: 80px 20px 0;
-	color: #433754
+	color: #151515
 }
 
 .article-section.mobile-small-bottom-gap {
@@ -14682,7 +14682,7 @@ ul li:before {
 .article-section h2 {
 	margin-bottom: 50px;
 	font-size: 4.6rem;
-	color: #433754
+	color: #151515
 }
 
 .article-section h2.bottom-closer {
@@ -14750,7 +14750,7 @@ ul li:before {
 }
 
 .article-section h3 {
-	color: #433754;
+	color: #151515;
 	font-size: 3.2rem;
 	margin-bottom: 15px
 }
@@ -15132,9 +15132,9 @@ ul li:before {
 	align-self: center;
 	font-size: 3.2rem;
 	color: #1bd4a5;
-	font-family: telugu_mn, Merriweather, serif;
+	font-family: telugu_mn, Modak;
 	line-height: 1.05;
-	font-weight: 700;
+	font-weight: normal;
 	font-weight: 400;
 	display: block
 }
@@ -15348,7 +15348,7 @@ ul li:before {
 .video-block footer {
 	padding-top: 15px;
 	font-size: 2rem;
-	color: #433754
+	color: #151515
 }
 
 @media only screen and (max-width:880px) {
@@ -15482,7 +15482,7 @@ ul li:before {
 
 .scrollBtn .label {
 	font-size: 2.1rem;
-	color: #433754;
+	color: #151515;
 	margin-right: 10px;
 	font-weight: 300
 }
@@ -15872,7 +15872,7 @@ ul li:before {
 	bottom: 20px;
 	width: 530px;
 	border-color: #ddd8d8;
-	color: #433754;
+	color: #151515;
 	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .2);
 	box-shadow: 0 0 30px rgba(0, 0, 0, .2);
 	padding: 12px
@@ -15964,6 +15964,15 @@ ul li:before {
 	font-weight: 400;
 	font-style: normal
 }
+
+
+@font-face {
+	font-family: Modak;
+	src: url("../fonts/Modak-Regular") format("truetype");
+	font-weight: normal;
+	font-style: normal
+}
+
 
 .fade-enter {
 	opacity: .01
