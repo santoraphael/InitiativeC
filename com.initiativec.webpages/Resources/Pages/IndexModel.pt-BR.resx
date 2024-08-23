@@ -121,8 +121,7 @@
     <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;é&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; 
+&lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
 &lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt;</value>
   </data>
@@ -142,13 +141,13 @@
     <value>garanta um valor futuro estimado de</value>
   </data>
   <data name="home.secure" xml:space="preserve">
-    <value>Quantidade máxima de F para a próxima vaga:</value>
+    <value>Quantidade máxima estimada de $LEMON para a próximo membro:</value>
   </data>
   <data name="home.what" xml:space="preserve">
     <value>Você sabe o que torna esta grande recompensa possível?</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>Para incentivarmos muitas pessoas a ingressarem, estamos reservando nossa moeda</value>
+    <value>Para incentivarmos nossa comunidade, estamos reservando nosso token para os primeiros membros.</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
     <value>Não.</value>
@@ -166,7 +165,7 @@
     <value>Legendado em portugues</value>
   </data>
   <data name="home.possible" xml:space="preserve">
-    <value>Leia o que torna isso possível</value>
+    <value>Conheça </value>
   </data>
   <data name="home.how_does_it_work" xml:space="preserve">
     <value>Saiba mais</value>
@@ -178,7 +177,8 @@
     <value>(No que se baseia esta estimativa?)</value>
   </data>
   <data name="home.based_p_1" xml:space="preserve">
-    <value>Você poderá reservar uma quantidade máxima de F (&lt;div class="tooltip" style="display: inline;" data-tooltipped="" aria-describedby="tippy-tooltip-5" data-original-title="undefined"&gt;&lt;span class="underlined noWrap"&gt;leia por quê&lt;/span&gt;&lt;/div&gt;).&lt;br&gt;&lt;span class="noWrap"&gt;&lt;span type="Q" class="Icon Q-icon icon-Q"&gt;&lt;/span&gt;250,984&lt;/span&gt;(&lt;span class="noWrap"&gt;10&lt;/span&gt;%) serão reservadas após o cadastro, &lt;span class="noWrap"&gt;40&lt;/span&gt;% após convidar &lt;span class="noWrap"&gt;5&lt;/span&gt; amigos, e o resto para tarefas futuras.</value>
+    <value>Você poderá reservar uma quantidade máxima de $LEMON.
+10% serão reservadas após o cadastro, 40% após convidar 5 amigos, e o resto para outras tarefas.</value>
   </data>
   <data name="home.based_link" xml:space="preserve">
     <value>leia por quê</value>

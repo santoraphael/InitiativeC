@@ -15,14 +15,23 @@ namespace com.initiativec.webpages.Services
 
         public JsonResult OnGetBounty() // Método de ação
         {
+
+            long total = 25000000000;
+            long divisor = 1000;
+
             var data = new
             {
-                amount = 20000000000,
+                amount = CalculoProximaVaga(total, divisor),
                 tick_speed = 10000,
                 timestamp = DateTime.UtcNow
             };
 
             return new JsonResult(data);
+        }
+
+        private long CalculoProximaVaga(long total, long divisor)
+        {
+            return total / divisor;
         }
     }
 }
