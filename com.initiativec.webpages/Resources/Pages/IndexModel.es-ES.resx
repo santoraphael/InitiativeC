@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about.article" xml:space="preserve">
-    <value>                        About</value>
+    <value>                        Sobre</value>
   </data>
   <data name="about.article.article_p" xml:space="preserve">
-    <value>            Lehmon Brothers is an initiative created to be more than just a community; it was created to be a space where the boldest, most sour, and ready-to-challenge-the-status-quo lemons come together. Lehmon Brothers is where the lemons unite to fight an epic meme battle.</value>
+    <value>            Lehmon Brothers es una iniciativa creada para ser más que una simple comunidad; fue creada para ser un espacio donde los limones más valientes, ácidos y listos para desafiar el status quo se encuentran. Lehmon Brothers es donde los limones se unen para luchar en una batalla épica de memes.</value>
   </data>
   <data name="home.alert_message.text" xml:space="preserve">
-    <value>            We are updating the service and will be back soon. We appreciate your patience.</value>
+    <value>            Estamos actualizando el servicio y volveremos pronto. Agradecemos tu paciencia.</value>
   </data>
   <data name="home.based_link" xml:space="preserve">
-    <value>                    read why</value>
+    <value>                    lee por qué</value>
   </data>
   <data name="home.based_p_1" xml:space="preserve">
-    <value>You will be able to reserve a maximum amount of $LEMON. 10% will be reserved after registration, 40% after inviting 5 friends, and the rest for other tasks.</value>
+    <value>Podrás reservar una cantidad máxima de $LEMON. El 10% se reservará después del registro, el 40% después de invitar a 5 amigos, y el resto para otras tareas.</value>
   </data>
   <data name="home.based_p_2" xml:space="preserve">
     <value>                    ).</value>
@@ -139,216 +139,216 @@
     <value>                    (</value>
   </data>
   <data name="home.based_p_4" xml:space="preserve">
-    <value>                    %) will be reserved after registration,</value>
+    <value>                    %) se reservarán después del registro,</value>
   </data>
   <data name="home.based_p_5" xml:space="preserve">
-    <value>                    % after inviting</value>
+    <value>                    % después de invitar a</value>
   </data>
   <data name="home.based_p_6" xml:space="preserve">
-    <value>                    friends, and the rest for future tasks.</value>
+    <value>                    amigos, y el resto para tareas futuras.</value>
   </data>
   <data name="home.button.getinvited" xml:space="preserve">
-    <value>            Get invited</value>
+    <value>            Sé invitado</value>
   </data>
   <data name="home.button.getinvited.link" xml:space="preserve">
-    <value>        &lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Get invited&lt;/span&gt;&lt;/a&gt;</value>
+    <value>        &lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Sé invitado&lt;/span&gt;&lt;/a&gt;</value>
   </data>
   <data name="home.h1" xml:space="preserve">
-    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;is&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;the&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;of&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt;</value>
+    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;es&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;la&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;memecoin&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;de&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;Cardano&lt;/span&gt;&lt;/span&gt;</value>
   </data>
   <data name="home.h2" xml:space="preserve">
-    <value>                            Secure an estimated future value of</value>
+    <value>                            Asegura un valor futuro estimado de</value>
   </data>
   <data name="home.h2Alt" xml:space="preserve">
-    <value>                        We all know that money only has value because of a common agreement. Initiative Q is a brilliant way to make everyone agree on a new currency.</value>
+    <value>                        Todos sabemos que el dinero solo tiene valor debido a un acuerdo común. Initiative Q es una manera brillante de hacer que todos estén de acuerdo con una nueva moneda.</value>
   </data>
   <data name="home.how_does_it_work" xml:space="preserve">
-    <value>            Learn more</value>
+    <value>            Saber más</value>
   </data>
   <data name="home.it_makes" xml:space="preserve">
-    <value>                    How to become part of Lehmon Brothers</value>
+    <value>                    Cómo formar parte de Lehmon Brothers</value>
   </data>
   <data name="home.join_2" xml:space="preserve">
-    <value>                        secure an estimated future value of</value>
+    <value>                        asegura un valor futuro estimado de</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>                    We need to find our other lemon brothers, and for that, we will reserve our token for all those who join.</value>
+    <value>                    Necesitamos encontrar a nuestros otros hermanos limones, y para eso reservaremos nuestro token para todos los que se unan.</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
     <value>                        No.</value>
   </data>
   <data name="home.no_2" xml:space="preserve">
-    <value>                        Sounds too good to be true.</value>
+    <value>                        Parece demasiado bueno para ser verdad.</value>
   </data>
   <data name="home.only_requires" xml:space="preserve">
-    <value>                Only name, email, and password are required. No spam: you will only receive system updates.</value>
+    <value>                Solo se requiere nombre, correo electrónico y contraseña. Sin spam: solo recibirás actualizaciones del sistema.</value>
   </data>
   <data name="home.paragraphs.concept_title" xml:space="preserve">
-    <value>    A simple, yet powerful concept</value>
+    <value>    Un concepto simple pero poderoso</value>
   </data>
   <data name="home.paragraphs.what_is_title" xml:space="preserve">
-    <value>    A next-generation payment system</value>
+    <value>    Un sistema de pago de última generación</value>
   </data>
   <data name="home.points.more" xml:space="preserve">
-    <value>                More</value>
+    <value>                Más</value>
   </data>
   <data name="home.points.point_1" xml:space="preserve">
-    <value>                Everyone wants to be part of Lehmon Brothers, but it’s not that easy; first, you need an invitation.</value>
+    <value>                Todo el mundo quiere formar parte de Lehmon Brothers, pero no es tan fácil; primero, necesitas una invitación.</value>
   </data>
   <data name="home.points.point_1_more_p_1" xml:space="preserve">
-    <value>    Each new brother in Lehmon Brothers has a certain amount of $LEMON Tokens that can be reserved exclusively for you, without spending anything to make the reservation. So, the sooner you join, the more $LEMON you can reserve.</value>
+    <value>    Cada nuevo hermano en Lehmon Brothers tiene una cantidad de $LEMON Tokens que puede ser reservada exclusivamente para ti, sin necesidad de gastar nada para hacer la reserva. Así que, cuanto antes entres, más $LEMON podrás reservar.</value>
   </data>
   <data name="home.points.point_1_more_p_2_1" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_2" xml:space="preserve">
-    <value>                The invitation is made through a brother’s link; you access the link and connect your wallet.</value>
+    <value>                La invitación se realiza a través de un enlace de un hermano; accedes al enlace y conectas tu cartera.</value>
   </data>
   <data name="home.points.point_2_more_p_1" xml:space="preserve">
-    <value>    The brother who owns the invitation link just needs to approve your entry into Lehmon Brothers. Once you join, 10% of the total amount of your slot is already reserved for you, and with that, we build a truly strong community.</value>
+    <value>    El hermano dueño del enlace de invitación solo tiene que aprobar tu entrada en Lehmon Brothers. Una vez que entras, el 10% de la cantidad total de tu cupo ya está reservado para ti, y con eso vamos construyendo una comunidad realmente fuerte.</value>
   </data>
   <data name="home.points.point_3" xml:space="preserve">
-    <value>                Once you become a brother, you will also have an invitation link.</value>
+    <value>                Una vez que te conviertas en un hermano, también tendrás un enlace de invitación.</value>
   </data>
   <data name="home.points.point_3_more_p_1" xml:space="preserve">
-    <value>    Upon joining, you get an invitation link to invite new brothers. You can approve up to 5 new brothers, so choose wisely who to invite. By approving new brothers, you secure more $LEMON in reserve for yourself.</value>
+    <value>    Al unirte, obtienes un enlace de invitación para invitar a nuevos hermanos. Podrás aprobar, como máximo, a 5 nuevos hermanos, así que elige bien a quién invitar. Al aprobar nuevos hermanos, aseguras más $LEMON en reserva para ti.</value>
   </data>
   <data name="home.points.point_3_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_4" xml:space="preserve">
-    <value>                The invitation period will last for a very, very limited time.</value>
+    <value>                El período de invitación durará por un tiempo muy, muy limitado.</value>
   </data>
   <data name="home.points.point_4_more_p_1" xml:space="preserve">
-    <value>    It will not be possible to reserve $LEMON after this period, so you need to join soon. After the invitation period, a new phase will begin: the fair distribution of $LEMON.</value>
+    <value>    No será posible reservar $LEMON después de este período, por lo que es necesario unirse pronto. Después del período de invitación, comenzará una nueva fase: la distribución justa de $LEMON.</value>
   </data>
   <data name="home.points.point_5" xml:space="preserve">
-    <value>                The fair distribution of $LEMON will ensure that the largest amount of tokens is already distributed at launch.</value>
+    <value>                La distribución justa de $LEMON garantizará que la mayor cantidad de tokens ya esté distribuida en su lanzamiento.</value>
   </data>
   <data name="home.points.point_5_more_p_1" xml:space="preserve">
-    <value>    The distribution phase will be the moment when a collection will be made, with a minimum value of 20 ADA and no maximum limit. This phase is open, and anyone can participate. The percentage relative to the total ADA sent to the collection wallet will be the percentage of $LEMON corresponding to this phase that you will receive. Brothers who have already reserved $LEMON and participated in the collection will receive the amount relative to their participation in the contribution pool, plus the tokens reserved in the reservation phase.</value>
+    <value>    La fase de distribución será el momento en que se realizará una recaudación, con un valor mínimo de 20 ADA y sin límite máximo. Esta fase está abierta, y cualquier persona puede participar. El porcentaje relativo al total de ADA enviado a la cartera de recaudación será el porcentaje de $LEMON correspondiente a esta fase que recibirás. Los hermanos que ya hayan reservado $LEMON y participado en la recaudación recibirán la cantidad relativa a su participación en la pool de contribución, más los tokens reservados en la fase de reserva.</value>
   </data>
   <data name="home.points.point_5_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_6" xml:space="preserve">
-    <value>                100% of the total ADA collected (minus fees) will go to the liquidity pool.</value>
+    <value>                El 100% del total de ADA recaudado (menos las tarifas) se destinará al pool de liquidez.</value>
   </data>
   <data name="home.points.point_6_more_p_1" xml:space="preserve">
-    <value>    After the collection phase, we will distribute liquidity pools across the 3 main DEXs on Cardano, proportionate to the DEX’s participation in the network.</value>
+    <value>    Después de la fase de recaudación, distribuiremos en pools de liquidez en las 3 principales DEXs de Cardano, proporcionalmente a la participación de la DEX en la red.</value>
   </data>
   <data name="home.points.point_6_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_7" xml:space="preserve">
-    <value>                Now the fun begins... We will build many things to make our community big, strong, and the largest non-animal memecoin in the world.</value>
+    <value>                Ahora comienza la diversión... Construiremos muchas cosas para hacer que nuestra comunidad sea grande, fuerte y la memecoin no animal más grande del mundo.</value>
   </data>
   <data name="home.points.point_7_more_p_1" xml:space="preserve">
-    <value>    Lehmon Brothers, with its $LEMON, is more than just a memecoin project; it’s a cultural revolution. Currently, memes on the networks look like a zoo. New things will come to greatly foster the community and make $LEMON yield good lemonades.</value>
+    <value>    Lehmon Brothers, con su $LEMON, es más que un proyecto de memecoin; es una revolución cultural. En este momento, los memes en las redes parecen un zoológico. Vendrán cosas nuevas para fomentar mucho la comunidad y hacer que $LEMON rinda buenas limonadas.</value>
   </data>
   <data name="home.point_more" xml:space="preserve">
-    <value>                    Learn more</value>
+    <value>                    Saber más</value>
   </data>
   <data name="home.possible" xml:space="preserve">
-    <value>                    Learn more</value>
+    <value>                    Saber más</value>
   </data>
   <data name="home.press.h3" xml:space="preserve">
-    <value>                    In the press:</value>
+    <value>                    En la prensa:</value>
   </data>
   <data name="home.press.quote_1" xml:space="preserve">
-    <value>                “Challenging Visa through a global currency for the future”</value>
+    <value>                “Desafiando a Visa a través de una moneda global para el futuro”</value>
   </data>
   <data name="home.press.read" xml:space="preserve">
-    <value>                    Read article</value>
+    <value>                    Leer artículo</value>
   </data>
   <data name="home.secure" xml:space="preserve">
-    <value>                        Maximum estimated amount of $LEMON for the next member:</value>
+    <value>                        Cantidad máxima estimada de $LEMON para el próximo miembro:</value>
   </data>
   <data name="home.vid_captions" xml:space="preserve">
-    <value>                Subtitled in Portuguese</value>
+    <value>                Subtitulado en portugués</value>
   </data>
   <data name="home.welcome" xml:space="preserve">
-    <value>                    Welcome to Initiative Q, a global effort to modernize payments!</value>
+    <value>                    ¡Bienvenido a Initiative Q, un esfuerzo global para modernizar los pagos!</value>
   </data>
   <data name="home.what" xml:space="preserve">
-    <value>                        Do you know what makes this great reward possible?</value>
+    <value>                        ¿Sabes qué hace posible esta gran recompensa?</value>
   </data>
   <data name="home.what_is_based_on" xml:space="preserve">
-    <value>            (What is this estimate based on?)</value>
+    <value>            (¿En qué se basa esta estimación?)</value>
   </data>
   <data name="home.what_is_based_on_alt" xml:space="preserve">
-    <value>        (What is this estimate based on?)</value>
+    <value>        (¿En qué se basa esta estimación?)</value>
   </data>
   <data name="home.win.h2" xml:space="preserve">
-    <value>                        Join now</value>
+    <value>                        Únete ahora</value>
   </data>
   <data name="home.win.win_1_h4" xml:space="preserve">
-    <value>                Free</value>
+    <value>                Gratis</value>
   </data>
   <data name="home.win.win_1_txt" xml:space="preserve">
-    <value>                Just connect with your wallet, and your $LEMONs will be reserved.</value>
+    <value>                Simplemente conecta tu cartera y tus $LEMON estarán reservados.</value>
   </data>
   <data name="home.win.win_2_h4" xml:space="preserve">
-    <value>                Simple</value>
+    <value>                Sencillo</value>
   </data>
   <data name="home.win.win_2_txt" xml:space="preserve">
-    <value>                All you need, for now, is to connect your wallet.</value>
+    <value>                Todo lo que necesitas por ahora es conectar tu cartera.</value>
   </data>
   <data name="home.win.win_3_h4" xml:space="preserve">
-    <value>                Why not?</value>
+    <value>                ¿Por qué no?</value>
   </data>
   <data name="home.win.win_3_txt" xml:space="preserve">
-    <value>                Think of it as getting bitcoin many years ago.</value>
+    <value>                Piénsalo como si estuvieras obteniendo bitcoin hace muchos años.</value>
   </data>
   <data name="home.yes_1" xml:space="preserve">
-    <value>                        Yes.</value>
+    <value>                        Sí.</value>
   </data>
   <data name="home.yes_2" xml:space="preserve">
-    <value>                        Sign me up!</value>
+    <value>                        ¡Regístrame!</value>
   </data>
   <data name="slide.tweet_text_1" xml:space="preserve">
-    <value>                This is an example of Tweet number 1</value>
+    <value>                Este es un ejemplo de Tweet número 1</value>
   </data>
   <data name="slide.tweet_text_2" xml:space="preserve">
-    <value>                This is an example of Tweet number 2</value>
+    <value>                Este es un ejemplo de Tweet número 2</value>
   </data>
   <data name="tokenization.article_p" xml:space="preserve">
-    <value>            A medium lemon can produce approximately 30-45 ml of juice.</value>
+    <value>            Un limón mediano puede producir aproximadamente 30-45 ml de jugo.</value>
   </data>
   <data name="tokenization.li_span_p_1" xml:space="preserve">
-    <value>        50% of the token supply will be distributed among all presale participants. Of these tokens, 50% (25% of the total - 11,250,000,000) will be made available in the reservation phase. The other 50% (25% of the total - 11,250,000,000) will be made available in the public presale, with no prior qualifications required. Distribution will be based on a snapshot of funds sent and carried out through an airdrop. Presale participants with reserved tokens will receive a proportional share in the distribution, in addition to the amount of tokens effectively reserved.</value>
+    <value>        El 50% del suministro de tokens se distribuirá entre todos los participantes de la preventa. De estos tokens, el 50% (25% del total - 11,250,000,000) estará disponible en la fase de reserva. El otro 50% (25% del total - 11,250,000,000) estará disponible en la preventa pública, sin requisitos previos. La distribución se basará en una instantánea de los fondos enviados y se realizará a través de un airdrop. Los participantes de la preventa que tengan tokens reservados recibirán una participación proporcional en la distribución, además de la cantidad de tokens reservados efectivamente.</value>
   </data>
   <data name="tokenization.li_span_p_2" xml:space="preserve">
-    <value>        40% of the token supply will be allocated to initial liquidity, which will be distributed proportionately based on participation in the SundaeSwap and Minswap networks. Liquidity Provider (LP) tokens will be stored in a multisig wallet for added security.</value>
+    <value>        El 40% del suministro de tokens se asignará a la liquidez inicial, que se distribuirá proporcionalmente a la participación en las redes de SundaeSwap y Minswap. Los tokens de Proveedores de Liquidez (LP) se almacenarán en una cartera multisig para mayor seguridad.</value>
   </data>
   <data name="tokenization.li_span_p_3" xml:space="preserve">
-    <value>        6% of the token supply will be used for marketing promotions, community airdrops, events, and incentives to promote $LEMON.</value>
+    <value>        El 6% del suministro de tokens se utilizará para promociones de marketing, airdrops comunitarios, eventos e incentivos para promover $LEMON.</value>
   </data>
   <data name="tokenization.li_span_p_4" xml:space="preserve">
-    <value>        3% of the token supply is reserved for exchange listings and expansion opportunities.</value>
+    <value>        El 3% del suministro de tokens está reservado para listados en exchanges y oportunidades de expansión.</value>
   </data>
   <data name="tokenization.li_span_p_5" xml:space="preserve">
-    <value>        1% will be distributed in the first weeks during meme battles we will organize among our brothers.</value>
+    <value>        El 1% se distribuirá en las primeras semanas durante las batallas de memes que organizaremos entre nuestros hermanos.</value>
   </data>
   <data name="tokenization.li_span_title_1" xml:space="preserve">
-    <value>    50% (22,500,000,000) - Presale Holders:</value>
+    <value>    50% (22,500,000,000) - Holders de la Preventa:</value>
   </data>
   <data name="tokenization.li_span_title_2" xml:space="preserve">
-    <value>    40% - Initial Liquidity:</value>
+    <value>    40% - Liquidez Inicial:</value>
   </data>
   <data name="tokenization.li_span_title_3" xml:space="preserve">
     <value>    6% - Marketing:</value>
   </data>
   <data name="tokenization.li_span_title_4" xml:space="preserve">
-    <value>    3% - Reserve:</value>
+    <value>    3% - Reserva:</value>
   </data>
   <data name="tokenization.li_span_title_5" xml:space="preserve">
-    <value>    1% - Meme Battle:</value>
+    <value>    1% - Batalla de Memes:</value>
   </data>
   <data name="tokenization.section_p_1" xml:space="preserve">
-    <value>        How is $LEMON</value>
+    <value>        ¿Cómo se distribuye $LEMON?</value>
   </data>
   <data name="tokenization.section_p_2" xml:space="preserve">
-    <value>        distributed?</value>
+    <value>        distribuido?</value>
   </data>
 </root>

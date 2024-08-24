@@ -19,7 +19,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql
 builder.Services.Configure<RequestLocalizationOptions>(
     options =>
     {
-        var supportedCultures = new[] { "en-US", "pt-BR", "ru-RU", "ar-SA", "zh-CN" };
+        var supportedCultures = new[] { "en-US", "zh-CN", "ar-SA", "es-ES", "fr-FR", "pt-BR", "ru-RU", "ja-JP" };
         options.SetDefaultCulture(supportedCultures[0])
                .AddSupportedCultures(supportedCultures)
                .AddSupportedUICultures(supportedCultures);
@@ -32,6 +32,7 @@ builder.Services.AddSingleton<SharedResourceService>();
 
 var app = builder.Build();
 app.UseMiddleware<CultureMiddleware>();
+
 
 //using (var scope = app.Services.CreateScope())
 //{

@@ -118,237 +118,237 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about.article" xml:space="preserve">
-    <value>                        About</value>
+    <value>                        について</value>
   </data>
   <data name="about.article.article_p" xml:space="preserve">
-    <value>            Lehmon Brothers is an initiative created to be more than just a community; it was created to be a space where the boldest, most sour, and ready-to-challenge-the-status-quo lemons come together. Lehmon Brothers is where the lemons unite to fight an epic meme battle.</value>
+    <value>            Lehmon Brothersは、単なるコミュニティ以上のものとして作られたイニシアチブです。最も勇敢で、酸っぱく、現状に挑戦する準備ができたレモンが集まる場所として作られました。Lehmon Brothersは、レモンが団結し、壮大なミームバトルを繰り広げる場所です。</value>
   </data>
   <data name="home.alert_message.text" xml:space="preserve">
-    <value>            We are updating the service and will be back soon. We appreciate your patience.</value>
+    <value>            サービスを更新中です。まもなく再開します。ご理解いただきありがとうございます。</value>
   </data>
   <data name="home.based_link" xml:space="preserve">
-    <value>                    read why</value>
+    <value>                    読む理由</value>
   </data>
   <data name="home.based_p_1" xml:space="preserve">
-    <value>You will be able to reserve a maximum amount of $LEMON. 10% will be reserved after registration, 40% after inviting 5 friends, and the rest for other tasks.</value>
+    <value>あなたは最大$LEMONの量を予約できます。登録後に10％が予約され、5人の友達を招待した後に40％が予約され、残りは他のタスクのために予約されます。</value>
   </data>
   <data name="home.based_p_2" xml:space="preserve">
-    <value>                    ).</value>
+    <value>                    )。</value>
   </data>
   <data name="home.based_p_3" xml:space="preserve">
     <value>                    (</value>
   </data>
   <data name="home.based_p_4" xml:space="preserve">
-    <value>                    %) will be reserved after registration,</value>
+    <value>                    %は登録後に予約されます。</value>
   </data>
   <data name="home.based_p_5" xml:space="preserve">
-    <value>                    % after inviting</value>
+    <value>                    %は友達を招待した後に</value>
   </data>
   <data name="home.based_p_6" xml:space="preserve">
-    <value>                    friends, and the rest for future tasks.</value>
+    <value>                    友達を招待した後に予約され、残りは将来のタスクのために予約されます。</value>
   </data>
   <data name="home.button.getinvited" xml:space="preserve">
-    <value>            Get invited</value>
+    <value>            招待を受ける</value>
   </data>
   <data name="home.button.getinvited.link" xml:space="preserve">
-    <value>        &lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Get invited&lt;/span&gt;&lt;/a&gt;</value>
+    <value>        &lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;招待を受ける&lt;/span&gt;&lt;/a&gt;</value>
   </data>
   <data name="home.h1" xml:space="preserve">
-    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;is&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;the&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;of&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt;</value>
+    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;は&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;Cardanoの&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;メムコイン&lt;/span&gt;&lt;/span&gt;</value>
   </data>
   <data name="home.h2" xml:space="preserve">
-    <value>                            Secure an estimated future value of</value>
+    <value>                            予想される将来の価値を確保する</value>
   </data>
   <data name="home.h2Alt" xml:space="preserve">
-    <value>                        We all know that money only has value because of a common agreement. Initiative Q is a brilliant way to make everyone agree on a new currency.</value>
+    <value>                        私たちは皆、お金が価値を持つのは共通の合意があるからだと知っています。Initiative Qは、全員が新しい通貨に同意するようにするための素晴らしい方法です。</value>
   </data>
   <data name="home.how_does_it_work" xml:space="preserve">
-    <value>            Learn more</value>
+    <value>            詳細を見る</value>
   </data>
   <data name="home.it_makes" xml:space="preserve">
-    <value>                    How to become part of Lehmon Brothers</value>
+    <value>                    Lehmon Brothersの一員になる方法</value>
   </data>
   <data name="home.join_2" xml:space="preserve">
-    <value>                        secure an estimated future value of</value>
+    <value>                        予想される将来の価値を確保する</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>                    We need to find our other lemon brothers, and for that, we will reserve our token for all those who join.</value>
+    <value>                    他のレモン兄弟を見つける必要があります。そのため、参加するすべての人のためにトークンを予約します。</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
-    <value>                        No.</value>
+    <value>                        いいえ。</value>
   </data>
   <data name="home.no_2" xml:space="preserve">
-    <value>                        Sounds too good to be true.</value>
+    <value>                        これは本当に素晴らしすぎます。</value>
   </data>
   <data name="home.only_requires" xml:space="preserve">
-    <value>                Only name, email, and password are required. No spam: you will only receive system updates.</value>
+    <value>                必要なのは名前、メールアドレス、パスワードだけです。スパムはありません。システムの更新のみが送信されます。</value>
   </data>
   <data name="home.paragraphs.concept_title" xml:space="preserve">
-    <value>    A simple, yet powerful concept</value>
+    <value>    シンプルだが強力なコンセプト</value>
   </data>
   <data name="home.paragraphs.what_is_title" xml:space="preserve">
-    <value>    A next-generation payment system</value>
+    <value>    次世代の決済システム</value>
   </data>
   <data name="home.points.more" xml:space="preserve">
-    <value>                More</value>
+    <value>                さらに</value>
   </data>
   <data name="home.points.point_1" xml:space="preserve">
-    <value>                Everyone wants to be part of Lehmon Brothers, but it’s not that easy; first, you need an invitation.</value>
+    <value>                みんなLehmon Brothersの一員になりたいのですが、それは簡単ではありません。まず、招待状が必要です。</value>
   </data>
   <data name="home.points.point_1_more_p_1" xml:space="preserve">
-    <value>    Each new brother in Lehmon Brothers has a certain amount of $LEMON Tokens that can be reserved exclusively for you, without spending anything to make the reservation. So, the sooner you join, the more $LEMON you can reserve.</value>
+    <value>    Lehmon Brothersの新しい兄弟ごとに、$LEMONトークンの特定の量が予約され、何も費やすことなく予約することができます。したがって、早く参加すればするほど、より多くの$LEMONを予約できます。</value>
   </data>
   <data name="home.points.point_1_more_p_2_1" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_2" xml:space="preserve">
-    <value>                The invitation is made through a brother’s link; you access the link and connect your wallet.</value>
+    <value>                招待は兄弟のリンクを通じて行われます。リンクにアクセスしてウォレットを接続します。</value>
   </data>
   <data name="home.points.point_2_more_p_1" xml:space="preserve">
-    <value>    The brother who owns the invitation link just needs to approve your entry into Lehmon Brothers. Once you join, 10% of the total amount of your slot is already reserved for you, and with that, we build a truly strong community.</value>
+    <value>    招待リンクを所有している兄弟は、Lehmon Brothersへの参加を承認するだけです。参加すると、総額の10％がすでにあなたのために予約されており、それにより、本当に強力なコミュニティが構築されます。</value>
   </data>
   <data name="home.points.point_3" xml:space="preserve">
-    <value>                Once you become a brother, you will also have an invitation link.</value>
+    <value>                兄弟になったら、あなたも招待リンクを持つことができます。</value>
   </data>
   <data name="home.points.point_3_more_p_1" xml:space="preserve">
-    <value>    Upon joining, you get an invitation link to invite new brothers. You can approve up to 5 new brothers, so choose wisely who to invite. By approving new brothers, you secure more $LEMON in reserve for yourself.</value>
+    <value>    参加すると、新しい兄弟を招待するためのリンクが提供されます。最大5人の新しい兄弟を承認できるので、誰を招待するかを慎重に選んでください。新しい兄弟を承認することで、さらに多くの$LEMONが自分のために予約されます。</value>
   </data>
   <data name="home.points.point_3_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_4" xml:space="preserve">
-    <value>                The invitation period will last for a very, very limited time.</value>
+    <value>                招待期間は非常に、非常に限られた時間です。</value>
   </data>
   <data name="home.points.point_4_more_p_1" xml:space="preserve">
-    <value>    It will not be possible to reserve $LEMON after this period, so you need to join soon. After the invitation period, a new phase will begin: the fair distribution of $LEMON.</value>
+    <value>    この期間後に$LEMONを予約することはできませんので、早めに参加する必要があります。招待期間の後、新しいフェーズが開始されます：$LEMONの公正な分配。</value>
   </data>
   <data name="home.points.point_5" xml:space="preserve">
-    <value>                The fair distribution of $LEMON will ensure that the largest amount of tokens is already distributed at launch.</value>
+    <value>                $LEMONの公正な分配は、トークンの最大量がすでにローンチ時に分配されていることを保証します。</value>
   </data>
   <data name="home.points.point_5_more_p_1" xml:space="preserve">
-    <value>    The distribution phase will be the moment when a collection will be made, with a minimum value of 20 ADA and no maximum limit. This phase is open, and anyone can participate. The percentage relative to the total ADA sent to the collection wallet will be the percentage of $LEMON corresponding to this phase that you will receive. Brothers who have already reserved $LEMON and participated in the collection will receive the amount relative to their participation in the contribution pool, plus the tokens reserved in the reservation phase.</value>
+    <value>    分配フェーズでは、最低額20ADAで上限なしの資金調達が行われます。このフェーズは公開されており、誰でも参加できます。調達ウォレットに送信されたADAの合計に対する割合が、このフェーズで受け取る$LEMONの割合となります。すでに$LEMONを予約し、資金調達に参加した兄弟たちは、貢献プールへの参加に応じた量と、予約フェーズで予約されたトークンを受け取ります。</value>
   </data>
   <data name="home.points.point_5_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_6" xml:space="preserve">
-    <value>                100% of the total ADA collected (minus fees) will go to the liquidity pool.</value>
+    <value>                調達されたADAの合計額の100％（手数料を除く）が流動性プールに送られます。</value>
   </data>
   <data name="home.points.point_6_more_p_1" xml:space="preserve">
-    <value>    After the collection phase, we will distribute liquidity pools across the 3 main DEXs on Cardano, proportionate to the DEX’s participation in the network.</value>
+    <value>    資金調達フェーズの後、Cardanoの主要な3つのDEXにおいて、ネットワーク内のDEXの参加割合に応じて流動性プールが分配されます。</value>
   </data>
   <data name="home.points.point_6_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_7" xml:space="preserve">
-    <value>                Now the fun begins... We will build many things to make our community big, strong, and the largest non-animal memecoin in the world.</value>
+    <value>                さて、楽しみが始まります... 私たちは、コミュニティを大きく、強くし、世界最大の非動物メムコインにするために多くのことを構築します。</value>
   </data>
   <data name="home.points.point_7_more_p_1" xml:space="preserve">
-    <value>    Lehmon Brothers, with its $LEMON, is more than just a memecoin project; it’s a cultural revolution. Currently, memes on the networks look like a zoo. New things will come to greatly foster the community and make $LEMON yield good lemonades.</value>
+    <value>    Lehmon Brothersとその$LEMONは、単なるメムコインプロジェクト以上のものです。それは文化的な革命です。現在、ネットワーク上のミームは動物園のように見えます。新しいものが登場し、コミュニティを大いに活性化し、$LEMONが良いレモネードを生み出すようになります。</value>
   </data>
   <data name="home.point_more" xml:space="preserve">
-    <value>                    Learn more</value>
+    <value>                    詳細を見る</value>
   </data>
   <data name="home.possible" xml:space="preserve">
-    <value>                    Learn more</value>
+    <value>                    詳細を見る</value>
   </data>
   <data name="home.press.h3" xml:space="preserve">
-    <value>                    In the press:</value>
+    <value>                    メディアで:</value>
   </data>
   <data name="home.press.quote_1" xml:space="preserve">
-    <value>                “Challenging Visa through a global currency for the future”</value>
+    <value>未来のためのグローバル通貨でVisaに挑戦</value>
   </data>
   <data name="home.press.read" xml:space="preserve">
-    <value>                    Read article</value>
+    <value>                    記事を読む</value>
   </data>
   <data name="home.secure" xml:space="preserve">
-    <value>                        Maximum estimated amount of $LEMON for the next member:</value>
+    <value>                        次のメンバーのための最大予想$LEMON数:</value>
   </data>
   <data name="home.vid_captions" xml:space="preserve">
-    <value>                Subtitled in Portuguese</value>
+    <value>                ポルトガル語字幕</value>
   </data>
   <data name="home.welcome" xml:space="preserve">
-    <value>                    Welcome to Initiative Q, a global effort to modernize payments!</value>
+    <value>                    Initiative Qへようこそ、支払いの近代化を目指すグローバルな取り組みです！</value>
   </data>
   <data name="home.what" xml:space="preserve">
-    <value>                        Do you know what makes this great reward possible?</value>
+    <value>                        この素晴らしい報酬が可能になる理由をご存知ですか？</value>
   </data>
   <data name="home.what_is_based_on" xml:space="preserve">
-    <value>            (What is this estimate based on?)</value>
+    <value>            (この見積もりの根拠は何ですか？)</value>
   </data>
   <data name="home.what_is_based_on_alt" xml:space="preserve">
-    <value>        (What is this estimate based on?)</value>
+    <value>        (この見積もりの根拠は何ですか？)</value>
   </data>
   <data name="home.win.h2" xml:space="preserve">
-    <value>                        Join now</value>
+    <value>                        今すぐ参加</value>
   </data>
   <data name="home.win.win_1_h4" xml:space="preserve">
-    <value>                Free</value>
+    <value>                無料</value>
   </data>
   <data name="home.win.win_1_txt" xml:space="preserve">
-    <value>                Just connect with your wallet, and your $LEMONs will be reserved.</value>
+    <value>                ウォレットを接続するだけで、あなたの$LEMONが予約されます。</value>
   </data>
   <data name="home.win.win_2_h4" xml:space="preserve">
-    <value>                Simple</value>
+    <value>                シンプル</value>
   </data>
   <data name="home.win.win_2_txt" xml:space="preserve">
-    <value>                All you need, for now, is to connect your wallet.</value>
+    <value>                今のところ必要なのは、ウォレットを接続することだけです。</value>
   </data>
   <data name="home.win.win_3_h4" xml:space="preserve">
-    <value>                Why not?</value>
+    <value>                なぜしないの？</value>
   </data>
   <data name="home.win.win_3_txt" xml:space="preserve">
-    <value>                Think of it as getting bitcoin many years ago.</value>
+    <value>                これは、多くの年前にビットコインを手に入れたようなものだと考えてみてください。</value>
   </data>
   <data name="home.yes_1" xml:space="preserve">
-    <value>                        Yes.</value>
+    <value>                        はい。</value>
   </data>
   <data name="home.yes_2" xml:space="preserve">
-    <value>                        Sign me up!</value>
+    <value>                        登録してください！</value>
   </data>
   <data name="slide.tweet_text_1" xml:space="preserve">
-    <value>                This is an example of Tweet number 1</value>
+    <value>                これはツイートの例1です</value>
   </data>
   <data name="slide.tweet_text_2" xml:space="preserve">
-    <value>                This is an example of Tweet number 2</value>
+    <value>                これはツイートの例2です</value>
   </data>
   <data name="tokenization.article_p" xml:space="preserve">
-    <value>            A medium lemon can produce approximately 30-45 ml of juice.</value>
+    <value>            中サイズのレモンは約30〜45mlのジュースを生成できます。</value>
   </data>
   <data name="tokenization.li_span_p_1" xml:space="preserve">
-    <value>        50% of the token supply will be distributed among all presale participants. Of these tokens, 50% (25% of the total - 11,250,000,000) will be made available in the reservation phase. The other 50% (25% of the total - 11,250,000,000) will be made available in the public presale, with no prior qualifications required. Distribution will be based on a snapshot of funds sent and carried out through an airdrop. Presale participants with reserved tokens will receive a proportional share in the distribution, in addition to the amount of tokens effectively reserved.</value>
+    <value>        トークン供給の50％は、すべてのプレセール参加者に分配されます。これらのトークンのうち、50％（総量の25％ - 11,250,000,000）は予約フェーズで利用可能になります。残りの50％（総量の25％ - 11,250,000,000）は、公開プレセールで提供され、事前の資格は必要ありません。分配は、送金された資金のスナップショットに基づいて行われ、エアドロップを通じて実施されます。予約されたトークンを持つプレセール参加者は、実際に予約されたトークンの量に加えて、分配において比例するシェアを受け取ります。</value>
   </data>
   <data name="tokenization.li_span_p_2" xml:space="preserve">
-    <value>        40% of the token supply will be allocated to initial liquidity, which will be distributed proportionately based on participation in the SundaeSwap and Minswap networks. Liquidity Provider (LP) tokens will be stored in a multisig wallet for added security.</value>
+    <value>        トークン供給の40％は、初期流動性に割り当てられ、SundaeSwapおよびMinswapネットワークへの参加割合に応じて分配されます。流動性提供者（LP）トークンは、セキュリティを強化するためにマルチシグウォレットに保管されます。</value>
   </data>
   <data name="tokenization.li_span_p_3" xml:space="preserve">
-    <value>        6% of the token supply will be used for marketing promotions, community airdrops, events, and incentives to promote $LEMON.</value>
+    <value>        トークン供給の6％は、マーケティングプロモーション、コミュニティエアドロップ、イベント、および$LEMONのプロモーションのためのインセンティブに使用されます。</value>
   </data>
   <data name="tokenization.li_span_p_4" xml:space="preserve">
-    <value>        3% of the token supply is reserved for exchange listings and expansion opportunities.</value>
+    <value>        トークン供給の3％は、取引所への上場および拡大の機会のために予約されています。</value>
   </data>
   <data name="tokenization.li_span_p_5" xml:space="preserve">
-    <value>        1% will be distributed in the first weeks during meme battles we will organize among our brothers.</value>
+    <value>        トークン供給の1％は、兄弟たちの間で行われるミームバトルの最初の数週間に分配されます。</value>
   </data>
   <data name="tokenization.li_span_title_1" xml:space="preserve">
-    <value>    50% (22,500,000,000) - Presale Holders:</value>
+    <value>    50％ (22,500,000,000) - プレセールホルダー:</value>
   </data>
   <data name="tokenization.li_span_title_2" xml:space="preserve">
-    <value>    40% - Initial Liquidity:</value>
+    <value>    40％ - 初期流動性:</value>
   </data>
   <data name="tokenization.li_span_title_3" xml:space="preserve">
-    <value>    6% - Marketing:</value>
+    <value>    6％ - マーケティング:</value>
   </data>
   <data name="tokenization.li_span_title_4" xml:space="preserve">
-    <value>    3% - Reserve:</value>
+    <value>    3％ - 予約:</value>
   </data>
   <data name="tokenization.li_span_title_5" xml:space="preserve">
-    <value>    1% - Meme Battle:</value>
+    <value>    1％ - ミームバトル:</value>
   </data>
   <data name="tokenization.section_p_1" xml:space="preserve">
-    <value>        How is $LEMON</value>
+    <value>        $LEMONはどのように</value>
   </data>
   <data name="tokenization.section_p_2" xml:space="preserve">
-    <value>        distributed?</value>
+    <value>        分配されていますか？</value>
   </data>
 </root>

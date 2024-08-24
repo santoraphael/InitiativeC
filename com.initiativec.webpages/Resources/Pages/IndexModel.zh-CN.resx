@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="about.article" xml:space="preserve">
-    <value>                        About</value>
+    <value>                        关于</value>
   </data>
   <data name="about.article.article_p" xml:space="preserve">
-    <value>            Lehmon Brothers is an initiative created to be more than just a community; it was created to be a space where the boldest, most sour, and ready-to-challenge-the-status-quo lemons come together. Lehmon Brothers is where the lemons unite to fight an epic meme battle.</value>
+    <value>            Lehmon Brothers 是一个旨在超越普通社区的倡议；它的目的是成为一个聚集最勇敢、最酸涩、并且准备挑战现状的柠檬的空间。Lehmon Brothers 是柠檬们联合起来进行史诗般的表情包大战的地方。</value>
   </data>
   <data name="home.alert_message.text" xml:space="preserve">
-    <value>            We are updating the service and will be back soon. We appreciate your patience.</value>
+    <value>            我们正在更新服务，很快会回来。感谢您的耐心等待。</value>
   </data>
   <data name="home.based_link" xml:space="preserve">
-    <value>                    read why</value>
+    <value>                    阅读原因</value>
   </data>
   <data name="home.based_p_1" xml:space="preserve">
-    <value>You will be able to reserve a maximum amount of $LEMON. 10% will be reserved after registration, 40% after inviting 5 friends, and the rest for other tasks.</value>
+    <value>您将能够预留最多数量的 $LEMON。 10% 在注册后预留，40% 在邀请 5 位朋友后预留，剩下的用于其他任务。</value>
   </data>
   <data name="home.based_p_2" xml:space="preserve">
     <value>                    ).</value>
@@ -139,216 +139,216 @@
     <value>                    (</value>
   </data>
   <data name="home.based_p_4" xml:space="preserve">
-    <value>                    %) will be reserved after registration,</value>
+    <value>                    % 在注册后预留，</value>
   </data>
   <data name="home.based_p_5" xml:space="preserve">
-    <value>                    % after inviting</value>
+    <value>                    % 在邀请</value>
   </data>
   <data name="home.based_p_6" xml:space="preserve">
-    <value>                    friends, and the rest for future tasks.</value>
+    <value>                    朋友后预留，剩下的用于未来的任务。</value>
   </data>
   <data name="home.button.getinvited" xml:space="preserve">
-    <value>            Get invited</value>
+    <value>            获取邀请</value>
   </data>
   <data name="home.button.getinvited.link" xml:space="preserve">
-    <value>        &lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Get invited&lt;/span&gt;&lt;/a&gt;</value>
+    <value>        &lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;获取邀请&lt;/span&gt;&lt;/a&gt;</value>
   </data>
   <data name="home.h1" xml:space="preserve">
-    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;is&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;the&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;of&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt;</value>
+    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;是&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;Cardano 的&lt;/span&gt;&lt;/span&gt; &lt;span&gt;&lt;span&gt;表情包币&lt;/span&gt;&lt;/span&gt;</value>
   </data>
   <data name="home.h2" xml:space="preserve">
-    <value>                            Secure an estimated future value of</value>
+    <value>                            确保未来的估值</value>
   </data>
   <data name="home.h2Alt" xml:space="preserve">
-    <value>                        We all know that money only has value because of a common agreement. Initiative Q is a brilliant way to make everyone agree on a new currency.</value>
+    <value>                        我们都知道，货币之所以有价值，是因为共同的认可。Initiative Q 是一个让所有人同意使用新货币的绝妙方式。</value>
   </data>
   <data name="home.how_does_it_work" xml:space="preserve">
-    <value>            Learn more</value>
+    <value>            了解更多</value>
   </data>
   <data name="home.it_makes" xml:space="preserve">
-    <value>                    How to become part of Lehmon Brothers</value>
+    <value>                    如何加入 Lehmon Brothers</value>
   </data>
   <data name="home.join_2" xml:space="preserve">
-    <value>                        secure an estimated future value of</value>
+    <value>                        确保未来的估值</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>                    We need to find our other lemon brothers, and for that, we will reserve our token for all those who join.</value>
+    <value>                    我们需要找到其他柠檬兄弟，为此，我们将为所有加入的人预留我们的代币。</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
-    <value>                        No.</value>
+    <value>                        不。</value>
   </data>
   <data name="home.no_2" xml:space="preserve">
-    <value>                        Sounds too good to be true.</value>
+    <value>                        这听起来好得令人难以置信。</value>
   </data>
   <data name="home.only_requires" xml:space="preserve">
-    <value>                Only name, email, and password are required. No spam: you will only receive system updates.</value>
+    <value>                只需姓名、电子邮件和密码。没有垃圾邮件：您只会收到系统更新通知。</value>
   </data>
   <data name="home.paragraphs.concept_title" xml:space="preserve">
-    <value>    A simple, yet powerful concept</value>
+    <value>    简单而强大的概念</value>
   </data>
   <data name="home.paragraphs.what_is_title" xml:space="preserve">
-    <value>    A next-generation payment system</value>
+    <value>    新一代支付系统</value>
   </data>
   <data name="home.points.more" xml:space="preserve">
-    <value>                More</value>
+    <value>                更多</value>
   </data>
   <data name="home.points.point_1" xml:space="preserve">
-    <value>                Everyone wants to be part of Lehmon Brothers, but it’s not that easy; first, you need an invitation.</value>
+    <value>                每个人都想加入 Lehmon Brothers，但这并不容易；首先，您需要一个邀请。</value>
   </data>
   <data name="home.points.point_1_more_p_1" xml:space="preserve">
-    <value>    Each new brother in Lehmon Brothers has a certain amount of $LEMON Tokens that can be reserved exclusively for you, without spending anything to make the reservation. So, the sooner you join, the more $LEMON you can reserve.</value>
+    <value>    每个新的 Lehmon Brothers 成员都有一定数量的 $LEMON 代币可以专门为您预留，无需支付任何费用即可预留。因此，越早加入，您可以预留的 $LEMON 就越多。</value>
   </data>
   <data name="home.points.point_1_more_p_2_1" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_2" xml:space="preserve">
-    <value>                The invitation is made through a brother’s link; you access the link and connect your wallet.</value>
+    <value>                邀请通过一个兄弟的链接进行；您访问该链接并连接您的钱包。</value>
   </data>
   <data name="home.points.point_2_more_p_1" xml:space="preserve">
-    <value>    The brother who owns the invitation link just needs to approve your entry into Lehmon Brothers. Once you join, 10% of the total amount of your slot is already reserved for you, and with that, we build a truly strong community.</value>
+    <value>    兄弟只需批准您的加入 Lehmon Brothers 请求。一旦您加入，总金额的 10% 就已为您预留，从而我们可以建立一个真正强大的社区。</value>
   </data>
   <data name="home.points.point_3" xml:space="preserve">
-    <value>                Once you become a brother, you will also have an invitation link.</value>
+    <value>                一旦您成为兄弟，您也将拥有一个邀请链接。</value>
   </data>
   <data name="home.points.point_3_more_p_1" xml:space="preserve">
-    <value>    Upon joining, you get an invitation link to invite new brothers. You can approve up to 5 new brothers, so choose wisely who to invite. By approving new brothers, you secure more $LEMON in reserve for yourself.</value>
+    <value>    加入后，您将获得一个邀请链接以邀请新兄弟。您最多可以批准 5 位新兄弟，因此请明智地选择邀请对象。通过批准新兄弟，您为自己预留了更多的 $LEMON。</value>
   </data>
   <data name="home.points.point_3_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_4" xml:space="preserve">
-    <value>                The invitation period will last for a very, very limited time.</value>
+    <value>                邀请期将持续非常非常有限的时间。</value>
   </data>
   <data name="home.points.point_4_more_p_1" xml:space="preserve">
-    <value>    It will not be possible to reserve $LEMON after this period, so you need to join soon. After the invitation period, a new phase will begin: the fair distribution of $LEMON.</value>
+    <value>    在此期间之后，将无法预留 $LEMON，因此您需要尽早加入。邀请期结束后，将开始新阶段：公平分配 $LEMON。</value>
   </data>
   <data name="home.points.point_5" xml:space="preserve">
-    <value>                The fair distribution of $LEMON will ensure that the largest amount of tokens is already distributed at launch.</value>
+    <value>                公平分配 $LEMON 将确保在发布时已分发最大数量的代币。</value>
   </data>
   <data name="home.points.point_5_more_p_1" xml:space="preserve">
-    <value>    The distribution phase will be the moment when a collection will be made, with a minimum value of 20 ADA and no maximum limit. This phase is open, and anyone can participate. The percentage relative to the total ADA sent to the collection wallet will be the percentage of $LEMON corresponding to this phase that you will receive. Brothers who have already reserved $LEMON and participated in the collection will receive the amount relative to their participation in the contribution pool, plus the tokens reserved in the reservation phase.</value>
+    <value>    分配阶段将是进行筹集的时刻，最低金额为 20 ADA，没有上限。此阶段是开放的，任何人都可以参与。相对于发送到筹集钱包的 ADA 总量的百分比将是您在此阶段获得的 $LEMON 的百分比。已预留 $LEMON 并参与筹集的兄弟将根据他们在贡献池中的参与量以及预留阶段预留的代币数量获得相应的数量。</value>
   </data>
   <data name="home.points.point_5_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_6" xml:space="preserve">
-    <value>                100% of the total ADA collected (minus fees) will go to the liquidity pool.</value>
+    <value>                收集的 ADA 总量的 100%（扣除费用）将进入流动性池。</value>
   </data>
   <data name="home.points.point_6_more_p_1" xml:space="preserve">
-    <value>    After the collection phase, we will distribute liquidity pools across the 3 main DEXs on Cardano, proportionate to the DEX’s participation in the network.</value>
+    <value>    在筹集阶段之后，我们将在 Cardano 上的 3 个主要 DEXs 之间按网络中的 DEX 参与度分配流动性池。</value>
   </data>
   <data name="home.points.point_6_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_7" xml:space="preserve">
-    <value>                Now the fun begins... We will build many things to make our community big, strong, and the largest non-animal memecoin in the world.</value>
+    <value>                现在开始有趣了... 我们将建设许多东西，使我们的社区变得庞大、强大，并成为世界上最大的非动物表情包币。</value>
   </data>
   <data name="home.points.point_7_more_p_1" xml:space="preserve">
-    <value>    Lehmon Brothers, with its $LEMON, is more than just a memecoin project; it’s a cultural revolution. Currently, memes on the networks look like a zoo. New things will come to greatly foster the community and make $LEMON yield good lemonades.</value>
+    <value>    Lehmon Brothers 及其 $LEMON 不仅仅是一个表情包币项目；这是一次文化变革。目前，网络上的表情包看起来像一个动物园。新事物将会到来，大大推动社区发展，使 $LEMON 产出优质柠檬水。</value>
   </data>
   <data name="home.point_more" xml:space="preserve">
-    <value>                    Learn more</value>
+    <value>                    了解更多</value>
   </data>
   <data name="home.possible" xml:space="preserve">
-    <value>                    Learn more</value>
+    <value>                    了解更多</value>
   </data>
   <data name="home.press.h3" xml:space="preserve">
-    <value>                    In the press:</value>
+    <value>                    在媒体上：</value>
   </data>
   <data name="home.press.quote_1" xml:space="preserve">
-    <value>                “Challenging Visa through a global currency for the future”</value>
+    <value>                “通过全球货币挑战 Visa 的未来”</value>
   </data>
   <data name="home.press.read" xml:space="preserve">
-    <value>                    Read article</value>
+    <value>                    阅读文章</value>
   </data>
   <data name="home.secure" xml:space="preserve">
-    <value>                        Maximum estimated amount of $LEMON for the next member:</value>
+    <value>                        下一位成员的最大估计 $LEMON 数量：</value>
   </data>
   <data name="home.vid_captions" xml:space="preserve">
-    <value>                Subtitled in Portuguese</value>
+    <value>                葡萄牙语字幕</value>
   </data>
   <data name="home.welcome" xml:space="preserve">
-    <value>                    Welcome to Initiative Q, a global effort to modernize payments!</value>
+    <value>                    欢迎来到 Initiative Q，这是一个全球性的支付现代化努力！</value>
   </data>
   <data name="home.what" xml:space="preserve">
-    <value>                        Do you know what makes this great reward possible?</value>
+    <value>                        您知道是什么让这一巨大回报成为可能吗？</value>
   </data>
   <data name="home.what_is_based_on" xml:space="preserve">
-    <value>            (What is this estimate based on?)</value>
+    <value>            （这一估计基于什么？）</value>
   </data>
   <data name="home.what_is_based_on_alt" xml:space="preserve">
-    <value>        (What is this estimate based on?)</value>
+    <value>        （这一估计基于什么？）</value>
   </data>
   <data name="home.win.h2" xml:space="preserve">
-    <value>                        Join now</value>
+    <value>                        立即加入</value>
   </data>
   <data name="home.win.win_1_h4" xml:space="preserve">
-    <value>                Free</value>
+    <value>                免费</value>
   </data>
   <data name="home.win.win_1_txt" xml:space="preserve">
-    <value>                Just connect with your wallet, and your $LEMONs will be reserved.</value>
+    <value>                只需连接您的钱包，您的 $LEMONs 就会被预留。</value>
   </data>
   <data name="home.win.win_2_h4" xml:space="preserve">
-    <value>                Simple</value>
+    <value>                简单</value>
   </data>
   <data name="home.win.win_2_txt" xml:space="preserve">
-    <value>                All you need, for now, is to connect your wallet.</value>
+    <value>                目前，您所需的只是连接您的钱包。</value>
   </data>
   <data name="home.win.win_3_h4" xml:space="preserve">
-    <value>                Why not?</value>
+    <value>                为什么不？</value>
   </data>
   <data name="home.win.win_3_txt" xml:space="preserve">
-    <value>                Think of it as getting bitcoin many years ago.</value>
+    <value>                想想这就像是很多年前获取比特币一样。</value>
   </data>
   <data name="home.yes_1" xml:space="preserve">
-    <value>                        Yes.</value>
+    <value>                        是的。</value>
   </data>
   <data name="home.yes_2" xml:space="preserve">
-    <value>                        Sign me up!</value>
+    <value>                        注册我吧！</value>
   </data>
   <data name="slide.tweet_text_1" xml:space="preserve">
-    <value>                This is an example of Tweet number 1</value>
+    <value>                这是推文示例 1</value>
   </data>
   <data name="slide.tweet_text_2" xml:space="preserve">
-    <value>                This is an example of Tweet number 2</value>
+    <value>                这是推文示例 2</value>
   </data>
   <data name="tokenization.article_p" xml:space="preserve">
-    <value>            A medium lemon can produce approximately 30-45 ml of juice.</value>
+    <value>            一个中等大小的柠檬可以产生大约 30-45 毫升的果汁。</value>
   </data>
   <data name="tokenization.li_span_p_1" xml:space="preserve">
-    <value>        50% of the token supply will be distributed among all presale participants. Of these tokens, 50% (25% of the total - 11,250,000,000) will be made available in the reservation phase. The other 50% (25% of the total - 11,250,000,000) will be made available in the public presale, with no prior qualifications required. Distribution will be based on a snapshot of funds sent and carried out through an airdrop. Presale participants with reserved tokens will receive a proportional share in the distribution, in addition to the amount of tokens effectively reserved.</value>
+    <value>        50% 的代币供应将分发给所有预售参与者。这些代币中的 50%（总量的 25% - 11,250,000,000）将在预留阶段提供。剩下的 50%（总量的 25% - 11,250,000,000）将在公开预售中提供，无需事先资格认证。分发将基于发送资金的快照并通过空投进行。预售中有预留代币的参与者将在分发中获得相应的份额，此外还将获得有效预留的代币数量。</value>
   </data>
   <data name="tokenization.li_span_p_2" xml:space="preserve">
-    <value>        40% of the token supply will be allocated to initial liquidity, which will be distributed proportionately based on participation in the SundaeSwap and Minswap networks. Liquidity Provider (LP) tokens will be stored in a multisig wallet for added security.</value>
+    <value>        40% 的代币供应将分配给初始流动性，并将按 SundaeSwap 和 Minswap 网络中的参与比例进行分配。流动性提供者 (LP) 代币将存储在多签名钱包中以提高安全性。</value>
   </data>
   <data name="tokenization.li_span_p_3" xml:space="preserve">
-    <value>        6% of the token supply will be used for marketing promotions, community airdrops, events, and incentives to promote $LEMON.</value>
+    <value>        6% 的代币供应将用于营销推广、社区空投、活动和激励措施以推广 $LEMON。</value>
   </data>
   <data name="tokenization.li_span_p_4" xml:space="preserve">
-    <value>        3% of the token supply is reserved for exchange listings and expansion opportunities.</value>
+    <value>        3% 的代币供应预留给交易所上市和扩展机会。</value>
   </data>
   <data name="tokenization.li_span_p_5" xml:space="preserve">
-    <value>        1% will be distributed in the first weeks during meme battles we will organize among our brothers.</value>
+    <value>        1% 将在我们组织的柠檬兄弟之间的表情包大战的头几周内分发。</value>
   </data>
   <data name="tokenization.li_span_title_1" xml:space="preserve">
-    <value>    50% (22,500,000,000) - Presale Holders:</value>
+    <value>    50% (22,500,000,000) - 预售持有者：</value>
   </data>
   <data name="tokenization.li_span_title_2" xml:space="preserve">
-    <value>    40% - Initial Liquidity:</value>
+    <value>    40% - 初始流动性：</value>
   </data>
   <data name="tokenization.li_span_title_3" xml:space="preserve">
-    <value>    6% - Marketing:</value>
+    <value>    6% - 营销：</value>
   </data>
   <data name="tokenization.li_span_title_4" xml:space="preserve">
-    <value>    3% - Reserve:</value>
+    <value>    3% - 储备：</value>
   </data>
   <data name="tokenization.li_span_title_5" xml:space="preserve">
-    <value>    1% - Meme Battle:</value>
+    <value>    1% - 表情包大战：</value>
   </data>
   <data name="tokenization.section_p_1" xml:space="preserve">
-    <value>        How is $LEMON</value>
+    <value>        $LEMON 是如何</value>
   </data>
   <data name="tokenization.section_p_2" xml:space="preserve">
-    <value>        distributed?</value>
+    <value>        分发的？</value>
   </data>
 </root>
