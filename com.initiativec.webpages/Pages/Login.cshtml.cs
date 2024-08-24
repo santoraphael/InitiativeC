@@ -9,7 +9,7 @@ namespace com.initiativec.webpages.Pages
     public class LoginModel : PageModel
     {
         private readonly ApplicationDbContext _context;
-        
+        public _howtoContentModel HowToContentModel { get; set; }
 
         public LoginModel(ApplicationDbContext context)
         {
@@ -20,7 +20,8 @@ namespace com.initiativec.webpages.Pages
 
         public async Task OnGetAsync()
         {
-            Users = await _context.Users.ToListAsync();
+            HowToContentModel = new _howtoContentModel();
+            //Users = await _context.Users.ToListAsync();
         }
     }
 }

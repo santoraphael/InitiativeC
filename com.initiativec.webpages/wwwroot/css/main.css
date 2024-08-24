@@ -304,10 +304,10 @@
 }
 
 .Button.Button-primary {
-	background: -webkit-linear-gradient(30degdeg, #18f2b2, #18f2b2);
-	background: -webkit-linear-gradient(240deg, #18f2b2, #18f2b2);
-	background: -o-linear-gradient(240deg, #18f2b2 0, #18f2b2 100%);
-	background: linear-gradient(210degdeg, #18f2b2, #18f2b2);
+	background: -webkit-linear-gradient(30degdeg, #e8e000, #e8e000);
+	background: -webkit-linear-gradient(240deg, #e8e000, #e8e000);
+	background: -o-linear-gradient(240deg, #e8e000 0, #e8e000 100%);
+	background: linear-gradient(210degdeg, #e8e000, #e8e000);
 	position: relative
 }
 
@@ -329,10 +329,10 @@
 		-webkit-transition: opacity .5s;
 		-o-transition: opacity .5s;
 		transition: opacity .5s;
-		background: -webkit-linear-gradient(30degdeg, #18deb2, #18deb2);
-		background: -webkit-linear-gradient(240deg, #18deb2, #18deb2);
-		background: -o-linear-gradient(240deg, #18deb2 0, #18deb2 100%);
-		background: linear-gradient(210degdeg, #18deb2, #18deb2)
+		background: -webkit-linear-gradient(30degdeg, #e8e000, #e8e000);
+		background: -webkit-linear-gradient(240deg, #e8e000, #e8e000);
+		background: -o-linear-gradient(240deg, #e8e000 0, #e8e000 100%);
+		background: linear-gradient(210degdeg, #e8e000, #e8e000)
 	}
 
 .Button.Button-primary:hover:before {
@@ -15968,7 +15968,8 @@ ul li:before {
 
 @font-face {
 	font-family: Modak;
-	src: url("../fonts/Modak-Regular") format("truetype");
+	/*src: url("../fonts/Modak-Regular") format("truetype");*/
+	src: url("../fonts/Modak-Regular.woff2") format("woff2"), url("../fonts/Modak-Regular.ttf") format("truetype"), url("../media/Modak-Regular.svg#telugu_mnregular") format("svg");
 	font-weight: normal;
 	font-style: normal
 }
