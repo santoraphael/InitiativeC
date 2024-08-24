@@ -57,6 +57,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ArquivosUteis\" />
     <Folder Include="wwwroot\componets\slick\" />
   </ItemGroup>
 

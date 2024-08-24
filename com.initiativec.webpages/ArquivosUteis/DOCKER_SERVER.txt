@@ -1,0 +1,313 @@
+DOCKER COMPOSE
+docker stop $(docker ps -a -q) //PARA TODOS OS CONTAINERS
+docker rm $(docker ps -a -q)  //REMOVE TODOS OS CONTAINERS
+docker system prune -a  // EXCLUI TUDO QUE NAO TA SENDO USADO IMAGENS E CONTAINERS
+docker volume prune -a
+
+ERRO DE PERMISAO NO DOCKER
+sudo aa-remove-unknown
+
+
+//NA PASTA DO PROJETO
+docker-compose build
+docker-compose push
+
+docker-compose pull
+
+docker-compose down
+docker-compose up -d
+docker container ls -a
+docker-compose pull && docker-compose down && docker-compose up -d && docker container ls -a
+
+sudo ./init-letsencrypt.sh
+
+docker-compose up --scale hypercube_application=2 -d
+
+docker inspect 3ab83cab2056 | grep -w "IPAddress" | awk '{ print $2 }' | head -n 1 | cut -d "," -f1
+
+
+
+apt update && apt upgrade
+apt install sudo
+sudo apt-get install nano
+sudo apt-get install vim
+
+scp docker-compose.yml root@85.31.234.221:/root/CONF_SERVER_FILES
+scp nginx.conf root@85.31.234.221:/root/CONF_SERVER_FILES
+
+MAINNET
+
+scp app.conf root@193.203.165.26:/root/CONF_SERVER_FILES/data/nginx/
+
+scp docker-compose.yml root@193.203.165.26:/root/CONF_SERVER_FILES
+scp nginx.conf root@193.203.165.26:/root/CONF_SERVER_FILES
+
+
+
+
+scp docker-compose.yml root@149.100.154.209:/root/CONF_SERVER_FILES
+-----------------------------
+
+CERTIFICADO
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d testnet.hypercubedex.com
+
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ -d testnet.hypercubedex.com
+
+
+
+
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d app.hypercubedex.com
+
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ -d app.hypercubedex.com
+
+
+
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d keycloak.hypercubedex.com
+
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ -d 85.31.234.221
+
+
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d 85.31.234.221
+
+
+docker-compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ -d admin.hypercubedex.com
+
+
+
+docker compose run --rm certbot renew
+
+sudo docker compose run --rm certbot renew
+
+-----------------------------
+
+
+LIBERANDO PORTA DO SERVIDOR
+firewall-cmd --permanent --add-port=5000/tcp
+firewall-cmd --reload
+
+
+CRIANDO UM REPOSITORIO DE IMAGENS DOCKER
+docker run -d -p 5000:5000 --restart=always --name repositorio registry
+
+
+ERRO AO CONECTAR SSH
+ssh-keygen -R 85.31.234.221
+ssh-keygen -R 193.203.165.26
+ssh-keygen -R 149.100.154.209
+
+ssh-keygen -t rsa -f C:\Users\rapha\.ssh\gcloud-ssh-vm -C ti@dracards.com
+
+
+
+
+docker ps (lista os conteiners rodando)
+
+//E esse comando garantirá que todos os contêineres em execução no momento sejam reiniciados, a menos que sejam interrompidos.
+docker update --restart unless-stopped $(docker ps -q)
+
+docker exec -it nginx bash
+apt-get update
+apt-get install iputils-ping
+
+
+-----------------------------------
+
+- MONGODB
+
+docker run -d -p 27017:27017 --name mongodb -v ~/mongodbdata:/data/db mongo mongod
+
+docker run -d -p 27017:27017 --name mongodb -v ~/mongodbdata:/data/db mongo mongod --auth
+
+
+docker-compose exec mongodb /bin/sh
+
+
+docker exec -it nginx bash
+
+
+docker exec -it mongodb bash
+
+mongosh -u root -p M@sterk3y --authenticationDatabase admin
+
+use admin
+
+db.getUsers()
+
+
+db.createUser(
+  {
+    user: "root",
+    pwd: "M@sterk3y",
+    roles: [
+      { role: "userAdminAnyDatabase", db: "admin" },
+      { role: "readWriteAnyDatabase", db: "admin" }
+    ]
+  }
+)
+
+
+use hypercubelabs
+db.createUser({
+    user: "Application",
+    pwd: "R330p908",
+    roles: [{ role: 'readWrite', db:'hypercubelabs'}]
+})
+
+
+use hypercubelabs
+db.createUser({
+    user: "Application",
+    pwd: "R330p908",
+    roles: [{ role: 'readWrite', db:'hypercubelabs'}]
+})
+
+db.getUser("Application",
+{
+    showCredentials: true,
+    showPrivileges: true,
+    showAuthenticationRestrictions: true
+})
+
+mongoose.createConnection(
+  "mongodb://localhost:27017/admin",
+  {
+    "auth": {
+      "authSource": "admin"
+    },
+    "user": "root",
+    "pass": "M@sterk3y"
+  }
+);
+
+
+
+- POSTGRES
+
+docker volume create pgdata
+
+docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=R330p908l548e13s224 -v pgdata:/var/lib/postgresql/data postgres
+
+//RODAR COMANDO DENTRO DO COTAINER POSTGRES
+
+docker run --rm -it postgres bash
+
+-----------------------------------
+
+.NET SERVICES
+
+docker login
+docker network create hypercube_network
+
+docker network connect hypercube_network periodicbackgroundtask
+docker network connect hypercube_network hypercube_application
+
+
+- CRIAR IMAGEM (dentro da pasta do projeto .. para pegar a solution que está uma pasta acima)
+docker build --no-cache -f Dockerfile -t raphaelsanto/hypercube_application:latest ..
+
+docker build --no-cache -f Dockerfile -t raphaelsanto/hypercube_periodicbackgroundtask:latest ..
+
+docker build --no-cache -f Dockerfile -t raphaelsanto/hypercube_vault:latest ..
+
+
+docker build --no-cache -f Dockerfile -t raphaelsanto/dracards_game_server:latest .
+docker build --no-cache -f Dockerfile -t raphaelsanto/dracards_game_play:latest .
+
+
+
+
+docker build --no-cache -f Dockerfile -t raphaelsanto/dracards_front_game:test1 .
+docker push raphaelsanto/dracards_front_game:test1
+sudo docker run -d --name frontgame -p 80:80 --network dracards-h raphaelsanto/dracards_front_game:test1
+
+
+
+
+docker build --no-cache -f Dockerfile -t raphaelsanto/dracards_api_game:latest .
+docker push raphaelsanto/dracards_front_game:test1
+sudo docker run -d --name frontgame -p 80:80 --network dracards-h raphaelsanto/dracards_front_game:test1
+
+
+
+- ENVIAR A IMAGEM PARA O SERVIDOR
+docker push raphaelsanto/hypercube_application:latest
+
+docker push raphaelsanto/hypercube_periodicbackgroundtask:latest
+
+docker push raphaelsanto/hypercube_vault:latest
+
+
+docker push raphaelsanto/dracards_game_server:latest
+docker push raphaelsanto/dracards_game_play:latest
+
+
+docker push raphaelsanto/dracards_game_server:latest
+docker push raphaelsanto/dracards_game_play:latest
+
+
+
+docker run -d -p 5000:5000 raphaelsanto/dracards_game_server:latest
+docker run -d -p 3000:3000 raphaelsanto/dracards_game_play:latest
+
+
+
+docker run -d --name periodicbackgroundtask -p 32768:32768 raphaelsanto/hypercube_periodicbackgroundtask:latest
+
+
+
+- CRIAR CONTEINER (SUBIR APLICACAO)
+docker run -d --name hypercube_application -P -p 127.0.0.1:44379:44379 raphaelsanto/hypercube_application:latest
+
+docker run -d --name periodicbackgroundtask -p 32768:32768 raphaelsanto/hypercube_periodicbackgroundtask:latest
+
+
+
+
+
+docker network connect hypercube_network hypercube_application
+docker network connect hypercube_network periodicbackgroundtask
+docker network connect hypercube_network mongodb
+========================================
+
+sudo apt update
+sudo apt upgrade
+
+sh <(curl https://cyberpanel.net/install.sh || wget -O - https://cyberpanel.net/install.sh)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name testnet.hypercubedex.com;
+    server_tokens off;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://app.hypercubedex.com$request_uri;
+    }
+}
+
+
+
+ window.cardano[walletName].isEnabled();
+
+
+
