@@ -123,19 +123,25 @@
                         </svg>
                     </a>
                     <div class="menu">
-                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
-                        <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
+                        @* <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#about" ? "selected" : "")" href="/#about">@sharedLocalizer.Get("link.what_is")</a></div> *@
+                        @* <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
                             <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
                                 <span class="label">@sharedLocalizer.Get("learn_more")</span>
                                 <span type="bottom" class="Icon icon-bottom"></span>
                             </a>
-                        </div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
-                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div> *@
-                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div>  *@  
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
+                        </div> *@
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#about" ? "selected" : "")" href="/#about">@sharedLocalizer.Get("link.what_is")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#howtowork" ? "selected" : "")" href="/#howtowork">@sharedLocalizer.Get("link.howtowork")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#tokenomics" ? "selected" : "")" href="/#tokenomics">@sharedLocalizer.Get("link.tokenomics")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")"  href="/#getinvite">@sharedLocalizer.Get("link.getinvite")</a></div>
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
+
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div> *@
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div> *@
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div>  *@  
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div> *@
+                        
                     </div>
                     <div class="NavBar-mobile">
                         <div class="mobile-btn"><i></i><i></i><i></i></div>
@@ -187,17 +193,26 @@
                         </svg>
                     </a>
                     <div class="menu">
-                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#what">@sharedLocalizer.Get("what_is")</a></div>
+                        @* <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn" href="/#about">@sharedLocalizer.Get("what_is")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip" data-tooltipped="" aria-describedby="tippy-tooltip-1" data-original-title="undefined" style="display: inline;">
                             <a class="NavBar-link dropDown-link" aria-current="false" href="/knowledge">
                                 <span class="label">@sharedLocalizer.Get("learn_more")</span>
                                 <span type="bottom" class="Icon icon-bottom"></span>
                             </a>
                         </div>
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/timeline" ? "selected" : "")" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a></div> *@
                         @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/FAQ" ? "selected" : "")" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a></div>
+
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/about" ? "selected" : "")" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a></div> *@
-                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div>
+                        @* <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/sellers" ? "selected" : "")" aria-current="false" href="/sellers">@sharedLocalizer.Get("sellers")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div> *@
+                        @* <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
+                        <div class="NavBar-link-wrapper btn"><a href="#sign-up" class="Button Button-small Button-primary"><span class="label">@sharedLocalizer.Get("getinvited") </span></a></div> *@
+
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#about" ? "selected" : "")" href="/#about">@sharedLocalizer.Get("link.what_is")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#howtowork" ? "selected" : "")" href="/#howtowork">@sharedLocalizer.Get("link.howtowork")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#tokenomics" ? "selected" : "")" href="/#tokenomics">@sharedLocalizer.Get("link.tokenomics")</a></div>
+                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")" href="/#getinvite">@sharedLocalizer.Get("link.getinvite")</a></div>
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
                         <div class="NavBar-link-wrapper btn"><a href="#sign-up" class="Button Button-small Button-primary"><span class="label">@sharedLocalizer.Get("getinvited") </span></a></div>
@@ -289,22 +304,22 @@
                         </a>
                     </div>
                     <nav>
-                        <a class="ScrollToLink Footer-link" href="/#what">@sharedLocalizer.Get("what_is")</a>
-                        <a class="Footer-link" aria-current="false" href="/knowledge/economic-model">@sharedLocalizer.Get("model")</a>
-                        <a class="Footer-link" aria-current="false" href="/knowledge/payment-network">@sharedLocalizer.Get("future")</a>
+                        <a class="ScrollToLink Footer-link" href="/#what">@sharedLocalizer.Get("link.what_is")</a>
+                        <a class="Footer-link" aria-current="false" href="/knowledge/economic-model">@sharedLocalizer.Get("link.howtowork")</a>
+                        <a class="Footer-link" aria-current="false" href="/knowledge/payment-network">@sharedLocalizer.Get("link.tokenomics")</a>
                         <a class="Footer-link" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a>
                     </nav>
                     <nav>
-                        <a class="Footer-link" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a>
+                        @* <a class="Footer-link" aria-current="false" href="/timeline">@sharedLocalizer.Get("timeline")</a>
                         <a class="Footer-link" aria-current="false" href="/FAQ">@sharedLocalizer.Get("faq")</a>
-                        <a class="Footer-link" href="mailto:info@lehmoonbros.fun">@sharedLocalizer.Get("contact")</a>
-                        <a class="Footer-link" aria-current="false" href="/terms">@sharedLocalizer.Get("terms")</a>
-                        <a class="Footer-link" aria-current="false" href="/privacy">@sharedLocalizer.Get("privacy")</a>
+                        <a class="Footer-link" href="mailto:info@lehmonbros.fun">@sharedLocalizer.Get("contact")</a> *@
+                        <a class="Footer-link" aria-current="false" href="/#">@sharedLocalizer.Get("terms")</a>
+                        <a class="Footer-link" aria-current="false" href="/#">@sharedLocalizer.Get("privacy")</a>
                     </nav>
                     <nav>
-                        <a class="Footer-link" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a>
-                        <a class="Footer-link" href="https://facebook.com/lehmoonbros" target="_blank" rel="noopener noreferrer">@sharedLocalizer.Get("facebook")</a>
-                        <a class="Footer-link" href="https://twitter.com/lehmoonbros" target="_blank" rel="noopener noreferrer">@sharedLocalizer.Get("twitter")</a>
+                        @* <a class="Footer-link" aria-current="false" href="/about">@sharedLocalizer.Get("about")</a> *@
+                        <a class="Footer-link" href="https://facebook.com/lehmonbros" target="_blank" rel="noopener noreferrer">@sharedLocalizer.Get("facebook")</a>
+                        <a class="Footer-link" href="https://twitter.com/lehmonbros" target="_blank" rel="noopener noreferrer">@sharedLocalizer.Get("twitter")</a>
                         <div class="" data-tooltipped="" aria-describedby="tippy-tooltip-6" data-original-title="undefined" style="display: inline;">
                             <a class="Footer-link lang">@CultureInfo.CurrentCulture.NativeName</a>
                         </div>
@@ -377,10 +392,10 @@
                     </g>
                 </svg>
             </footer>
-            <div class="Cookie">
+            @* <div class="Cookie">
                 <p>@sharedLocalizer.Get("cookie.message")</p>
                 <div class="Button Button-small Button-white"><span class="label">@sharedLocalizer.Get("cookie.click")</span></div>
-            </div>
+            </div> *@
         </div>
     </div>
 

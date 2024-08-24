@@ -279,7 +279,7 @@
                     <span type="bottom" class="Icon icon-bottom"></span>
                 </a>
             </div>
-            <div class="VideoBtn play-video card" id="271407506">
+@*             <div class="VideoBtn play-video card" id="271407506">
                 <div class="bg-img"></div>
                 <svg class="play-vid" width="75px" height="75px" viewBox="0 0 75 75" version="1.1" stroke="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                     <g id="Group-11" transform="translate(-8.000000, -7.000000)">
@@ -289,15 +289,15 @@
                     </g>
                 </svg>
                 <h4 class="captions">@localizer["home.vid_captions"]</h4>
-            </div>
+            </div> *@
         </section>
-        <a class="ScrollToLink scrollBtn" aria-current="false" href="/#what">
+        @* <a class="ScrollToLink scrollBtn" aria-current="false" href="/#what">
             <span class="label">@localizer["home.how_does_it_work"]</span>
             <span type="bottom" class="Icon icon-bottom"></span>
-        </a>
+        </a> *@
     </article>
 
-    <section class="Twitts">
+    @* <section class="Twitts">
         <div class="slick-slider slick-initialized" dir="ltr">
             <div class="slick-list">
                 <div class="slick-track" >
@@ -361,9 +361,26 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> *@
 
-    <section id="what" class="column article-section path">
+    <article id="about" class="">
+        <article class="Hero">
+            <section>
+                <h1>@localizer["about.article"]</h1>
+                <div class="line-divider turquoise"></div>
+            </section>
+        </article>
+        <article class="column narrow">
+            <main id="Joining" class="article-section no-padding animateIn">
+                <p>@localizer["about.article.article_p"]</p>
+            </main>
+        </article>
+        <img alt="" class="about-divider" src="~/media/about-divider.43311034.svg">
+    </article>
+
+    <img class="divider big" src="~/media/divider-flipped.a6819e99.svg" alt="divider-flipped">
+
+    <section id="howtowork" class="column article-section path">
         <h2>@localizer["home.it_makes"]</h2>
         <div class="path-start"><i></i></div>
         <article class="list">
@@ -438,6 +455,79 @@
         </article>
     </section>
 
+    <img class="divider big" src="~/media/divider-flipped.a6819e99.svg" alt="divider-flipped">
+
+    <article id="tokenomics" class="Hero">
+        <section>
+            <h1 class="WordWrapper active">
+                <span><span>T</span><span>o</span><span>k</span><span>e</span><span>n</span><span>o</span><span>m</span><span>i</span><span>c</span><span>s</span></span>
+            </h1>
+            <div class="SvgAnimation">
+                <div>
+
+                    <img src="~/media/tokenomics.png" width="222px" height="222px" />
+
+                </div>
+            </div>
+            <h1 class="WordWrapper active">
+                <span>45,000,000,000</span>
+            </h1>
+            <p>@localizer["tokenization.article_p"]</p>
+        </section>
+    </article>
+
+    <section class="animateIn column article-section">
+
+        <article class="two-columns side-title">
+
+            <section>
+                <h2 class="bottom-closer">@localizer["tokenization.section_p_1"]<br> @localizer["tokenization.section_p_2"]</h2>
+                @* <div class="author">Em coautoria com <a href="https://web.archive.org/web/20181106174256/https://www.wikiwand.com/en/Lawrence_H._White" target="_blank" rel="noopener noreferrer" class="underlined">Prof. Lawrence H. White</a>, especialista em teoria monetária</div> *@
+            </section>
+            <div class="pole wide">
+                <ul>
+                    <li>
+                        <span>
+                            <img src="~/media/check_1.png" style="width: 25px;" /><b> @localizer["tokenization.li_span_title_1"]</b>
+                            @localizer["tokenization.li_span_p_1"]
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            <img src="~/media/check_2.png" style="width: 25px;" /><b> @localizer["tokenization.li_span_title_2"]</b>
+                            @localizer["tokenization.li_span_p_2"]
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            <img src="~/media/check_4.png" style="width: 25px;" /><b> @localizer["tokenization.li_span_title_3"]</b>
+                            @localizer["tokenization.li_span_p_3"]
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            <img src="~/media/check_5.png" style="width: 25px;" /><b> @localizer["tokenization.li_span_title_4"]</b>
+                            @localizer["tokenization.li_span_p_4"]
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>
+                            <img src="~/media/check_3.png" style="width: 25px;" /><b> @localizer["tokenization.li_span_title_5"]</b>
+                            @localizer["tokenization.li_span_p_5"]
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <img class="divider big" src="~/media/divider-flipped.a6819e99.svg" alt="divider-flipped">
+
     <section class="column article-section win">
         <h2>@localizer["home.win.h2"]</h2>
         <div class="blocks">
@@ -447,7 +537,7 @@
             </div>
             <div class="block card">
                 <h4>@localizer["home.win.win_2_h4"]</h4>
-                <span>@localizer["home.win.win_2_txt"]</span><img src="~/media/win-2.ce7b4760.svg" alt="win-2" class="win-2">
+                <span>@localizer["home.win.win_2_txt"]</span>
             </div>
             <div class="block card">
                 <h4>@localizer["home.win.win_3_h4"]</h4>
@@ -456,14 +546,14 @@
         </div>
     </section>
 
-    <img alt="" src="~/media/form-spacer.7488400a.svg" style="margin: 90px auto 0px; display: block;">
+    <img id="getinvite" alt="" src="~/media/form-spacer.7488400a.svg" style="margin: 90px auto 0px; display: block;">
 
     @await Html.PartialAsync("_howtoContent", Model.HowToContentModel)
 
-    <div class="alert-message card">
+    @* <div class="alert-message card">
         <h3>A Lehmoon Brothers está tendo um aumento repentino de cadastros e reservas de F.</h3>
         <p>Estamos atualizando o serviço e voltaremos em breve. Agradecemos sua paciência.</p>
-    </div>
+    </div> *@
 
 </div>
 
