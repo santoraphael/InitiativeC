@@ -131,16 +131,8 @@ $(document).ready(function () {
         });
 
 
-        document.getElementById('menuIcon').addEventListener('click', function () {
-            const menu = document.querySelector('.MobileMenu');
-            menu.classList.toggle('active');
-        });
-
 
     });
-
-
-
 
     $('.NavBar-link-wrapper.js-tooltip-language').on('click', function (e) {
         e.preventDefault();
@@ -158,8 +150,8 @@ $(document).ready(function () {
                 'visibility': 'visible',
                 'transition-duration': '350ms',
                 'position': 'absolute',
-                'top': (buttonOffset.top - 65) + 'px', // 5px abaixo do botão
-                //'left': buttonOffset.left + 'px',
+                'top': (buttonOffset.top + 35) + 'px', // 5px abaixo do botão
+                'left': (buttonOffset.left - 75) + 'px',
                 'will-change': 'transform'
             });
 
@@ -206,6 +198,36 @@ $(document).ready(function () {
     });
 
 
+    $('.mobile-btn').click(function () {
+        const menu = document.querySelector('.MobileMenu');
+        menu.classList.toggle('active');
+    });
+
+    $('.MobileMenu').click(function () {
+
+        const clickedElement = event.target.closest('.MobileMenu-link.mobile-js-tooltip-language');
+
+        if (clickedElement) {
+            // Se clicou no botão de linguagens, exibe ou esconde a tooltip
+            const tooltip = document.querySelector('.tippy-popper');
+            if (tooltip) {
+                // Alterna a visibilidade da tooltip
+                const isVisible = tooltip.style.visibility === 'visible';
+                tooltip.style.visibility = isVisible ? 'hidden' : 'visible';
+            }
+        } else {
+            // Se não clicou no botão de linguagens, faz o resto
+            const menu = document.querySelector('.MobileMenu');
+            menu.classList.toggle('active');
+        }
+    });
+
+    $('.LanguagesMenu-link').click(function () {
+        const menu = document.querySelector('.MobileMenu');
+        menu.classList.toggle('active');
+    });
+
+
 });
 
 
@@ -236,6 +258,8 @@ $(document).ready(function () {
         // Toggle do conteúdo correspondente ao botão clicado
         $(this).next('.more-content').slideToggle();
     });
+
+   
 });
 
 function setCulture(element) {

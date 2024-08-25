@@ -26,6 +26,10 @@
 	}
 }
 
+body {
+	background-color: #f9f6d2; /* Substitua #SEU_VALOR_DE_COR pela cor desejada */
+}
+
 .Logo {
 	cursor: pointer;
 	display: -ms-flexbox;
@@ -48,7 +52,7 @@
 
 @media only screen and (max-width:680px) {
 	.Logo .name {
-		width: 92px
+		width: 170px
 	}
 }
 
@@ -61,7 +65,7 @@
 
 @media only screen and (max-width:580px) {
 	.Logo .Q {
-		width: 26px
+		width: 50px
 	}
 }
 
@@ -11558,7 +11562,7 @@ only screen and (max-width:880px) {
 
 @media (min-height:780px) and (max-width:580px) {
 	.Home .Hero {
-		min-height: calc(100vh - 200px)
+		/*min-height: calc(100vh - 200px)*/
 	}
 }
 
