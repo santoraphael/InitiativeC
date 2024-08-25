@@ -17391,3 +17391,17 @@ body.touch [data-hint]:before {
 	border-radius: 50%;
 	padding: .9em .9em !important;
 }
+
+
+
+.MobileMenu {
+	display: none; /* O menu começa oculto */
+	transition: opacity 0.3s ease;
+	opacity: 0;
+}
+
+	/* Estilos para quando o menu estiver visível */
+	.MobileMenu.active {
+		display: block;
+		opacity: 1;
+	}

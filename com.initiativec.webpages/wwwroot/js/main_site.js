@@ -129,6 +129,14 @@ $(document).ready(function () {
                 $(document).off('click.hideTooltip'); // Remove o evento para evitar múltiplas ligações
             }
         });
+
+
+        document.getElementById('menuIcon').addEventListener('click', function () {
+            const menu = document.querySelector('.MobileMenu');
+            menu.classList.toggle('active');
+        });
+
+
     });
 
 
