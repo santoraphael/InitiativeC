@@ -42,7 +42,7 @@
     <meta name="description" content="@sharedLocalizer.Get("content.description")">
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-
+    <script src="~/daapconnector/Conn.js" type="module"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     @* <link href="~/componets/slick/slick-theme.css" rel="stylesheet" /> *@
     <title>@sharedLocalizer.Get("website.title_text")</title>
@@ -133,7 +133,7 @@
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#about" ? "selected" : "")" href="/#about">@sharedLocalizer.Get("link.what_is")</a></div>
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#howtowork" ? "selected" : "")" href="/#howtowork">@sharedLocalizer.Get("link.howtowork")</a></div>
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#tokenomics" ? "selected" : "")" href="/#tokenomics">@sharedLocalizer.Get("link.tokenomics")</a></div>
-                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")"  href="/#getinvite">@sharedLocalizer.Get("link.getinvite")</a></div>
+                        @* <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")" href="/#HowTo">@sharedLocalizer.Get("link.getinvite")</a></div> *@
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
 
@@ -212,10 +212,10 @@
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#about" ? "selected" : "")" href="/#about">@sharedLocalizer.Get("link.what_is")</a></div>
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#howtowork" ? "selected" : "")" href="/#howtowork">@sharedLocalizer.Get("link.howtowork")</a></div>
                         <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#tokenomics" ? "selected" : "")" href="/#tokenomics">@sharedLocalizer.Get("link.tokenomics")</a></div>
-                        <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")" href="/#getinvite">@sharedLocalizer.Get("link.getinvite")</a></div>
+                        @* <div class="NavBar-link-wrapper"><a class="ScrollToLink NavBar-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")" href="/#getinvite">@sharedLocalizer.Get("link.getinvite")</a></div> *@
                         <div class="NavBar-link-wrapper"><a class="NavBar-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a></div>
                         <div class="NavBar-link-wrapper js-tooltip-language" data-tooltipped="" aria-describedby="tippy-tooltip-2" data-original-title="undefined" style="display: inline;"><a class="NavBar-link lang"><span type="languages" class="Icon icon-languages"></span></a></div>
-                        <div class="NavBar-link-wrapper btn"><a href="#sign-up" class="Button Button-small Button-primary"><span class="label">@sharedLocalizer.Get("getinvited") </span></a></div>
+                        <div class="NavBar-link-wrapper btn"><a href="/#HowTo" class="Button Button-small Button-primary"><span class="label">@sharedLocalizer.Get("getinvited") </span></a></div>
                     </div>
                     <div class="NavBar-mobile">
                         <div class="mobile-btn"><i></i><i></i><i></i></div>
@@ -468,7 +468,7 @@
                         <a class="ScrollToLink MobileMenu-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#about" ? "selected" : "")" href="/#about">@sharedLocalizer.Get("link.what_is")</a>
                         <a class="ScrollToLink MobileMenu-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#howtowork" ? "selected" : "")" href="/#howtowork">@sharedLocalizer.Get("link.howtowork")</a>
                         <a class="ScrollToLink MobileMenu-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#tokenomics" ? "selected" : "")" href="/#tokenomics">@sharedLocalizer.Get("link.tokenomics")</a>
-                        <a class="ScrollToLink MobileMenu-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")" href="/#getinvite">@sharedLocalizer.Get("link.getinvite")</a>
+                        @* <a class="ScrollToLink MobileMenu-link whatBtn @(ViewContext.HttpContext.Request.Path == "/#getinvite" ? "selected" : "")" href="/#getinvite">@sharedLocalizer.Get("link.getinvite")</a> *@
                         <a class="MobileMenu-link @(ViewContext.HttpContext.Request.Path == "/login" ? "selected" : "")" aria-current="false" href="/login">@sharedLocalizer.Get("login")</a>
                         
                         <div class="MobileMenu-link mobile-js-tooltip-language">
