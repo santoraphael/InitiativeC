@@ -43,6 +43,15 @@
     <meta property="fb:app_id" content="202066333902240" />
     <meta name="description" content="@sharedLocalizer.Get("content.description")">
 
+
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/daapconnector/Conn.js" type="module"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
@@ -612,7 +621,214 @@
         </div>
     </div>
 
-    
+
+@* ====================== MENU WALLET ===============================*@
+
+    <div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <div class="modal-header" style="color: #000; margin-bottom: 0; line-height: 1.5;     font-size: 1.5rem;>
+                        <h4 class="modal-title" id="myLargeModalLabel">Connect wallet</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body" style="color: #000;>
+                        <ul class="list-group">
+
+                            <li id="js-connect-nami" class="list-group-item">
+                                <div class="flex w-full cursor-pointer items-center justify-between p-4 text-sm text-gray-900  dark:text-white  hover:bg-gray-100 dark:hover:bg-dark-700" style="padding-bottom: 0px !important;padding-top: 0px !important;">
+
+                                    <div class="flex flex-col text-left">
+                                        <div style="font-size: 20px;">Nami</div>
+                                    </div>
+                                    <div class="flex place-items-center space-x-4" style="float: right; margin-top: -25px;">
+                                        <div>
+                                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+                                                <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;">
+                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2730%27%20height=%2730%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
+                                                </span>
+                                                <img alt="Nami" src="~/daapconnector/html/wallets/nami.svg" decoding="async" data-nimg="intrinsic" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="app-nami-install-wallet" class="flex place-items-center space-x-4" style="opacity: 1; background-color: rgb(239 240 250); width: 132px; float: right; margin: -22px 37px 0px 0px; border-radius: 162px;">
+                                        <a class="" href="https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo" rel="noreferrer noopener" target="_blank">
+                                            <div style="margin-left: 10px;">
+                                                <svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="currentColor" fill-rule="nonzero"><g><g><path d="M3.69.003c.43 0 .779.348.779.778 0 .43-.349.777-.778.777H1.555v10.887h10.887v-2.222c0-.43.348-.778.777-.778.43 0 .778.348.778.778v3c0 .429-.348.777-.778.777H.778C.348 14 0 13.652 0 13.222V.781C0 .35.348.003.778.003zM13.223 0c.43 0 .778.348.778.778v6.22c0 .43-.348.778-.778.778-.43 0-.777-.348-.777-.778V2.655L4.44 10.659c-.152.152-.35.228-.55.228-.199 0-.398-.076-.55-.228-.303-.304-.303-.796 0-1.1l8.004-8.004H7.001c-.429 0-.777-.348-.777-.777C6.224.348 6.572 0 7 0z" transform="translate(-474 -415) translate(320 100) translate(154 315)"></path></g></g></g></g></svg>
+                                                Not installed
+                                            </div>
+
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li id="js-connect-eternl" class="list-group-item">
+                                <div class="flex w-full cursor-pointer items-center justify-between p-4 text-sm text-gray-900  dark:text-white  hover:bg-gray-100 dark:hover:bg-dark-700" style="padding-bottom: 0px !important;padding-top: 0px !important;">
+
+                                    <div class="flex flex-col text-left">
+                                        <div style="font-size: 20px;">Eternl</div>
+                                    </div>
+                                    <div class="flex place-items-center space-x-4" style="float: right; margin-top: -25px;">
+                                        <div>
+                                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+                                                <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;">
+                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2730%27%20height=%2730%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
+                                                </span>
+                                                <img alt="Eternl" src="~/daapconnector/html/wallets/eternl.svg" decoding="async" data-nimg="intrinsic" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="app-eternl-install-wallet" class="flex place-items-center space-x-4" style="opacity: 1; background-color: rgb(239 240 250); width: 132px; float: right; margin: -22px 37px 0px 0px; border-radius: 162px;">
+                                        <a class="" href="https://chrome.google.com/webstore/detail/eternl/kmhcihpebfmpgmihbkipmjlmmioameka" rel="noreferrer noopener" target="_blank">
+                                            <div style="margin-left: 10px;">
+                                                <svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="currentColor" fill-rule="nonzero"><g><g><path d="M3.69.003c.43 0 .779.348.779.778 0 .43-.349.777-.778.777H1.555v10.887h10.887v-2.222c0-.43.348-.778.777-.778.43 0 .778.348.778.778v3c0 .429-.348.777-.778.777H.778C.348 14 0 13.652 0 13.222V.781C0 .35.348.003.778.003zM13.223 0c.43 0 .778.348.778.778v6.22c0 .43-.348.778-.778.778-.43 0-.777-.348-.777-.778V2.655L4.44 10.659c-.152.152-.35.228-.55.228-.199 0-.398-.076-.55-.228-.303-.304-.303-.796 0-1.1l8.004-8.004H7.001c-.429 0-.777-.348-.777-.777C6.224.348 6.572 0 7 0z" transform="translate(-474 -415) translate(320 100) translate(154 315)"></path></g></g></g></g></svg>
+                                                Not installed
+                                            </div>
+
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li id="js-connect-typhon" class="list-group-item">
+                                <div class="flex w-full cursor-pointer items-center justify-between p-4 text-sm text-gray-900  dark:text-white  hover:bg-gray-100 dark:hover:bg-dark-700" style="padding-bottom: 0px !important;padding-top: 0px !important;">
+
+                                    <div class="flex flex-col text-left">
+                                        <div style="font-size: 20px;">Typhon</div>
+                                    </div>
+                                    <div class="flex place-items-center space-x-4" style="float: right; margin-top: -25px;">
+                                        <div>
+                                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+                                                <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;">
+                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2730%27%20height=%2730%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
+                                                </span>
+                                                <img alt="Typhon" src="~/daapconnector/html/wallets/typhon.svg" decoding="async" data-nimg="intrinsic" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="app-typhon-install-wallet" class="flex place-items-center space-x-4" style="opacity: 1; background-color: rgb(239 240 250); width: 132px; float: right; margin: -22px 37px 0px 0px; border-radius: 162px;">
+                                        <a class="" href="https://chrome.google.com/webstore/detail/typhon-wallet/kfdniefadaanbjodldohaedphafoffoh" rel="noreferrer noopener" target="_blank">
+                                            <div style="margin-left: 10px;">
+                                                <svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="currentColor" fill-rule="nonzero"><g><g><path d="M3.69.003c.43 0 .779.348.779.778 0 .43-.349.777-.778.777H1.555v10.887h10.887v-2.222c0-.43.348-.778.777-.778.43 0 .778.348.778.778v3c0 .429-.348.777-.778.777H.778C.348 14 0 13.652 0 13.222V.781C0 .35.348.003.778.003zM13.223 0c.43 0 .778.348.778.778v6.22c0 .43-.348.778-.778.778-.43 0-.777-.348-.777-.778V2.655L4.44 10.659c-.152.152-.35.228-.55.228-.199 0-.398-.076-.55-.228-.303-.304-.303-.796 0-1.1l8.004-8.004H7.001c-.429 0-.777-.348-.777-.777C6.224.348 6.572 0 7 0z" transform="translate(-474 -415) translate(320 100) translate(154 315)"></path></g></g></g></g></svg>
+                                                Not installed
+                                            </div>
+
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li id="js-connect-gerowallet" class="list-group-item">
+                                <div class="flex w-full cursor-pointer items-center justify-between p-4 text-sm text-gray-900  dark:text-white  hover:bg-gray-100 dark:hover:bg-dark-700" style="padding-bottom: 0px !important;padding-top: 0px !important;">
+
+                                    <div class="flex flex-col text-left">
+                                        <div style="font-size: 20px;">GeroWallet</div>
+                                    </div>
+                                    <div class="flex place-items-center space-x-4" style="float: right; margin-top: -25px;">
+                                        <div>
+                                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+                                                <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;">
+                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2730%27%20height=%2730%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
+                                                </span>
+                                                <img alt="Gero" src="~/daapconnector/html/wallets/gero.svg" decoding="async" data-nimg="intrinsic" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="app-gerowallet-install-wallet" class="flex place-items-center space-x-4" style="opacity: 1; background-color: rgb(239 240 250); width: 132px; float: right; margin: -22px 37px 0px 0px; border-radius: 162px;">
+                                        <a class="" href="https://chrome.google.com/webstore/detail/gerowallet/bgpipimickeadkjlklgciifhnalhdjhe" rel="noreferrer noopener" target="_blank">
+                                            <div style="margin-left: 10px;">
+                                                <svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="currentColor" fill-rule="nonzero"><g><g><path d="M3.69.003c.43 0 .779.348.779.778 0 .43-.349.777-.778.777H1.555v10.887h10.887v-2.222c0-.43.348-.778.777-.778.43 0 .778.348.778.778v3c0 .429-.348.777-.778.777H.778C.348 14 0 13.652 0 13.222V.781C0 .35.348.003.778.003zM13.223 0c.43 0 .778.348.778.778v6.22c0 .43-.348.778-.778.778-.43 0-.777-.348-.777-.778V2.655L4.44 10.659c-.152.152-.35.228-.55.228-.199 0-.398-.076-.55-.228-.303-.304-.303-.796 0-1.1l8.004-8.004H7.001c-.429 0-.777-.348-.777-.777C6.224.348 6.572 0 7 0z" transform="translate(-474 -415) translate(320 100) translate(154 315)"></path></g></g></g></g></svg>
+                                                Not installed
+                                            </div>
+
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li id="js-connect-flint" class="list-group-item">
+                                <div class="flex w-full cursor-pointer items-center justify-between p-4 text-sm text-gray-900  dark:text-white  hover:bg-gray-100 dark:hover:bg-dark-700" style="padding-bottom: 0px !important;padding-top: 0px !important;">
+
+                                    <div class="flex flex-col text-left">
+                                        <div style="font-size: 20px;">Flint</div>
+                                    </div>
+                                    <div class="flex place-items-center space-x-4" style="float: right; margin-top: -25px;">
+                                        <div>
+                                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+                                                <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;">
+                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2730%27%20height=%2730%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
+                                                </span>
+                                                <img alt="Flint" src="~/daapconnector/html/wallets/flint.svg" decoding="async" data-nimg="intrinsic" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="app-flint-install-wallet" class="flex place-items-center space-x-4" style="opacity: 1; background-color: rgb(239 240 250); width: 132px; float: right; margin: -22px 37px 0px 0px; border-radius: 162px;">
+                                        <a class="" href="https://chrome.google.com/webstore/detail/flint-wallet/hnhobjmcibchnmglfbldbfabcgaknlkj" rel="noreferrer noopener" target="_blank">
+                                            <div style="margin-left: 10px;">
+                                                <svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="currentColor" fill-rule="nonzero"><g><g><path d="M3.69.003c.43 0 .779.348.779.778 0 .43-.349.777-.778.777H1.555v10.887h10.887v-2.222c0-.43.348-.778.777-.778.43 0 .778.348.778.778v3c0 .429-.348.777-.778.777H.778C.348 14 0 13.652 0 13.222V.781C0 .35.348.003.778.003zM13.223 0c.43 0 .778.348.778.778v6.22c0 .43-.348.778-.778.778-.43 0-.777-.348-.777-.778V2.655L4.44 10.659c-.152.152-.35.228-.55.228-.199 0-.398-.076-.55-.228-.303-.304-.303-.796 0-1.1l8.004-8.004H7.001c-.429 0-.777-.348-.777-.777C6.224.348 6.572 0 7 0z" transform="translate(-474 -415) translate(320 100) translate(154 315)"></path></g></g></g></g></svg>
+                                                Not installed
+                                            </div>
+
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="color: #000;">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myLargeModalLabel" style="color: #000;">Disconnect Wallet</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li id="js-disconnect-wallet" class="list-group-item">
+                                <div class="flex w-full cursor-pointer items-center justify-between p-4 text-sm text-gray-900  dark:text-white  hover:bg-gray-100 dark:hover:bg-dark-700" style="padding-bottom: 0px !important;padding-top: 0px !important;">
+
+                                    <div class="flex flex-col text-left">
+                                        <div style="font-size: 20px;">Disconnect</div>
+                                    </div>
+                                    <div class="flex place-items-center space-x-4" style="float: right; margin-top: -25px;">
+                                        <div>
+                                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+                                                <span style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;">
+                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2730%27%20height=%2730%27/%3e" style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;">
+                                                </span>
+                                                <svg style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;" fill="none" height="16" viewBox="0 0 18 16" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M13.1667 11.3333L16.5 7.99992M16.5 7.99992L13.1667 4.66658M16.5 7.99992L4.83333 7.99992M9.83333 11.3333V12.1666C9.83333 13.5473 8.71405 14.6666 7.33333 14.6666H4C2.61929 14.6666 1.5 13.5473 1.5 12.1666V3.83325C1.5 2.45254 2.61929 1.33325 4 1.33325H7.33333C8.71405 1.33325 9.83333 2.45254 9.83333 3.83325V4.66658" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
