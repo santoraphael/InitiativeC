@@ -265,6 +265,14 @@ $(document).ready(function () {
 function setCulture(element) {
     var culture = element.getAttribute('data-culture');
 
+    var links = document.querySelectorAll('.LanguagesMenu-link');
+    links.forEach(function (link) {
+        link.classList.remove('active');
+    });
+
+    element.classList.add('active');
+
+
     fetch('/SetCulture', {
         method: 'POST',
         headers: {
