@@ -1,3 +1,5 @@
+using com.cardano;
+using com.database;
 using com.initiativec.webpages;
 using com.initiativec.webpages.Database;
 using com.initiativec.webpages.Services;
@@ -14,7 +16,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.Configure<RequestLocalizationOptions>(
     options =>
@@ -29,6 +31,8 @@ builder.Services.Configure<RequestLocalizationOptions>(
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<SharedResourceService>();
+
+builder.Services.AddSingleton<BlockfrostService>();
 
 var app = builder.Build();
 app.UseMiddleware<CultureMiddleware>();

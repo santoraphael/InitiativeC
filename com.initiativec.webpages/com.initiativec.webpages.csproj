@@ -66,4 +66,9 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.18" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\com.cardano\com.cardano.csproj" />
+    <ProjectReference Include="..\com.database\com.database.csproj" />
+  </ItemGroup>
+
 </Project>

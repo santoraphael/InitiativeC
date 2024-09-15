@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.initiativec.webpages", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.database", "com.database\com.database.csproj", "{0D155B0C-30EA-40F8-B21F-959C8238779B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.cardano", "com.cardano\com.cardano.csproj", "{FF218EA8-77E9-4D3B-B43C-C7A1338B9D29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0D155B0C-30EA-40F8-B21F-959C8238779B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D155B0C-30EA-40F8-B21F-959C8238779B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D155B0C-30EA-40F8-B21F-959C8238779B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF218EA8-77E9-4D3B-B43C-C7A1338B9D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF218EA8-77E9-4D3B-B43C-C7A1338B9D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF218EA8-77E9-4D3B-B43C-C7A1338B9D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF218EA8-77E9-4D3B-B43C-C7A1338B9D29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
