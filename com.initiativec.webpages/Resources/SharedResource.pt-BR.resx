@@ -183,6 +183,9 @@
   <data name="learn_more" xml:space="preserve">
     <value>Saiba mais</value>
   </data>
+  <data name="link.dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
   <data name="link.getinvite" xml:space="preserve">
     <value>Pegue um convite</value>
   </data>

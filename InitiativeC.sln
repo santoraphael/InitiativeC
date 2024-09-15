@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.initiativec.webpages", "com.initiativec.webpages\com.initiativec.webpages.csproj", "{3BE167B7-908B-4A0B-8851-42E828A7E3BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.database", "com.database\com.database.csproj", "{0D155B0C-30EA-40F8-B21F-959C8238779B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3BE167B7-908B-4A0B-8851-42E828A7E3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BE167B7-908B-4A0B-8851-42E828A7E3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BE167B7-908B-4A0B-8851-42E828A7E3BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D155B0C-30EA-40F8-B21F-959C8238779B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D155B0C-30EA-40F8-B21F-959C8238779B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D155B0C-30EA-40F8-B21F-959C8238779B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D155B0C-30EA-40F8-B21F-959C8238779B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

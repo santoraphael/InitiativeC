@@ -124,7 +124,7 @@ var protocolParams = {
 async function run() {
 
     State.whichWalletSelected = await getWalletKey();
-    console.log(State.whichWalletSelected);
+    //console.log(State.whichWalletSelected);
     
     if (State.whichWalletSelected == null) {
         prepareButtonWalletsConnect();
@@ -164,7 +164,11 @@ async function run() {
                 var loadBtnLoad = document.querySelector('#js-btn-connect-load'); 
                 loadBtnLoad.style.cssText = 'display:block;';
 
-                
+                var dashboardButton = document.querySelector('.js-dashboard-menu');
+                dashboardButton.style.cssText = 'display:block;';
+
+                var dashboardButtonSecond = document.querySelector('.js-dashboard-menu-second');
+                dashboardButtonSecond.style.cssText = 'display:block;';
 
                 State.usedAddress = await getUsedAddresses();
                 window.localStorage.setItem("WalletAddress", State.usedAddress);
@@ -202,8 +206,6 @@ async function run() {
                 if (txtConnectedWallet !== null) {
                     txtConnectedWallet.innerHTML = showAddress;
                 }
-                
-
                 
 
                 //getAPIVersion()
@@ -287,8 +289,8 @@ function validatinFunds(valueToValidate, quantity) {
     var btnConnectBuy = document.querySelector('#js-btn-connect-buy');
     var spanConnectBuy = document.querySelector('#js-span-connect-buy');
 
-    console.log(valueToValidate);
-    console.log(State.balance);
+    //console.log(valueToValidate);
+    //console.log(State.balance);
 
     if (State.balance <= valueToValidate) {
         btnConnectBuy.setAttribute("disabled", '');
@@ -369,7 +371,7 @@ function prepareButtonWalletsConnect() {
     const wallets = [];
     for (const key in window.cardano) {
 
-        
+        console.log(key);
 
 
         if (window.cardano[key].enable && wallets.indexOf(key) === -1) {
@@ -379,6 +381,7 @@ function prepareButtonWalletsConnect() {
             if (key === 'nami') {
 
                 var remove = document.querySelector('#js-connect-nami');
+                remove.style.cssText = "cursor: pointer;"
                 remove.id = 'nami'
 
                 var nami = document.querySelector('#app-nami-install-wallet');
@@ -388,6 +391,7 @@ function prepareButtonWalletsConnect() {
             if (key === 'eternl') {
 
                 var remove = document.querySelector('#js-connect-eternl');
+                remove.style.cssText = "cursor: pointer;"
                 remove.id = 'eternl'
 
                 var wallet = document.querySelector('#app-eternl-install-wallet');
@@ -397,6 +401,7 @@ function prepareButtonWalletsConnect() {
             if (key === 'typhon') {
 
                 var remove = document.querySelector('#js-connect-typhon');
+                remove.style.cssText = "cursor: pointer;"
                 remove.id = 'typhon'
 
                 var wallet = document.querySelector('#app-typhon-install-wallet');
@@ -406,6 +411,7 @@ function prepareButtonWalletsConnect() {
             if (key === 'gerowallet') {
 
                 var remove = document.querySelector('#js-connect-gerowallet');
+                remove.style.cssText = "cursor: pointer;"
                 remove.id = 'gerowallet'
 
                 var wallet = document.querySelector('#app-gerowallet-install-wallet');
@@ -415,20 +421,21 @@ function prepareButtonWalletsConnect() {
             if (key === 'flint') {
 
                 var remove = document.querySelector('#js-connect-flint');
+                remove.style.cssText = "cursor: pointer;"
                 remove.id = 'flint'
 
                 var wallet = document.querySelector('#app-flint-install-wallet');
                 wallet.style.cssText = 'display:none;';
             }
 
-            if (key === 'lace') {
+            //if (key === 'lace') {
 
-                var remove = document.querySelector('#js-connect-lace');
-                remove.id = 'lace'
+            //    var remove = document.querySelector('#js-connect-lace');
+            //    remove.id = 'lace'
 
-                var wallet = document.querySelector('#app-lace-install-wallet');
-                wallet.style.cssText = 'display:none;';
-            }
+            //    var wallet = document.querySelector('#app-lace-install-wallet');
+            //    wallet.style.cssText = 'display:none;';
+            //}
 
         }
     }
@@ -446,7 +453,7 @@ async function synchWalletInfo() {
 
     //await initTransactionBuilder();
 
-    console.log(State);
+    //console.log(State);
 }
 
 function generateScriptAddress() {
@@ -493,7 +500,7 @@ function checkIfWalletEnabled() {
         const walletName = State.whichWalletSelected;
         walletIsEnabled =  window.cardano[walletName].isEnabled();
     } catch (err) {
-        console.log(err)
+        //console.log(err)
     }
 
     State.walletIsEnabled = walletIsEnabled;
@@ -507,7 +514,7 @@ async function enableWallet() {
     try {
         WalletAPI = window.cardano[walletKey].enable();
     } catch (err) {
-        console.log(err);
+        //console.log(err);
     }
     return checkIfWalletEnabled();
 }
@@ -516,7 +523,7 @@ function getAPIVersion() {
     const walletKey = State.whichWalletSelected;
     const walletAPIVersion = window?.cardano?.[walletKey].apiVersion;
     const wallletIco = window?.cardano?.[walletKey].ico
-    console.log(wallletIco);
+    //console.log(wallletIco);
     State.walletAPIVersion = walletAPIVersion;
 
     return walletAPIVersion;
@@ -543,7 +550,7 @@ async function getNetworkId() {
         });
 
     } catch (err) {
-        console.log(err)
+        //console.log(err)
     }
 } 
 

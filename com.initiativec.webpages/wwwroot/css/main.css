@@ -9887,7 +9887,7 @@ body {
 	}
 }
 
-.Modal {
+.customModal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9909,17 +9909,17 @@ body {
 
 @media only screen and (max-height:820px),
 only screen and (max-width:880px) {
-	.Modal {
+	.customModal {
 		-ms-flex-align: start;
 		align-items: flex-start
 	}
 }
 
-.Modal>article {
+.customModal>article {
 	width: 100%
 }
 
-.Modal .bg-click {
+.customModal .bg-click {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -9929,20 +9929,20 @@ only screen and (max-width:880px) {
 	z-index: -1
 }
 
-.Modal .FollowButton {
+.customModal .FollowButton {
 	position: fixed;
 	top: 0;
 	z-index: 10
 }
 
-.Modal .FollowButton .FollowButton-elm {
+.customModal .FollowButton .FollowButton-elm {
 	background-color: #fff;
 	border-radius: 50%;
 	-webkit-box-shadow: 2px 8px 30px rgba(0, 0, 0, .15);
 	box-shadow: 2px 8px 30px rgba(0, 0, 0, .15)
 }
 
-.Modal .FollowButton .Icon {
+.customModal .FollowButton .Icon {
 	cursor: pointer;
 	padding: 5px;
 	font-size: 3rem;
@@ -9953,34 +9953,34 @@ only screen and (max-width:880px) {
 	transition: all .3s
 }
 
-.Modal .FollowButton .Icon:hover {
+.customModal .FollowButton .Icon:hover {
 	opacity: 1;
 	-webkit-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg)
 }
 
-.Modal.form {
+.customModal.form {
 	padding-top: 4vh
 }
 
 @media (max-height:780px) and (min-width:880px) {
-	.Modal.form {
+	.customModal.form {
 		padding-top: 1vh
 	}
 }
 
 @media only screen and (max-width:680px) {
-	.Modal.form .article-section {
+	.customModal.form .article-section {
 		padding: 35px 5px 0
 	}
 
-	.Modal.form .Form form {
+	.customModal.form .Form form {
 		padding-top: 5px
 	}
 }
 
-.Modal.form .bg-wrapper {
+.customModal.form .bg-wrapper {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9991,139 +9991,139 @@ only screen and (max-width:880px) {
 }
 
 @media only screen and (max-width:880px) {
-	.Modal.form .bg-wrapper {
+	.customcustomModal.form .bg-wrapper {
 		display: none
 	}
 }
 
-.Modal.form .bg-wrapper img {
+.customcustomModal.form .bg-wrapper img {
 	position: absolute;
 	bottom: 0
 }
 
 @media only screen and (max-height:820px) {
-	.Modal.form .bg-wrapper img {
+	.customcustomModal.form .bg-wrapper img {
 		bottom: -40px;
 		height: 100%
 	}
 }
 
 @media only screen and (max-height:650px) {
-	.Modal.form .bg-wrapper img {
+	.customcustomModal.form .bg-wrapper img {
 		bottom: -80px;
 		height: 105%
 	}
 }
 
-.Modal.form .bg-wrapper .l {
+.customcustomModal.form .bg-wrapper .l {
 	right: 50%;
 	margin-right: 350px
 }
 
 @media only screen and (max-width:1080px) {
-	.Modal.form .bg-wrapper .l {
+	.customcustomModal.form .bg-wrapper .l {
 		margin-right: 300px
 	}
 }
 
-.Modal.form .bg-wrapper .r {
+.customModal.form .bg-wrapper .r {
 	left: 50%;
 	margin-left: 350px
 }
 
 @media only screen and (max-width:1080px) {
-	.Modal.form .bg-wrapper .r {
+	.customModal.form .bg-wrapper .r {
 		margin-left: 300px
 	}
 }
 
-.Modal.form .FollowButton {
+.customModal.form .FollowButton {
 	margin: 2vh auto 0
 }
 
 @media (max-height:780px) and (min-width:880px) {
-	.Modal.form .FollowButton {
+	.customModal.form .FollowButton {
 		margin-top: 0
 	}
 }
 
 @media only screen and (max-width:680px) {
-	.Modal.form .FollowButton {
+	.customModal.form .FollowButton {
 		margin: auto
 	}
 
-	.Modal.form .FollowButton .Icon {
+	.customModal.form .FollowButton .Icon {
 		padding: 4px;
 		font-size: 2.8rem
 	}
 }
 
 @media (max-height:780px) and (min-width:880px) {
-	.Modal.form .Form p.bold {
+	.customModal.form .Form p.bold {
 		margin-top: 2vh
 	}
 
-	.Modal.form .Form .Counter {
+	.customModal.form .Form .Counter {
 		margin-bottom: 2.5vh
 	}
 }
 
 @media (max-height:720px) and (min-width:880px) {
-	.Modal.form .Form form {
+	.customModal.form .Form form {
 		padding-top: 5.5vh
 	}
 
-	.Modal.form .Form .Counter {
+	.customModal.form .Form .Counter {
 		margin-bottom: 1vh;
 		font-size: 4.2rem !important
 	}
 
-	.Modal.form .Form .Counter.small .Tick {
+	.customModal.form .Form .Counter.small .Tick {
 		width: 38px !important;
 		height: 52px !important
 	}
 
-	.Modal.form .Form .form-block {
+	.customModal.form .Form .form-block {
 		max-width: 300px
 	}
 
-	.Modal.form .Form .form-block .btn:not(:last-child),
-	.Modal.form .Form .form-block .InputWrapper {
+	.customModal.form .Form .form-block .btn:not(:last-child),
+	.customModal.form .Form .form-block .InputWrapper {
 		margin-bottom: 19px
 	}
 
-	.Modal.form .Form .Button.Button-fat,
-	.Modal.form .Form .InputWrapper input {
+	.customModal.form .Form .Button.Button-fat,
+	.customModal.form .Form .InputWrapper input {
 		padding: 14px 20px
 	}
 
-	.Modal.form .Form .Accept {
+	.customModal.form .Form .Accept {
 		padding: 16px 20px
 	}
 }
 
-.Modal.video {
+.customModal.video {
 	background-color: hsla(0, 0%, 100%, .7);
 	padding: 10vw
 }
 
 @media only screen and (max-width:1080px) {
-	.Modal.video {
+	.customModal.video {
 		padding: 5vw
 	}
 }
 
 @media only screen and (max-width:580px) {
-	.Modal.video {
+	.customModal.video {
 		padding: 0
 	}
 }
 
-.Modal.video .FollowButton {
+.customModal.video .FollowButton {
 	right: 5px
 }
 
-.Modal.video>article {
+.customModal.video>article {
 	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
 	box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
 	border: 1px solid #f8f4f4;
@@ -10131,13 +10131,13 @@ only screen and (max-width:880px) {
 	animation: softFromBottom .7s .2s backwards
 }
 
-.Modal .video-wrapper,
-.Modal.video>article {
+.customModal .video-wrapper,
+.customModal.video>article {
 	-ms-flex-item-align: center;
 	align-self: center
 }
 
-.Modal .video-wrapper {
+.customModal .video-wrapper {
 	position: relative;
 	z-index: 1;
 	width: 100%;
@@ -10146,7 +10146,7 @@ only screen and (max-width:880px) {
 	background-color: #fff
 }
 
-.Modal .video-wrapper iframe {
+.customModal .video-wrapper iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
