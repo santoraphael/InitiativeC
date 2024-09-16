@@ -1,54 +1,86 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Blockfrost.Api;
-using Blockfrost.Api.Services;
-using Microsoft.Extensions.DependencyInjection;
-using Blockfrost.Api.Extensions;
+using System.Threading.Tasks;
+using CardanoSharp.Blockfrost.Sdk;
+using CardanoSharp.Blockfrost.Sdk.Contracts;
+using CardanoSharp.Wallet;
+using CardanoSharp.Wallet.Encoding;
+using CardanoSharp.Wallet.Enums;
+using CardanoSharp.Wallet.Extensions.Models;
+using CardanoSharp.Wallet.Models.Addresses;
+using Refit;
 
 namespace com.cardano
 {
-    public class BlockfrostService
+    public class BlockfrostServices
     {
-        private readonly IAddressesService _addressesService;
-        private readonly IAccountsService _accountsService;
+        private readonly IAssetsClient _assetsClient;
+        private readonly IEpochsClient _epochsClient;
+        private readonly IAddressesClient _addressesClient;
+        private readonly IAccountClient _accountsClient;
 
-        public BlockfrostService()
+        public BlockfrostServices(IAssetsClient assetsClient
+                                    , IEpochsClient epochsClient
+                                    , IAddressesClient addressesClient
+                                    , IAccountClient accountClient)
         {
-            var projectId = "mainnet9Zmdv75dfVyFF0DzGoLVbQXoqX16yaOp";
-            var network = "mainnet"; // ou "testnet"
-
-            // Configurar os serviços
-            var services = new ServiceCollection();
-
-            // Utilize esta sobrecarga de AddBlockfrost
-            services.AddBlockfrost(network, projectId);
-
-            // Construir o provedor de serviços
-            var serviceProvider = services.BuildServiceProvider();
-
-            // Obter os serviços necessários
-            _addressesService = serviceProvider.GetRequiredService<IAddressesService>();
-            _accountsService = serviceProvider.GetRequiredService<IAccountsService>();
+            _assetsClient = assetsClient;
+            _epochsClient = epochsClient;
+            _addressesClient = addressesClient;
+            _accountsClient = accountClient;
         }
 
-        public async Task<string> GetStakeAddressFromWalletAddress(string walletAddress)
+
+        public async Task<string> GetStakeAddress(string walletAddress, NetworkType networkType = NetworkType.Mainnet)
         {
+            try
+            {
+                var addressBytes = Bech32.Decode(walletAddress, out var witVer, out var hrp);
+                var address = new Address(addressBytes);
 
-            var BaseUrl = _accountsService.BaseUrl;
-            var Network = _accountsService.Network;
-            var Health = _accountsService.Health;
-            var Metrics = _accountsService.Metrics;
+                var baseAddress =  address.GetStakeAddress();
 
-            var addressContent = await _addressesService.GetTotalAsync(walletAddress);
-            return addressContent.Address;
+                return baseAddress.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro ao processar o endereço: {ex.Message}");
+            }
         }
 
-        public async Task<IList<string>> GetWalletAddressesFromStakeAddress(string stakeAddress, int? count, int? page)
+        public async Task<List<string>> GetAllAddressesByStakeAddress(string stakeAddress)
         {
-            var addresses = await _accountsService.GetAddressesAsync(stakeAddress, count, page, ESortOrder.Asc);
-            return addresses.Select(a => a.Address).ToList();
-        }
+            try
+            {
+                var allAddresses = new List<string>();
+                int page = 1;
+                int count = 100;
+                bool hasMore = true;
 
+                var addresses = await _accountsClient.GetAccountAssociatedAddresses(stakeAddress, count, page);
+
+                if (addresses != null && addresses.IsSuccessStatusCode)
+                {
+                    foreach (var item in addresses.Content)
+                    {
+                        allAddresses.Add(item.Address);
+                    }
+
+                    page++;
+                }
+
+
+                return allAddresses;
+            }
+            catch (ApiException apiEx)
+            {
+                throw new Exception($"Erro da API Blockfrost: {apiEx.StatusCode} - {apiEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro ao obter os endereços: {ex.Message}");
+            }
+        }
     }
 }

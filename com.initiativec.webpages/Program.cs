@@ -1,7 +1,9 @@
+using Blockfrost.Api;
+using Blockfrost.Api.Services;
+using CardanoSharp.Blockfrost.Sdk.Common;
 using com.cardano;
 using com.database;
 using com.initiativec.webpages;
-using com.initiativec.webpages.Database;
 using com.initiativec.webpages.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -32,7 +34,16 @@ builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization()
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<SharedResourceService>();
 
-builder.Services.AddSingleton<BlockfrostService>();
+
+var apiKey = builder.Configuration["Blockfrost:Network:ApiKey"];
+var baseUrl = builder.Configuration["Blockfrost:Network:BaseUrl"];
+var authConfig = new AuthHeaderConfiguration(apiKey, baseUrl);
+
+builder.Services.AddBlockfrost(authConfig);
+
+
+builder.Services.AddScoped<BlockfrostServices>();
+
 
 var app = builder.Build();
 app.UseMiddleware<CultureMiddleware>();

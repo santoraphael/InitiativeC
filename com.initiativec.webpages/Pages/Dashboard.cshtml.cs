@@ -9,12 +9,12 @@ namespace com.initiativec.webpages.Pages
     public class DashboardModel : PageModel
     {
         private readonly DatabaseContext _context;
-        private readonly BlockfrostService _blockfrostService;
+        private readonly BlockfrostServices _blockfrostServices;
 
-        public DashboardModel(DatabaseContext context)
+        public DashboardModel(DatabaseContext context, BlockfrostServices blockfrostServices)
         {
             _context = context;
-            _blockfrostService = new BlockfrostService();
+            _blockfrostServices = blockfrostServices;
         }
 
         public IList<User> Users { get; set; }
@@ -23,13 +23,17 @@ namespace com.initiativec.webpages.Pages
 
         public async Task OnGetAsync()
         {
-            Users = await _context.Users.ToListAsync();
+            //Users = await _context.Users.ToListAsync();
 
-            string walletAddress = "addr1qykejxf3y7zdmpz46lujz3y8wjvqcrgxexhg8pjnktthlrt572xe6wu67dqq88ra7lpwkdgr43xugeykwy4d9vuzsa6qtynn2y";
+            string walletAddress = "addr1q9p2annkw94a9nrs2gduxu8rhe4v0vvhpnlwtuzttqngtz5wsfgya999406dl2wthe3adeux7c0jv8kfrfdyv4zp4zxshcsqru";
 
-            StakeAddress = await _blockfrostService.GetStakeAddressFromWalletAddress(walletAddress);
+            StakeAddress = await _blockfrostServices.GetStakeAddress(walletAddress);
 
-            WalletAddresses = await _blockfrostService.GetWalletAddressesFromStakeAddress(StakeAddress, 1, 1);
+            WalletAddresses = await _blockfrostServices.GetAllAddressesByStakeAddress(StakeAddress);
+
+            //StakeAddress = await _blockfrostServices.GetStakeAddressFromWalletAddress(walletAddress);
+
+            //WalletAddresses = await _blockfrostServices.GetWalletAddressesFromStakeAddress(StakeAddress, 1, 1);
 
         }
     }

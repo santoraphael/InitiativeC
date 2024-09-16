@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Blockfrost.Api" Version="1.0.1" />
+    <PackageReference Include="Blockfrost.Extensions" Version="1.0.0" />
+    <PackageReference Include="CardanoSharp.Blockfrost.Sdk" Version="0.0.14" />
     <PackageReference Include="CardanoSharp.Wallet" Version="5.1.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />

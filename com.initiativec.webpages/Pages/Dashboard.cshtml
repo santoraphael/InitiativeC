@@ -18,6 +18,22 @@
             @* <h2 class="small">Acompanhe seu progresso diariamente</h2> *@
         </div>
         
+
+        @if (Model.WalletAddresses != null)
+        {
+            <ul>
+                @foreach (var address in Model.WalletAddresses)
+                {
+                    <li>@address</li>
+                }
+            </ul>
+        }
+        else if (Model.WalletAddresses != null)
+        {
+            <p>Nenhum endereço encontrado.</p>
+        }
+
+
         <div class="Dashboard-content">
             
             <div class="Dashboard-column">
