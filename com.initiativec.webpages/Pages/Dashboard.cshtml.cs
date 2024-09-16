@@ -23,7 +23,11 @@ namespace com.initiativec.webpages.Pages
 
         public async Task OnGetAsync()
         {
-            //Users = await _context.Users.ToListAsync();
+          
+            string wallet = "dasdas";
+
+            _context.Users.Select(u => u.wallet_address == wallet);
+
 
             string walletAddress = "addr1q9p2annkw94a9nrs2gduxu8rhe4v0vvhpnlwtuzttqngtz5wsfgya999406dl2wthe3adeux7c0jv8kfrfdyv4zp4zxshcsqru";
 
