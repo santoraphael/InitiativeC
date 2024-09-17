@@ -18,7 +18,7 @@ namespace com.initiativec.webpages.Pages
             _blockfrostServices = blockfrostServices;
         }
 
-        
+        [ValidateAntiForgeryToken]
         public IActionResult OnPost([FromBody] TokenRequest request)
         {
             if (request == null || string.IsNullOrEmpty(request.Token))

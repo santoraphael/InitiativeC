@@ -11,39 +11,46 @@
     }
 }
 
+<div class ="Home">
+    <article class="Hero">
+        <section>
+            <h1 class="WordWrapper active">
+                Você ainda não foi aceito...
+            </h1>
+            <p>Verificando acesso...</p>
+        </section>
+        
 
-<article class="Dashboard">
+        <script>
+            (function () {
+                var token = localStorage.getItem('WalletAddress');
 
-    <p>Verificando acesso...</p>
-    <script>
-        (function () {
-            var token = localStorage.getItem('WalletAddress');
-
-            if (token) {
-                fetch('/ValidarAcesso', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ token: token })
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.acessoPermitido) {
-                            window.location.href = '/Dashboard';
-                        } else {
-                            window.location.href = '/';
-                        }
+                if (token) {
+                    fetch('/ValidarAcesso', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': '@GetAntiforgeryToken()'
+                        },
+                        body: JSON.stringify({ token: token })
                     })
-                    .catch(error => {
-                        console.error('Erro na validação:', error);
-                        window.location.href = '/';
-                    });
-            } else {
-                window.location.href = '/';
-            }
-        })();
-    </script>
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.acessoPermitido) {
+                                window.location.href = '/Dashboard';
+                            } else {
+                                //window.location.href = '/';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erro na validação:', error);
+                            //window.location.href = '/';
+                        });
+                } else {
+                    //window.location.href = '/';
+                }
+            })();
+        </script>
 
-
-</article>
+    </article>
+</div>
