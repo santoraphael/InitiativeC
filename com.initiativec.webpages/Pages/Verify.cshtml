@@ -2,6 +2,9 @@
 @using Microsoft.AspNetCore.Antiforgery
 @inject IAntiforgery Antiforgery
 
+@inject IStringLocalizer<IndexModel> localizer
+@inject IHtmlLocalizer<IndexModel> htmlLocalizer
+
 @model com.initiativec.webpages.Pages.VerifyModel
 @functions {
     public string GetAntiforgeryToken()
@@ -11,17 +14,20 @@
     }
 }
 
-<div class ="Home">
+<div>
     <article class="Hero">
         <section>
-            <h1 class="WordWrapper active">
-                Você ainda não foi aceito...
+            <h1 class="WordWrapper" id="tituloDinamico">
+                
             </h1>
-            <p>Verificando acesso...</p>
+            <p id="paragrafoDinamico" style="font-size: 2.1rem; font-weight: 300;"></p>
         </section>
-        
+       
 
         <script>
+
+            
+
             (function () {
                 var token = localStorage.getItem('WalletAddress');
 
@@ -38,16 +44,38 @@
                         .then(data => {
                             if (data.acessoPermitido) {
                                 window.location.href = '/Dashboard';
-                            } else {
-                                //window.location.href = '/';
+                            } 
+                            else {
+                                if (data.details == "NaoAprovado")
+                                {
+                                    var textoH1 = "@Html.Raw(localizer["verify.NaoAprovado.h1"])";
+                                    var textoP = "@Html.Raw(localizer["verify.NaoAprovado.p"])";
+                                    $('#tituloDinamico').text(textoH1);
+                                    $('#paragrafoDinamico').text(textoP);
+                                }
+                                else if (data.details == "SemConvite") {
+
+                                    var textoH1 = "@Html.Raw(localizer["verify.SemConvite.h1"])";
+                                    var textoP = "@Html.Raw(localizer["verify.SemConvite.p"])";
+
+                                    $('#tituloDinamico').text(textoH1);
+                                    $('#paragrafoDinamico').text(textoP);
+                                }
+                                
                             }
                         })
                         .catch(error => {
                             console.error('Erro na validação:', error);
-                            //window.location.href = '/';
+                            $('#tituloDinamico').text("ERROR");
+                            $('#paragrafoDinamico').text("OOPS!");
                         });
                 } else {
-                    //window.location.href = '/';
+
+                    var textoH1 = "@Html.Raw(localizer["verify.NaoLogado.h1"])";
+                    var textoP = "@Html.Raw(localizer["verify.NaoLogado.p"])";
+
+                    $('#tituloDinamico').text(textoH1);
+                    $('#paragrafoDinamico').text(textoP);
                 }
             })();
         </script>

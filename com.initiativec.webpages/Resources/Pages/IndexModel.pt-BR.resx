@@ -357,4 +357,22 @@
   <data name="tokenization.section_p_2" xml:space="preserve">
     <value>distribuido?</value>
   </data>
+  <data name="verify.NaoAprovado.h1" xml:space="preserve">
+    <value>Sua entrada ainda não aprovada</value>
+  </data>
+  <data name="verify.NaoAprovado.p" xml:space="preserve">
+    <value>Procure a pessoa que lhe deu o convite para que ela te aprove e você possa reservar $LEMON</value>
+  </data>
+  <data name="verify.NaoLogado.h1" xml:space="preserve">
+    <value>Você não está conectado</value>
+  </data>
+  <data name="verify.NaoLogado.p" xml:space="preserve">
+    <value>Conecte sua carteira usando um dos apps compativeis</value>
+  </data>
+  <data name="verify.SemConvite.h1" xml:space="preserve">
+    <value>Você ainda não recebeu um convite</value>
+  </data>
+  <data name="verify.SemConvite.p" xml:space="preserve">
+    <value>Busque em um dos nossos canais oficiais pessoas que possam lhe dar um convite. Corra pois a cada minuto menos $LEMON poderá ser reservado por você.</value>
+  </data>
 </root>

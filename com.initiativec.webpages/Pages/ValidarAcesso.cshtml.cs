@@ -23,7 +23,7 @@ namespace com.initiativec.webpages.Pages
         {
             if (request == null || string.IsNullOrEmpty(request.Token))
             {
-                return new JsonResult(new { acessoPermitido = false });
+                return new JsonResult(new { acessoPermitido = false, details = "NaoLogado" });
             }
 
             var StakeAddress = _blockfrostServices.GetStakeAddress(request.Token);
@@ -33,13 +33,20 @@ namespace com.initiativec.webpages.Pages
 
             if (usuario != null)
             {
-                // Token válido, acesso permitido
-                return new JsonResult(new { acessoPermitido = true });
+                if(usuario.status == 1)
+                {
+                    // Token válido, acesso permitido
+                    return new JsonResult(new { acessoPermitido = true, details = "" });
+                }
+                else
+                {
+                    return new JsonResult(new { acessoPermitido = false, details = "NaoAprovado" });
+                }
             }
             else
             {
                 // Token inválido, acesso negado
-                return new JsonResult(new { acessoPermitido = false });
+                return new JsonResult(new { acessoPermitido = false, details = "SemConvite" });
             }
         }
 
