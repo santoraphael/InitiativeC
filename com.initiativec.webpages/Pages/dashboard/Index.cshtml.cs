@@ -5,15 +5,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace com.initiativec.webpages.Pages
+namespace com.initiativec.webpages.Pages.dashboard
 {
-    public class DashboardModel : PageModel
+    public class IndexModel : PageModel
     {
         private readonly DatabaseContext _context;
         private readonly BlockfrostServices _blockfrostServices;
 
 
-        public DashboardModel(DatabaseContext context, BlockfrostServices blockfrostServices)
+        public IndexModel(DatabaseContext context, BlockfrostServices blockfrostServices)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
@@ -37,7 +37,7 @@ namespace com.initiativec.webpages.Pages
 
         //public async Task OnGetAsync()
         //{
-          
+
         //    string wallet = "dasdas";
 
         //    _context.Users.Select(u => u.wallet_address == wallet);
