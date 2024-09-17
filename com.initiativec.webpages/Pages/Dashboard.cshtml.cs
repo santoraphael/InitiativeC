@@ -1,6 +1,7 @@
 using com.cardano;
 using com.database;
 using com.database.entities;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ namespace com.initiativec.webpages.Pages
     {
         private readonly DatabaseContext _context;
         private readonly BlockfrostServices _blockfrostServices;
+
 
         public DashboardModel(DatabaseContext context, BlockfrostServices blockfrostServices)
         {
@@ -21,24 +23,36 @@ namespace com.initiativec.webpages.Pages
         public string StakeAddress { get; set; }
         public IList<string> WalletAddresses { get; set; }
 
-        public async Task OnGetAsync()
+        public IActionResult OnGet()
         {
-          
-            string wallet = "dasdas";
+            var token = Request.Cookies["UsuarioToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                return RedirectToPage("/Verify");
+            }
 
-            _context.Users.Select(u => u.wallet_address == wallet);
-
-
-            string walletAddress = "addr1q9p2annkw94a9nrs2gduxu8rhe4v0vvhpnlwtuzttqngtz5wsfgya999406dl2wthe3adeux7c0jv8kfrfdyv4zp4zxshcsqru";
-
-            StakeAddress = await _blockfrostServices.GetStakeAddress(walletAddress);
-
-            WalletAddresses = await _blockfrostServices.GetAllAddressesByStakeAddress(StakeAddress);
-
-            //StakeAddress = await _blockfrostServices.GetStakeAddressFromWalletAddress(walletAddress);
-
-            //WalletAddresses = await _blockfrostServices.GetWalletAddressesFromStakeAddress(StakeAddress, 1, 1);
-
+            return Page();
         }
+
+
+        //public async Task OnGetAsync()
+        //{
+          
+        //    string wallet = "dasdas";
+
+        //    _context.Users.Select(u => u.wallet_address == wallet);
+
+
+        //    string walletAddress = "addr1q9p2annkw94a9nrs2gduxu8rhe4v0vvhpnlwtuzttqngtz5wsfgya999406dl2wthe3adeux7c0jv8kfrfdyv4zp4zxshcsqru";
+
+        //    StakeAddress = await _blockfrostServices.GetStakeAddress(walletAddress);
+
+        //    WalletAddresses = await _blockfrostServices.GetAllAddressesByStakeAddress(StakeAddress);
+
+        //    //StakeAddress = await _blockfrostServices.GetStakeAddressFromWalletAddress(walletAddress);
+
+        //    //WalletAddresses = await _blockfrostServices.GetWalletAddressesFromStakeAddress(StakeAddress, 1, 1);
+
+        //}
     }
 }

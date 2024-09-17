@@ -91,4 +91,6 @@ app.MapGet("/static/bounty", async context =>
     await context.Response.WriteAsync(json);
 });
 
+
+
 app.Run();

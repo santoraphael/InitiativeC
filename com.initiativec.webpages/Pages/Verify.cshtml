@@ -1,0 +1,49 @@
+﻿@page
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery Antiforgery
+
+@model com.initiativec.webpages.Pages.VerifyModel
+@functions {
+    public string GetAntiforgeryToken()
+    {
+        var tokens = Antiforgery.GetAndStoreTokens(HttpContext);
+        return tokens.RequestToken;
+    }
+}
+
+
+<article class="Dashboard">
+
+    <p>Verificando acesso...</p>
+    <script>
+        (function () {
+            var token = localStorage.getItem('WalletAddress');
+
+            if (token) {
+                fetch('/ValidarAcesso', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ token: token })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.acessoPermitido) {
+                            window.location.href = '/Dashboard';
+                        } else {
+                            window.location.href = '/';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro na validação:', error);
+                        window.location.href = '/';
+                    });
+            } else {
+                window.location.href = '/';
+            }
+        })();
+    </script>
+
+
+</article>
