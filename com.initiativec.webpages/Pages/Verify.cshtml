@@ -14,9 +14,33 @@
     }
 }
 
+<style>
+    /* Estilo para o spinner */
+    .loader {
+      border: 16px solid #f3f3f3; /* Cor de fundo */
+      border-top: 16px solid #3498db; /* Cor do spinner */
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+    }
+
+    /* Animação de spin */
+    @@keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+</style>
+
 <div>
     <article class="Hero">
         <section>
+            <div id="spinner" style="display: none;">
+                <div class="spinner-border text-primary" role="status">
+                    <div class="loader"></div>
+                    <span class="visually-hidden">Carregando...</span>
+                </div>
+            </div>
             <h1 class="WordWrapper" id="tituloDinamico">
                 
             </h1>
@@ -26,9 +50,10 @@
 
         <script>
 
-            
-
             (function () {
+                // Mostrar o spinner
+                $('#spinner').show();
+
                 var token = localStorage.getItem('WalletAddress');
 
                 if (token) {
@@ -42,12 +67,14 @@
                     })
                         .then(response => response.json())
                         .then(data => {
+                            // Esconder o spinner
+                            $('#spinner').hide();
+
                             if (data.acessoPermitido) {
                                 window.location.href = '/Dashboard';
-                            } 
+                            }
                             else {
-                                if (data.details == "NaoAprovado")
-                                {
+                                if (data.details == "NaoAprovado") {
                                     var textoH1 = "@Html.Raw(localizer["verify.NaoAprovado.h1"])";
                                     var textoP = "@Html.Raw(localizer["verify.NaoAprovado.p"])";
                                     $('#tituloDinamico').text(textoH1);
@@ -61,15 +88,19 @@
                                     $('#tituloDinamico').text(textoH1);
                                     $('#paragrafoDinamico').text(textoP);
                                 }
-                                
                             }
                         })
                         .catch(error => {
+                            // Esconder o spinner
+                            $('#spinner').hide();
+
                             console.error('Erro na validação:', error);
                             $('#tituloDinamico').text("ERROR");
                             $('#paragrafoDinamico').text("OOPS!");
                         });
                 } else {
+                    // Esconder o spinner
+                    $('#spinner').hide();
 
                     var textoH1 = "@Html.Raw(localizer["verify.NaoLogado.h1"])";
                     var textoP = "@Html.Raw(localizer["verify.NaoLogado.p"])";
