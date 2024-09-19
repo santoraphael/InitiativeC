@@ -358,7 +358,7 @@
     <value>distribuido?</value>
   </data>
   <data name="verify.NaoAprovado.h1" xml:space="preserve">
-    <value>Sua entrada ainda não aprovada</value>
+    <value>Sua entrada precisa ser aprovada</value>
   </data>
   <data name="verify.NaoAprovado.p" xml:space="preserve">
     <value>Procure a pessoa que lhe deu o convite para que ela te aprove e você possa reservar $LEMON</value>
