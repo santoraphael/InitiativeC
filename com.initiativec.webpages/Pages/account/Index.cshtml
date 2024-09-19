@@ -3,30 +3,67 @@
 @{
 }
 
+<style>
+    .Button-circle {
+        width: 40px !important;
+        height: 40px;
+        border-radius: 50%;
+        padding: 0;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .Button-circle:hover {
+        background-color: #0056b3;
+    }
+
+    #addEmailButton {
+        margin-top: 10px;
+        margin-left: 0; /* Ajuste conforme necessário */
+    }
+
+</style>
+
+
 <article class="Login">
     <div class="Form">
         <section class="column article-section centered">
             <h2 class="WordWrapper bottom-closer active"><span>Registrar</span></h2>
-            <div class="ActiveWayPoint animateByClass active"><p class="js-panel-register" style="display:none;">Adicione um nome para que você seja reconhecido pela pessoa que te deu o convite e irá te aprovar</p></div>
+            <div class="ActiveWayPoint animateByClass active">
+                <p class="js-panel-register" style="display:none;">Adicione um nome para que você seja reconhecido pela pessoa que te deu o convite e irá te aprovar. Pode ser como você é conhecido nas redes sociais.</p>
+            </div>
         </section>
         <form method="post">
             <article class="ActiveWayPoint form-block SignUp-form animateByClass active js-panel-register" style="display:none;">
            
                 <div class="InputWrapper">
                     <article>
-                        <input asp-for="Name" value="">
+                        <input asp-for="Name" placeholder="Name">
                         <span asp-validation-for="Name"></span>
-                        <input type="hidden" id="WalletAddress" asp-for="WalletAddress" />
-                        @* <label>E-mail</label> *@
+                        <label for="Name">Adicione seu e-mail para que possamos avisá-lo quando você for aprovado.</label>
                     </article>
                 </div>
-                @* <div class="InputWrapper">
-                <article>
-                <input type="password" value="">
-                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
-                <label>Senha</label>
-                </article>
-                </div> *@
+                <br /><br />
+                <!-- Botão '+' -->
+                 <!-- Botão '+' redondo -->
+                <button type="button" id="addEmailButton" class="Button  shadow btn Button-circle Button-primary" aria-label="Adicionar E-mail">
+                    +
+                </button>
+
+                <!-- Campo de E-mail oculto -->
+                <div id="emailField" class="InputWrapper" style="display: none; margin-top: 10px;">
+                    <article>
+                        <input asp-for="Email" placeholder="Seu e-mail">
+                        <span asp-validation-for="Email"></span>
+                        <label for="Email">Adicione seu e-mail para que possamos avisá-lo quando você for aprovado.</label>
+                    </article>
+                </div>
+
+                <input type="hidden" id="WalletAddress" asp-for="WalletAddress" />
+                <br /><br /><br />
                 <button type="submit" class="Button shadow btn Button-fat Button-primary"><span class="label">Register</span></button>
             </article>
         </form>
@@ -45,6 +82,13 @@
 
 <script>
     $(document).ready(function () {
+
+
+        document.getElementById('addEmailButton').addEventListener('click', function () {
+            var emailField = document.getElementById('emailField');
+            emailField.style.display = 'block';
+        });
+
 
         function getWalletAddress() {
             // Substitua esta função pela lógica para obter o endereço da carteira

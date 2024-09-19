@@ -3,12 +3,22 @@
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery Antiforgery
 
 @inject com.initiativec.webpages.Services.SharedResourceService sharedLocalizer
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 
 @inject IOptions<RequestLocalizationOptions> LocOptions
 @Html.AntiForgeryToken()
+
+@functions {
+    public string GetAntiforgeryToken()
+    {
+        var tokens = Antiforgery.GetAndStoreTokens(Context);
+        return tokens.RequestToken;
+    }
+}
 
 
 @{
@@ -846,7 +856,6 @@
 
 
 
-
 <script>
     $(document).ready(function () {
 
@@ -992,7 +1001,9 @@
 
 
     $("#js-disconnect-wallet").on("click", function () {
-        localStorage.removeItem('walletKey')
+        localStorage.removeItem('walletKey');
+        localStorage.removeItem('WalletAddress')
+        
 
         var dashboardButton = document.querySelector('.js-dashboard-menu');
         dashboardButton.style.cssText = 'display:none;';
@@ -1000,8 +1011,26 @@
         var dashboardButtonSecond = document.querySelector('.js-dashboard-menu-second');
         dashboardButtonSecond.style.cssText = 'display:none;';
 
-        window.location.reload();
+        $.ajax({
+            url: '@Url.Page("ValidarAcesso", "Logout")',
+            type: 'POST',
+            headers: {
+                'RequestVerificationToken': '@GetAntiforgeryToken()'
+            },
+            success: function (result) {
+                if (result.success) {
+                    // Recarrega a página após o logout
+                    window.location.reload();
+                } else {
+                    console.error('Falha ao desconectar.');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Erro ao desconectar:', error);
+            }
+        });
     });
+
 
 
     $("#js-connect-nami").on("click", function () {

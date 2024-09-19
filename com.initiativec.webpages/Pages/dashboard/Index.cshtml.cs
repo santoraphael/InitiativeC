@@ -28,7 +28,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             var token = Request.Cookies["UsuarioToken"];
             if (string.IsNullOrEmpty(token))
             {
-                return RedirectToPage("/Verify");
+                return RedirectToPage("/verify");
             }
 
             return Page();

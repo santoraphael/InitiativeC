@@ -33,9 +33,19 @@ namespace com.initiativec.webpages.Pages
 
             if (usuario != null)
             {
-                if(usuario.status == 1)
+                if(usuario.confirmed == true)
                 {
                     // Token válido, acesso permitido
+
+                    // Definir o cookie UsuarioToken
+                    Response.Cookies.Append("UsuarioToken", request.Token, new CookieOptions
+                    {
+                        HttpOnly = true,
+                        Secure = true, // Defina como true se estiver usando HTTPS
+                        Expires = DateTimeOffset.UtcNow.AddHours(1), // Defina a expiração conforme necessário
+                        SameSite = SameSiteMode.Strict
+                    });
+
                     return new JsonResult(new { acessoPermitido = true, details = "" });
                 }
                 else
@@ -48,6 +58,16 @@ namespace com.initiativec.webpages.Pages
                 // Token inválido, acesso negado
                 return new JsonResult(new { acessoPermitido = false, details = "SemConvite" });
             }
+        }
+
+        [ValidateAntiForgeryToken]
+        public IActionResult OnPostLogout()
+        {
+            // Remove o cookie 'UsuarioToken'
+            Response.Cookies.Delete("UsuarioToken");
+
+            // Retorna uma resposta JSON indicando sucesso
+            return new JsonResult(new { success = true });
         }
 
         public class TokenRequest
