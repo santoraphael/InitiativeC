@@ -3,15 +3,67 @@
 @{
 }
 
-<div>
-    <article class="Hero">
-        <section>
-            <h1 class="WordWrapper" id="tituloDinamico">
-                Registro
-            </h1>
-            <p id="paragrafoDinamico" style="font-size: 2.1rem; font-weight: 300;"></p>
+<article class="Login">
+    <div class="Form">
+        <section class="column article-section centered">
+            <h2 class="WordWrapper bottom-closer active"><span>Registrar</span></h2>
+            <div class="ActiveWayPoint animateByClass active"><p class="js-panel-register" style="display:none;">Adicione um nome para que você seja reconhecido pela pessoa que te deu o convite e irá te aprovar</p></div>
         </section>
-      
+        <form method="post">
+            <article class="ActiveWayPoint form-block SignUp-form animateByClass active js-panel-register" style="display:none;">
+           
+                <div class="InputWrapper">
+                    <article>
+                        <input asp-for="Name" value="">
+                        <span asp-validation-for="Name"></span>
+                        <input type="hidden" id="WalletAddress" asp-for="WalletAddress" />
+                        @* <label>E-mail</label> *@
+                    </article>
+                </div>
+                @* <div class="InputWrapper">
+                <article>
+                <input type="password" value="">
+                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
+                <label>Senha</label>
+                </article>
+                </div> *@
+                <button type="submit" class="Button shadow btn Button-fat Button-primary"><span class="label">Register</span></button>
+            </article>
+        </form>
+             @* <div class="ActiveWayPoint or animateByClass active"><span>Ou</span></div> *@
+            <article class="ActiveWayPoint form-block animateByClass active js-panel-connect">
+                <div class="Button shadow btn Button-fat Button-primary" data-toggle="modal" data-target=".bd-example-modal-md"><span class="label">Connect Wallet</span></div>
+                @* <div class="Button shadow btn Button-facebook Button-fat"><span class="label">Login com o Facebook</span></div>
+                <div class="Button shadow btn Button-twitter Button-fat"><span class="label">Login com o Twitter</span></div> *@
+            </article>
+        
+        @* <p class="flip"><span>Não é membro? <a aria-current="false" href="#sign-up">Cadastrar-se</a></span><span>Esqueceu a senha? <a aria-current="false" href="/forgot_pass">Clique aqui </a></span></p> *@
+    </div>
+    <img alt="" class="safe" src="~/media/safe-open.133cedd1.svg">
+</article>
 
-    </article>
-</div>
+
+<script>
+    $(document).ready(function () {
+
+        function getWalletAddress() {
+            // Substitua esta função pela lógica para obter o endereço da carteira
+            // Por exemplo, pode estar armazenado no localStorage
+            return localStorage.getItem('WalletAddress') || '';
+        }
+
+
+        getConnected();
+
+        async function getConnected() {
+            const walletKey = window.localStorage.getItem('walletKey');
+            await window.cardano[walletKey].enable().then((data) => {
+                $('.js-panel-register').css('display', 'block');
+                $('.js-panel-connect').css('display', 'none');
+
+                var walletAddress = getWalletAddress();
+                document.getElementById('WalletAddress').value = walletAddress;
+            });
+        }
+    });
+</script>
