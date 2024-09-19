@@ -4,6 +4,7 @@ using CardanoSharp.Blockfrost.Sdk.Common;
 using com.cardano;
 using com.database;
 using com.initiativec.webpages;
+using com.initiativec.webpages.Interfaces;
 using com.initiativec.webpages.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -43,6 +44,8 @@ builder.Services.AddBlockfrost(authConfig);
 
 
 builder.Services.AddScoped<BlockfrostServices>();
+
+builder.Services.AddTransient<IEmailSender, SendGridEmailSender>();
 
 
 var app = builder.Build();

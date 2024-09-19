@@ -2,6 +2,7 @@ using Blockfrost.Api;
 using com.cardano;
 using com.database;
 using com.database.entities;
+using com.initiativec.webpages.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
@@ -13,11 +14,15 @@ namespace com.initiativec.webpages.Pages.account
     {
         private readonly DatabaseContext _context;
         private readonly BlockfrostServices _blockfrostServices;
+        private readonly IEmailSender _emailSender;
 
-        public IndexModel(DatabaseContext context, BlockfrostServices blockfrostServices)
+        public IndexModel(DatabaseContext context
+                            ,BlockfrostServices blockfrostServices
+                            ,IEmailSender emailSender)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
+            _emailSender = emailSender;
         }
 
         [BindProperty(SupportsGet = true)]
@@ -96,6 +101,12 @@ namespace com.initiativec.webpages.Pages.account
                 invitations_available = 0,
                 expiration_date_invitations = DateTime.UtcNow.AddDays(7)
             };
+
+            string subject = "Confirmação de Registro";
+            string message = $"Olá {Name},<br/>Obrigado por se registrar!";
+
+
+            _emailSender.SendEmailAsync(Email, subject, message);
 
             _context.Users.Add(user);
             _context.SaveChanges();
