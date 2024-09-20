@@ -20,135 +20,134 @@
         </div>
         
 
-        @if (Model.WalletAddresses != null)
-        {
-            <ul>
-                @foreach (var address in Model.WalletAddresses)
-                {
-                    <li>@address</li>
-                }
-            </ul>
-        }
-        else if (Model.WalletAddresses != null)
-        {
-            <p>Nenhum endereço encontrado.</p>
-        }
-
-
         <div class="Dashboard-content">
             
             <div class="Dashboard-column">
 
-                <!-- Conteúdo da coluna esquerda -->
-                <div class="Dashboard-card card">
-                    <div class="img-card"><b>!</b></div>
-                    <h4 class="title-card">Tarefa Atual</h4>
-                    <p class="subtitle-card">Convide pessoas que vocë conhece pessoalmente e garanta um adicional de <b>Q12,170</b></p>
-                    <div class="oneFieldForm small">
-                        <input type="text" readonly="" class="small" value="https://initial-s.com/invite/sdasdasd">
-                        <div class="Button With-icon Button-primary" onclick="CopyToClipboard('massage-copy')" style="text-align: center; background-color:#292874;">COPIAR LINK</div>
-                    </div>
-                    
-                    <div class="share">
-                        
-                        <p class="column" style="float: left; font-size: 17px; margin-top: 5px; margin-right: 10px;">Ou compartilhar com:</p>
-                        <div id="btnsSocials" class="jssocials ">
-                            <div class="jssocials-shares column right-side">
-                                <div class="jssocials-share jssocials-share-email">
-                                    <a target="_self" href="mailto:?subject=%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%20Initial%20S%20%C3%A9%20um%20ousado%20projeto%20que%20tenta%20criar%20uma%20nova%20forma%20de%20se%20investir%20e%20de%20conseguir%20investimentos%20para%20Startups.%20Utilizando%20uma%20moeda%20propriet%C3%A1ria%2C%20a%20Start%2C%20eles%20buscam%20incentivar%20as%20pessoas%20a%20come%C3%A7arem%20a%20usar%20a%20plataforma%20uma%20vez%20que%20ela%20estiver%20pronta.%20Eles%20est%C3%A3o%20reservando%20Starts%20gratuitamente%20para%20pessoas%20que%20se%20cadastrarem%20agora%20(o%20valor%20diminui%20%C3%A0%20medida%20que%20as%20pessoas%20se%20cadastram%2C%20portanto%2C%20%C3%A9%20melhor%20entrar%20o%20quanto%20antes).%20O%20cadastro%20%C3%A9%20gratuito%20e%20eles%20s%C3%B3%20pedem%20nome%20e%20e-mail.%20N%C3%A3o%20h%C3%A1%20o%20que%20perder%2C%20mas%2C%20se%20a%20plataforma%20se%20tornar%20o%20novo%20padr%C3%A3o%20de%20investimento%20e%20capita%C3%A7%C3%A3o%20para%20Startups%2C%20suas%20Starts%20poder%C3%A3o%20valer%20muito.%20Se%20voc%C3%AA%20deixou%20passar%20alguma%20oportunidade%20de%20comprar%20bitcoins%20h%C3%A1%20sete%20anos%2C%20n%C3%A3o%20vai%20querer%20perder%20essa%2C%20ainda%20mais%20sendo%20de%20gra%C3%A7a.%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Aqui%20est%C3%A1%20o%20meu%20link%20de%20convite%3A%20https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Este%20link%20deixar%C3%A1%20de%20funcionar%20quando%20meus%20convites%20acabarem.%20Avise-me%20depois%20que%20voc%C3%AA%20se%20cadastrar%2C%20porque%20eu%20preciso%20aprovar%20o%20seu%20cadastro%20atrav%C3%A9s%20da%20minha%20conta.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&amp;body=https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd" class="jssocials-share-link">
-                                        <i class="fa fa-at jssocials-share-logo"></i>
-                                    </a>
+                @if (Model.enviarConvite.status)
+                {
+                    <div class="Dashboard-card card">
+                        <div class="img-card"><b>!</b></div>
+                        <h4 class="title-card">Tarefa Atual</h4>
+                        <p class="subtitle-card">Convide pessoas que vocë conhece pessoalmente e garanta um adicional de <b>$LEMON @Model.enviarConvite.valorConviteTotal.ToString("N0")</b></p>
+                        <div class="oneFieldForm small">
+                            <input type="text" readonly="" class="small" style="font-size: 1.8em;" value="@($"https://lehmonbros.fun/invite/{Model.enviarConvite.invite_code}")">
+                            <div class="Button With-icon Button-primary" onclick="CopyToClipboard('massage-copy')" style="text-align: center; background-color:#292874;">COPIAR LINK</div>
+                        </div>
+
+                        <div class="share">
+
+                            <p class="column" style="float: left; font-size: 17px; margin-top: 5px; margin-right: 10px;">Ou compartilhar com:</p>
+                            <div id="btnsSocials" class="jssocials ">
+                                <div class="jssocials-shares column right-side">
+                                    <div class="jssocials-share jssocials-share-email">
+                                        <a target="_self" href="mailto:?subject=%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%20Initial%20S%20%C3%A9%20um%20ousado%20projeto%20que%20tenta%20criar%20uma%20nova%20forma%20de%20se%20investir%20e%20de%20conseguir%20investimentos%20para%20Startups.%20Utilizando%20uma%20moeda%20propriet%C3%A1ria%2C%20a%20Start%2C%20eles%20buscam%20incentivar%20as%20pessoas%20a%20come%C3%A7arem%20a%20usar%20a%20plataforma%20uma%20vez%20que%20ela%20estiver%20pronta.%20Eles%20est%C3%A3o%20reservando%20Starts%20gratuitamente%20para%20pessoas%20que%20se%20cadastrarem%20agora%20(o%20valor%20diminui%20%C3%A0%20medida%20que%20as%20pessoas%20se%20cadastram%2C%20portanto%2C%20%C3%A9%20melhor%20entrar%20o%20quanto%20antes).%20O%20cadastro%20%C3%A9%20gratuito%20e%20eles%20s%C3%B3%20pedem%20nome%20e%20e-mail.%20N%C3%A3o%20h%C3%A1%20o%20que%20perder%2C%20mas%2C%20se%20a%20plataforma%20se%20tornar%20o%20novo%20padr%C3%A3o%20de%20investimento%20e%20capita%C3%A7%C3%A3o%20para%20Startups%2C%20suas%20Starts%20poder%C3%A3o%20valer%20muito.%20Se%20voc%C3%AA%20deixou%20passar%20alguma%20oportunidade%20de%20comprar%20bitcoins%20h%C3%A1%20sete%20anos%2C%20n%C3%A3o%20vai%20querer%20perder%20essa%2C%20ainda%20mais%20sendo%20de%20gra%C3%A7a.%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Aqui%20est%C3%A1%20o%20meu%20link%20de%20convite%3A%20https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Este%20link%20deixar%C3%A1%20de%20funcionar%20quando%20meus%20convites%20acabarem.%20Avise-me%20depois%20que%20voc%C3%AA%20se%20cadastrar%2C%20porque%20eu%20preciso%20aprovar%20o%20seu%20cadastro%20atrav%C3%A9s%20da%20minha%20conta.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&amp;body=https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd" class="jssocials-share-link">
+                                            <i class="fa fa-at jssocials-share-logo"></i>
+                                        </a>
+                                    </div>
+                                    <div class="jssocials-share jssocials-share-twitter"><a href="#" class="jssocials-share-link"><i class="fa fa-twitter jssocials-share-logo"></i></a></div>
+                                    <div class="jssocials-share jssocials-share-facebook"><a href="#" class="jssocials-share-link"><i class="fa fa-facebook jssocials-share-logo"></i></a></div>
+                                    <div class="jssocials-share jssocials-share-googleplus"><a href="#" class="jssocials-share-link"><i class="fa fa-google jssocials-share-logo"></i></a></div>
+                                    <div class="jssocials-share jssocials-share-linkedin"><a href="#" class="jssocials-share-link"><i class="fa fa-linkedin jssocials-share-logo"></i></a></div>
+                                    <div class="jssocials-share jssocials-share-whatsapp"><a target="_self" href="whatsapp://send?text=https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd %0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%20Initial%20S%20%C3%A9%20um%20ousado%20projeto%20que%20tenta%20criar%20uma%20nova%20forma%20de%20se%20investir%20e%20de%20conseguir%20investimentos%20para%20Startups.%20Utilizando%20uma%20moeda%20propriet%C3%A1ria%2C%20a%20Start%2C%20eles%20buscam%20incentivar%20as%20pessoas%20a%20come%C3%A7arem%20a%20usar%20a%20plataforma%20uma%20vez%20que%20ela%20estiver%20pronta.%20Eles%20est%C3%A3o%20reservando%20Starts%20gratuitamente%20para%20pessoas%20que%20se%20cadastrarem%20agora%20(o%20valor%20diminui%20%C3%A0%20medida%20que%20as%20pessoas%20se%20cadastram%2C%20portanto%2C%20%C3%A9%20melhor%20entrar%20o%20quanto%20antes).%20O%20cadastro%20%C3%A9%20gratuito%20e%20eles%20s%C3%B3%20pedem%20nome%20e%20e-mail.%20N%C3%A3o%20h%C3%A1%20o%20que%20perder%2C%20mas%2C%20se%20a%20plataforma%20se%20tornar%20o%20novo%20padr%C3%A3o%20de%20investimento%20e%20capita%C3%A7%C3%A3o%20para%20Startups%2C%20suas%20Starts%20poder%C3%A3o%20valer%20muito.%20Se%20voc%C3%AA%20deixou%20passar%20alguma%20oportunidade%20de%20comprar%20bitcoins%20h%C3%A1%20sete%20anos%2C%20n%C3%A3o%20vai%20querer%20perder%20essa%2C%20ainda%20mais%20sendo%20de%20gra%C3%A7a.%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Aqui%20est%C3%A1%20o%20meu%20link%20de%20convite%3A%20https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Este%20link%20deixar%C3%A1%20de%20funcionar%20quando%20meus%20convites%20acabarem.%20Avise-me%20depois%20que%20voc%C3%AA%20se%20cadastrar%2C%20porque%20eu%20preciso%20aprovar%20o%20seu%20cadastro%20atrav%C3%A9s%20da%20minha%20conta.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20" class="jssocials-share-link"><i class="fa fa-whatsapp jssocials-share-logo"></i></a></div>
                                 </div>
-                                <div class="jssocials-share jssocials-share-twitter"><a href="#" class="jssocials-share-link"><i class="fa fa-twitter jssocials-share-logo"></i></a></div>
-                                <div class="jssocials-share jssocials-share-facebook"><a href="#" class="jssocials-share-link"><i class="fa fa-facebook jssocials-share-logo"></i></a></div>
-                                <div class="jssocials-share jssocials-share-googleplus"><a href="#" class="jssocials-share-link"><i class="fa fa-google jssocials-share-logo"></i></a></div>
-                                <div class="jssocials-share jssocials-share-linkedin"><a href="#" class="jssocials-share-link"><i class="fa fa-linkedin jssocials-share-logo"></i></a></div>
-                                <div class="jssocials-share jssocials-share-whatsapp"><a target="_self" href="whatsapp://send?text=https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd %0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20A%20Initial%20S%20%C3%A9%20um%20ousado%20projeto%20que%20tenta%20criar%20uma%20nova%20forma%20de%20se%20investir%20e%20de%20conseguir%20investimentos%20para%20Startups.%20Utilizando%20uma%20moeda%20propriet%C3%A1ria%2C%20a%20Start%2C%20eles%20buscam%20incentivar%20as%20pessoas%20a%20come%C3%A7arem%20a%20usar%20a%20plataforma%20uma%20vez%20que%20ela%20estiver%20pronta.%20Eles%20est%C3%A3o%20reservando%20Starts%20gratuitamente%20para%20pessoas%20que%20se%20cadastrarem%20agora%20(o%20valor%20diminui%20%C3%A0%20medida%20que%20as%20pessoas%20se%20cadastram%2C%20portanto%2C%20%C3%A9%20melhor%20entrar%20o%20quanto%20antes).%20O%20cadastro%20%C3%A9%20gratuito%20e%20eles%20s%C3%B3%20pedem%20nome%20e%20e-mail.%20N%C3%A3o%20h%C3%A1%20o%20que%20perder%2C%20mas%2C%20se%20a%20plataforma%20se%20tornar%20o%20novo%20padr%C3%A3o%20de%20investimento%20e%20capita%C3%A7%C3%A3o%20para%20Startups%2C%20suas%20Starts%20poder%C3%A3o%20valer%20muito.%20Se%20voc%C3%AA%20deixou%20passar%20alguma%20oportunidade%20de%20comprar%20bitcoins%20h%C3%A1%20sete%20anos%2C%20n%C3%A3o%20vai%20querer%20perder%20essa%2C%20ainda%20mais%20sendo%20de%20gra%C3%A7a.%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Aqui%20est%C3%A1%20o%20meu%20link%20de%20convite%3A%20https%3A%2F%2Finitial-s.com%2Finvite%2Fsdasdasd%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Este%20link%20deixar%C3%A1%20de%20funcionar%20quando%20meus%20convites%20acabarem.%20Avise-me%20depois%20que%20voc%C3%AA%20se%20cadastrar%2C%20porque%20eu%20preciso%20aprovar%20o%20seu%20cadastro%20atrav%C3%A9s%20da%20minha%20conta.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20" class="jssocials-share-link"><i class="fa fa-whatsapp jssocials-share-logo"></i></a></div>
                             </div>
                         </div>
+
+
+                        <div id="massage-copy" style="display:none; position:absolute; left:1000px;">
+                            A Initial S é um ousado projeto que tenta criar uma nova forma de se investir e de conseguir investimentos para Startups. Utilizando uma moeda proprietária, a Start, eles buscam incentivar as pessoas a começarem a usar a plataforma uma vez que ela estiver pronta. Eles estão reservando Starts gratuitamente para pessoas que se cadastrarem agora (o valor diminui à medida que as pessoas se cadastram, portanto, é melhor entrar o quanto antes). O cadastro é gratuito e eles só pedem nome e e-mail. Não há o que perder, mas, se a plataforma se tornar o novo padrão de investimento e capitação para Startups, suas Starts poderão valer muito. Se você deixou passar alguma oportunidade de comprar bitcoins há sete anos, não vai querer perder essa, ainda mais sendo de graça.
+
+                            Aqui está o meu link de convite: @($"https://lehmonbros.fun/invite/{Model.enviarConvite.invite_code}")
+
+                            Este link deixará de funcionar quando meus convites acabarem. Avise-me depois que você se cadastrar, porque eu preciso aprovar o seu cadastro através da minha conta.
+                        </div>
                     </div>
-
-
-                    <div id="massage-copy" style="display:none; position:absolute; left:1000px;">
-                        A Initial S é um ousado projeto que tenta criar uma nova forma de se investir e de conseguir investimentos para Startups. Utilizando uma moeda proprietária, a Start, eles buscam incentivar as pessoas a começarem a usar a plataforma uma vez que ela estiver pronta. Eles estão reservando Starts gratuitamente para pessoas que se cadastrarem agora (o valor diminui à medida que as pessoas se cadastram, portanto, é melhor entrar o quanto antes). O cadastro é gratuito e eles só pedem nome e e-mail. Não há o que perder, mas, se a plataforma se tornar o novo padrão de investimento e capitação para Startups, suas Starts poderão valer muito. Se você deixou passar alguma oportunidade de comprar bitcoins há sete anos, não vai querer perder essa, ainda mais sendo de graça.
-
-                        Aqui está o meu link de convite: https://initial-s.com/invite/sdasdasd
-
-                        Este link deixará de funcionar quando meus convites acabarem. Avise-me depois que você se cadastrar, porque eu preciso aprovar o seu cadastro através da minha conta.
-                    </div>
-                </div>
-
-                <div class="Dashboard-card card">
-                    @* <div class="img-card"><b>!</b></div> *@
-                    <h4 class="title-card">Saldo Atual</h4>                    
-                    <div class="Balance">
-                        <!-- Cabeçalho -->
+                }
+                
+                @if (Model.cardSaldoAtual.status)
+                {
+                    <div class="Dashboard-card card">
                         
-
-                        <!-- Valor total -->
-                        <div class="sum">
-                            <span class="granted">Q<b>3,043</b></></span>
-                            <span class="max">Das suas possíveis Q30,430</span>
-                        </div>
-
-                        <!-- Barra de progresso -->
-                        <div class="bar-wrapper">
-                            <div class="bar">
-                                <div class="current" style="width:70%"></div>
-                                <div class="granted" style="width:30%"></div>
-                                <div class="adjustment"></div>
-                            </div>
-                        </div>
-
-                        <!-- Legenda -->
-                        <div class="legend">
-                            <div class="granted">
-                                <i></i>
-                                <span class="label">Reservadas</span>
-                            </div>
-                            <div class="current">
-                                <i></i>
-                                <span class="label">Tarefa Atual</span>
+                        <h4 class="title-card">Saldo Atual</h4>                    
+                        <div class="Balance">
+                            
+                       
+                            <!-- Valor total -->
+                            <div class="sum">
+                                <span class="granted">$LEMON<b>@Model.cardSaldoAtual.valorSaldo.ToString("N0")</b></span>
+                                <span class="max">Das suas possíveis $LEMON @Model.cardSaldoAtual.valorSaldoTotal.ToString("N0")</span>
                             </div>
 
-                            <div class="adjustment">
-                                <i style="background-color: #f5f5f5;background-image: none;"></i>
-                                <span class="label">Tarefas Futuras</span>
+                            <!-- Barra de progresso -->
+                            <div class="bar-wrapper">
+                                <div class="bar">
+                                    <div class="current" style="width:@Model.cardSaldoAtual.percentualAtual%"></div>
+                                    <div class="granted" style="width:@Model.cardSaldoAtual.percentualReservado%"></div>
+                                    <div class="adjustment"></div>
+                                </div>
+                            </div>
+
+                            <!-- Legenda -->
+                            <div class="legend">
+                                <div class="granted">
+                                    <i></i>
+                                    <span class="label">Reservadas</span>
+                                </div>
+                                <div class="current">
+                                    <i></i>
+                                    <span class="label">Tarefa Atual</span>
+                                </div>
+
+                                <div class="adjustment">
+                                    <i style="background-color: #f5f5f5;background-image: none;"></i>
+                                    <span class="label">Tarefas Futuras</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
+                
             </div>
 
 
             <div class="Dashboard-column right-side">
                 <!-- Conteúdo da coluna direita -->
-                <div class="Dashboard-card card">
 
-                    <h4>Você tem  X amigos para revisar, e você já aprovou  X num total de 5 convites disponiveis.</h4>
+                @if (Model.cardVerificaConvite.status)
+                {
+                    <div class="Dashboard-card card">
 
-                    <div class="Approve-user pending">
-                        <div class="content">
-                            <div class="sb-avatar" style="display: inline-block; width: 38px; height: 38px; border-radius: 500px;">
-                                <div style="width: 38px; height: 38px; font: 12px/38px Helvetica, Arial, sans-serif; text-align: center; text-transform: uppercase; color: rgb(255, 255, 255); background: #292874; border-radius: 100%;">
-                                    RS
+                        <h4>Você tem @Model.cardVerificaConvite.ConvitesParaRevisar amigos para revisar, e você já aprovou @Model.cardVerificaConvite.Aprovados num total de @Model.cardVerificaConvite.ConvitesDisponiveis convites disponiveis.</h4>
+
+                        @foreach (var item in Model.cardVerificaConvite.Usuarios)
+                        {
+                            <div class="Approve-user pending">
+                                <div class="content">
+                                    <div class="sb-avatar" style="display: inline-block; width: 38px; height: 38px; border-radius: 500px;">
+                                        <div style="width: 38px; height: 38px; font: 12px/38px Helvetica, Arial, sans-serif; text-align: center; text-transform: uppercase; color: rgb(255, 255, 255); background: #292874; border-radius: 100%;">
+                                            RS
+                                        </div>
+                                    </div>
+                                    <header><p>@item.Nome</p></header>
                                 </div>
-                            </div>
-                            <header><p>Raphael Santo</p></header>
-                        </div>
-                        &nbsp;&nbsp;
-                        <div>
-                            <div id="1" class="Button Button-small Button-primary js-boatao-reprovar" style="background-color: red;">
-                                <span class="label">Reprovar</span>
-                            </div>
-                            &nbsp;
-                            <div id="1" class="Button Button-small Button-primary js-boatao-aprova" style="background-color: green;">
-                                <span class="label">Aprovar</span>
-                            </div>
-                        </div>
+                                &nbsp;&nbsp;
+                                <div>
+                                    <div class="Button Button-small Button-primary js-boatao-reprovar" data-id="@item.Id" style="background-color: red !important;">
+                                        <span class="label">Reprovar</span>
+                                    </div>
+                                    &nbsp;
+                                    <div class="Button Button-small Button-primary js-boatao-aprova" data-id="@item.Id" style="background-color: green !important;">
+                                        <span class="label">Aprovar</span>
+                                    </div>
+                                </div>
 
+                            </div>
+                        }
+                        
                     </div>
-                </div>
+                }
+
             </div>
         </div>
         

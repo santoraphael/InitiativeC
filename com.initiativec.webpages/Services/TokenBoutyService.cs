@@ -72,5 +72,13 @@ namespace com.initiativec.webpages.Services
 
             return valorCadaVerificacao;
         }
+
+        public decimal ValorReservaConviteTotal(int usuarioId)
+        {
+            var bounty = _context.TokenBounties.FirstOrDefault(b => b.id_usuario == usuarioId);
+            var valorTodosConvites = ReservaValorPercentual(bounty.valor_reserva_total, 40);
+
+            return valorTodosConvites;
+        }
     }
 }

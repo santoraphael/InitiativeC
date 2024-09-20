@@ -6,6 +6,7 @@ using com.database;
 using com.initiativec.webpages;
 using com.initiativec.webpages.Interfaces;
 using com.initiativec.webpages.Services;
+using com.initiativec.webpages.ViewModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -21,6 +22,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.Configure<TwitterSettings>(builder.Configuration.GetSection("Twitter"));
 
 builder.Services.Configure<RequestLocalizationOptions>(
     options =>
@@ -42,6 +44,8 @@ var baseUrl = builder.Configuration["Blockfrost:Network:BaseUrl"];
 var authConfig = new AuthHeaderConfiguration(apiKey, baseUrl);
 
 builder.Services.AddBlockfrost(authConfig);
+
+builder.Services.AddSingleton<TwitterService>();
 
 
 builder.Services.AddScoped<BlockfrostServices>();
