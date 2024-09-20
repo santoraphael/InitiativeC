@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using com.database;
@@ -11,9 +12,11 @@ using com.database;
 namespace com.database.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240920022052_TokenPool")]
+    partial class TokenPool
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,14 +33,11 @@ namespace com.database.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
 
-                    b.Property<decimal>("divisor")
-                        .HasColumnType("numeric");
+                    b.Property<long>("divisor")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("tick_speed")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal>("total")
-                        .HasColumnType("numeric");
+                    b.Property<long>("total")
+                        .HasColumnType("bigint");
 
                     b.HasKey("id");
 

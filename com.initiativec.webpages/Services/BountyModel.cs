@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using com.database;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 
@@ -6,30 +7,34 @@ namespace com.initiativec.webpages.Services
 {
     public class BountyModel : PageModel
     {
+        private readonly DatabaseContext _context;
+
         private readonly IOptions<RequestLocalizationOptions> _locOptions;
 
-        public BountyModel(IOptions<RequestLocalizationOptions> locOptions)
+        public BountyModel(DatabaseContext context, IOptions<RequestLocalizationOptions> locOptions)
         {
+            _context = context;
             _locOptions = locOptions;
         }
 
         public JsonResult OnGetBounty() // Método de ação
         {
+            var tokenPool = _context.TokenPool.FirstOrDefault();
 
-            long total = 25000000000;
-            long divisor = 1000;
+            decimal total = tokenPool.total;
+            decimal divisor = tokenPool.divisor;
 
             var data = new
             {
                 amount = CalculoProximaVaga(total, divisor),
-                tick_speed = 10000,
+                tick_speed = tokenPool.tick_speed,
                 timestamp = DateTime.UtcNow
             };
 
             return new JsonResult(data);
         }
 
-        private long CalculoProximaVaga(long total, long divisor)
+        private decimal CalculoProximaVaga(decimal total, decimal divisor)
         {
             return total / divisor;
         }

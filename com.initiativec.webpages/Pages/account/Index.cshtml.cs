@@ -34,7 +34,7 @@ namespace com.initiativec.webpages.Pages.account
 
         [BindProperty]
         [EmailAddress(ErrorMessage = "Por favor, insira um e-mail válido.")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [BindProperty]
         public string WalletAddress { get; set; }
@@ -98,7 +98,7 @@ namespace com.initiativec.webpages.Pages.account
                 confirmation_code_number = GenerateCodeNumericConfirmation(),
                 confirmation_code_alphanumber = GenerateAlphanumericCodeConfirmation(),
                 confirmed = false,
-                invitations_available = 0,
+                invitations_available = 5,
                 expiration_date_invitations = DateTime.UtcNow.AddDays(7)
             };
 
@@ -106,7 +106,7 @@ namespace com.initiativec.webpages.Pages.account
             string message = $"Olá {Name},<br/>Obrigado por se registrar!";
 
 
-            _emailSender.SendEmailAsync(Email, subject, message);
+            //_emailSender.SendEmailAsync(Email, subject, message);
 
             _context.Users.Add(user);
             _context.SaveChanges();

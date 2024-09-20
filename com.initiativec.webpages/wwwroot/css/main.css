@@ -3126,7 +3126,7 @@ body {
 	transform: translate(-50%, -50%);
 	color: #151515;
 	padding: 0 6px;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	pointer-events: none;
 	-webkit-transition: all .2s;
 	-o-transition: all .2s;

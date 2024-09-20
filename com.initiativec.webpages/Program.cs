@@ -6,6 +6,7 @@ using com.database;
 using com.initiativec.webpages;
 using com.initiativec.webpages.Interfaces;
 using com.initiativec.webpages.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -85,6 +86,7 @@ app.MapControllers();
 app.MapGet("/static/bounty", async context =>
 {
     var handler = new BountyModel(
+        context.RequestServices.GetRequiredService<DatabaseContext>(),
         context.RequestServices.GetRequiredService<IOptions<RequestLocalizationOptions>>()
     );
 

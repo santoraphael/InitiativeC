@@ -16,5 +16,6 @@ namespace com.database
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<TokenPool> TokenPool { get; set; }
     }
 }
