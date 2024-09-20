@@ -12,8 +12,8 @@
     
     <section class="column article-section">
         <div class="Dashboard-hero">
-            <h1>Olá, Raphael, bem-vindo ao futudo dos pagamentos!</h1>
-            <p>Pelos próximos 14 dias voce pode convidar e verificar até 5 amigos e garantir Q2,434 para cada. Com o seu convite, eles também poderão reservar Qs com antecedëncia e ajudar a expandir a rede Q</p>
+            <h1>Olá, @Model.dashboard.nome_usuario, bem-vindo ao futudo dos pagamentos!</h1>
+            <p>Pelos próximos <b>@Model.dashboard.qtd_dias_restantes</b> dias voce pode convidar e verificar até <b>@Model.dashboard.qtd_convites_restantes</b> pessoas e garantir <b>$LEMON @Model.dashboard.amount_token_por_convite.ToString("N0")</b> por cada. Com o seu convite, eles também poderão reservar Qs com antecedëncia e ajudar a expandir a rede Q</p>
             <h2 class="small"></h2>
            @*  <h2 class="wide">Pelos próximos 14 dias voce pode convidar e verificar até 5 amigos e garantir Q2,434 para cada. Com o seu convite, eles também poderão reservar Qs com antecedëncia e ajudar a expandir a rede Q</h2> *@
             @* <h2 class="small">Acompanhe seu progresso diariamente</h2> *@
