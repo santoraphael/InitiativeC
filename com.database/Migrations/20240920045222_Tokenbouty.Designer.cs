@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using com.database;
@@ -11,9 +12,11 @@ using com.database;
 namespace com.database.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240920045222_Tokenbouty")]
+    partial class Tokenbouty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,9 +43,6 @@ namespace com.database.Migrations
                         .HasColumnType("numeric");
 
                     b.HasKey("id");
-
-                    b.HasIndex("id_usuario")
-                        .IsUnique();
 
                     b.ToTable("TokenBounties");
                 });
@@ -117,23 +117,6 @@ namespace com.database.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("com.database.entities.TokenBounty", b =>
-                {
-                    b.HasOne("com.database.entities.User", "User")
-                        .WithOne("TokenBounty")
-                        .HasForeignKey("com.database.entities.TokenBounty", "id_usuario")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("com.database.entities.User", b =>
-                {
-                    b.Navigation("TokenBounty")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

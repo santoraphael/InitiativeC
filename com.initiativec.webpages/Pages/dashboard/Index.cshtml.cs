@@ -1,6 +1,7 @@
 using com.cardano;
 using com.database;
 using com.database.entities;
+using com.initiativec.webpages.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -11,12 +12,14 @@ namespace com.initiativec.webpages.Pages.dashboard
     {
         private readonly DatabaseContext _context;
         private readonly BlockfrostServices _blockfrostServices;
+        private readonly TokenBoutyService _tokenBountyService;
 
 
-        public IndexModel(DatabaseContext context, BlockfrostServices blockfrostServices)
+        public IndexModel(DatabaseContext context, BlockfrostServices blockfrostServices, TokenBoutyService tokenBountyService)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
+            _tokenBountyService = tokenBountyService;
         }
 
         public IList<User> Users { get; set; }
@@ -30,6 +33,13 @@ namespace com.initiativec.webpages.Pages.dashboard
             {
                 return RedirectToPage("/verify");
             }
+
+            var StakeAddress = _blockfrostServices.GetStakeAddress(token);
+            var stk_adress = StakeAddress.Result;
+
+            var user = _context.Users.FirstOrDefault(u => u.wallet_address == stk_adress);       
+
+            _tokenBountyService.ReservarValorInicial(user.id);
 
             return Page();
         }

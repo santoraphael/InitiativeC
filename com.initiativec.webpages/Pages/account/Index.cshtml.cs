@@ -59,17 +59,7 @@ namespace com.initiativec.webpages.Pages.account
             }
 
             var StakeAddress = _blockfrostServices.GetStakeAddress(WalletAddress);
-            var stk_adress = "";
-
-            if (StakeAddress != null)
-            {
-                stk_adress = StakeAddress.Result;
-            }
-            else
-            {
-                stk_adress = WalletAddress;
-            }
-
+            var stk_adress = StakeAddress.Result;
 
             var userExsists = _context.Users.Select(u => u.wallet_address == stk_adress).FirstOrDefault();
 
@@ -99,7 +89,7 @@ namespace com.initiativec.webpages.Pages.account
                 confirmation_code_alphanumber = GenerateAlphanumericCodeConfirmation(),
                 confirmed = false,
                 invitations_available = 5,
-                expiration_date_invitations = DateTime.UtcNow.AddDays(7)
+                expiration_date_invitations = DateTime.UtcNow.AddDays(14)
             };
 
             string subject = "Confirmação de Registro";

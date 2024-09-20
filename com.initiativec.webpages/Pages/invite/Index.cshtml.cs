@@ -1,3 +1,5 @@
+using com.cardano;
+using com.database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -5,6 +7,13 @@ namespace com.initiativec.webpages.Pages.invite
 {
     public class IndexModel : PageModel
     {
+        private readonly DatabaseContext _context;
+
+        public IndexModel(DatabaseContext context)
+        {
+            _context = context;
+        }
+
         [BindProperty(SupportsGet = true)]
         public string InviteCode { get; set; }
         public IActionResult OnGet()
@@ -27,8 +36,8 @@ namespace com.initiativec.webpages.Pages.invite
 
         private bool IsValidInviteCode(string code)
         {
-            var validCodes = new List<string> { "ABC123", "DEF456", "GHI789" };
-            return validCodes.Contains(code);
+            var validCode = _context.Users.Select(u => u.invite_code == code).FirstOrDefault();
+            return validCode;
         }
     }
 }

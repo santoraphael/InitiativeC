@@ -47,7 +47,7 @@ builder.Services.AddBlockfrost(authConfig);
 builder.Services.AddScoped<BlockfrostServices>();
 
 builder.Services.AddTransient<IEmailSender, SendGridEmailSender>();
-
+builder.Services.AddTransient<TokenBoutyService>();
 
 var app = builder.Build();
 app.UseMiddleware<CultureMiddleware>();

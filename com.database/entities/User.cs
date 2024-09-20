@@ -21,5 +21,7 @@ namespace com.database.entities
         public bool? confirmed { get; set; }
         public int? invitations_available { get; set; }
         public DateTime? expiration_date_invitations { get; set; }
+
+        public TokenBounty TokenBounty { get; set; }
     }
 }
