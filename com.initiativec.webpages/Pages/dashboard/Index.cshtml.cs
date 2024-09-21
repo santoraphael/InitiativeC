@@ -31,7 +31,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             _telegramService = telegramService;
         }
 
-        public IList<user> users { get; set; }
+        public IList<User> Users { get; set; }
         public string StakeAddress { get; set; }
         public IList<string> WalletAddresses { get; set; }
         public DashboardVM dashboard { get; set; }
@@ -53,7 +53,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             var StakeAddress = _blockfrostServices.GetStakeAddress(token);
             var stk_adress = StakeAddress.Result;
 
-            var user = _context.users.FirstOrDefault(u => u.wallet_address == stk_adress);
+            var user = _context.Users.FirstOrDefault(u => u.wallet_address == stk_adress);
 
             DashboardVM dashboardVM = new DashboardVM();
             dashboardVM.id_usuario = user.id;
@@ -89,7 +89,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             List<UsuarioAcao> usuarioAcoes = new List<UsuarioAcao>();
 
 
-            var users = _context.users
+            var users = _context.Users
                     .Where(u => u.invited_by == invite_code)
                     .ToList();
 
@@ -135,7 +135,7 @@ namespace com.initiativec.webpages.Pages.dashboard
         private CardSaldoAtual GetCardSaldoAtual(int id_usuario)
         {
             CardSaldoAtual cardSaldoAtual = new CardSaldoAtual();
-            var tokens = _context.tokenbounties.FirstOrDefault(t => t.id_usuario == id_usuario);
+            var tokens = _context.TokenBounties.FirstOrDefault(t => t.id_usuario == id_usuario);
 
             if(tokens != null)
             {

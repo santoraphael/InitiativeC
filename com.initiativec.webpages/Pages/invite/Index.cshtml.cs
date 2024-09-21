@@ -36,7 +36,7 @@ namespace com.initiativec.webpages.Pages.invite
 
         private bool IsValidInviteCode(string code)
         {
-            var validCode = _context.users.Select(u => u.invite_code == code).FirstOrDefault();
+            var validCode = _context.Users.Select(u => u.invite_code == code).FirstOrDefault();
             return validCode;
         }
     }

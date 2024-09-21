@@ -15,7 +15,7 @@ namespace com.initiativec.webpages.Services
 
         public decimal OnGetBounty()
         {
-            var tokenPool = _context.tokenpool.FirstOrDefault();
+            var tokenPool = _context.TokenPool.FirstOrDefault();
 
             decimal total = tokenPool.total;
             decimal divisor = tokenPool.divisor;
@@ -33,22 +33,22 @@ namespace com.initiativec.webpages.Services
         public bool ReservarValorInicial(int usuarioId)
         {
             //var user = _context.Users.SingleOrDefault(u => u.id == usuarioId);
-            var pool = _context.tokenpool.FirstOrDefault(t => t.id == 1);
+            var pool = _context.TokenPool.FirstOrDefault(t => t.id == 1);
 
             decimal total = pool.total;
             decimal divisor = pool.divisor;
 
             var amount = CalculoProximaVaga(total, divisor);
 
-            tokenbounty bounty = new tokenbounty();
+            TokenBounty bounty = new TokenBounty();
             bounty.id_usuario = usuarioId;
             bounty.valor_reserva_total = amount;
             bounty.valor_reservado = ReservaValorPercentual(amount, 10);
 
             pool.total = pool.total - bounty.valor_reservado;
 
-            _context.tokenbounties.Add(bounty);
-            _context.tokenpool.Update(pool);
+            _context.TokenBounties.Add(bounty);
+            _context.TokenPool.Update(pool);
 
             _context.SaveChanges();
 
@@ -66,7 +66,7 @@ namespace com.initiativec.webpages.Services
 
         public decimal ValorReservaPorConvite(int usuarioId)
         {
-            var bounty = _context.tokenbounties.FirstOrDefault(b => b.id_usuario == usuarioId);
+            var bounty = _context.TokenBounties.FirstOrDefault(b => b.id_usuario == usuarioId);
             decimal valorTodosConvites = 0;
             if (bounty != null)
             {
@@ -80,7 +80,7 @@ namespace com.initiativec.webpages.Services
 
         public decimal ValorReservaConviteTotal(int usuarioId)
         {
-            var bounty = _context.tokenbounties.FirstOrDefault(b => b.id_usuario == usuarioId);
+            var bounty = _context.TokenBounties.FirstOrDefault(b => b.id_usuario == usuarioId);
             decimal valorTodosConvites = 0;
             
             if (bounty != null)

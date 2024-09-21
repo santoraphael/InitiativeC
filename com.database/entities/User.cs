@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace com.database.entities
 {
-    public class user
+    public class User
     {
         public int id { get; set; }
         public string wallet_address { get; set; }
@@ -22,6 +22,6 @@ namespace com.database.entities
         public int? invitations_available { get; set; }
         public DateTime? expiration_date_invitations { get; set; }
 
-        public tokenbounty tokenbounty { get; set; }
+        public TokenBounty TokenBounty { get; set; }
     }
 }

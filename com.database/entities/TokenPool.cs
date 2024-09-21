@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace com.database.entities
 {
-    public class tokenpool
+    public class TokenPool
     {
         public int id { get; set; }
         public decimal total { get; set; }

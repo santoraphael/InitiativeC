@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace com.database.entities
 {
-    public class tokenbounty
+    public class TokenBounty
     {
         [Key]
         public int id { get; set; }
 
-        [ForeignKey("user")]
+        [ForeignKey("User")]
         public int id_usuario { get; set; }
 
         public decimal valor_reserva_total { get; set; }
         public decimal valor_reservado { get; set; }
 
-        public user user { get; set; }
+        public User User { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace com.database.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("com.database.entities.tokenbounty", b =>
+            modelBuilder.Entity("com.database.entities.TokenBounty", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,7 @@ namespace com.database.Migrations
                     b.ToTable("TokenBounties");
                 });
 
-            modelBuilder.Entity("com.database.entities.tokenpool", b =>
+            modelBuilder.Entity("com.database.entities.TokenPool", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -69,7 +69,7 @@ namespace com.database.Migrations
                     b.ToTable("TokenPool");
                 });
 
-            modelBuilder.Entity("com.database.entities.user", b =>
+            modelBuilder.Entity("com.database.entities.User", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -119,20 +119,20 @@ namespace com.database.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("com.database.entities.tokenbounty", b =>
+            modelBuilder.Entity("com.database.entities.TokenBounty", b =>
                 {
-                    b.HasOne("com.database.entities.user", "user")
-                        .WithOne("tokenbounty")
-                        .HasForeignKey("com.database.entities.tokenbounty", "id_usuario")
+                    b.HasOne("com.database.entities.User", "User")
+                        .WithOne("TokenBounty")
+                        .HasForeignKey("com.database.entities.TokenBounty", "id_usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("user");
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("com.database.entities.user", b =>
+            modelBuilder.Entity("com.database.entities.User", b =>
                 {
-                    b.Navigation("tokenbounty")
+                    b.Navigation("TokenBounty")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

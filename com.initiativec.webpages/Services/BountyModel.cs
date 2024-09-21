@@ -19,7 +19,7 @@ namespace com.initiativec.webpages.Services
 
         public JsonResult OnGetBounty() // Método de ação
         {
-            var tokenPool = _context.tokenpool.FirstOrDefault();
+            var tokenPool = _context.TokenPool.FirstOrDefault();
 
             decimal total = tokenPool.total;
             decimal divisor = tokenPool.divisor;
