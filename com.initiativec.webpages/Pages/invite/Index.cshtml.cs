@@ -8,10 +8,12 @@ namespace com.initiativec.webpages.Pages.invite
     public class IndexModel : PageModel
     {
         private readonly DatabaseContext _context;
+        private readonly IStringLocalizer<IndexModel> _localizer;
 
-        public IndexModel(DatabaseContext context)
+        public IndexModel(DatabaseContext context, IStringLocalizer<IndexModel> localizer)
         {
             _context = context;
+            _localizer = localizer;
         }
 
         [BindProperty(SupportsGet = true)]
@@ -29,9 +31,9 @@ namespace com.initiativec.webpages.Pages.invite
             }
             else
             {
-                
-                TempData["ErrorTitle"] = "Convite Inválido";
-                TempData["ErrorMessage"] = "Código de convite inválido ou expirado.";
+
+                TempData["ErrorTitle"] = _localizer["ErrorTitleInvalidInvite"].Value;
+                TempData["ErrorMessage"] = _localizer["ErrorMessageInvalidInvite"].Value;
                 return RedirectToPage("/Error");
             }
         }
