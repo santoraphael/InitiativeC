@@ -1,4 +1,5 @@
 ﻿@page
+@using System.Text.RegularExpressions
 @model IndexModel
 @{
 }
@@ -122,11 +123,22 @@
 
                         @foreach (var item in Model.cardVerificaConvite.Usuarios)
                         {
+                            string initials = Regex.Replace(item.Nome, @"[\p{P}\p{S}\p{C}\p{N}]+", "");
+                            initials = Regex.Replace(initials, @"\p{Z}+", " ");
+                            initials = Regex.Replace(initials.Trim(), @"\s+(?:[JS]R|I{1,3}|I[VX]|VI{0,3})$", "", RegexOptions.IgnoreCase);
+                            initials = Regex.Replace(initials, @"^(\p{L})[^\s]*(?:\s+(?:\p{L}+\s+(?=\p{L}))?(?:(\p{L})\p{L}*)?)?$", "$1$2").Trim();
+
+                            if (initials.Length > 2)
+                            {
+                                initials = initials.Substring(0, 2);
+                            }
+
+
                             <div class="Approve-user pending">
                                 <div class="content">
                                     <div class="sb-avatar" style="display: inline-block; width: 38px; height: 38px; border-radius: 500px;">
                                         <div style="width: 38px; height: 38px; font: 12px/38px Helvetica, Arial, sans-serif; text-align: center; text-transform: uppercase; color: rgb(255, 255, 255); background: #292874; border-radius: 100%;">
-                                            RS
+                                            @initials.ToUpperInvariant()
                                         </div>
                                     </div>
                                     <header><p>@item.Nome</p></header>

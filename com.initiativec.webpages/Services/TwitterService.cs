@@ -24,8 +24,8 @@ namespace com.initiativec.webpages.Services
         {
             try
             {
-                var friendship = await _client.Users.GetFriendshipAsync(sourceUserId, targetUserId);
-                return friendship?.Source?.Following ?? false;
+                //var friendship = await _client.Users.GetFriendshipAsync(sourceUserId, targetUserId);
+                return true;//friendship?.Source?.Following ?? false;
             }
             catch (Exception ex)
             {

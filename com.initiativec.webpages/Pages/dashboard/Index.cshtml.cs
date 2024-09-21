@@ -16,17 +16,19 @@ namespace com.initiativec.webpages.Pages.dashboard
         private readonly BlockfrostServices _blockfrostServices;
         private readonly TokenBoutyService _tokenBountyService;
         private readonly TwitterService _twitterService;
-
+        private readonly TelegramService _telegramService;
 
         public IndexModel(DatabaseContext context
                             ,BlockfrostServices blockfrostServices
                             ,TokenBoutyService tokenBountyService
-                            ,TwitterService twitterService)
+                            ,TwitterService twitterService
+                            ,TelegramService telegramService)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
             _tokenBountyService = tokenBountyService;
-            _twitterService = twitterService;       
+            _twitterService = twitterService;
+            _telegramService = telegramService;
         }
 
         public IList<User> Users { get; set; }
@@ -38,6 +40,7 @@ namespace com.initiativec.webpages.Pages.dashboard
         public CardSaldoAtual cardSaldoAtual { get; set; }
 
         public FollowStatusCard FollowStatus { get; set; }
+        public bool IsUserInGroup { get; set; }
 
         public IActionResult OnGet()
         {
@@ -134,8 +137,18 @@ namespace com.initiativec.webpages.Pages.dashboard
             CardSaldoAtual cardSaldoAtual = new CardSaldoAtual();
             var tokens = _context.TokenBounties.FirstOrDefault(t => t.id_usuario == id_usuario);
 
-            cardSaldoAtual.valorSaldo = tokens.valor_reservado;
-            cardSaldoAtual.valorSaldoTotal = tokens.valor_reserva_total;
+            if(tokens != null)
+            {
+                cardSaldoAtual.valorSaldo = tokens.valor_reservado;
+                cardSaldoAtual.valorSaldoTotal = tokens.valor_reserva_total;
+            }
+            else
+            {
+                cardSaldoAtual.valorSaldo = 0;
+                cardSaldoAtual.valorSaldoTotal = 0;
+            }
+
+            
             cardSaldoAtual.percentualAtual = 70;
             cardSaldoAtual.percentualReservado = 30;
 
@@ -177,6 +190,14 @@ namespace com.initiativec.webpages.Pages.dashboard
                     ErrorMessage = "Um dos usuários não foi encontrado."
                 };
             }
+        }
+
+
+        private void GetCardParticipaGrupoTelegram()
+        {
+            long userTelegramId = 123456789; // Substitua pelo ID real do usuário
+
+            IsUserInGroup = _telegramService.IsUserInGroupAsync(userTelegramId).Result;
         }
 
 

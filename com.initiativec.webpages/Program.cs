@@ -10,6 +10,7 @@ using com.initiativec.webpages.ViewModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Telegram.Bot;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,17 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.Configure<TwitterSettings>(builder.Configuration.GetSection("Twitter"));
+
+// Registrar as configurações do Telegram Bot
+builder.Services.Configure<TelegramBotSettings>(builder.Configuration.GetSection("TelegramBot"));
+
+// Registrar o cliente do Telegram.Bot
+builder.Services.AddSingleton<ITelegramBotClient>(sp =>
+{
+    var settings = sp.GetRequiredService<IOptions<TelegramBotSettings>>().Value;
+    return new TelegramBotClient(settings.Token);
+});
+
 
 builder.Services.Configure<RequestLocalizationOptions>(
     options =>
@@ -46,6 +58,9 @@ var authConfig = new AuthHeaderConfiguration(apiKey, baseUrl);
 builder.Services.AddBlockfrost(authConfig);
 
 builder.Services.AddSingleton<TwitterService>();
+builder.Services.AddScoped<TelegramService>();
+builder.Services.AddSingleton<BotService>();
+builder.Services.AddHostedService<BotHostedService>();
 
 
 builder.Services.AddScoped<BlockfrostServices>();
