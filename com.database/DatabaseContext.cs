@@ -24,6 +24,17 @@ namespace com.database
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configurar a chave primária
+            modelBuilder.Entity<User>()
+                .HasKey(u => u.id);
+
+            // Configurar índice único para stake_address
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.stake_address)
+                .IsUnique();
+
+
+
             // Configurar a relação entre TokenBounty e User
             modelBuilder.Entity<TokenBounty>()
                 .HasOne(tb => tb.User)

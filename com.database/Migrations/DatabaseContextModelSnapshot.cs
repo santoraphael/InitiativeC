@@ -107,6 +107,10 @@ namespace com.database.Migrations
                     b.Property<string>("phone_number")
                         .HasColumnType("text");
 
+                    b.Property<string>("stake_address")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int?>("status")
                         .HasColumnType("integer");
 
@@ -115,6 +119,9 @@ namespace com.database.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("id");
+
+                    b.HasIndex("stake_address")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

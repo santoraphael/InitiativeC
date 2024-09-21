@@ -1,14 +1,19 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace com.database.entities
 {
+    [Index(nameof(stake_address), IsUnique = true)]
     public class User
     {
+        [Key]
         public int id { get; set; }
+        public string stake_address { get; set; }
         public string wallet_address { get; set; }
         public string? name { get; set; }
         public string? email { get; set; }
