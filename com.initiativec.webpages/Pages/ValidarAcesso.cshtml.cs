@@ -29,7 +29,7 @@ namespace com.initiativec.webpages.Pages
             var StakeAddress = _blockfrostServices.GetStakeAddress(request.Token);
 
             // Validar o token no banco de dados
-            var usuario = _context.Users.FirstOrDefault(u => u.wallet_address == StakeAddress.Result);
+            var usuario = _context.Users.FirstOrDefault(u => u.stake_address == StakeAddress.Result && u.confirmed == true);
 
             if (usuario != null)
             {
@@ -42,7 +42,7 @@ namespace com.initiativec.webpages.Pages
                     {
                         HttpOnly = true,
                         Secure = true, // Defina como true se estiver usando HTTPS
-                        Expires = DateTimeOffset.UtcNow.AddHours(1), // Defina a expiração conforme necessário
+                        Expires = DateTimeOffset.UtcNow.AddMonths(1), // Defina a expiração conforme necessário
                         SameSite = SameSiteMode.Strict
                     });
 

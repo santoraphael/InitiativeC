@@ -53,7 +53,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             var StakeAddress = _blockfrostServices.GetStakeAddress(token);
             var stk_adress = StakeAddress.Result;
 
-            var user = _context.Users.FirstOrDefault(u => u.wallet_address == stk_adress);
+            var user = _context.Users.FirstOrDefault(u => u.stake_address == stk_adress);
 
             DashboardVM dashboardVM = new DashboardVM();
             dashboardVM.id_usuario = user.id;

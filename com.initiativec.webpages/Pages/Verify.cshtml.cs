@@ -23,7 +23,7 @@ namespace com.initiativec.webpages.Pages
             }
 
             // Validar o token no banco de dados
-            var usuario = _context.Users.FirstOrDefault(u => u.wallet_address == request.Token);
+            var usuario = _context.Users.FirstOrDefault(u => u.stake_address == request.Token);
 
             if (usuario != null)
             {

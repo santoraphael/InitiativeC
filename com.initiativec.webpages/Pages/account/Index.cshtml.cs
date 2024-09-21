@@ -3,6 +3,7 @@ using com.cardano;
 using com.database;
 using com.database.entities;
 using com.initiativec.webpages.Interfaces;
+using com.initiativec.webpages.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
@@ -15,14 +16,17 @@ namespace com.initiativec.webpages.Pages.account
         private readonly DatabaseContext _context;
         private readonly BlockfrostServices _blockfrostServices;
         private readonly IEmailSender _emailSender;
+        private readonly TokenBoutyService _tokenBountyService;
 
         public IndexModel(DatabaseContext context
                             ,BlockfrostServices blockfrostServices
-                            ,IEmailSender emailSender)
+                            ,IEmailSender emailSender
+                            ,TokenBoutyService tokenBountyService)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
             _emailSender = emailSender;
+            _tokenBountyService = tokenBountyService;
         }
 
         [BindProperty(SupportsGet = true)]
@@ -61,13 +65,17 @@ namespace com.initiativec.webpages.Pages.account
             var StakeAddress = _blockfrostServices.GetStakeAddress(WalletAddress);
             var stk_adress = StakeAddress.Result;
 
-            var userExsists = _context.Users.Select(u => u.wallet_address == stk_adress).FirstOrDefault();
+            var userExsists = _context.Users.FirstOrDefault(u => u.stake_address == stk_adress);
 
-            if (userExsists)
+            if(userExsists != null)
             {
-                ModelState.AddModelError(string.Empty, "Stake Address ou Wallet Address já cadastrado");
-                return Page();
+                if ((bool)userExsists.confirmed)
+                {
+                    ModelState.AddModelError(string.Empty, "Stake Address ou Wallet Address já cadastrado");
+                    return Page();
+                }
             }
+            
 
             var generatedCode = GenerateInviteCode();
             while (ValidateInviteCode(generatedCode) == false)
@@ -76,31 +84,65 @@ namespace com.initiativec.webpages.Pages.account
             }
 
 
-            User user = new User()
+            var confirmedMaster = false;
+
+            if(InviteCode == "MASTER")
             {
-                wallet_address = stk_adress,
-                name = Name,
-                email = string.IsNullOrEmpty(Email) ? null : Email,
-                phone_number = "",
-                invite_code = generatedCode,
-                invited_by = InviteCode,
-                status = 0,
-                confirmation_code_number = GenerateCodeNumericConfirmation(),
-                confirmation_code_alphanumber = GenerateAlphanumericCodeConfirmation(),
-                confirmed = false,
-                invitations_available = 5,
-                expiration_date_invitations = DateTime.UtcNow.AddDays(14)
-            };
+                var userMaster = _context.Users.FirstOrDefault(u => u.invite_code == "MASTER");
+                if(userMaster.invitations_available > 0)
+                {
+                    confirmedMaster = true;
+
+                    userMaster.invitations_available = userMaster.invitations_available - 1;
+                    _context.Update(userMaster);
+                }
+            }
+
+
+            User user = new User();
+            if (userExsists != null)
+            {
+                userExsists.name = Name;
+                userExsists.name = string.IsNullOrEmpty(Email) ? null : Email;
+                userExsists.invited_by = InviteCode;
+                userExsists.confirmed = confirmedMaster;
+                userExsists.expiration_date_invitations = DateTime.UtcNow.AddDays(14);
+
+                _context.Users.Update(userExsists);
+            }
+            else
+            {
+                
+                user.stake_address = stk_adress;
+                user.wallet_address = WalletAddress;
+                user.name = Name;
+                user.email = string.IsNullOrEmpty(Email) ? null : Email;
+                user.phone_number = "";
+                user.invite_code = generatedCode;
+                user.invited_by = InviteCode;
+                user.status = 0;
+                user.confirmation_code_number = GenerateCodeNumericConfirmation();
+                user.confirmation_code_alphanumber = GenerateAlphanumericCodeConfirmation();
+                user.confirmed = confirmedMaster;
+                user.invitations_available = 5;
+                user.expiration_date_invitations = DateTime.UtcNow.AddDays(14);
+
+                _context.Users.Add(user);
+            }
+
+            _context.SaveChanges();
+
+            if(confirmedMaster)
+            {
+                _tokenBountyService.ReservarValorInicial(user.id);
+            }
+            
 
             string subject = "Confirmação de Registro";
             string message = $"Olá {Name},<br/>Obrigado por se registrar!";
 
 
             //_emailSender.SendEmailAsync(Email, subject, message);
-
-            _context.Users.Add(user);
-            _context.SaveChanges();
-
 
             return RedirectToPage("/verify");
         }
