@@ -22,6 +22,13 @@ namespace com.database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            foreach (var entity in modelBuilder.Model.GetEntityTypes())
+            {
+                // Converter o nome da tabela para minúsculas
+                entity.SetTableName(entity.GetTableName().ToLower());
+            }
+
             base.OnModelCreating(modelBuilder);
 
             // Configurar a chave primária

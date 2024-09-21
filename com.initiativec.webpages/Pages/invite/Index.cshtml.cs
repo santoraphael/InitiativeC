@@ -29,6 +29,8 @@ namespace com.initiativec.webpages.Pages.invite
             }
             else
             {
+                
+                TempData["ErrorTitle"] = "Convite Inválido";
                 TempData["ErrorMessage"] = "Código de convite inválido ou expirado.";
                 return RedirectToPage("/Error");
             }
@@ -36,7 +38,7 @@ namespace com.initiativec.webpages.Pages.invite
 
         private bool IsValidInviteCode(string code)
         {
-            var validCode = _context.Users.Select(u => u.invite_code == code).FirstOrDefault();
+            var validCode = _context.Users.Any(u => u.invite_code == code && u.invitations_available > 0);
             return validCode;
         }
     }

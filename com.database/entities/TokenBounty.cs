@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace com.database.entities
 {
+    [Table("tokenbounties")]
     public class TokenBounty
     {
         [Key]

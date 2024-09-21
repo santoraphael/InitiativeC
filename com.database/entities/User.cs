@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace com.database.entities
 {
     [Index(nameof(stake_address), IsUnique = true)]
+    [Table("users")]
     public class User
     {
         [Key]
