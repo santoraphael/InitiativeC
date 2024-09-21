@@ -7,6 +7,14 @@
     <UserSecretsId>db2ac553-0cac-4ee6-8c99-8ec613f1cbdd</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Pages\invite\dfymlllb.eby~" />
   </ItemGroup>
