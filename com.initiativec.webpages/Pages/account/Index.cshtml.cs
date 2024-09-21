@@ -61,7 +61,7 @@ namespace com.initiativec.webpages.Pages.account
             var StakeAddress = _blockfrostServices.GetStakeAddress(WalletAddress);
             var stk_adress = StakeAddress.Result;
 
-            var userExsists = _context.Users.Select(u => u.wallet_address == stk_adress).FirstOrDefault();
+            var userExsists = _context.users.Select(u => u.wallet_address == stk_adress).FirstOrDefault();
 
             if (userExsists)
             {
@@ -76,7 +76,7 @@ namespace com.initiativec.webpages.Pages.account
             }
 
 
-            User user = new User()
+            user user = new user()
             {
                 wallet_address = stk_adress,
                 name = Name,
@@ -98,7 +98,7 @@ namespace com.initiativec.webpages.Pages.account
 
             //_emailSender.SendEmailAsync(Email, subject, message);
 
-            _context.Users.Add(user);
+            _context.users.Add(user);
             _context.SaveChanges();
 
 
@@ -127,7 +127,7 @@ namespace com.initiativec.webpages.Pages.account
 
         public bool ValidateInviteCode(string inviteCode)
         {
-            var inviteCodeReturn = _context.Users.Select(u => u.invite_code == inviteCode).FirstOrDefault();
+            var inviteCodeReturn = _context.users.Select(u => u.invite_code == inviteCode).FirstOrDefault();
 
             if (inviteCodeReturn)
             {
