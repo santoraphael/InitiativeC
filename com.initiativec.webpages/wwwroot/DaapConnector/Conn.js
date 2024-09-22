@@ -416,15 +416,15 @@ function prepareButtonWalletsConnect() {
                 wallet.style.cssText = 'display:none;';
             }
 
-            if (key === 'flint') {
+            //if (key === 'flint') {
 
-                var remove = document.querySelector('#js-connect-flint');
-                remove.style.cssText = "cursor: pointer;"
-                remove.id = 'flint'
+            //    var remove = document.querySelector('#js-connect-flint');
+            //    remove.style.cssText = "cursor: pointer;"
+            //    remove.id = 'flint'
 
-                var wallet = document.querySelector('#app-flint-install-wallet');
-                wallet.style.cssText = 'display:none;';
-            }
+            //    var wallet = document.querySelector('#app-flint-install-wallet');
+            //    wallet.style.cssText = 'display:none;';
+            //}
 
             if (key === 'vespr') {
                 console.log(key);
