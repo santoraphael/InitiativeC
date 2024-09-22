@@ -376,8 +376,6 @@ function prepareButtonWalletsConnect() {
 
         if (window.cardano[key].enable && wallets.indexOf(key) === -1) {
 
-            console.log(key);
-
             if (key === 'nami') {
 
                 var remove = document.querySelector('#js-connect-nami');
@@ -425,6 +423,16 @@ function prepareButtonWalletsConnect() {
                 remove.id = 'flint'
 
                 var wallet = document.querySelector('#app-flint-install-wallet');
+                wallet.style.cssText = 'display:none;';
+            }
+
+            if (key === 'vespr') {
+                console.log(key);
+                var remove = document.querySelector('#js-connect-vespr');
+                remove.style.cssText = "cursor: pointer;"
+                remove.id = 'vespr'
+
+                var wallet = document.querySelector('#app-vespr-install-wallet');
                 wallet.style.cssText = 'display:none;';
             }
 
