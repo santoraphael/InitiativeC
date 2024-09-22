@@ -416,18 +416,18 @@ function prepareButtonWalletsConnect() {
                 wallet.style.cssText = 'display:none;';
             }
 
-            //if (key === 'flint') {
+            if (key === 'flint') {
 
-            //    var remove = document.querySelector('#js-connect-flint');
-            //    remove.style.cssText = "cursor: pointer;"
-            //    remove.id = 'flint'
+                var remove = document.querySelector('#js-connect-flint');
+                remove.style.cssText = "cursor: pointer;"
+                remove.id = 'flint'
 
-            //    var wallet = document.querySelector('#app-flint-install-wallet');
-            //    wallet.style.cssText = 'display:none;';
-            //}
+                var wallet = document.querySelector('#app-flint-install-wallet');
+                wallet.style.cssText = 'display:none;';
+            }
 
             if (key === 'vespr') {
-                console.log(key);
+   
                 var remove = document.querySelector('#js-connect-vespr');
                 remove.style.cssText = "cursor: pointer;"
                 remove.id = 'vespr'
@@ -436,14 +436,35 @@ function prepareButtonWalletsConnect() {
                 wallet.style.cssText = 'display:none;';
             }
 
-            //if (key === 'lace') {
+            if (key === 'nufi') {
 
-            //    var remove = document.querySelector('#js-connect-lace');
-            //    remove.id = 'lace'
+                var remove = document.querySelector('#js-connect-nufi');
+                remove.style.cssText = "cursor: pointer;"
+                remove.id = 'nufi'
 
-            //    var wallet = document.querySelector('#app-lace-install-wallet');
-            //    wallet.style.cssText = 'display:none;';
-            //}
+                var wallet = document.querySelector('#app-nufi-install-wallet');
+                wallet.style.cssText = 'display:none;';
+            }
+
+            if (key === 'lace') {
+
+                var remove = document.querySelector('#js-connect-lace');
+                remove.style.cssText = "cursor: pointer;"
+                remove.id = 'lace'
+
+                var wallet = document.querySelector('#app-lace-install-wallet');
+                wallet.style.cssText = 'display:none;';
+            }
+
+            if (key === 'begin') {
+
+                var remove = document.querySelector('#js-connect-begin');
+                remove.style.cssText = "cursor: pointer;"
+                remove.id = 'begin'
+
+                var wallet = document.querySelector('#app-begin-install-wallet');
+                wallet.style.cssText = 'display:none;';
+            }
 
         }
     }
@@ -521,6 +542,7 @@ async function enableWallet() {
     const walletKey = State.whichWalletSelected;
     try {
         WalletAPI = window.cardano[walletKey].enable();
+        //console.log(WalletAPI);
     } catch (err) {
         //console.log(err);
     }
@@ -574,8 +596,8 @@ function getUtxos() {
         WalletAPI.then((data) => {
 
 
-            
-            data.getUtxos().then((rawUtxos) => {
+          
+            cardano.getUtxos().then((rawUtxos) => {
 
                 //const rawUtxos = Utxos;
 
@@ -784,14 +806,14 @@ async function getUsedAddresses() {
     try {
 
         State.usedAddress =  WalletAPI.then((api) => {
-
+            
              //api.getUsedAddresses().then(raw => State.usedAddress = convertHexToWalletAddress(raw[0]));
+            
 
-
-            State.usedAddress = api.getUsedAddresses().then((raw) => {
-
+            State.usedAddress = cardano.getUsedAddresses().then((raw) => {
+                
                 var rawFirst = raw[0];
-
+             
                 State.usedAddress = convertHexToWalletAddress(rawFirst);
                 return State.usedAddress;                
             });
