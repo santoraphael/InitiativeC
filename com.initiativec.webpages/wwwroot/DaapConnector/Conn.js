@@ -123,17 +123,25 @@ var protocolParams = {
 
 async function run() {
 
+
+    
+
     State.whichWalletSelected = await getWalletKey();
-    //console.log(State.whichWalletSelected);
+    
     
     if (State.whichWalletSelected == null) {
+        
+
         prepareButtonWalletsConnect();
 
         //prepareMintButton();
     }
     else {
 
+
         State.walletIsConnected = await isConnectWallet(State.whichWalletSelected);
+
+        
 
         if (State.walletIsConnected) {
             State.walletIsEnabled = enableWallet();
@@ -366,7 +374,7 @@ $(".js-btn-comprar").on("click", function () {
 
 function prepareButtonWalletsConnect() {
 
-    //console.log('prepareButtonWalletsConnect');
+    
 
     const wallets = [];
     for (const key in window.cardano) {
@@ -416,15 +424,15 @@ function prepareButtonWalletsConnect() {
                 wallet.style.cssText = 'display:none;';
             }
 
-            if (key === 'flint') {
+            //if (key === 'flint') {
 
-                var remove = document.querySelector('#js-connect-flint');
-                remove.style.cssText = "cursor: pointer;"
-                remove.id = 'flint'
+            //    var remove = document.querySelector('#js-connect-flint');
+            //    remove.style.cssText = "cursor: pointer;"
+            //    remove.id = 'flint'
 
-                var wallet = document.querySelector('#app-flint-install-wallet');
-                wallet.style.cssText = 'display:none;';
-            }
+            //    var wallet = document.querySelector('#app-flint-install-wallet');
+            //    wallet.style.cssText = 'display:none;';
+            //}
 
             if (key === 'vespr') {
    
@@ -808,15 +816,18 @@ async function getUsedAddresses() {
         State.usedAddress =  WalletAPI.then((api) => {
             
              //api.getUsedAddresses().then(raw => State.usedAddress = convertHexToWalletAddress(raw[0]));
-            
+
+            var walletKey = window.localStorage.getItem('walletKey');
 
             State.usedAddress = api.getUsedAddresses().then((raw) => {
-                
+
                 var rawFirst = raw[0];
-             
+
                 State.usedAddress = convertHexToWalletAddress(rawFirst);
-                return State.usedAddress;                
+                return State.usedAddress;
             });
+
+            
 
             return State.usedAddress
 
@@ -925,12 +936,12 @@ function connectWallet(walletkey) {
 }
 
 async function isConnectWallet(walletkey) {
-
+    
     var walletIsConnected = false;
-    //console.log(walletkey);
+    
 
     if (walletkey != null) {
-
+        console.log(walletkey);
         
         walletIsConnected = await window.cardano[walletkey].isEnabled().then((data) => {
 
@@ -938,6 +949,7 @@ async function isConnectWallet(walletkey) {
            return data;
             
         });
+
     }
 
 
