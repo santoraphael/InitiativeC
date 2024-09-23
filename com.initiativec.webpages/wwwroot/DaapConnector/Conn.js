@@ -597,7 +597,7 @@ function getUtxos() {
 
 
           
-            cardano.getUtxos().then((rawUtxos) => {
+            data.getUtxos().then((rawUtxos) => {
 
                 //const rawUtxos = Utxos;
 
@@ -810,7 +810,7 @@ async function getUsedAddresses() {
              //api.getUsedAddresses().then(raw => State.usedAddress = convertHexToWalletAddress(raw[0]));
             
 
-            State.usedAddress = cardano.getUsedAddresses().then((raw) => {
+            State.usedAddress = api.getUsedAddresses().then((raw) => {
                 
                 var rawFirst = raw[0];
              
