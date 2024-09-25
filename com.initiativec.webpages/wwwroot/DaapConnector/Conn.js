@@ -121,9 +121,8 @@ var protocolParams = {
 
 // ================================================================= //
 
+
 async function run() {
-
-
     
 
     State.whichWalletSelected = await getWalletKey();
@@ -140,31 +139,14 @@ async function run() {
 
 
         State.walletIsConnected = await isConnectWallet(State.whichWalletSelected);
-
+        //console.log(State.walletIsConnected);
         
 
         if (State.walletIsConnected) {
             State.walletIsEnabled = enableWallet();
-            await getNetworkId();
-            await getBalance();
 
-            //console.log(State.networkId);
-
-
-            getUtxos();
-
-            //if (State.networkId != 1) {
-            //    alert('NETWORK WRONG');
-            //    return false;
-            //    //window.location.href = '/';
-            //}
 
             if (State.walletIsEnabled) {
-                //console.log('Connected');
-                
-
-                prepareMintButtonLoad();
-                
 
                 var notConnected = document.querySelector('#js-btn-connect-wallet');
                 notConnected.style.cssText = 'display:none;';
@@ -178,9 +160,18 @@ async function run() {
                 var dashboardButtonSecond = document.querySelector('.js-dashboard-menu-second');
                 dashboardButtonSecond.style.cssText = 'display:block;';
 
+
+
+                const protectedPages = ['/dashboard', '/outraPaginaProtegida']; // Adicione aqui todas as suas páginas protegidas
+                const currentPath = window.location.pathname.toLowerCase();
+
+                if (protectedPages.includes(currentPath)) {
+                   await runValidation();
+                }
+
+                
                 State.usedAddress = await getUsedAddresses();
                 window.localStorage.setItem("WalletAddress", State.usedAddress);
-
 
                 let firstPart = State.usedAddress.substring(0, 12);
                 let lastPart = State.usedAddress.substring(State.usedAddress.length - 8);
@@ -207,7 +198,7 @@ async function run() {
                 }
 
 
-                stateButtonMint();
+                //stateButtonMint();
                 //console.log(showAddress);
                 txtConnected.innerHTML = showAddress;
 
@@ -232,65 +223,38 @@ async function run() {
 }
 
 
-function prepareMintButtonLoad() {
-
+async function runValidation() {
     try {
-        var labelPrincipalText = document.querySelector('#js-label-principal-text-buy');
-        var labelSecundaryText = document.querySelector('#js-label-secundary-text-buy');
-        var btnConnectBuy = document.querySelector('#js-btn-connect-buy');
-        var spanConnectBuy = document.querySelector('#js-span-connect-buy');
+        State.usedAddress = await getUsedAddresses();
+        window.localStorage.setItem("WalletAddress", State.usedAddress);
+        let usuarioToken = getCookie('UsuarioToken');
+
+        // Enviar o endereço da carteira para verificação no backend
+        const response = await fetch('/ValidarAcesso?handler=VerifyWalletAddress', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': getAntiForgeryToken()
+            },
+            body: JSON.stringify({ WalletAddress: State.usedAddress })
+        });
 
 
-        labelPrincipalText.innerHTML = "Establishing a connection";
-        labelSecundaryText.innerHTML = "Please wait a moment.";
+        if (!response.ok) {
+            // Verificação falhou, redirecionar para /verify
+            window.location.href = '/verify';
+            return;
+        }
 
+        // Se a verificação for bem-sucedida, continuar normalmente
 
-        btnConnectBuy.setAttribute("disabled", '');
-        btnConnectBuy.style.cssText = 'background-color: rgb(89, 90, 99)';
-        spanConnectBuy.innerHTML = "Connect...";
-    } catch {
-
-    }
-    
-}
-
-function stateButtonMint() {
-    try {
-        var labelPrincipalText = document.querySelector('#js-label-principal-text-buy');
-        var labelSecundaryText = document.querySelector('#js-label-secundary-text-buy');
-        var btnConnectBuy = document.querySelector('#js-btn-connect-buy');
-        var spanConnectBuy = document.querySelector('#js-span-connect-buy');
-
-
-        labelPrincipalText.innerHTML = "Mint a GoodVibes";
-        labelSecundaryText.innerHTML = "LOAD PRICE...";
-
-
-        btnConnectBuy.setAttribute("disabled", '');
-        btnConnectBuy.style.cssText = 'background-color: rgb(89, 90, 99)';
-        spanConnectBuy.innerHTML = "Mint a GoodVibes";
-
-
-        
-
-        //validatinFunds(12449993344,3);
-
-    } catch {
-
+    } catch (error) {
+        console.error('Erro durante a validação:', error);
+        // Redirecionar para /verify em caso de erro
+        window.location.href = '/verify';
     }
 }
 
-function alterCurrentPriceGoodVibe(currentPrice) {
-    try {
-
-        let valueConvert = currentPrice / 1000000
-
-        var labelSecundaryText = document.querySelector('#js-label-secundary-text-buy');
-        labelSecundaryText.innerHTML = "You can mint up to 10 GoodVibes. Current Price: " + valueConvert + " ADA";
-    } catch {
-
-    }
-}
 
 function validatinFunds(valueToValidate, quantity) {
 
@@ -379,7 +343,7 @@ function prepareButtonWalletsConnect() {
     const wallets = [];
     for (const key in window.cardano) {
 
-        console.log(key);
+        //console.log(key);
 
 
         if (window.cardano[key].enable && wallets.indexOf(key) === -1) {
@@ -777,7 +741,7 @@ function getChangeAddress() {
                 const changeAddress = convertHexToWalletAddress(raw);
                 State.changeAddress = changeAddress;
 
-                //console.log(changeAddress);
+                console.log("MUDOU: "+changeAddress);
             });
         });
 
@@ -839,6 +803,39 @@ async function getUsedAddresses() {
         console.log(err)
     }
 
+}
+
+async function getCurrentWalletAddress() {
+    // Obter o walletKey do localStorage
+    var walletKey = window.localStorage.getItem('walletKey');
+    console.log(walletKey);
+
+    if (!walletKey) {
+        console.error('walletKey não encontrado no localStorage');
+        return null;
+    }
+
+    // Obter a carteira do window.cardano
+    const wallet = window.cardano[walletKey];
+    if (!wallet) {
+        console.error('Carteira não encontrada em window.cardano');
+        return null;
+    }
+
+    // Habilitar a carteira para obter acesso à API
+    const api = await wallet.enable();
+    const usedAddresses = await api.getUsedAddresses();
+
+    if (!usedAddresses || usedAddresses.length === 0) {
+        console.error('Nenhum endereço usado encontrado');
+        return null;
+    }
+
+    // Converter o primeiro endereço de hexadecimal para formato legível
+    const rawFirst = usedAddresses[0];
+    const address = convertHexToWalletAddress(rawFirst);
+
+    return address;
 }
 
 window.refreshData = function()  {
@@ -930,7 +927,9 @@ function getWalletKey(){
 
 function connectWallet(walletkey) {
 
-    WalletAPI = window.cardano[walletkey].enable();
+    console.log("CONECTANDO: "+walletkey)
+
+    WalletAPI =  window.cardano[walletkey].enable();
 
     //console.log(WalletAPI);
 }
@@ -941,11 +940,14 @@ async function isConnectWallet(walletkey) {
     
 
     if (walletkey != null) {
-        console.log(walletkey);
+        
         
         walletIsConnected = await window.cardano[walletkey].isEnabled().then((data) => {
 
-            
+            if (data.data == false) {
+                disconnectWallet();
+            }
+
            return data;
             
         });
@@ -954,6 +956,18 @@ async function isConnectWallet(walletkey) {
 
 
     return walletIsConnected;
+}
+
+function disconnectWallet() {
+    localStorage.removeItem('walletKey');
+    localStorage.removeItem('WalletAddress')
+
+
+    var dashboardButton = document.querySelector('.js-dashboard-menu');
+    dashboardButton.style.cssText = 'display:none;';
+
+    var dashboardButtonSecond = document.querySelector('.js-dashboard-menu-second');
+    dashboardButtonSecond.style.cssText = 'display:none;';
 }
 
 function getInfos() {
@@ -977,3 +991,36 @@ function convertHexToWalletAddress(hexWallet) {
 
 
 
+function getCookie(name) {
+    // Função para obter o valor de um cookie
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+}
+
+function deleteCookie(name) {
+    document.cookie = name + '=; Max-Age=0; path=/;';
+}
+
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + encodeURIComponent(value || "") + expires + "; path=/";
+}
+
+function getAntiForgeryToken() {
+    // Função para obter o token anti-forgery
+    return document.querySelector('input[name="__RequestVerificationToken"]').value;
+}
+
+function getPageValidate() {
+    // Função para obter o token anti-forgery
+    console.log(document.querySelector('input[name="__RequestValidatePage"]').value);
+
+    return document.querySelector('input[name="__RequestValidatePage"]').value;
+}

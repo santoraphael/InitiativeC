@@ -55,6 +55,11 @@ namespace com.initiativec.webpages.Pages.dashboard
 
             var user = _context.Users.FirstOrDefault(u => u.stake_address == stk_adress);
 
+            //if (user == null)
+            //{
+            //    return RedirectToPage("/");
+            //}
+
             DashboardVM dashboardVM = new DashboardVM();
             dashboardVM.id_usuario = user.id;
             dashboardVM.nome_usuario = user.name;

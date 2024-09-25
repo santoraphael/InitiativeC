@@ -74,5 +74,32 @@ namespace com.initiativec.webpages.Pages
         {
             public string Token { get; set; }
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult OnPostVerifyWalletAddress([FromBody] VerifyWalletAddressRequest request)
+        {
+            var token = Request.Cookies["UsuarioToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                // Usuário não está autenticado
+                return Unauthorized();
+            }
+
+            if (token != request.WalletAddress)
+            {
+                // Endereços diferentes, realizar logout
+                Response.Cookies.Delete("UsuarioToken");
+                return Unauthorized();
+            }
+
+            // Endereços coincidem
+            return new JsonResult(new { success = true });
+        }
+
+        public class VerifyWalletAddressRequest
+        {
+            public string WalletAddress { get; set; }
+        }
     }
 }

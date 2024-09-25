@@ -5,6 +5,8 @@
 @using Microsoft.Extensions.Options
 @using Microsoft.AspNetCore.Antiforgery
 @inject IAntiforgery Antiforgery
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+
 
 @inject com.initiativec.webpages.Services.SharedResourceService sharedLocalizer
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
@@ -18,8 +20,24 @@
         var tokens = Antiforgery.GetAndStoreTokens(Context);
         return tokens.RequestToken;
     }
+
+    public string GetPageValidate()
+    {
+        var pages = @Url.Page("ValidarAcesso", "VerifyWalletAddress");
+        return pages;
+    }
 }
 
+@{
+    var isAuthenticated = !string.IsNullOrEmpty(Context.Request.Cookies["UsuarioToken"]);
+}
+
+<script>
+    var isAuthenticated = @isAuthenticated.ToString().ToLower()
+</script>
+
+<input type="hidden" id="__RequestVerificationToken" name="__RequestVerificationToken" value="@GetAntiforgeryToken()" />
+<input type="hidden" id="__RequestValidatePage" name="__RequestValidatePage" value="@GetPageValidate()" />
 
 @{
 
@@ -1119,11 +1137,15 @@
 
 <script>
     $(document).ready(function () {
-        //refreshData();
+        // Exemplo de uso:
+        
+
+
     });
 
 
     $("#js-disconnect-wallet").on("click", function () {
+
         localStorage.removeItem('walletKey');
         localStorage.removeItem('WalletAddress')
         
@@ -1134,6 +1156,9 @@
         var dashboardButtonSecond = document.querySelector('.js-dashboard-menu-second');
         dashboardButtonSecond.style.cssText = 'display:none;';
 
+        
+        console.log("result.success");
+
         $.ajax({
             url: '@Url.Page("ValidarAcesso", "Logout")',
             type: 'POST',
@@ -1141,9 +1166,12 @@
                 'RequestVerificationToken': '@GetAntiforgeryToken()'
             },
             success: function (result) {
+                
                 if (result.success) {
+                   
+
                     // Recarrega a página após o logout
-                    window.location.reload();
+                    window.location.reload("/");
                 } else {
                     console.error('Falha ao desconectar.');
                 }
@@ -1217,27 +1245,20 @@
 
 
     async function getEnableWallet(walletKey) {
-        //console.log(walletKey);
 
-        //var notConnected = document.querySelector('#js-btn-connect-wallet');
-        //notConnected.style.cssText = 'display:none;';
-
-        //var loadBtnLoad = document.querySelector('#js-btn-connect-load');
-        //loadBtnLoad.style.cssText = 'display:block;';
 
         window.localStorage.setItem('walletKey', walletKey);
         await window.cardano[walletKey].enable().then((data) => {
-            console.log('entrou');
+            //console.log(walletKey);
         });
 
 
-        //var loadBtnLoad = document.querySelector('#js-btn-connect-load');
-        //loadBtnLoad.style.cssText = 'display:none;';
-
-        //console.log(enabled);
-
         window.location.reload();
     }
+
+    
+
+
 </script>
 
 </html>
