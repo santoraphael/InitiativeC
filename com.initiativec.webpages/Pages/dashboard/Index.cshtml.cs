@@ -58,10 +58,10 @@ namespace com.initiativec.webpages.Pages.dashboard
 
             var user = _context.Users.FirstOrDefault(u => u.stake_address == stk_adress);
 
-            //if (user == null)
-            //{
-            //    return RedirectToPage("/");
-            //}
+            if (user == null)
+            {
+                return RedirectToPage("/verify");
+            }
 
             DashboardVM dashboardVM = new DashboardVM();
             dashboardVM.id_usuario = user.id;
@@ -153,13 +153,14 @@ namespace com.initiativec.webpages.Pages.dashboard
                 cardSaldoAtual.valorSaldoTotal = 0;
             }
 
-            
-            cardSaldoAtual.percentualAtual = 70;
-            cardSaldoAtual.percentualReservado = 30;
+            var cardSaldoAtualAtualizado = _tokenBountyService.ObterReservaPercentuais(id_usuario, 10, cardSaldoAtual);
 
-            cardSaldoAtual.status = true;
+            //cardSaldoAtual.percentualAtual = 70;
+            //cardSaldoAtual.percentualReservado = 30;
 
-            return cardSaldoAtual;
+            cardSaldoAtualAtualizado.status = true;
+
+            return cardSaldoAtualAtualizado;
         }
 
 

@@ -1,5 +1,6 @@
 ﻿using com.database;
 using com.database.entities;
+using com.initiativec.webpages.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace com.initiativec.webpages.Services
@@ -183,6 +184,51 @@ namespace com.initiativec.webpages.Services
                     return false;
                 }
             }
+        }
+
+
+        public CardSaldoAtual ObterReservaPercentuais(int usuarioId, int percentualTask, CardSaldoAtual cardSaldoAtual)
+        {
+            // Validação básica dos parâmetros
+            if (usuarioId <= 0)
+            {
+                throw new ArgumentException("ID de usuário inválido.", nameof(usuarioId));
+            }
+
+            if (percentualTask <= 0 || percentualTask > 100)
+            {
+                throw new ArgumentException("Percentual da tarefa deve ser maior que 0 e menor ou igual a 100.", nameof(percentualTask));
+            }
+
+            // Obter o bounty do usuário
+            var bounty = _context.TokenBounties.FirstOrDefault(b => b.id_usuario == usuarioId);
+
+
+            // Calcular o percentual já reservado
+            int percentualReservado = (int)((bounty.valor_reservado / bounty.valor_reserva_total) * 100);
+            //percentualReservado = Math.Round(percentualReservado, 2);
+
+            // Garantir que o percentual total não exceda 100%
+            if (percentualTask + percentualReservado > 100)
+            {
+                // Ajustar o percentualTask para não exceder o limite
+                percentualTask = 100 - percentualReservado;
+            }
+
+            // Garantir que o percentualTask não seja negativo
+            if (percentualTask < 0)
+            {
+                percentualTask = 0;
+            }
+
+            // Arredondar os valores para duas casas decimais
+            //percentualTask = Math.Round(percentualTask, 2);
+
+
+            cardSaldoAtual.percentualAtual = percentualTask + percentualReservado;
+            cardSaldoAtual.percentualReservado = percentualReservado;
+
+            return cardSaldoAtual;
         }
     }
 }

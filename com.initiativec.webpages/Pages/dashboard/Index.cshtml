@@ -216,64 +216,6 @@
 
     <script>
 
-        jQuery(".js-boatao-aprova").click(function () {
-
-            var id = jQuery(this).attr('id');
-            jQuery('.Dashboard-card').children().attr('disabled', 'disabled');
-            AprovarMembro(id);
-        });
-
-        function AprovarMembro(ID) {
-
-            jQuery.ajax({
-                url: "/Member/AprovarMembro",
-                data: {
-                    'Id': ID,
-                },
-                dataType: "json",
-                type: 'POST',
-                success: function (data) {
-                    //window.location.reload();
-                },
-                error: function () {
-                    //Notification();
-                }
-            });
-
-            window.location.reload();
-        }
-
-
-        jQuery(".js-boatao-reprovar").click(function () {
-
-            var id = jQuery(this).attr('id');
-
-            ReprovarMembro(id);
-        });
-
-        function ReprovarMembro(ID) {
-
-            jQuery.ajax({
-                url: "/Member/ReprovarMembro",
-                data: {
-                    'Id': ID,
-                },
-                dataType: "json",
-                type: 'POST',
-                success: function (data) {
-                    //alert('deu certo');
-
-                },
-                error: function () {
-                    alert('deu certo');
-                    //Notification();
-                }
-            });
-
-            window.location.reload();
-        }
-
-
         jQuery("#btnsSocials").jsSocials({
 
             shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "whatsapp"],

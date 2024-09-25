@@ -17383,7 +17383,7 @@ body.touch [data-hint]:before {
 
 .title-card {
 	font-size: 21px !important;
-	font-weight: bolder !important;
+	/*font-weight: bolder !important;*/
 }
 
 .subtitle-card {
