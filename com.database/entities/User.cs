@@ -22,7 +22,6 @@ namespace com.database.entities
         public string? phone_number { get; set; }
         public string? invite_code { get; set; }
         public string? invited_by { get; set; }
-        public int? status { get; set; }
         public string? confirmation_code_number{ get; set; }
         public string? confirmation_code_alphanumber { get; set; }
         public bool? confirmed { get; set; }

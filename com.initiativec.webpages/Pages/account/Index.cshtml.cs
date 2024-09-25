@@ -120,7 +120,7 @@ namespace com.initiativec.webpages.Pages.account
                 user.phone_number = "";
                 user.invite_code = generatedCode;
                 user.invited_by = InviteCode;
-                user.status = 0;
+                //user.status = 0;
                 user.confirmation_code_number = GenerateCodeNumericConfirmation();
                 user.confirmation_code_alphanumber = GenerateAlphanumericCodeConfirmation();
                 user.confirmed = confirmedMaster;

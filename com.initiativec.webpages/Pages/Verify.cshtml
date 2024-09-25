@@ -18,7 +18,7 @@
     /* Estilo para o spinner */
     .loader {
       border: 16px solid #f3f3f3; /* Cor de fundo */
-      border-top: 16px solid #3498db; /* Cor do spinner */
+        border-top: 16px solid #151515; /* Cor do spinner */
       border-radius: 50%;
       width: 120px;
       height: 120px;
@@ -35,16 +35,17 @@
 <div>
     <article class="Hero">
         <section>
-            <div id="spinner" style="display: none;">
-                <div class="spinner-border text-primary" role="status">
+            <div id="spinner" style="display: none; max-width: 118px;margin: auto;">
+                <div class="spinner-border" role="status">
                     <div class="loader"></div>
-                    <span class="visually-hidden">Carregando...</span>
+                    <p style="font-size: 2.1rem; font-weight: 300;max-width: 720px;margin: auto;"><span class="visually-hidden">Loading...</span></p>
+                    
                 </div>
             </div>
             <h1 class="WordWrapper" id="tituloDinamico">
                 
             </h1>
-            <p id="paragrafoDinamico" style="font-size: 2.1rem; font-weight: 300;"></p>
+            <p id="paragrafoDinamico" style="font-size: 2.1rem; font-weight: 300;max-width: 720px;margin: auto;"></p>
         </section>
        
 

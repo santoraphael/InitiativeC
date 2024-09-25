@@ -171,44 +171,48 @@ async function run() {
 
                 
                 State.usedAddress = await getUsedAddresses();
-                window.localStorage.setItem("WalletAddress", State.usedAddress);
-
-                let firstPart = State.usedAddress.substring(0, 12);
-                let lastPart = State.usedAddress.substring(State.usedAddress.length - 8);
-
-                let showAddress = firstPart + "..." + lastPart;
-
-
-                loadBtnLoad.style.cssText = 'display:none;';
 
                 
+                 
+                if (State.usedAddress !== undefined) {
+                    window.localStorage.setItem("WalletAddress", State.usedAddress);
 
-                var connected = document.querySelector('#js-btn-connected');
-                connected.style.cssText = 'display:block; width: 270px;';
-                var txtConnected = document.querySelector('.js-btn-connected');
-                var txtConnectedWallet = document.querySelector('.js-btn-connected-wallet');
+                    let firstPart = State.usedAddress.substring(0, 12);
+                    let lastPart = State.usedAddress.substring(State.usedAddress.length - 8);
+
+                    let showAddress = firstPart + "..." + lastPart;
+
+
+                    loadBtnLoad.style.cssText = 'display:none;';
+
+
+                    var connected = document.querySelector('#js-btn-connected');
+                    connected.style.cssText = 'display:block; width: 270px;';
+                    var txtConnected = document.querySelector('.js-btn-connected');
+                    var txtConnectedWallet = document.querySelector('.js-btn-connected-wallet');
+
+
+                    try {
+                        let containerQttyItens = document.querySelector('#js-container-qtty-itens');
+                        containerQttyItens.style.cssText = 'opacity: 1; transform: none; margin-top: 50px; z-index: 1; display:block;';
+                    }
+                    catch {
+
+                    }
+
+                    txtConnected.innerHTML = showAddress;
+
+                    if (txtConnectedWallet !== null) {
+                        txtConnectedWallet.innerHTML = showAddress;
+                    }
+
+                } else {
+                    
+                    prepareButtonWalletsConnect();
+                }
+
+
                 
-
-                try {
-                    let containerQttyItens = document.querySelector('#js-container-qtty-itens');
-                    containerQttyItens.style.cssText = 'opacity: 1; transform: none; margin-top: 50px; z-index: 1; display:block;';
-                }
-                catch {
-
-                }
-
-
-                //stateButtonMint();
-                //console.log(showAddress);
-                txtConnected.innerHTML = showAddress;
-
-                if (txtConnectedWallet !== null) {
-                    txtConnectedWallet.innerHTML = showAddress;
-                }
-                
-
-                //getAPIVersion()
-                //console.log(State.usedAddress);
             }
             else {
                 prepareButtonWalletsConnect();
@@ -338,15 +342,14 @@ $(".js-btn-comprar").on("click", function () {
 
 function prepareButtonWalletsConnect() {
 
-    
-
+   
     const wallets = [];
     for (const key in window.cardano) {
 
-        //console.log(key);
-
+       
 
         if (window.cardano[key].enable && wallets.indexOf(key) === -1) {
+            
 
             if (key === 'nami') {
 
@@ -418,28 +421,34 @@ function prepareButtonWalletsConnect() {
                 wallet.style.cssText = 'display:none;';
             }
 
-            if (key === 'lace') {
+            //if (key === 'lace') {
 
-                var remove = document.querySelector('#js-connect-lace');
-                remove.style.cssText = "cursor: pointer;"
-                remove.id = 'lace'
+            //    var remove = document.querySelector('#js-connect-lace');
+            //    remove.style.cssText = "cursor: pointer;"
+            //    remove.id = 'lace'
 
-                var wallet = document.querySelector('#app-lace-install-wallet');
-                wallet.style.cssText = 'display:none;';
-            }
+            //    var wallet = document.querySelector('#app-lace-install-wallet');
+            //    wallet.style.cssText = 'display:none;';
+            //}
 
-            if (key === 'begin') {
+            //if (key === 'begin') {
 
-                var remove = document.querySelector('#js-connect-begin');
-                remove.style.cssText = "cursor: pointer;"
-                remove.id = 'begin'
+            //    var remove = document.querySelector('#js-connect-begin');
+            //    remove.style.cssText = "cursor: pointer;"
+            //    remove.id = 'begin'
 
-                var wallet = document.querySelector('#app-begin-install-wallet');
-                wallet.style.cssText = 'display:none;';
-            }
+            //    var wallet = document.querySelector('#app-begin-install-wallet');
+            //    wallet.style.cssText = 'display:none;';
+            //}
 
         }
     }
+
+    var notConnected = document.querySelector('#js-btn-connect-wallet');
+    notConnected.style.cssText = 'display:block;';
+
+    var loadBtnLoad = document.querySelector('#js-btn-connect-load');
+    loadBtnLoad.style.cssText = 'display:none;';
 }
 
 
@@ -787,11 +796,16 @@ async function getUsedAddresses() {
 
                 var rawFirst = raw[0];
 
-                State.usedAddress = convertHexToWalletAddress(rawFirst);
-                return State.usedAddress;
+                if (rawFirst !== undefined) {
+                    State.usedAddress = convertHexToWalletAddress(rawFirst);
+                    return State.usedAddress;
+                } else {
+                    localStorage.removeItem('walletKey');
+                    localStorage.removeItem('WalletAddress');
+                }
+
             });
 
-            
 
             return State.usedAddress
 
