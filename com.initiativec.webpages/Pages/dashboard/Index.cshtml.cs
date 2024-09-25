@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
+using Telegram.Bot.Types;
 
 namespace com.initiativec.webpages.Pages.dashboard
 {
@@ -73,7 +74,30 @@ namespace com.initiativec.webpages.Pages.dashboard
             dashboard = dashboardVM;
             cardVerificaConvite = GetCardVerificaConvite(user.invite_code, (int)user.invitations_available);
             enviarConvite = GetCardEnviarConvite(user.invite_code, _tokenBountyService.ValorReservaConviteTotal(user.id), (int)user.invitations_available);
-            cardSaldoAtual = GetCardSaldoAtual(user.id);
+
+            int percentualTarefa = 0;
+
+            //Atividades:
+            //Cadastrar 10 % -1.125.000
+            //Convidar 5 Amigos: 40 %
+            //Seguir Twitter: 10 %
+            //Entrar no Discord: 10 %
+            //Entrar no Telegram: 10 %
+            //Adicionar Email: 10 %
+            //Fazer a primeira contribuição mínima para a Pool 10 %
+
+            if (cardVerificaConvite.status)
+            {
+                percentualTarefa = 40;
+                
+            }
+            else
+            {
+                percentualTarefa = 10;
+            }
+
+
+            cardSaldoAtual = GetCardSaldoAtual(user.id, percentualTarefa);
 
 
             return Page();
@@ -137,7 +161,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             return cardEnviarConvite;
         }
 
-        private CardSaldoAtual GetCardSaldoAtual(int id_usuario)
+        private CardSaldoAtual GetCardSaldoAtual(int id_usuario, int percentualTarefa)
         {
             CardSaldoAtual cardSaldoAtual = new CardSaldoAtual();
             var tokens = _context.TokenBounties.FirstOrDefault(t => t.id_usuario == id_usuario);
@@ -153,7 +177,7 @@ namespace com.initiativec.webpages.Pages.dashboard
                 cardSaldoAtual.valorSaldoTotal = 0;
             }
 
-            var cardSaldoAtualAtualizado = _tokenBountyService.ObterReservaPercentuais(id_usuario, 10, cardSaldoAtual);
+            var cardSaldoAtualAtualizado = _tokenBountyService.ObterReservaPercentuais(id_usuario, percentualTarefa, cardSaldoAtual);
 
             //cardSaldoAtual.percentualAtual = 70;
             //cardSaldoAtual.percentualReservado = 30;
