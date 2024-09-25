@@ -12,8 +12,8 @@ using com.database;
 namespace com.database.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240925032153_remove_campo_status")]
-    partial class remove_campo_status
+    [Migration("20240925140423_RemoveCampoStatus")]
+    partial class RemoveCampoStatus
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,7 @@ namespace com.database.Migrations
                     b.HasIndex("id_usuario")
                         .IsUnique();
 
-                    b.ToTable("tokenbounties");
+                    b.ToTable("tokenbounties", (string)null);
                 });
 
             modelBuilder.Entity("com.database.entities.TokenPool", b =>

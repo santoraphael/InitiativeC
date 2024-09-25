@@ -29,7 +29,7 @@ namespace com.initiativec.webpages.Pages
             var StakeAddress = _blockfrostServices.GetStakeAddress(request.Token);
 
             // Validar o token no banco de dados
-            var usuario = _context.Users.FirstOrDefault(u => u.stake_address == StakeAddress.Result && u.confirmed == true);
+            var usuario = _context.Users.FirstOrDefault(u => u.stake_address == StakeAddress.Result);
 
             if (usuario != null)
             {

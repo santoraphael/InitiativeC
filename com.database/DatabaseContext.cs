@@ -42,6 +42,11 @@ namespace com.database
 
 
 
+            modelBuilder.Entity<TokenBounty>(entity =>
+            {
+                entity.ToTable("tokenbounties"); // Garante que o nome está em minúsculas
+            });
+
             // Configurar a relação entre TokenBounty e User
             modelBuilder.Entity<TokenBounty>()
                 .HasOne(tb => tb.User)

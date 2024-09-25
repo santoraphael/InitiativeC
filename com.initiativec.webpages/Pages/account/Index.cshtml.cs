@@ -103,7 +103,7 @@ namespace com.initiativec.webpages.Pages.account
             if (userExsists != null)
             {
                 userExsists.name = Name;
-                userExsists.name = string.IsNullOrEmpty(Email) ? null : Email;
+                userExsists.email = string.IsNullOrEmpty(Email) ? null : Email;
                 userExsists.invited_by = InviteCode;
                 userExsists.confirmed = confirmedMaster;
                 userExsists.expiration_date_invitations = DateTime.UtcNow.AddDays(14);

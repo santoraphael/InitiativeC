@@ -44,7 +44,7 @@ namespace com.database.Migrations
                     b.HasIndex("id_usuario")
                         .IsUnique();
 
-                    b.ToTable("tokenbounties");
+                    b.ToTable("tokenbounties", (string)null);
                 });
 
             modelBuilder.Entity("com.database.entities.TokenPool", b =>

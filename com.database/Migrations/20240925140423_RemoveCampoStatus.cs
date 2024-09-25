@@ -5,42 +5,30 @@
 namespace com.database.Migrations
 {
     /// <inheritdoc />
-    public partial class remove_campo_status : Migration
+    public partial class RemoveCampoStatus : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_TokenBounties_Users_id_usuario",
-                table: "TokenBounties");
+                table: "tokenbounties");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Users",
-                table: "Users");
+                table: "users");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_TokenPool",
-                table: "TokenPool");
+                table: "tokenpool");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_TokenBounties",
-                table: "TokenBounties");
+                table: "tokenbounties");
 
             migrationBuilder.DropColumn(
                 name: "status",
-                table: "Users");
-
-            migrationBuilder.RenameTable(
-                name: "Users",
-                newName: "users");
-
-            migrationBuilder.RenameTable(
-                name: "TokenPool",
-                newName: "tokenpool");
-
-            migrationBuilder.RenameTable(
-                name: "TokenBounties",
-                newName: "tokenbounties");
+                table: "users");
 
             migrationBuilder.RenameIndex(
                 name: "IX_Users_stake_address",
@@ -95,54 +83,42 @@ namespace com.database.Migrations
                 name: "PK_tokenbounties",
                 table: "tokenbounties");
 
-            migrationBuilder.RenameTable(
-                name: "users",
-                newName: "Users");
-
-            migrationBuilder.RenameTable(
-                name: "tokenpool",
-                newName: "TokenPool");
-
-            migrationBuilder.RenameTable(
-                name: "tokenbounties",
-                newName: "TokenBounties");
-
             migrationBuilder.RenameIndex(
                 name: "IX_users_stake_address",
-                table: "Users",
+                table: "users",
                 newName: "IX_Users_stake_address");
 
             migrationBuilder.RenameIndex(
                 name: "IX_tokenbounties_id_usuario",
-                table: "TokenBounties",
+                table: "tokenbounties",
                 newName: "IX_TokenBounties_id_usuario");
 
             migrationBuilder.AddColumn<int>(
                 name: "status",
-                table: "Users",
+                table: "users",
                 type: "integer",
                 nullable: true);
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Users",
-                table: "Users",
+                table: "users",
                 column: "id");
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_TokenPool",
-                table: "TokenPool",
+                table: "tokenpool",
                 column: "id");
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_TokenBounties",
-                table: "TokenBounties",
+                table: "tokenbounties",
                 column: "id");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_TokenBounties_Users_id_usuario",
-                table: "TokenBounties",
+                table: "tokenbounties",
                 column: "id_usuario",
-                principalTable: "Users",
+                principalTable: "users",
                 principalColumn: "id",
                 onDelete: ReferentialAction.Cascade);
         }

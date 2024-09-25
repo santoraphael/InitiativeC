@@ -120,7 +120,20 @@
 
 
             <div class="Dashboard-column right-side">
-                <!-- Conteúdo da coluna direita -->
+                @if (TempData["Message"] != null)
+                {
+                    <div class="alert alert-success" id="success-alert">
+                        @TempData["Message"]
+                    </div>
+                }
+
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger" id="error-alert">
+                        @TempData["Error"]
+                    </div>
+                }
+
                 @if (Model.cardSaldoAtual != null)
                 {
                     if (Model.cardVerificaConvite.status)
@@ -131,16 +144,21 @@
 
                             @foreach (var item in Model.cardVerificaConvite.Usuarios)
                             {
-                                string initials = Regex.Replace(item.Nome, @"[\p{P}\p{S}\p{C}\p{N}]+", "");
-                                initials = Regex.Replace(initials, @"\p{Z}+", " ");
-                                initials = Regex.Replace(initials.Trim(), @"\s+(?:[JS]R|I{1,3}|I[VX]|VI{0,3})$", "", RegexOptions.IgnoreCase);
-                                initials = Regex.Replace(initials, @"^(\p{L})[^\s]*(?:\s+(?:\p{L}+\s+(?=\p{L}))?(?:(\p{L})\p{L}*)?)?$", "$1$2").Trim();
+                                string initials = "";
 
-                                if (initials.Length > 2)
+                                if(!String.IsNullOrEmpty(item.Nome))
                                 {
-                                    initials = initials.Substring(0, 2);
-                                }
+                                    initials = Regex.Replace(item.Nome, @"[\p{P}\p{S}\p{C}\p{N}]+", "");
+                                    initials = Regex.Replace(initials, @"\p{Z}+", " ");
+                                    initials = Regex.Replace(initials.Trim(), @"\s+(?:[JS]R|I{1,3}|I[VX]|VI{0,3})$", "", RegexOptions.IgnoreCase);
+                                    initials = Regex.Replace(initials, @"^(\p{L})[^\s]*(?:\s+(?:\p{L}+\s+(?=\p{L}))?(?:(\p{L})\p{L}*)?)?$", "$1$2").Trim();
 
+                                    if (initials.Length > 2)
+                                    {
+                                        initials = initials.Substring(0, 2);
+                                    }
+                                }
+                                
 
                                 <div class="Approve-user pending">
                                     <div class="content">
@@ -153,13 +171,21 @@
                                     </div>
                                     &nbsp;&nbsp;
                                     <div>
-                                        <div class="Button Button-small Button-primary js-boatao-reprovar" data-id="@item.Id" style="background-color: red !important;">
-                                            <span class="label">Reprovar</span>
-                                        </div>
+                                        <!-- Form para Reprovar -->
+                                        <form method="post" asp-page-handler="Reject" style="display: inline;">
+                                            <input type="hidden" name="UserId" value="@item.Id" />
+                                            <button type="submit" class="Button Button-small Button-primary" style="background-color: red !important; border: none; cursor: pointer;">
+                                                <span class="label">Reprovar</span>
+                                            </button>
+                                        </form>
                                         &nbsp;
-                                        <div class="Button Button-small Button-primary js-boatao-aprova" data-id="@item.Id" style="background-color: green !important;">
-                                            <span class="label">Aprovar</span>
-                                        </div>
+                                        <!-- Form para Aprovar -->
+                                        <form method="post" asp-page-handler="Approve" style="display: inline;">
+                                            <input type="hidden" name="UserId" value="@item.Id" />
+                                            <button type="submit" class="Button Button-small Button-primary" style="background-color: green !important; border: none; cursor: pointer;">
+                                                <span class="label">Aprovar</span>
+                                            </button>
+                                        </form>
                                     </div>
 
                                 </div>
@@ -170,9 +196,23 @@
                 }
 
             </div>
+
         </div>
         
     </section>
+
+
+
+    <style>
+        .alert {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .alert.fade-out {
+            opacity: 0;
+        }
+    </style>
 
     <script>
 
@@ -250,24 +290,38 @@
                 }
         });
 
-        function CopyToClipboard(containerid) {
-            // Create a new textarea element and give it id='temp_element'
-            var textarea = document.createElement('textarea')
-            textarea.id = 'temp_element'
-            // Optional step to make less noise on the page, if any!
-            textarea.style.height = 0
-            // Now append it to your page somewhere, I chose <body>
-            document.body.appendChild(textarea)
-            // Give our textarea a value of whatever inside the div of id=containerid
-            textarea.value = document.getElementById(containerid).innerText
-            // Now copy whatever inside the textarea to clipboard
-            var selector = document.querySelector('#temp_element')
-            selector.select()
-            document.execCommand('copy')
-            // Remove the textarea
-            document.body.removeChild(textarea)
+        // Função para ocultar o alerta após um delay
+        function hideAlert(alertId, delay) {
+            const alertElement = document.getElementById(alertId);
+            if (alertElement) {
+                console.log(`Iniciando o temporizador para o alerta com ID: ${alertId}`);
+                setTimeout(() => {
+                    console.log(`Ocultando o alerta com ID: ${alertId}`);
+                    // Adiciona a classe 'fade-out' para iniciar a transição
+                    alertElement.classList.add("fade-out");
 
-            alert("O Texto foi copiado com sucesso!");
+                    // Remove o elemento do DOM após a transição
+                    alertElement.addEventListener("transitionend", () => {
+                        console.log(`Removendo o alerta com ID: ${alertId} do DOM`);
+                        alertElement.style.display = "none";
+                    });
+                }, delay);
+            } else {
+                console.log(`Elemento com ID: ${alertId} não encontrado.`);
+            }
         }
+
+        // Quando o documento estiver pronto
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("DOM completamente carregado e analisado.");
+            // Defina o tempo em milissegundos (por exemplo, 5 segundos)
+            const delay = 1500;
+
+            // Oculta os alertas se existirem
+            hideAlert("success-alert", delay);
+            hideAlert("error-alert", delay);
+        });
+
+
     </script>
 </article>

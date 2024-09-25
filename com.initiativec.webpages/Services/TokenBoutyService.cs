@@ -91,5 +91,98 @@ namespace com.initiativec.webpages.Services
 
             return valorTodosConvites;
         }
+
+        /// <summary>
+        /// Reserva um valor específico para uma tarefa executada por um usuário.
+        /// Garante que a reserva não exceda o valor total do bounty do usuário e que o pool tenha saldo suficiente.
+        /// </summary>
+        /// <param name="usuarioId">ID do usuário que está reservando o valor.</param>
+        /// <param name="valorReserva">Valor a ser reservado para a tarefa.</param>
+        /// <returns>Retorna true se a reserva foi bem-sucedida; caso contrário, false.</returns>
+        public bool ReservarValorTarefa(int usuarioId, decimal valorReserva)
+        {
+            // Validar entradas
+            if (usuarioId <= 0)
+            {
+                // ID de usuário inválido
+                return false;
+            }
+
+            if (valorReserva <= 0)
+            {
+                // Valor de reserva inválido
+                return false;
+            }
+
+            // Iniciar uma transação para garantir a consistência dos dados
+            using (var transaction = _context.Database.BeginTransaction())
+            {
+                try
+                {
+                    // 1. Obter o pool de tokens
+                    var pool = _context.TokenPool.FirstOrDefault(t => t.id == 1);
+                    if (pool == null)
+                    {
+                        // Pool não encontrado
+                        return false;
+                    }
+
+                    // 2. Verificar se há saldo suficiente no pool
+                    if (pool.total < valorReserva)
+                    {
+                        // Saldo insuficiente no pool
+                        return false;
+                    }
+
+                    // 3. Obter o bounty do usuário
+                    var bounty = _context.TokenBounties.FirstOrDefault(b => b.id_usuario == usuarioId);
+                    if (bounty == null)
+                    {
+                        // Bounty do usuário não encontrado, criar um novo registro
+                        bounty = new TokenBounty
+                        {
+                            id_usuario = usuarioId,
+                            valor_reserva_total = 0, // Assumindo que 0 é o valor inicial; ajuste conforme necessário
+                            valor_reservado = 0
+                        };
+                        _context.TokenBounties.Add(bounty);
+                    }
+
+                    // 4. Verificar se a nova reserva excede o valor total do bounty
+                    decimal reservaDisponivel = bounty.valor_reserva_total - bounty.valor_reservado;
+                    if (valorReserva > reservaDisponivel)
+                    {
+                        // Reserva excede o valor disponível no bounty do usuário
+                        return false;
+                    }
+
+                    // 5. Atualizar as reservas no bounty
+                    bounty.valor_reservado += valorReserva;
+
+                    // 6. Deduzir o valor do pool
+                    pool.total -= valorReserva;
+
+                    // 7. Atualizar as entidades no contexto
+                    _context.TokenPool.Update(pool);
+                    _context.TokenBounties.Update(bounty);
+
+                    // 8. Salvar as mudanças no banco de dados
+                    _context.SaveChanges();
+
+                    // 9. Confirmar a transação
+                    transaction.Commit();
+
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    // Em caso de erro, reverter a transação
+                    transaction.Rollback();
+                    // Opcional: Registrar o erro para diagnóstico
+                    // Logger.LogError(ex, "Erro ao reservar valor para tarefa.");
+                    return false;
+                }
+            }
+        }
     }
 }

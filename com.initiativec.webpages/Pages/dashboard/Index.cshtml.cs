@@ -41,6 +41,9 @@ namespace com.initiativec.webpages.Pages.dashboard
 
         public FollowStatusCard FollowStatus { get; set; }
         public bool IsUserInGroup { get; set; }
+        
+        [BindProperty]
+        public int UserId { get; set; }
 
         public IActionResult OnGet()
         {
@@ -72,9 +75,6 @@ namespace com.initiativec.webpages.Pages.dashboard
             enviarConvite = GetCardEnviarConvite(user.invite_code, _tokenBountyService.ValorReservaConviteTotal(user.id), (int)user.invitations_available);
             cardSaldoAtual = GetCardSaldoAtual(user.id);
 
-
-            //Apenas um exemplo
-            //_tokenBountyService.ReservarValorInicial(user.id);
 
             return Page();
         }
@@ -203,6 +203,115 @@ namespace com.initiativec.webpages.Pages.dashboard
             long userTelegramId = 123456789; // Substitua pelo ID real do usuário
 
             IsUserInGroup = _telegramService.IsUserInGroupAsync(userTelegramId).Result;
+        }
+
+
+        // Handler para Aprovar
+        public IActionResult OnPostApprove()
+        {
+            var token = Request.Cookies["UsuarioToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                return RedirectToPage("/verify");
+            }
+
+            var StakeAddress = _blockfrostServices.GetStakeAddress(token);
+            var stk_adress = StakeAddress.Result;
+
+            var user = _context.Users.FirstOrDefault(u => u.stake_address == stk_adress);
+
+            // Valide o UserId conforme necessário
+            if (UserId > 0)
+            {
+                // Lógica para aprovar o usuário
+                AprovarUsuario(UserId);
+
+                var amount_token_por_convite = _tokenBountyService.ValorReservaPorConvite(user.id);
+                _tokenBountyService.ReservarValorTarefa(user.id, amount_token_por_convite);
+                
+                
+                TempData["Message"] = "Usuário aprovado com sucesso.";
+            }
+            else
+            {
+                TempData["Error"] = "ID de usuário inválido.";
+            }
+
+            return RedirectToPage();
+        }
+
+        // Handler para Reprovar
+        public IActionResult OnPostReject()
+        {
+            // Valide o UserId conforme necessário
+            if (UserId > 0)
+            {
+                // Lógica para reprovar o usuário
+                ReprovarUsuario(UserId);
+                TempData["Message"] = "Usuário reprovado com sucesso.";
+            }
+            else
+            {
+                TempData["Error"] = "ID de usuário inválido.";
+            }
+
+            return RedirectToPage();
+        }
+
+        private void AprovarUsuario(int userId)
+        {
+            var token = Request.Cookies["UsuarioToken"];
+
+            var StakeAddress = _blockfrostServices.GetStakeAddress(token);
+            var stk_adress = StakeAddress.Result;
+
+            var UsuarioLogado = _context.Users.FirstOrDefault(u => u.stake_address == stk_adress);
+
+
+            //Verifica se usuário ainda tem convites disponiveis
+            if (UsuarioLogado.invitations_available > 0)
+            {
+                //Busca dados do usuário convidado
+                var usuarioConvidado = _context.Users.FirstOrDefault(u => u.id == userId);
+
+                if (usuarioConvidado.confirmed != true)
+                {
+                    //Cria a carteira virtual do novo membro e faz a reserva do valor.
+                    _tokenBountyService.ReservarValorInicial(userId);
+
+                    ////Altera o Status do novo membro para 1 = Ativo.
+                    usuarioConvidado.confirmed = true;
+                    ////Faz a aprovação do membro gravando os dados no Banco de dados.
+                    _context.Users.Update(usuarioConvidado);
+
+                    UsuarioLogado.invitations_available = UsuarioLogado.invitations_available - 1;
+                    _context.Update(UsuarioLogado);
+                }
+            }
+            else
+            {
+                
+            }
+
+            _context.SaveChanges();
+
+        }
+
+        private void ReprovarUsuario(int userId)
+        {
+            var token = Request.Cookies["UsuarioToken"];
+            var StakeAddress = _blockfrostServices.GetStakeAddress(token);
+            var stk_adress = StakeAddress.Result;
+            var UsuarioLogado = _context.Users.FirstOrDefault(u => u.stake_address == stk_adress);
+
+            var usuarioConvidado = _context.Users.FirstOrDefault(u => u.id == userId);
+
+            if(usuarioConvidado.invited_by == UsuarioLogado.invite_code)
+            {
+                _context.Users.Remove(usuarioConvidado);
+
+                _context.SaveChanges();
+            }
         }
 
 
