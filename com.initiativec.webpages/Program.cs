@@ -7,9 +7,12 @@ using com.initiativec.webpages;
 using com.initiativec.webpages.Interfaces;
 using com.initiativec.webpages.Services;
 using com.initiativec.webpages.ViewModel;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Security.Claims;
 using Telegram.Bot;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -46,6 +49,28 @@ builder.Services.Configure<RequestLocalizationOptions>(
     }
 );
 
+
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = "Discord";
+})
+.AddCookie()
+.AddDiscord(options =>
+{
+    options.ClientId = "SEU_CLIENT_ID";       // Substitua pelo seu Client ID
+    options.ClientSecret = "SEU_CLIENT_SECRET"; // Substitua pelo seu Client Secret
+    options.SaveTokens = true;
+    options.Scope.Add("identify");
+    options.ClaimActions.MapJsonKey(ClaimTypes.NameIdentifier, "id");
+    options.ClaimActions.MapJsonKey(ClaimTypes.Name, "username");
+    options.ClaimActions.MapJsonKey("urn:discord:avatar", "avatar");
+});
+
+
+
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<SharedResourceService>();
@@ -62,6 +87,11 @@ builder.Services.AddScoped<TelegramService>();
 builder.Services.AddSingleton<BotService>();
 builder.Services.AddHostedService<BotHostedService>();
 
+
+builder.Services.AddSingleton<DiscordBotService>();
+builder.Services.AddHostedService(provider => provider.GetRequiredService<DiscordBotService>());
+
+builder.Services.AddSingleton<IDiscordService, DiscordService>();
 
 builder.Services.AddScoped<BlockfrostServices>();
 

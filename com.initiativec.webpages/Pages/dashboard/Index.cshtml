@@ -67,6 +67,38 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                         </div>
                     }
                 }
+
+
+                <div class="Dashboard-card card">
+                    <div class="img-card"><b>!</b></div>
+                    <h4 class="title-card">Tarefa Atual</h4>
+                    <p class="subtitle-card">DISCORD</b></p>
+                    <div class="oneFieldForm small">
+
+                        <form method="post" asp-page-handler="CheckDiscord">
+                            <button type="submit" class="btn btn-primary">Verificar Discord</button>
+                        </form>
+
+                        @if (Model.IsUserInChannel.HasValue)
+                        {
+                            <div class="mt-3">
+                                Resultado: <strong>@Model.IsUserInChannel.Value</strong>
+                            </div>
+                        }
+
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a asp-page="/Login">Login com Discord</a>
+                        }
+                        else
+                        {
+                            <p>Olá, @User.Identity.Name!</p>
+                            <a asp-page="/Logout">Logout</a>
+                        }
+                    </div>
+
+                </div>
+
                 
                 @if (Model.cardSaldoAtual != null)
                 {
@@ -114,6 +146,9 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                     }
                 
                 }
+
+
+
                 
             </div>
 

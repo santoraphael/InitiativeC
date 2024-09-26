@@ -1,12 +1,15 @@
 using com.cardano;
 using com.database;
 using com.database.entities;
+using com.initiativec.webpages.Interfaces;
 using com.initiativec.webpages.Services;
 using com.initiativec.webpages.ViewModel;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
+using System.Security.Claims;
 using Telegram.Bot.Types;
 
 namespace com.initiativec.webpages.Pages.dashboard
@@ -18,21 +21,24 @@ namespace com.initiativec.webpages.Pages.dashboard
         private readonly TokenBoutyService _tokenBountyService;
         private readonly TwitterService _twitterService;
         private readonly TelegramService _telegramService;
+        private readonly IDiscordService _discordService;
 
         public IndexModel(DatabaseContext context
                             ,BlockfrostServices blockfrostServices
                             ,TokenBoutyService tokenBountyService
                             ,TwitterService twitterService
-                            ,TelegramService telegramService)
+                            ,TelegramService telegramService
+                            ,IDiscordService discordService)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
             _tokenBountyService = tokenBountyService;
             _twitterService = twitterService;
             _telegramService = telegramService;
+            _discordService = discordService;
         }
 
-        public IList<User> Users { get; set; }
+        public IList<database.entities.User> Users { get; set; }
         public string StakeAddress { get; set; }
         public IList<string> WalletAddresses { get; set; }
         public DashboardVM dashboard { get; set; }
@@ -45,6 +51,9 @@ namespace com.initiativec.webpages.Pages.dashboard
         
         [BindProperty]
         public int UserId { get; set; }
+
+        [BindProperty]
+        public bool? IsUserInChannel { get; set; }
 
         public IActionResult OnGet()
         {
@@ -79,10 +88,10 @@ namespace com.initiativec.webpages.Pages.dashboard
 
             //Atividades:
             //Cadastrar 10 % -1.125.000
-            //Convidar 5 Amigos: 40 %
-            //Seguir Twitter: 10 %
-            //Entrar no Discord: 10 %
-            //Entrar no Telegram: 10 %
+            //Convidar 5 Amigos: 40 %     -- CARD ENVIAR CONVITE
+            //Seguir Twitter: 10 %        -- CARD SEGUIR TWITTER
+            //Entrar no Discord: 10 %     -- CARD DISCORD
+            //Entrar no Telegram: 10 %      
             //Adicionar Email: 10 %
             //Fazer a primeira contribuição mínima para a Pool 10 %
 
@@ -102,7 +111,6 @@ namespace com.initiativec.webpages.Pages.dashboard
 
             return Page();
         }
-
 
         private int CalcularDiasRestantes(DateTime dataAlvo)
         {
@@ -337,6 +345,33 @@ namespace com.initiativec.webpages.Pages.dashboard
 
                 _context.SaveChanges();
             }
+        }
+
+        public async Task<IActionResult> OnPostCheckDiscordAsync()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Challenge(new AuthenticationProperties { RedirectUri = "/" }, "Discord");
+            }
+
+            ulong userId = ulong.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            ulong guildId = SEU_GUILD_ID;     // ID do servidor (guild) no Discord
+            ulong channelId = SEU_CHANNEL_ID; // ID do canal que deseja verificar
+
+            IsUserInChannel = await _discordService.IsUserInChannelAsync(userId, guildId, channelId);
+
+            return Page();
+        }
+
+        public IActionResult OnGetLoginDiscord(string returnUrl = "/dashboard")
+        {
+            return Challenge(new AuthenticationProperties { RedirectUri = returnUrl }, "Discord");
+        }
+
+        public async Task<IActionResult> OnGetLogoutDiscord()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToPage("/dashboard");
         }
 
 
