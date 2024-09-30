@@ -38,6 +38,5 @@ namespace com.initiativec.webpages.Services
 
             return user.VoiceChannel != null && user.VoiceChannel.Id == channelId;
         }
-
     }
 }

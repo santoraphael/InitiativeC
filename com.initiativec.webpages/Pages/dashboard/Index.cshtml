@@ -72,9 +72,9 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                 <div class="Dashboard-card card">
                     <div class="img-card"><b>!</b></div>
                     <h4 class="title-card">Tarefa Atual</h4>
-                    <p class="subtitle-card">DISCORD</b></p>
+                    <p class="subtitle-card">DISCORD</p>
                     <div class="oneFieldForm small">
-
+                        <!-- Formulário para verificar se o usuário está no canal Discord -->
                         <form method="post" asp-page-handler="CheckDiscord">
                             <button type="submit" class="btn btn-primary">Verificar Discord</button>
                         </form>
@@ -86,17 +86,17 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                             </div>
                         }
 
+                        <!-- Link para Login com Discord -->
                         @if (!User.Identity.IsAuthenticated)
                         {
-                            <a asp-page="/Login">Login com Discord</a>
+                            <a asp-page-handler="LoginDiscord" asp-route-returnUrl="/dashboard" class="btn btn-primary">Login com Discord</a>
                         }
                         else
                         {
                             <p>Olá, @User.Identity.Name!</p>
-                            <a asp-page="/Logout">Logout</a>
+                            <a asp-page-handler="LogoutDiscord" class="btn btn-danger">Logout</a>
                         }
                     </div>
-
                 </div>
 
                 

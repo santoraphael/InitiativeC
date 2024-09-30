@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Security.Claims;
 using Telegram.Bot;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,23 +52,64 @@ builder.Services.Configure<RequestLocalizationOptions>(
 
 
 
+// Configura a autenticação
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = "Discord";
+    options.DefaultChallengeScheme = "Discord"; // Define Discord como esquema padrão para desafios
 })
 .AddCookie()
-.AddDiscord(options =>
+.AddOAuth("Discord", options =>
 {
-    options.ClientId = "SEU_CLIENT_ID";       // Substitua pelo seu Client ID
-    options.ClientSecret = "SEU_CLIENT_SECRET"; // Substitua pelo seu Client Secret
-    options.SaveTokens = true;
+    options.ClientId = "1288955489224233124";//builder.Configuration["Discord:ClientId"];
+    options.ClientSecret = "gcYaZV93s8cpPRJQ-_TZfTkTOJs5y4fo"; //builder.Configuration["Discord:ClientSecret"];
+    options.CallbackPath = new PathString("/signin-discord"); // Deve corresponder à Redirect URI registrada
+
+    options.AuthorizationEndpoint = "https://discord.com/api/oauth2/authorize";
+    options.TokenEndpoint = "https://discord.com/api/oauth2/token";
+    options.UserInformationEndpoint = "https://discord.com/api/users/@me";
+
     options.Scope.Add("identify");
+
     options.ClaimActions.MapJsonKey(ClaimTypes.NameIdentifier, "id");
     options.ClaimActions.MapJsonKey(ClaimTypes.Name, "username");
+    options.ClaimActions.MapJsonKey("urn:discord:discriminator", "discriminator");
     options.ClaimActions.MapJsonKey("urn:discord:avatar", "avatar");
+
+    options.SaveTokens = true;
+
+    options.Events.OnCreatingTicket = async context =>
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, context.Options.UserInformationEndpoint);
+        request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", context.AccessToken);
+        request.Headers.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+        var response = await context.Backchannel.SendAsync(request, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, context.HttpContext.RequestAborted);
+        response.EnsureSuccessStatusCode();
+
+        var user = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
+
+        context.RunClaimActions(user.RootElement);
+    };
 });
+
+// Configuração de Cookies
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.SameSite = SameSiteMode.Lax;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+});
+
+// Registra serviços adicionais (como DiscordBotService)
+builder.Services.AddSingleton<DiscordBotService>();
+builder.Services.AddHostedService(provider => provider.GetRequiredService<DiscordBotService>());
+builder.Services.AddSingleton<IDiscordService, DiscordService>();
+
+
+
+
+
 
 
 
@@ -88,10 +130,6 @@ builder.Services.AddSingleton<BotService>();
 builder.Services.AddHostedService<BotHostedService>();
 
 
-builder.Services.AddSingleton<DiscordBotService>();
-builder.Services.AddHostedService(provider => provider.GetRequiredService<DiscordBotService>());
-
-builder.Services.AddSingleton<IDiscordService, DiscordService>();
 
 builder.Services.AddScoped<BlockfrostServices>();
 
@@ -99,6 +137,11 @@ builder.Services.AddTransient<IEmailSender, SendGridEmailSender>();
 builder.Services.AddTransient<TokenBoutyService>();
 
 var app = builder.Build();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+
 app.UseMiddleware<CultureMiddleware>();
 
 
@@ -125,7 +168,7 @@ app.UseRouting();
 
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
-app.UseAuthorization();
+
 
 app.MapRazorPages();
 app.MapControllers();

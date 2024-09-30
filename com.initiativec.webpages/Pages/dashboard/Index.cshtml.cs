@@ -5,6 +5,7 @@ using com.initiativec.webpages.Interfaces;
 using com.initiativec.webpages.Services;
 using com.initiativec.webpages.ViewModel;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -351,27 +352,41 @@ namespace com.initiativec.webpages.Pages.dashboard
         {
             if (!User.Identity.IsAuthenticated)
             {
-                return Challenge(new AuthenticationProperties { RedirectUri = "/" }, "Discord");
+                return Challenge(new AuthenticationProperties { RedirectUri = "/dashboard" }, "Discord");
             }
 
-            ulong userId = ulong.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            ulong guildId = SEU_GUILD_ID;     // ID do servidor (guild) no Discord
-            ulong channelId = SEU_CHANNEL_ID; // ID do canal que deseja verificar
+            // Obtenha o userId do Discord a partir dos Claims
+            string userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (!ulong.TryParse(userIdString, out ulong userId))
+            {
+                IsUserInChannel = false;
+                return Page();
+            }
+
+            // Obtenha os IDs do servidor e canal do appsettings.json
+            if (!ulong.TryParse("1278126514654941366", out ulong guildId) ||
+                !ulong.TryParse("1289755523591438336", out ulong channelId))
+            {
+                IsUserInChannel = false;
+                return Page();
+            }
 
             IsUserInChannel = await _discordService.IsUserInChannelAsync(userId, guildId, channelId);
 
             return Page();
         }
 
+        // Handler para Login com Discord
         public IActionResult OnGetLoginDiscord(string returnUrl = "/dashboard")
         {
             return Challenge(new AuthenticationProperties { RedirectUri = returnUrl }, "Discord");
         }
 
+        // Handler para Logout com Discord
         public async Task<IActionResult> OnGetLogoutDiscord()
         {
-            await HttpContext.SignOutAsync();
-            return RedirectToPage("/dashboard");
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToPage("/Index"); // Redireciona para a página inicial após logout
         }
 
 
