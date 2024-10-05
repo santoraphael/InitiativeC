@@ -16,7 +16,7 @@ namespace com.initiativec.webpages.Services
         public DiscordBotService(ILogger<DiscordBotService> logger)
         {
             _logger = logger;
-            _botToken = "MTI4ODk1NTQ4OTIyNDIzMzEyNA.Gd9E4O.ZJymiauTRZEWSdJPZgWJjaP82sTSGP0_Ak_qUk"; // Substitua pelo seu token
+            _botToken = "a"; // Substitua pelo seu token
 
             var config = new DiscordSocketConfig
             {
