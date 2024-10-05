@@ -1,4 +1,9 @@
-﻿namespace com.initiativec.webpages
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+using System.Threading.Tasks;
+
+namespace com.initiativec.webpages
 {
     public class CultureMiddleware
     {
@@ -9,21 +14,18 @@
             _next = next;
         }
 
-        public async Task InvokeAsync(HttpContext context, IHttpContextAccessor httpContextAccessor)
+        public async Task InvokeAsync(HttpContext context)
         {
-            var currentCulture = CultureInfo.CurrentCulture;
-            var currentUICulture = CultureInfo.CurrentUICulture;
-
-            if (currentCulture == null)
+            // **Ignorar Caminhos de Autenticação**
+            if (context.Request.Path.StartsWithSegments("/signin-discord"))
             {
-                CultureInfo customCulture = new CultureInfo("en-US");
-
-                context.Response.Cookies.Append(
-                    CookieRequestCultureProvider.DefaultCookieName,
-                    CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(customCulture)),
-                    new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-                );
+                await _next(context);
+                return;
             }
+
+            // **Implementar Lógica de Cultura Personalizada (se necessário)**
+            // Exemplo: Definir a cultura com base em um cookie personalizado ou outro critério
+            // Este exemplo assume que a cultura já está definida pelo RequestLocalization middleware
 
             await _next(context);
         }

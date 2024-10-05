@@ -20,7 +20,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -39,7 +38,6 @@ builder.Services.AddSingleton<ITelegramBotClient>(sp =>
     return new TelegramBotClient(settings.Token);
 });
 
-
 builder.Services.Configure<RequestLocalizationOptions>(
     options =>
     {
@@ -49,8 +47,6 @@ builder.Services.Configure<RequestLocalizationOptions>(
                .AddSupportedUICultures(supportedCultures);
     }
 );
-
-
 
 // Configura a autenticação
 builder.Services.AddAuthentication(options =>
@@ -101,22 +97,16 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
 });
 
-// Registra serviços adicionais (como DiscordBotService)
+// Remover registros duplicados e adicionar serviços adicionais
 builder.Services.AddSingleton<DiscordBotService>();
 builder.Services.AddHostedService(provider => provider.GetRequiredService<DiscordBotService>());
 builder.Services.AddSingleton<IDiscordService, DiscordService>();
 
-
-
-
-
-
-
-
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-builder.Services.AddSingleton<SharedResourceService>();
 
+// Remover a segunda instância de IHttpContextAccessor
+// builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddSingleton<SharedResourceService>();
 
 var apiKey = builder.Configuration["Blockfrost:Network:ApiKey"];
 var baseUrl = builder.Configuration["Blockfrost:Network:BaseUrl"];
@@ -129,7 +119,8 @@ builder.Services.AddScoped<TelegramService>();
 builder.Services.AddSingleton<BotService>();
 builder.Services.AddHostedService<BotHostedService>();
 
-
+// Já foi adicionado anteriormente
+// builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<BlockfrostServices>();
 
@@ -138,40 +129,35 @@ builder.Services.AddTransient<TokenBoutyService>();
 
 var app = builder.Build();
 
-app.UseAuthentication();
-app.UseAuthorization();
-
-
-app.UseMiddleware<CultureMiddleware>();
-
-
-//using (var scope = app.Services.CreateScope())
-//{
-//    var services = scope.ServiceProvider;
-
-//    var localizationOptions = services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
-//    app.UseRequestLocalization(localizationOptions);
-//}
-
-
-// Configure the HTTP request pipeline.
+// Configura o pipeline HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
 }
-app.UseStaticFiles();
 
-app.UseRouting();
-
-// Registrar o CultureMiddleware antes do middleware de localização
-
-
+// 1. Configurar a localização
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
+// 2. Servir arquivos estáticos
+app.UseStaticFiles();
 
+// 3. Roteamento
+app.UseRouting();
 
+// 4. Autenticação
+app.UseAuthentication();
+
+// 5. Autorização
+app.UseAuthorization();
+
+// 6. Middleware de Cultura (opcional)
+app.UseMiddleware<CultureMiddleware>();
+
+// 7. Mapear endpoints
 app.MapRazorPages();
 app.MapControllers();
+
+
 
 
 //PODE DAR ERRO
@@ -187,6 +173,9 @@ app.MapGet("/static/bounty", async context =>
     context.Response.ContentType = "application/json";
     await context.Response.WriteAsync(json);
 });
+
+
+
 
 
 
