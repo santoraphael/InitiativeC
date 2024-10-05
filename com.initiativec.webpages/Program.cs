@@ -58,8 +58,8 @@ builder.Services.AddAuthentication(options =>
 .AddCookie()
 .AddOAuth("Discord", options =>
 {
-    options.ClientId = "1288955489224233124";//builder.Configuration["Discord:ClientId"];
-    options.ClientSecret = "gcYaZV93s8cpPRJQ-_TZfTkTOJs5y4fo"; //builder.Configuration["Discord:ClientSecret"];
+    options.ClientId = builder.Configuration["Discord:ClientId"];
+    options.ClientSecret = builder.Configuration["Discord:ClientSecret"];
     options.CallbackPath = new PathString("/signin-discord"); // Deve corresponder à Redirect URI registrada
 
     options.AuthorizationEndpoint = "https://discord.com/api/oauth2/authorize";
