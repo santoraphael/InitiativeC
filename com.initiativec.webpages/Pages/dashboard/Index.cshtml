@@ -1,5 +1,17 @@
 ﻿@page
+
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
 @using System.Text.RegularExpressions
+
+@inject IStringLocalizer<IndexModel> localizer
+@inject IHtmlLocalizer<IndexModel> htmlLocalizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+
 @model IndexModel
 @{
 }
@@ -13,11 +25,14 @@
     
     <section class="column article-section">
         <div class="Dashboard-hero">
-            <h1>Olá, @Model.dashboard.nome_usuario, bem-vindo ao futudo dos pagamentos!</h1>
-            <p>Pelos próximos <b>@Model.dashboard.qtd_dias_restantes</b> dias voce pode convidar e verificar até <b>@Model.dashboard.qtd_convites_restantes</b> pessoas e garantir <b>$LEMON @Model.dashboard.amount_token_por_convite.ToString("N0")</b> por cada. Com o seu convite, eles também poderão reservar Qs com antecedëncia e ajudar a expandir a rede Q</p>
+            <h1>@string.Format(@localizer["Olá, {0}, bem-vindo a (em breve) maior memecoin da Cardano!"], Model.dashboard.nome_usuario)</h1>
+            <p>
+                @localizer["Pelos próximos {0} dias voce pode convidar e verificar até {1} pessoas e garantir $LEMON {2} por cada. Com o seu convite, eles também poderão reservar $LEMON com antecedência e ajudar a expandir nossa comunidade",
+                         Model.dashboard.qtd_dias_restantes,
+                         Model.dashboard.qtd_convites_restantes,
+                         Model.dashboard.amount_token_por_convite.ToString("N0")]
+            </p>
             <h2 class="small"></h2>
-           @*  <h2 class="wide">Pelos próximos 14 dias voce pode convidar e verificar até 5 amigos e garantir Q2,434 para cada. Com o seu convite, eles também poderão reservar Qs com antecedëncia e ajudar a expandir a rede Q</h2> *@
-            @* <h2 class="small">Acompanhe seu progresso diariamente</h2> *@
         </div>
         
 
@@ -31,16 +46,16 @@
                     {
                         <div class="Dashboard-card card">
                             <div class="img-card"><b>!</b></div>
-                            <h4 class="title-card">Tarefa Atual</h4>
-                            <p class="subtitle-card">Convide pessoas que vocë conhece pessoalmente e garanta um adicional de <b>$LEMON @Model.enviarConvite.valorConviteTotal.ToString("N0")</b></p>
+                            <h4 class="title-card">@localizer["Tarefa Atual"]</h4>
+                            <p class="subtitle-card">@Html.Raw(string.Format(htmlLocalizer["Convide pessoas que você conhece pessoalmente e garanta um adicional de <b>$LEMON {0}</b>"].Value, Model.enviarConvite.valorConviteTotal.ToString("N0")))</p>
                             <div class="oneFieldForm small">
                                 <input type="text" readonly="" class="small" style="font-size: 1.8em;" value="@($"https://lehmonbros.fun/invite/{Model.enviarConvite.invite_code}")">
-                                <div class="Button With-icon Button-primary" onclick="CopyToClipboard('massage-copy')" style="text-align: center; background-color:#292874;">COPIAR LINK</div>
+                                <div class="Button With-icon Button-primary" onclick="CopyToClipboard('massage-copy')" style="text-align: center; background-color:#292874;">@localizer["COPIAR LINK"]</div>
                             </div>
 
                             <div class="share">
 
-                                <p class="column" style="float: left; font-size: 17px; margin-top: 5px; margin-right: 10px;">Ou compartilhar com:</p>
+                                <p class="column" style="float: left; font-size: 17px; margin-top: 5px; margin-right: 10px;">@localizer["Ou compartilhar com:"]</p>
                                 <div id="btnsSocials" class="jssocials ">
                                     <div class="jssocials-shares column right-side">
                                         <div class="jssocials-share jssocials-share-email">
@@ -58,12 +73,10 @@
                             </div>
 
 
-<div id="massage-copy" style="display:none; position:absolute; left:1000px;">A Initial S é um ousado projeto que tenta criar uma nova forma de se investir e de conseguir investimentos para Startups. Utilizando uma moeda proprietária, a Start, eles buscam incentivar as pessoas a começarem a usar a plataforma uma vez que ela estiver pronta. Eles estão reservando Starts gratuitamente para pessoas que se cadastrarem agora (o valor diminui à medida que as pessoas se cadastram, portanto, é melhor entrar o quanto antes). O cadastro é gratuito e eles só pedem nome e e-mail. Não há o que perder, mas, se a plataforma se tornar o novo padrão de investimento e capitação para Startups, suas Starts poderão valer muito. Se você deixou passar alguma oportunidade de comprar bitcoins há sete anos, não vai querer perder essa, ainda mais sendo de graça.
+                            <div id="massage-copy" style="display:none; position:absolute; left:1000px;">
+                                @string.Format(@localizer["A Lehmon Brothers é o projeto socio-viral da memecoin $LEMON que quer construir a maior memecoin não animal da Cardano. Eles utilizam mecanismos virais pensados com ajuda de inteligência artificial para distribuição de $LEMON, quebrando a barreira da adoção e incentivando pessoas e resevarem tokens para que serão usados pela comunidade. Entrar é de graça mas é preciso de um convite que é limitado. Não há o que perder, mas, se o $LEMON se tornar uma das grandes memecoins da Cardano, cada $LEMON poderá valer muito. Se você já deixou passar alguma oportunidade de entrar em projetos anteriormente, não vai querr perder essa, ainda mais podendo reservar de graça. Aqui está o meu link de convite: {0}\n\nEste link deixará de funcionar quando meus convites acabarem. Avise-me depois que você entrar, porque eu preciso aprovar a sua entrada na comunidade através da minha conta."], $"https://lehmonbros.fun/invite/{Model.enviarConvite.invite_code}")
+                            </div>
 
-Aqui está o meu link de convite: @($"https://lehmonbros.fun/invite/{Model.enviarConvite.invite_code}")
-
-Este link deixará de funcionar quando meus convites acabarem. Avise-me depois que você se cadastrar, porque eu preciso aprovar o seu cadastro através da minha conta.
-</div>
                         </div>
                     }
                 }
@@ -106,14 +119,15 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                     {
                         <div class="Dashboard-card card">
 
-                            <h4 class="title-card">Saldo Atual</h4>
+                            <h4 class="title-card">@localizer["Saldo Atual"]</h4>
                             <div class="Balance">
 
 
                                 <!-- Valor total -->
                                 <div class="sum">
                                     <span class="granted">$LEMON<b>@Model.cardSaldoAtual.valorSaldo.ToString("N0")</b></span>
-                                    <span class="max">Das suas possíveis $LEMON @Model.cardSaldoAtual.valorSaldoTotal.ToString("N0")</span>
+                                    <span class="max">@htmlLocalizer["Das suas possíveis $LEMON {0}", Model.cardSaldoAtual.valorSaldoTotal.ToString("N0")]</span>
+
                                 </div>
 
                                 <!-- Barra de progresso -->
@@ -129,16 +143,16 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                                 <div class="legend">
                                     <div class="granted">
                                         <i></i>
-                                        <span class="label">Reservadas</span>
+                                        <span class="label">@localizer["Reservadas"]</span>
                                     </div>
                                     <div class="current">
                                         <i></i>
-                                        <span class="label">Tarefa Atual</span>
+                                        <span class="label">@localizer["Tarefa Atual"]</span>
                                     </div>
 
                                     <div class="adjustment">
                                         <i style="background-color: #f5f5f5;background-image: none;"></i>
-                                        <span class="label">Tarefas Futuras</span>
+                                        <span class="label">@localizer["Tarefas Futuras"]</span>
                                     </div>
                                 </div>
                             </div>
@@ -146,9 +160,6 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                     }
                 
                 }
-
-
-
                 
             </div>
 
@@ -174,7 +185,12 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                     {
                         <div class="Dashboard-card card">
 
-                            <h4>Você tem @Model.cardVerificaConvite.ConvitesParaRevisar amigos para revisar, e você já aprovou @Model.cardVerificaConvite.Aprovados num total de @Model.cardVerificaConvite.ConvitesDisponiveis convites disponiveis.</h4>
+                            <h4>
+                                @htmlLocalizer["Você tem {0} amigos para revisar, e você já aprovou {1} num total de {2} convites disponíveis.",
+                                         Model.cardVerificaConvite.ConvitesParaRevisar,
+                                         Model.cardVerificaConvite.Aprovados,
+                                         Model.cardVerificaConvite.ConvitesDisponiveis]
+                            </h4>
 
                             @foreach (var item in Model.cardVerificaConvite.Usuarios)
                             {
@@ -209,7 +225,7 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                                         <form method="post" asp-page-handler="Reject" style="display: inline;">
                                             <input type="hidden" name="UserId" value="@item.Id" />
                                             <button type="submit" class="Button Button-small Button-primary" style="background-color: red !important; border: none; cursor: pointer;">
-                                                <span class="label">Reprovar</span>
+                                                <span class="label">@localizer["Reprovar"]</span>
                                             </button>
                                         </form>
                                         &nbsp;
@@ -217,7 +233,7 @@ Este link deixará de funcionar quando meus convites acabarem. Avise-me depois q
                                         <form method="post" asp-page-handler="Approve" style="display: inline;">
                                             <input type="hidden" name="UserId" value="@item.Id" />
                                             <button type="submit" class="Button Button-small Button-primary" style="background-color: green !important; border: none; cursor: pointer;">
-                                                <span class="label">Aprovar</span>
+                                                <span class="label">@localizer["Aprovar"]</span>
                                             </button>
                                         </form>
                                     </div>

@@ -41,7 +41,7 @@ namespace com.initiativec.webpages.Pages
                     Response.Cookies.Append("UsuarioToken", request.Token, new CookieOptions
                     {
                         HttpOnly = true,
-                        Secure = true, // Defina como true se estiver usando HTTPS
+                        Secure = false, // Defina como true se estiver usando HTTPS
                         Expires = DateTimeOffset.UtcNow.AddMonths(1), // Defina a expiração conforme necessário
                         SameSite = SameSiteMode.Strict
                     });

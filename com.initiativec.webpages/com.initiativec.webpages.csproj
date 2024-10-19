@@ -98,4 +98,10 @@
     <ProjectReference Include="..\com.database\com.database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\EmailResources.pt-BR.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

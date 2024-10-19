@@ -15,6 +15,7 @@ using Microsoft.Extensions.Options;
 using System.Security.Claims;
 using Telegram.Bot;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,10 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddRazorPages();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+builder.Services.Configure<EmailApiSettings>(builder.Configuration.GetSection("EmailApiSettings"));
+builder.Services.AddHttpClient<EmailService>();
+
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.Configure<TwitterSettings>(builder.Configuration.GetSection("Twitter"));
@@ -58,8 +63,8 @@ builder.Services.AddAuthentication(options =>
 .AddCookie()
 .AddOAuth("Discord", options =>
 {
-    options.ClientId = builder.Configuration["Discord:ClientId"];
-    options.ClientSecret = builder.Configuration["Discord:ClientSecret"];
+    options.ClientId = "1288955489224233124";//builder.Configuration["Discord:ClientId"];
+    options.ClientSecret = "gcYaZV93s8cpPRJQ-_TZfTkTOJs5y4fo"; //builder.Configuration["Discord:ClientSecret"];
     options.CallbackPath = new PathString("/signin-discord"); // Deve corresponder à Redirect URI registrada
 
     options.AuthorizationEndpoint = "https://discord.com/api/oauth2/authorize";
