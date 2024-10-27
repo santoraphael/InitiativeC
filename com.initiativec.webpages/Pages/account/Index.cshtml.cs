@@ -15,18 +15,21 @@ namespace com.initiativec.webpages.Pages.account
     {
         private readonly DatabaseContext _context;
         private readonly BlockfrostServices _blockfrostServices;
-        private readonly IEmailSender _emailSender;
         private readonly TokenBoutyService _tokenBountyService;
+
+        private readonly EmailService _emailService;
 
         public IndexModel(DatabaseContext context
                             ,BlockfrostServices blockfrostServices
                             ,IEmailSender emailSender
-                            ,TokenBoutyService tokenBountyService)
+                            ,TokenBoutyService tokenBountyService
+                            ,EmailService emailService)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
-            _emailSender = emailSender;
             _tokenBountyService = tokenBountyService;
+
+            _emailService = emailService;
         }
 
         [BindProperty(SupportsGet = true)]
@@ -132,6 +135,8 @@ namespace com.initiativec.webpages.Pages.account
 
             _context.SaveChanges();
 
+
+
             if(confirmedMaster)
             {
                 _tokenBountyService.ReservarValorInicial(user.id);
@@ -141,8 +146,8 @@ namespace com.initiativec.webpages.Pages.account
             string subject = "Confirmação de Registro";
             string message = $"Olá {Name},<br/>Obrigado por se registrar!";
 
-
-            //_emailSender.SendEmailAsync(Email, subject, message);
+            string currentCulture = CultureInfo.CurrentUICulture.Name;
+            _emailService.SendLocalizedEmailAsync(Email, subject, message, currentCulture);
 
             return RedirectToPage("/verify");
         }

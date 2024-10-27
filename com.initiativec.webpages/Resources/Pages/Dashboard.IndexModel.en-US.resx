@@ -117,148 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="about" xml:space="preserve">
-    <value>Descrição</value>
+  <data name="A Lehmon Brothers é o projeto socio-viral da memecoin $LEMON que quer construir a maior memecoin não animal da Cardano. Eles utilizam mecanismos virais pensados com ajuda de inteligência artificial para distribuição de $LEMON, quebrando a barreira da adoção e incentivando pessoas e resevarem tokens para que serão usados pela comunidade. Entrar é de graça mas é preciso de um convite que é limitado. Não há o que perder, mas, se o $LEMON se tornar uma das grandes memecoins da Cardano, cada $LEMON poderá valer muito. Se você já deixou passar alguma oportunidade de entrar em projetos anteriormente, não vai querr perder essa, ainda mais podendo reservar de graça. Aqui está o meu link de convite: {0}\n\nEste link deixará de funcionar quando meus convites acabarem. Avise-me depois que você entrar, porque eu preciso aprovar a sua entrada na comunidade através da minha conta." xml:space="preserve">
+    <value>Lehmon Brothers is the socio-viral project of the memecoin $LEMON that aims to build the largest non-animal memecoin on Cardano. They use viral mechanisms designed with the help of artificial intelligence for the distribution of $LEMON, breaking the barrier of adoption and encouraging people to reserve tokens that will be used by the community. Joining is free, but you need an invitation that is limited. There’s nothing to lose, but if $LEMON becomes one of the major memecoins of Cardano, each $LEMON could be worth a lot. If you’ve missed out on opportunities to join projects before, you don’t want to miss this one, especially since you can reserve for free. Here is my invitation link: {0}\n\nThis link will stop working when my invites run out. Let me know after you join because I need to approve your entry into the community through my account.</value>
   </data>
-  <data name="close_account" xml:space="preserve">
-    <value>Encerrar conta</value>
+  <data name="Aprovar" xml:space="preserve">
+    <value>Approve</value>
   </data>
-  <data name="contact" xml:space="preserve">
-    <value>Contato</value>
+  <data name="Convide pessoas que você conhece pessoalmente e garanta um adicional de &lt;b&gt;$LEMON {0}&lt;/b&gt;" xml:space="preserve">
+    <value>Invite people you know personally and secure an additional &lt;b&gt;$LEMON {0}&lt;/b&gt;</value>
   </data>
-  <data name="content.description" xml:space="preserve">
-    <value>Lehmon Brothers e a memecoin $LEMON irá superar a barreira de adoção e se tornará uma das principais memecoins da Cardano</value>
+  <data name="COPIAR LINK" xml:space="preserve">
+    <value>COPY LINK</value>
   </data>
-  <data name="cookie.click" xml:space="preserve">
-    <value>Entendi</value>
+  <data name="Olá, {0}, bem-vindo a (em breve) maior memecoin da Cardano!" xml:space="preserve">
+    <value>Hello, {0}, welcome to (coming soon) the largest memecoin on Cardano!</value>
   </data>
-  <data name="cookie.message" xml:space="preserve">
-    <value>Este site utiliza cookies para garantir que você tenha a melhor experiência no site</value>
+  <data name="Ou compartilhar com:" xml:space="preserve">
+    <value>Or share with:</value>
   </data>
-  <data name="dashboard" xml:space="preserve">
-    <value>Dashboard</value>
+  <data name="Pelos próximos {0} dias voce pode convidar e verificar até {1} pessoas e garantir $LEMON {2} por cada. Com o seu convite, eles também poderão reservar $LEMON com antecedência e ajudar a expandir nossa comunidade" xml:space="preserve">
+    <value>For the next {0} days, you can invite and verify up to {1} people and secure $LEMON {2} for each. With your invite, they will also be able to reserve $LEMON in advance and help expand our community.</value>
   </data>
-  <data name="facebook" xml:space="preserve">
-    <value>Discord</value>
+  <data name="Reprovar" xml:space="preserve">
+    <value>Disapprove</value>
   </data>
-  <data name="faq" xml:space="preserve">
-    <value>Perguntas frequentes</value>
+  <data name="Reservadas" xml:space="preserve">
+    <value>Reserved</value>
   </data>
-  <data name="future" xml:space="preserve">
-    <value>Prometemos não prometer nada</value>
+  <data name="Saldo Atual" xml:space="preserve">
+    <value>Current Balance</value>
   </data>
-  <data name="future_text" xml:space="preserve">
-    <value>Dê uma olhada nas inovações e tecnologias de pagamento que se tornarão universais quando a Initiative Q tiver êxito.</value>
+  <data name="Tarefa Atual" xml:space="preserve">
+    <value>Current Task</value>
   </data>
-  <data name="getinvited" xml:space="preserve">
-    <value>Seja Convidado</value>
+  <data name="Tarefas Futuras" xml:space="preserve">
+    <value>Future Tasks</value>
   </data>
-  <data name="home" xml:space="preserve">
-    <value>Início</value>
-  </data>
-  <data name="howto.get.invite" xml:space="preserve">
-    <value>Como receber um convite</value>
-  </data>
-  <data name="howto.visit.send.post" xml:space="preserve">
-    <value>Envie um &lt;b&gt;post &lt;/b&gt;nas&lt;b&gt; redes sociais&lt;/b&gt; perguntando aos seus amigos se um deles pode te convidar.</value>
-  </data>
-  <data name="howto.visit.social" xml:space="preserve">
-    <value>Visite a página da Lehmon Brothers no &lt;a href="https://discord.gg/j6tTnGWwkc" target="_blank" rel="noopener noreferrer"&gt;&lt;b&gt;Discord&lt;/b&gt;&lt;/a&gt; ou &lt;a href="https://x.com/lehmonbros" target="_blank" rel="noopener noreferrer"&gt;&lt;b&gt;Twitter (X)&lt;/b&gt;&lt;/a&gt; e veja quais dos seus amigos já segue a Lehmon Brothers. Pode ser que eles já estejam cadastrados.</value>
-  </data>
-  <data name="howto.why" xml:space="preserve">
-    <value>O ingresso na Lehmon Brothers é somente por convite. Confira duas maneiras simples de encontrar um convite:</value>
-  </data>
-  <data name="Info.blocks.block.label_1" xml:space="preserve">
-    <value>Conheça o Tokenomics da F e como a quantidade de token diminui </value>
-  </data>
-  <data name="Info.blocks.block.label_2" xml:space="preserve">
-    <value>Conheça a inspiração da Lehmoon Brothers e porque somos diferentes</value>
-  </data>
-  <data name="Info.blocks.block.label_3" xml:space="preserve">
-    <value>Leia as nossas perguntas frequentes</value>
-  </data>
-  <data name="languages" xml:space="preserve">
-    <value>Línguas</value>
-  </data>
-  <data name="learn_more" xml:space="preserve">
-    <value>Saiba mais</value>
-  </data>
-  <data name="link.dashboard" xml:space="preserve">
-    <value>Dashboard</value>
-  </data>
-  <data name="link.getinvite" xml:space="preserve">
-    <value>Pegue um convite</value>
-  </data>
-  <data name="link.howtowork" xml:space="preserve">
-    <value>Como funciona</value>
-  </data>
-  <data name="link.tokenomics" xml:space="preserve">
-    <value>Tokenomics</value>
-  </data>
-  <data name="link.what_is" xml:space="preserve">
-    <value>Sobre</value>
-  </data>
-  <data name="login" xml:space="preserve">
-    <value>Connect</value>
-  </data>
-  <data name="logout" xml:space="preserve">
-    <value>Sair</value>
-  </data>
-  <data name="model" xml:space="preserve">
-    <value>Tokenomics</value>
-  </data>
-  <data name="model.short.description" xml:space="preserve">
-    <value>Conheça como está distribuído o Token F, qual a quantidade total cunhada, entre outras informações de F.</value>
-  </data>
-  <data name="model_text" xml:space="preserve">
-    <value>Conheça as teorias econômicas e a política monetária por trás da Initiative Q, e como estimar o valor da moeda Q que estará reservada para você quando você ingressar.</value>
-  </data>
-  <data name="network.name" xml:space="preserve">
-    <value>Chega de bichinhos</value>
-  </data>
-  <data name="network.short.description" xml:space="preserve">
-    <value>Veja tudo que não iremos prometer mas que Lehmoon Brothers assim como o token F se tornar sucesso poderíamos fazer.</value>
-  </data>
-  <data name="notFound" xml:space="preserve">
-    <value>Não encontrado</value>
-  </data>
-  <data name="og.description" xml:space="preserve">
-    <value>Lehmon Brothers | A memecoin da Cardano</value>
-  </data>
-  <data name="Postar" xml:space="preserve">
-    <value>Postar</value>
-  </data>
-  <data name="press" xml:space="preserve">
-    <value>Imprensa</value>
-  </data>
-  <data name="privacy" xml:space="preserve">
-    <value>Privacidade</value>
-  </data>
-  <data name="sellers" xml:space="preserve">
-    <value>Vendedores</value>
-  </data>
-  <data name="settings" xml:space="preserve">
-    <value>Configurações</value>
-  </data>
-  <data name="terms" xml:space="preserve">
-    <value>Termos de uso</value>
-  </data>
-  <data name="timeline" xml:space="preserve">
-    <value>Linha Cronológica</value>
-  </data>
-  <data name="Tweetar" xml:space="preserve">
-    <value>Tweetar</value>
-  </data>
-  <data name="twitter" xml:space="preserve">
-    <value>Twitter</value>
-  </data>
-  <data name="want.learn.more" xml:space="preserve">
-    <value>Quer saber mais?</value>
-  </data>
-  <data name="website.title_text" xml:space="preserve">
-    <value>Lehmon Brothers | A memecoin da Cardano</value>
-  </data>
-  <data name="what_is" xml:space="preserve">
-    <value>Sobre</value>
+  <data name="Você tem {0} amigos para revisar, e você já aprovou {1} num total de {2} convites disponíveis." xml:space="preserve">
+    <value>You have {0} friends to review, and you have already approved {1} out of {2} available invitations.</value>
   </data>
 </root>
