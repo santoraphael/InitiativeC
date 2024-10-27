@@ -118,15 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="home.h1" xml:space="preserve">
-    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;é&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt; 
-&lt;span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt; 
+    <value>&lt;span&gt;&lt;span&gt;L&lt;/span&gt;&lt;span&gt;E&lt;/span&gt;&lt;span&gt;M&lt;/span&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;N&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span&gt;is&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span&gt;a&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;m&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;span&gt;c&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;span&gt;i&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span&gt;of&lt;/span&gt;&lt;/span&gt;
+
 &lt;span&gt;&lt;span&gt;C&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;r&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span&gt;a&lt;/span&gt;&lt;span&gt;n&lt;/span&gt;&lt;span&gt;o&lt;/span&gt;&lt;/span&gt;</value>
   </data>
   <data name="home.h2Alt" xml:space="preserve">
-    <value>We all know that money only has value due to a common agreement. Initiative Q is a brilliant way to get everyone to agree on a new currency.</value>
+    <value>We all know that money only has value due to a common agreement. Initiative Q is a brilliant way to get everyone to agree on a new currency</value>
   </data>
   <data name="home.h2" xml:space="preserve">
     <value>Ensure an estimated future value of</value>
@@ -138,7 +143,7 @@
     <value>How to become part of Lehmon Brothers</value>
   </data>
   <data name="home.join_2" xml:space="preserve">
-    <value>Ensure an estimated future value of</value>
+    <value>ensure an estimated future value of</value>
   </data>
   <data name="home.secure" xml:space="preserve">
     <value>Estimated maximum amount of $LEMON for the next member:</value>
@@ -147,19 +152,19 @@
     <value>Do you know what makes this great reward possible?</value>
   </data>
   <data name="home.network" xml:space="preserve">
-    <value>Lehmon Brothers is the socio-viral memecoin project where the full strength of the Cardano community is put to the test.</value>
+    <value>We need to find our other lemon brothers, and for that we will reserve our token for all those who join.</value>
   </data>
   <data name="home.no_1" xml:space="preserve">
     <value>No.</value>
   </data>
   <data name="home.no_2" xml:space="preserve">
-    <value>It sounds too good to be true.</value>
+    <value>Seems too good to be true.</value>
   </data>
   <data name="home.yes_1" xml:space="preserve">
     <value>Yes.</value>
   </data>
   <data name="home.yes_2" xml:space="preserve">
-    <value>Can you register me!</value>
+    <value>You can sign me up!</value>
   </data>
   <data name="home.vid_captions" xml:space="preserve">
     <value>Subtitled in Portuguese</value>
@@ -174,14 +179,14 @@
     <value>(What are the fundamentals of this estimate?)</value>
   </data>
   <data name="home.what_is_based_on_alt" xml:space="preserve">
-    <value>(On what is this estimate based?)</value>
+    <value>(What is this estimate based on?)</value>
   </data>
   <data name="home.based_p_1" xml:space="preserve">
     <value>You can reserve a maximum amount of $LEMON.
 10% will be reserved after registration, 40% after inviting 5 friends, and the rest for other tasks.</value>
   </data>
   <data name="home.based_link" xml:space="preserve">
-    <value>Read why</value>
+    <value>leia por quê</value>
   </data>
   <data name="home.based_p_2" xml:space="preserve">
     <value>).</value>
@@ -202,7 +207,7 @@
     <value>Only name, email, and password are required. No spam: you will only receive updates about the system.</value>
   </data>
   <data name="home.paragraphs.what_is_title" xml:space="preserve">
-    <value>A state-of-the-art payment system</value>
+    <value>A next-generation payment system</value>
   </data>
   <data name="home.paragraphs.concept_title" xml:space="preserve">
     <value>A simple but powerful concept</value>
@@ -220,78 +225,76 @@
     <value>More</value>
   </data>
   <data name="home.points.point_1" xml:space="preserve">
-    <value>Only members can participate in the launch of the $LEMON token, and to become a member you only need an invitation.</value>
+    <value>Everyone wants to be part of Lehmon Brothers, but it's not that easy; first, you need an invitation.</value>
   </data>
   <data name="home.points.point_1_more_p_1" xml:space="preserve">
-    <value>During the launch phase, each new member at Lehmon Brothers has a maximum amount of $LEMON that can be reserved exclusively for them, and there is no payment required to make the reservation. The maximum amount for reservation is variable; the maximum amount decreases with each new member. So, the sooner you join, the more $LEMON you can reserve.</value>
+    <value>Each new brother in Lehmon Brothers has an amount of $LEMON Tokens that can be reserved exclusively for you, without needing to spend anything to make the reservation. So, the sooner you join, the more $LEMON you can reserve.</value>
   </data>
   <data name="home.points.point_1_more_p_2_1" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_2" xml:space="preserve">
-    <value>The invitation is made through a unique link generated for each member; you need to be connected with your Cardano wallet on the Lehmon website.</value>
+    <value>The invitation is made through a brother's link; you access the link and connect your wallet.</value>
   </data>
   <data name="home.points.point_2_more_p_1" xml:space="preserve">
-    <value>Just access the link; adding a name will make it easier for the invite owner to know it’s you (they will need to approve your entry). As soon as you join, 10% of the total amount of $LEMON will be reserved for you. After the token distribution, entry into the community will be blocked for new members for new exclusive actions for those already part of it.</value>
+    <value>The brother who owns the invitation link just needs to approve your entry into Lehmon Brothers. Once you join, 10% of the total amount of your spot is already reserved for you, and with that, we are building a really strong community.</value>
   </data>
   <data name="home.points.point_3" xml:space="preserve">
-    <value>Once you join, you will have your invitation link and 5 invites that you can use to invite whoever you want. Whenever you approve the entry of a new member, you reserve an additional percentage of $LEMON.</value>
+    <value>Once you become a brother, you will also have an invitation link.</value>
   </data>
   <data name="home.points.point_3_more_p_1" xml:space="preserve">
-    <value>After the token distribution phase, new invites may be made available as new activities are launched for the community.</value>
+    <value>Upon joining, you get an invitation link to invite new brothers. You can approve up to 5 new brothers, so choose well whom you will invite. By approving new brothers, you secure more $LEMON in reserve for yourself.</value>
   </data>
   <data name="home.points.point_3_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_4" xml:space="preserve">
-    <value>After the invitation and reservation phase, which will happen for a very limited time, the contribution phase will begin, where we will raise funds for the $LEMON liquidity pool.</value>
+    <value>The invitation period will last for a very, very limited time.</value>
   </data>
   <data name="home.points.point_4_more_p_1" xml:space="preserve">
-    <value>The total amount will be added to the liquidity pool as stated in the tokenomics section. The contribution phase is divided into two parts that occur simultaneously: The first is that any member with reserved tokens can participate with a minimum contribution of 20 ADA, which will entitle them to receive the airdrop with the amount that was effectively reserved. The second part is the token distribution with participation from the pool.&lt;/br&gt;&lt;/br&gt;
-
-Example. If we raise 100 ADA for the pool, the member who contributed 20 ADA will receive 20% of the tokens allocated for the pre-sale; if they participated in the token reservation phase, they will also receive the reserved amount. However, another member who did not participate in the token reservation phase and contributes the same 20 ADA, for example, will only receive the 20% of the tokens allocated for the pre-sale.</value>
+    <value>It will not be possible to reserve $LEMON after this period, so you need to join soon. After the invitation period, a new phase will begin: the fair distribution of $LEMON.</value>
   </data>
   <data name="home.points.point_5" xml:space="preserve">
-    <value>Anyone can participate in the contribution phase, whether they are a member or not of Lehmon Brothers. To participate, simply send a minimum of 20 ADA to a wallet address that will be disclosed on all our social media, website, and community. There is no maximum limit for contributions.</value>
+    <value>The fair distribution of $LEMON will ensure that the largest number of tokens is already distributed at its launch.</value>
   </data>
   <data name="home.points.point_5_more_p_1" xml:space="preserve">
-    <value>The distribution phase will be the time when a fundraiser will take place, with a minimum amount of 20 ADA and no maximum limit. This phase is open, and anyone can participate. The percentage relative to the total ADA sent to the fundraising wallet will be the corresponding percentage of $LEMON that you will receive in this phase. Members who have already reserved $LEMON and participated in the fundraising will receive the amount relative to their contribution to the pool, plus the tokens reserved in the reservation phase.</value>
+    <value>The distribution phase will be the moment when a fundraising will take place, with a minimum value of 20 ADA and no maximum limit. This phase is open, and anyone can participate. The percentage relative to the total ADA sent to the fundraising wallet will be the percentage of $LEMON corresponding to that phase that you will receive. Brothers who have already reserved $LEMON and participated in the fundraising will receive the amount relative to their participation in the contribution pool, plus the tokens reserved in the reservation phase.</value>
   </data>
   <data name="home.points.point_5_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_6" xml:space="preserve">
-    <value>After the fundraising phase, 100% of the total ADA raised (minus transfer and airdrop fees) will go to the liquidity pool, which will initially be created on a DEX chosen by the community and may later have other pools on new DEXs created to increase the reach of $LEMON.</value>
+    <value>100% of the total ADA collected (minus fees) will go to the liquidity pool.</value>
   </data>
   <data name="home.points.point_6_more_p_1" xml:space="preserve">
-    <value>All participation and decisions regarding the direction that Lehmon Brothers will take concerning $LEMON will be made through voting within the exclusive community.</value>
+    <value>After the fundraising phase, we will distribute in the liquidity pools of the top 3 Cardano DEXs, proportionally to the DEX's participation in the network.</value>
   </data>
   <data name="home.points.point_6_more_p_2" xml:space="preserve">
     <value />
   </data>
   <data name="home.points.point_7" xml:space="preserve">
-    <value>Breaking the adoption barrier and creating a highly distributed token depends solely on you, so your participation in all community actions is of utmost importance, and that's why you will have the right to reserve tokens as a way of thanking the entire Brothers community, both those who are already here and those who will come</value>
+    <value>Now the fun begins... We will build many things to make our community big, strong, and become the largest non-animal memecoin in the world.</value>
   </data>
   <data name="home.points.point_7_more_p_1" xml:space="preserve">
-    <value>Lehmon Brothers, with its $LEMON, is more than just a memecoin project; it’s a cultural revolution. New things will come to greatly foster the community and make $LEMON yield good lemonade.</value>
+    <value>Lehmon Brothers, with its $LEMON, is more than a memecoin project; it's a cultural turnaround. At the moment, network memes look like a zoo. New things will come to greatly foster the community and make $LEMON yield good lemonades.</value>
   </data>
   <data name="home.point_more" xml:space="preserve">
     <value>Learn more</value>
   </data>
   <data name="home.win.h2" xml:space="preserve">
-    <value>Become part now</value>
+    <value>Join right now</value>
   </data>
   <data name="home.win.win_1_h4" xml:space="preserve">
-    <value>Receive an invitation</value>
+    <value>Free</value>
   </data>
   <data name="home.win.win_1_txt" xml:space="preserve">
-    <value>Just access the invitation link and be accepted to reserve your $LEMON</value>
+    <value>Just access with your wallet and your $LEMONs will be reserved.</value>
   </data>
   <data name="home.win.win_2_h4" xml:space="preserve">
-    <value>Reserve $LEMON</value>
+    <value>Simple</value>
   </data>
   <data name="home.win.win_2_txt" xml:space="preserve">
-    <value>Just complete the tasks to automatically reserve your tokens. You pay nothing to reserve $LEMON for yourself.</value>
+    <value>All you need, for now, is to connect your wallet.</value>
   </data>
   <data name="home.win.win_3_h4" xml:space="preserve">
     <value>Why not?</value>
@@ -300,14 +303,13 @@ Example. If we raise 100 ADA for the pool, the member who contributed 20 ADA wil
     <value>Think of it as getting bitcoin many years ago.</value>
   </data>
   <data name="home.alert_message.text" xml:space="preserve">
-    <value>We are updating the service and will be back soon. We appreciate your patience.</value>
+    <value>Estamos atualizando o serviço e voltaremos em breve. Agradecemos sua paciência.</value>
   </data>
   <data name="home.button.getinvited" xml:space="preserve">
     <value>Be invited</value>
   </data>
   <data name="home.button.getinvited.link" xml:space="preserve">
-    <value>&lt;a href="#HowTo" class="Button Button-primary"&gt;&lt;span class="label"&gt;Be invited&lt;/span&gt;&lt;/a&gt;
-</value>
+    <value>&lt;a href="#sign-up" class="Button Button-primary"&gt;&lt;span class="label"&gt;Be invited&lt;/span&gt;&lt;/a&gt;</value>
   </data>
   <data name="slide.tweet_text_1" xml:space="preserve">
     <value>This is an example of Tweet number 1</value>
@@ -319,16 +321,16 @@ Example. If we raise 100 ADA for the pool, the member who contributed 20 ADA wil
     <value>About</value>
   </data>
   <data name="about.article.article_p" xml:space="preserve">
-    <value>Lehmon Brothers is an initiative created with the aim of building a community using viral mechanisms and artificial intelligence to generate the entire marketing strategy, showcasing the power of Cardano and demonstrating that we can have more than two strong memecoins, reflecting the maturity of Cardano as a blockchain.</value>
+    <value>Lehmon Brothers is an initiative created to be something more than a simple community; it was created to be a space where the bravest, most acidic lemons ready to challenge the status quo meet. Lehmon Brothers is where lemons come together to fight in an epic meme battle.</value>
   </data>
   <data name="tokenization.article_p" xml:space="preserve">
-    <value>A medium lemon can produce approximately 30-45 ml of juice.</value>
+    <value>An average lemon can produce approximately 30–45 ml of juice.</value>
   </data>
   <data name="tokenization.li_span_p_1" xml:space="preserve">
-    <value>50% of the token supply will be distributed among all pre-sale participants. Of these tokens, 50% (25% of the total - 11,250,000,000) will be made available in the reservation phase. The other 50% (25% of the total - 11,250,000,000) will be made available in the pre-sale open to the public, with no prior qualifications. Distribution will be based on a snapshot of the funds sent and carried out through an airdrop. Pre-sale participants who have reserved tokens will receive a proportional share in the distribution, in addition to the amount of tokens effectively reserved.</value>
+    <value>50% of the token supply will be distributed among all pre-sale participants. Of these tokens, 50% (25% of the total - 11,250,000,000) will be made available in the reservation phase. The other 50% (25% of the total - 11,250,000,000) will be available in the pre-sale open to the public, without prior qualifications. The distribution will be based on a snapshot of the funds sent and carried out through an airdrop. Pre-sale participants who have reserved tokens will receive a proportional share in the distribution, in addition to the amount of tokens effectively reserved.</value>
   </data>
   <data name="tokenization.li_span_p_2" xml:space="preserve">
-    <value>40% of the token supply will be allocated for initial liquidity. Liquidity Provider (LP) tokens will be stored in a multisig wallet for added security.</value>
+    <value>40% of the token supply will be allocated to initial liquidity, which will be distributed proportionally to the participation on the SundaeSwap and Minswap networks. The Liquidity Provider (LP) tokens will be stored in a multisig wallet for greater security.</value>
   </data>
   <data name="tokenization.li_span_p_3" xml:space="preserve">
     <value>6% of the token supply will be used for marketing promotions, community airdrops, events, and incentives to promote $LEMON.</value>
@@ -337,7 +339,7 @@ Example. If we raise 100 ADA for the pool, the member who contributed 20 ADA wil
     <value>3% of the token supply is reserved for exchange listings and expansion opportunities.</value>
   </data>
   <data name="tokenization.li_span_p_5" xml:space="preserve">
-    <value>1% will be distributed in the first weeks during events for the Lehmon Brothers community that have reserved tokens.</value>
+    <value>1% will be distributed in the first weeks during the meme battles we will organize among our brothers.</value>
   </data>
   <data name="tokenization.li_span_title_1" xml:space="preserve">
     <value>50% (22,500,000,000) - Pre-sale Holders:</value>
@@ -352,19 +354,19 @@ Example. If we raise 100 ADA for the pool, the member who contributed 20 ADA wil
     <value>3% - Reserve:</value>
   </data>
   <data name="tokenization.li_span_title_5" xml:space="preserve">
-    <value>1% - Community Events:</value>
+    <value>1% - Meme Battle:</value>
   </data>
   <data name="tokenization.section_p_1" xml:space="preserve">
-    <value>How is $LEMON distributed?</value>
+    <value>How is $LEMON</value>
   </data>
   <data name="tokenization.section_p_2" xml:space="preserve">
-    <value />
+    <value>distributed?</value>
   </data>
   <data name="verify.NaoAprovado.h1" xml:space="preserve">
     <value>Your entry needs to be approved</value>
   </data>
   <data name="verify.NaoAprovado.p" xml:space="preserve">
-    <value>Find the person who invited you so they can approve you and you can reserve $LEMON</value>
+    <value>Seek the person who gave you the invitation so they can approve you and you can reserve $LEMON</value>
   </data>
   <data name="verify.NaoLogado.h1" xml:space="preserve">
     <value>You are not connected</value>
@@ -373,9 +375,9 @@ Example. If we raise 100 ADA for the pool, the member who contributed 20 ADA wil
     <value>Connect your wallet using one of the compatible apps</value>
   </data>
   <data name="verify.SemConvite.h1" xml:space="preserve">
-    <value>You have not received an invitation yet</value>
+    <value>You have not yet received an invitation</value>
   </data>
   <data name="verify.SemConvite.p" xml:space="preserve">
-    <value>Look in one of our official channels for people who can invite you. Hurry, because with each passing minute, less $LEMON may be reserved by you.</value>
+    <value>Search in one of our official channels for people who can give you an invitation. Hurry because with each passing minute, less $LEMON can be reserved by you.</value>
   </data>
 </root>

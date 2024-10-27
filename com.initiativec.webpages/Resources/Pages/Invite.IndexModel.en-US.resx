@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ErrorMessageInvalidInvite" xml:space="preserve">
-    <value>Invalid or expired invite code.</value>
+    <value>Invalid or expired invitation code.</value>
   </data>
   <data name="ErrorTitleInvalidInvite" xml:space="preserve">
-    <value>Invalid invite.</value>
+    <value>Invalid Invitation</value>
   </data>
 </root>
