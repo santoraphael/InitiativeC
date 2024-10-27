@@ -1,0 +1,84 @@
+[33mec6ec18[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: checkout: moving from backup-branch to main
+[33mbf007d5[m[33m ([m[1;31morigin/backup-branch[m[33m, [m[1;32mbackup-branch[m[33m)[m HEAD@{1}: checkout: moving from main to backup-branch
+[33mec6ec18[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{2}: commit: asd
+[33mc778bf0[m HEAD@{3}: reset: moving to HEAD~1
+[33m09903d3[m HEAD@{4}: reset: moving to HEAD~1
+[33m6b4b5f1[m HEAD@{5}: commit: sdasd
+[33m09903d3[m HEAD@{6}: commit: ASDA
+[33mc778bf0[m HEAD@{7}: commit: asd
+[33m4cb9a0f[m HEAD@{8}: commit: asd
+[33m9c3321b[m HEAD@{9}: commit: zxcz
+[33mf504b17[m HEAD@{10}: commit: asd
+[33mef64709[m HEAD@{11}: commit: asdknjk
+[33m4df0cdf[m HEAD@{12}: commit: asdasd
+[33md50bcdc[m HEAD@{13}: commit: rfgdf
+[33me29c096[m HEAD@{14}: commit: ghfhjgfjtyfghj
+[33mfead5c6[m HEAD@{15}: commit: asdasd
+[33mc19cecb[m HEAD@{16}: commit: Toda a parte basica está concluida.
+[33m0b32384[m HEAD@{17}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m4857b9a[m HEAD@{18}: commit: sdasd
+[33mbf007d5[m[33m ([m[1;31morigin/backup-branch[m[33m, [m[1;32mbackup-branch[m[33m)[m HEAD@{19}: checkout: moving from backup-branch to main
+[33mbf007d5[m[33m ([m[1;31morigin/backup-branch[m[33m, [m[1;32mbackup-branch[m[33m)[m HEAD@{20}: checkout: moving from main to backup-branch
+[33mbf007d5[m[33m ([m[1;31morigin/backup-branch[m[33m, [m[1;32mbackup-branch[m[33m)[m HEAD@{21}: commit: sadasd
+[33m9b0523b[m HEAD@{22}: commit: asd
+[33mb5ba17b[m HEAD@{23}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33ma90414c[m HEAD@{24}: commit: sdfsdf
+[33maa9f833[m HEAD@{25}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m1c87b19[m HEAD@{26}: commit: asdasd
+[33me0d7a79[m HEAD@{27}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m3dc16c9[m HEAD@{28}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m3954eba[m HEAD@{29}: commit: asdasd
+[33me84ba0b[m HEAD@{30}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33mb1a7298[m HEAD@{31}: commit: asdasd
+[33mea2e41f[m HEAD@{32}: commit: sdasd
+[33me7f7c8d[m HEAD@{33}: commit: yuftyfyasda
+[33m2c75283[m HEAD@{34}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m6645626[m HEAD@{35}: commit: sdfsdf
+[33mcfc33eb[m HEAD@{36}: reset: moving to HEAD
+[33mcfc33eb[m HEAD@{37}: revert: Revert "dfsdfs"
+[33m43acddd[m HEAD@{38}: commit: dfsdfs
+[33m765af5c[m HEAD@{39}: commit: fsdfsfdsfdasdasd
+[33mf404609[m HEAD@{40}: commit: asdasde
+[33m73d4905[m HEAD@{41}: commit: aisjdiasjd
+[33m4c9881f[m HEAD@{42}: commit: dasd
+[33med8b25f[m HEAD@{43}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33mfa72477[m HEAD@{44}: commit: WDSFSDFSDF
+[33m286140c[m HEAD@{45}: commit: asdasd
+[33m3fc1764[m HEAD@{46}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m484555b[m HEAD@{47}: commit: asdasd
+[33m9136638[m HEAD@{48}: commit: asdasd
+[33m914331d[m HEAD@{49}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m7de40fd[m HEAD@{50}: commit: asdasdasdasdasd
+[33mea93246[m HEAD@{51}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m4ac682b[m HEAD@{52}: commit: asdfasd
+[33mb047e1d[m HEAD@{53}: commit: Todos os ajustes de tela antes de começar a incluir o cadastro e login
+[33m047ce23[m HEAD@{54}: commit: sda
+[33mb9e6c54[m HEAD@{55}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m48d2a82[m HEAD@{56}: commit: asdasd
+[33m14ec434[m HEAD@{57}: commit: Parte do site terminada
+[33m6b87569[m HEAD@{58}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33me9579a3[m HEAD@{59}: commit: Implementação do banco de dados
+[33mb5a74db[m HEAD@{60}: commit: sdasda
+[33mfcc2381[m HEAD@{61}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m201bb16[m HEAD@{62}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m43ddef3[m HEAD@{63}: commit: imagens
+[33m4271e5b[m HEAD@{64}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33mdec9ac1[m HEAD@{65}: commit: vairias alteracoes
+[33m23a4961[m HEAD@{66}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m41af804[m HEAD@{67}: commit: asd
+[33m0493eea[m HEAD@{68}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33md3dbafe[m HEAD@{69}: commit: sdfsdf
+[33m040d628[m HEAD@{70}: commit: asd
+[33m67d666f[m HEAD@{71}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33mb06d585[m HEAD@{72}: commit: sad
+[33m0d4f67b[m HEAD@{73}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m5f86387[m HEAD@{74}: commit: Alteracoes diversas
+[33m0486cb0[m HEAD@{75}: commit: Diversas implementacoes.... site base 90% concluido
+[33m620af10[m HEAD@{76}: commit: Migracao de todo o site para a nova tecnologia RazorPages
+[33m1002716[m HEAD@{77}: commit: asdasd
+[33m6e70c06[m HEAD@{78}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33mf97f945[m HEAD@{79}: commit: asdfsdf
+[33m5e96d48[m HEAD@{80}: commit: Menu tradução
+[33m8f20b37[m HEAD@{81}: commit: Arrumando menu Saiba Mais
+[33m10f745b[m HEAD@{82}: commit: Versionando
+[33mbeabf0b[m HEAD@{83}: clone: from https://github.com/santoraphael/InitiativeC.git
