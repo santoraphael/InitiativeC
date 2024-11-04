@@ -82,7 +82,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             dashboardVM.amount_token_por_convite = _tokenBountyService.ValorReservaPorConvite(user.id);
 
             dashboard = dashboardVM;
-            cardVerificaConvite = GetCardVerificaConvite(user.invite_code, (int)user.invitations_available);
+            cardVerificaConvite = GetCardVerificaConvite(user.invite_code, (int)user.invitations_available, dashboardVM.qtd_dias_restantes);
             enviarConvite = GetCardEnviarConvite(user.invite_code, _tokenBountyService.ValorReservaConviteTotal(user.id), (int)user.invitations_available);
 
             int percentualTarefa = 0;
@@ -121,7 +121,7 @@ namespace com.initiativec.webpages.Pages.dashboard
             return diasRestantes < 0 ? 0 : diasRestantes;
         }
 
-        private CardVerificaConvite GetCardVerificaConvite(string invite_code, int invitations_available)
+        private CardVerificaConvite GetCardVerificaConvite(string invite_code, int invitations_available, int qtd_dias_restantes)
         {
             CardVerificaConvite cardVerificaConvite = new CardVerificaConvite();
             List<UsuarioAcao> usuarioAcoes = new List<UsuarioAcao>();
@@ -146,7 +146,16 @@ namespace com.initiativec.webpages.Pages.dashboard
                 cardVerificaConvite.ConvitesParaRevisar = usuarioAcoes.Count();
                 cardVerificaConvite.Aprovados = users.Where(u => u.confirmed == true).Count();
                 cardVerificaConvite.ConvitesDisponiveis = invitations_available;
-                cardVerificaConvite.status = true;
+
+                if(invitations_available > 0 && qtd_dias_restantes > 0)
+                {
+                    cardVerificaConvite.status = true;
+                }
+                else
+                {
+                    cardVerificaConvite.status = false;
+                }
+                
             }
 
             return cardVerificaConvite;
@@ -347,67 +356,5 @@ namespace com.initiativec.webpages.Pages.dashboard
                 _context.SaveChanges();
             }
         }
-
-        public async Task<IActionResult> OnPostCheckDiscordAsync()
-        {
-            if (!User.Identity.IsAuthenticated)
-            {
-                return Challenge(new AuthenticationProperties { RedirectUri = "/dashboard" }, "Discord");
-            }
-
-            // Obtenha o userId do Discord a partir dos Claims
-            string userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!ulong.TryParse(userIdString, out ulong userId))
-            {
-                IsUserInChannel = false;
-                return Page();
-            }
-
-            // Obtenha os IDs do servidor e canal do appsettings.json
-            if (!ulong.TryParse("1278126514654941366", out ulong guildId) ||
-                !ulong.TryParse("1289755523591438336", out ulong channelId))
-            {
-                IsUserInChannel = false;
-                return Page();
-            }
-
-            IsUserInChannel = await _discordService.IsUserInChannelAsync(userId, guildId, channelId);
-
-            return Page();
-        }
-
-        // Handler para Login com Discord
-        public IActionResult OnGetLoginDiscord(string returnUrl = "/dashboard")
-        {
-            return Challenge(new AuthenticationProperties { RedirectUri = returnUrl }, "Discord");
-        }
-
-        // Handler para Logout com Discord
-        public async Task<IActionResult> OnGetLogoutDiscord()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToPage("/Index"); // Redireciona para a página inicial após logout
-        }
-
-
-        //public async Task OnGetAsync()
-        //{
-
-        //    string wallet = "dasdas";
-
-        //    _context.Users.Select(u => u.wallet_address == wallet);
-
-
-        //    string walletAddress = "addr1q9p2annkw94a9nrs2gduxu8rhe4v0vvhpnlwtuzttqngtz5wsfgya999406dl2wthe3adeux7c0jv8kfrfdyv4zp4zxshcsqru";
-
-        //    StakeAddress = await _blockfrostServices.GetStakeAddress(walletAddress);
-
-        //    WalletAddresses = await _blockfrostServices.GetAllAddressesByStakeAddress(StakeAddress);
-
-        //    //StakeAddress = await _blockfrostServices.GetStakeAddressFromWalletAddress(walletAddress);
-
-        //    //WalletAddresses = await _blockfrostServices.GetWalletAddressesFromStakeAddress(StakeAddress, 1, 1);
-
-        //}
     }
 }

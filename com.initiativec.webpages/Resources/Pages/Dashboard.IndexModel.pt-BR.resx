@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="A Lehmon Brothers é o projeto socio-viral da memecoin $LEMON que quer construir a maior memecoin não animal da Cardano. Eles utilizam mecanismos virais pensados com ajuda de inteligência artificial para distribuição de $LEMON, quebrando a barreira da adoção e incentivando pessoas e resevarem tokens para que serão usados pela comunidade. Entrar é de graça mas é preciso de um convite que é limitado. Não há o que perder, mas, se o $LEMON se tornar uma das grandes memecoins da Cardano, cada $LEMON poderá valer muito. Se você já deixou passar alguma oportunidade de entrar em projetos anteriormente, não vai querr perder essa, ainda mais podendo reservar de graça. Aqui está o meu link de convite: {0}\n\nEste link deixará de funcionar quando meus convites acabarem. Avise-me depois que você entrar, porque eu preciso aprovar a sua entrada na comunidade através da minha conta." xml:space="preserve">
-    <value>A Lehmon Brothers é o projeto socio-viral da memecoin $LEMON que quer construir a maior memecoin não animal da Cardano. Eles utilizam mecanismos virais pensados com ajuda de inteligência artificial para distribuição de $LEMON, quebrando a barreira da adoção e incentivando pessoas e resevarem tokens que serão usados pela comunidade. Entrar é de graça mas é preciso de um convite que é limitado. Não há o que perder, mas, se o $LEMON se tornar uma das grandes memecoins da Cardano, cada $LEMON poderá valer muito. Se você já deixou passar alguma oportunidade de entrar em projetos anteriormente, não vai quer perder essa, ainda mais podendo reservar de graça. Aqui está o meu link de convite: {0}\n\nEste link deixará de funcionar quando meus convites acabarem. Avise-me depois que você entrar, porque eu preciso aprovar a sua entrada na comunidade através da minha conta.</value>
-  </data>
   <data name="Aprovar" xml:space="preserve">
     <value>Aprovar</value>
   </data>
@@ -128,6 +125,11 @@
   </data>
   <data name="COPIAR LINK" xml:space="preserve">
     <value>COPIAR LINK</value>
+  </data>
+  <data name="massage-copy-text" xml:space="preserve">
+    <value>A Lehmon Brothers é o projeto socio-viral da memecoin $LEMON que quer construir a maior memecoin não animal da Cardano. Eles utilizam mecanismos virais pensados com ajuda de inteligência artificial para distribuição de $LEMON, quebrando a barreira da adoção e incentivando pessoas e resevarem tokens que serão usados pela comunidade. Entrar é de graça mas é preciso de um convite que é limitado. Não há o que perder, mas, se o $LEMON se tornar uma das grandes memecoins da Cardano, cada $LEMON poderá valer muito. Se você já deixou passar alguma oportunidade de entrar em projetos anteriormente, não vai quer perder essa, ainda mais podendo reservar de graça. Aqui está o meu link de convite: {0}
+
+Este link deixará de funcionar quando meus convites acabarem. Avise-me depois que você entrar, porque eu preciso aprovar a sua entrada na comunidade através da minha conta.</value>
   </data>
   <data name="Olá, {0}, bem-vindo a (em breve) maior memecoin da Cardano!" xml:space="preserve">
     <value>Olá, {0}, bem-vindo a (em breve) maior memecoin da Cardano!</value>

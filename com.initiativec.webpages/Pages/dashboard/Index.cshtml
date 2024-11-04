@@ -74,7 +74,7 @@
 
 
                             <div id="massage-copy" style="display:none; position:absolute; left:1000px;">
-                                @string.Format(@localizer["A Lehmon Brothers é o projeto socio-viral da memecoin $LEMON que quer construir a maior memecoin não animal da Cardano. Eles utilizam mecanismos virais pensados com ajuda de inteligência artificial para distribuição de $LEMON, quebrando a barreira da adoção e incentivando pessoas e resevarem tokens para que serão usados pela comunidade. Entrar é de graça mas é preciso de um convite que é limitado. Não há o que perder, mas, se o $LEMON se tornar uma das grandes memecoins da Cardano, cada $LEMON poderá valer muito. Se você já deixou passar alguma oportunidade de entrar em projetos anteriormente, não vai querr perder essa, ainda mais podendo reservar de graça. Aqui está o meu link de convite: {0}\n\nEste link deixará de funcionar quando meus convites acabarem. Avise-me depois que você entrar, porque eu preciso aprovar a sua entrada na comunidade através da minha conta."], $"https://lehmonbros.fun/invite/{Model.enviarConvite.invite_code}")
+                                @Html.Raw(string.Format(htmlLocalizer["massage-copy-text"].Value, $"https://lehmonbros.fun/invite/{Model.enviarConvite.invite_code}"))
                             </div>
 
                         </div>
@@ -84,31 +84,13 @@
 
                 @* <div class="Dashboard-card card">
                     <div class="img-card"><b>!</b></div>
-                    <h4 class="title-card">Tarefa Atual</h4>
-                    <p class="subtitle-card">DISCORD</p>
+                    <h4 class="title-card">Tarefa Atual: DISCORD</h4>
+                    <p class="subtitle-card">Acesse o Discord e clique no link que está no canal X:</p>
                     <div class="oneFieldForm small">
-                        <!-- Formulário para verificar se o usuário está no canal Discord -->
-                        <form method="post" asp-page-handler="CheckDiscord">
-                            <button type="submit" class="btn btn-primary">Verificar Discord</button>
-                        </form>
+                       
 
-                        @if (Model.IsUserInChannel.HasValue)
-                        {
-                            <div class="mt-3">
-                                Resultado: <strong>@Model.IsUserInChannel.Value</strong>
-                            </div>
-                        }
+                        <a href="https://discord.gg/YvHbxAZNfB?id=@Model.UserId" class="btn btn-primary">Verificar Discord</a>
 
-                        <!-- Link para Login com Discord -->
-                        @if (!User.Identity.IsAuthenticated)
-                        {
-                            <a asp-page-handler="LoginDiscord" asp-route-returnUrl="/dashboard" class="btn btn-primary">Login com Discord</a>
-                        }
-                        else
-                        {
-                            <p>Olá, @User.Identity.Name!</p>
-                            <a asp-page-handler="LogoutDiscord" class="btn btn-danger">Logout</a>
-                        }
                     </div>
                 </div> *@
 
@@ -270,8 +252,8 @@
 
         jQuery("#btnsSocials").jsSocials({
 
-            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "whatsapp"],
-            url: "https://initial-s.com/invite/@ViewBag.CodigoConvite",
+            shares: ["email", "twitter", "facebook", "linkedin", "whatsapp"],
+            url: "https://lehmonbros.fun/invite/@Model.enviarConvite.invite_code",
             text: jQuery('#massage-copy').text(),
             showLabel: false,
             showCount: false,
@@ -333,7 +315,7 @@
 
         // Utilizar a Clipboard API para copiar o texto
         await navigator.clipboard.writeText(textToCopy);
-        alert("O texto foi copiado com sucesso!");
+        alert("Sucess!");
     } catch (err) {
         // Fallback para navegadores que não suportam a Clipboard API
         fallbackCopyTextToClipboard(containerid);

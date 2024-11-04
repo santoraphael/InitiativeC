@@ -103,6 +103,7 @@ namespace com.initiativec.webpages.Pages.account
 
 
             User user = new User();
+
             if (userExsists != null)
             {
                 userExsists.name = Name;
@@ -110,6 +111,7 @@ namespace com.initiativec.webpages.Pages.account
                 userExsists.invited_by = InviteCode;
                 userExsists.confirmed = confirmedMaster;
                 userExsists.expiration_date_invitations = DateTime.UtcNow.AddDays(14);
+                userExsists.currentCulture = CultureInfo.CurrentUICulture.Name;
 
                 _context.Users.Update(userExsists);
             }
@@ -129,6 +131,7 @@ namespace com.initiativec.webpages.Pages.account
                 user.confirmed = confirmedMaster;
                 user.invitations_available = 5;
                 user.expiration_date_invitations = DateTime.UtcNow.AddDays(14);
+                user.currentCulture = CultureInfo.CurrentUICulture.Name;
 
                 _context.Users.Add(user);
             }
@@ -146,8 +149,8 @@ namespace com.initiativec.webpages.Pages.account
             string subject = "Confirmação de Registro";
             string message = $"Olá {Name},<br/>Obrigado por se registrar!";
 
-            string currentCulture = CultureInfo.CurrentUICulture.Name;
-            _emailService.SendLocalizedEmailAsync(Email, subject, message, currentCulture);
+            
+            _emailService.SendLocalizedEmailAsync(Email, subject, message, user.currentCulture);
 
             return RedirectToPage("/verify");
         }

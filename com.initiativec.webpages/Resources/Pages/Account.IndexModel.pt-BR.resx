@@ -117,45 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Aprovar" xml:space="preserve">
-    <value>Approve</value>
+  <data name="Adicione um nome para que você seja reconhecido pela pessoa que te deu o convite e irá te aprovar. Pode ser como você é conhecido nas redes sociais." xml:space="preserve">
+    <value>Adicione um nome para que você seja reconhecido pela pessoa que te deu o convite e irá te aprovar. Pode ser como você é conhecido nas redes sociais.</value>
   </data>
-  <data name="Convide pessoas que você conhece pessoalmente e garanta um adicional de &lt;b&gt;$LEMON {0}&lt;/b&gt;" xml:space="preserve">
-    <value>Invite people you know personally and secure an additional &lt;b&gt;$LEMON {0}&lt;/b&gt;</value>
+  <data name="Registrar" xml:space="preserve">
+    <value>Registrar</value>
   </data>
-  <data name="COPIAR LINK" xml:space="preserve">
-    <value>COPY LINK</value>
-  </data>
-  <data name="massage-copy-text" xml:space="preserve">
-    <value>Lehmon Brothers is the socio-viral project of the memecoin $LEMON that aims to build the largest non-animal memecoin on Cardano. They use viral mechanisms designed with the help of artificial intelligence for the distribution of $LEMON, breaking the barrier of adoption and encouraging people to reserve tokens that will be used by the community. Joining is free, but you need an invitation that is limited. There’s nothing to lose, but if $LEMON becomes one of the major memecoins of Cardano, each $LEMON could be worth a lot. If you’ve missed out on opportunities to join projects before, you don’t want to miss this one, especially since you can reserve for free. Here is my invitation link: {0}
-
-This link will stop working when my invites run out. Let me know after you join because I need to approve your entry into the community through my account.</value>
-  </data>
-  <data name="Olá, {0}, bem-vindo a (em breve) maior memecoin da Cardano!" xml:space="preserve">
-    <value>Hello, {0}, welcome to (coming soon) the largest memecoin on Cardano!</value>
-  </data>
-  <data name="Ou compartilhar com:" xml:space="preserve">
-    <value>Or share with:</value>
-  </data>
-  <data name="Pelos próximos {0} dias voce pode convidar e verificar até {1} pessoas e garantir $LEMON {2} por cada. Com o seu convite, eles também poderão reservar $LEMON com antecedência e ajudar a expandir nossa comunidade" xml:space="preserve">
-    <value>For the next {0} days, you can invite and verify up to {1} people and secure $LEMON {2} for each. With your invite, they will also be able to reserve $LEMON in advance and help expand our community.</value>
-  </data>
-  <data name="Reprovar" xml:space="preserve">
-    <value>Disapprove</value>
-  </data>
-  <data name="Reservadas" xml:space="preserve">
-    <value>Reserved</value>
-  </data>
-  <data name="Saldo Atual" xml:space="preserve">
-    <value>Current Balance</value>
-  </data>
-  <data name="Tarefa Atual" xml:space="preserve">
-    <value>Current Task</value>
-  </data>
-  <data name="Tarefas Futuras" xml:space="preserve">
-    <value>Future Tasks</value>
-  </data>
-  <data name="Você tem {0} amigos para revisar, e você já aprovou {1} num total de {2} convites disponíveis." xml:space="preserve">
-    <value>You have {0} friends to review, and you have already approved {1} out of {2} available invitations.</value>
+  <data name="Se você quiser pode adicionar seu e-mail para que possamos avisá-lo quando você for aprovado." xml:space="preserve">
+    <value>Se você quiser pode adicionar seu e-mail para que possamos avisá-lo quando você for aprovado.</value>
   </data>
 </root>

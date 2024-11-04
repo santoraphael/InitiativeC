@@ -43,8 +43,21 @@ var healthCheck = await vaultClient.V1.System.GetHealthStatusAsync();
 
 // Lendo segredos do Vault
 // Lendo segredos do Vault (KV v2)
-var mountPoint = "secret"; // Caminho onde o KV está montado
-var secretPath = "appsettings"; // Nome do seu segredo
+var mountPoint = ""; // Caminho onde o KV está montado
+var secretPath = ""; // Nome do seu segredo
+
+
+if (builder.Environment.IsDevelopment())
+{
+    mountPoint = "secret";
+    secretPath = "appsettings";
+}
+else if (builder.Environment.IsProduction())
+{
+    mountPoint = "secret";
+    secretPath = "appsettings";
+}
+
 
 try
 {
@@ -68,8 +81,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
-//builder.Services.Configure<EmailApiSettings>(builder.Configuration.GetSection("EmailApiSettings"));
-//builder.Services.AddHttpClient<EmailService>();
+builder.Services.Configure<EmailApiSettings>(builder.Configuration.GetSection("EmailApiSettings"));
+builder.Services.AddHttpClient<EmailService>();
 
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(builder.Configuration["ConnectionStrings"]));

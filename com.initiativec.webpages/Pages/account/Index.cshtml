@@ -1,5 +1,17 @@
 ﻿@page 
-@model com.initiativec.webpages.Pages.account.IndexModel
+
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+@using System.Text.RegularExpressions
+
+@inject IStringLocalizer<IndexModel> localizer
+@inject IHtmlLocalizer<IndexModel> htmlLocalizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@model IndexModel
 @{
 }
 
@@ -31,9 +43,9 @@
 <article class="Login">
     <div class="Form">
         <section class="column article-section centered">
-            <h2 class="WordWrapper bottom-closer active"><span>Registrar</span></h2>
+            <h2 class="WordWrapper bottom-closer active"><span>@localizer["Registrar"]</span></h2>
             <div class="ActiveWayPoint animateByClass active">
-                <p class="js-panel-register" style="display:none;">Adicione um nome para que você seja reconhecido pela pessoa que te deu o convite e irá te aprovar. Pode ser como você é conhecido nas redes sociais.</p>
+                <p class="js-panel-register" style="display:none;">@localizer["Adicione um nome para que você seja reconhecido pela pessoa que te deu o convite e irá te aprovar. Pode ser como você é conhecido nas redes sociais."]</p>
             </div>
         </section>
         <form method="post">
@@ -56,9 +68,9 @@
                 <!-- Campo de E-mail oculto -->
                 <div id="emailField" class="InputWrapper" style="display: none; margin-top: 10px;">
                     <article>
+                        <label for="Email">@localizer["Se você quiser pode adicionar seu e-mail para que possamos avisá-lo quando você for aprovado."]</label>
                         <input asp-for="Email" placeholder="Seu e-mail">
                         <span asp-validation-for="Email"></span>
-                        <label for="Email">Se você quiser pode adicionar seu e-mail para que possamos avisá-lo quando você for aprovado.</label>
                     </article>
                 </div>
 
