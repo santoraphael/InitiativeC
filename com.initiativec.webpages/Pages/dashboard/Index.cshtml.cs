@@ -20,23 +20,14 @@ namespace com.initiativec.webpages.Pages.dashboard
         private readonly DatabaseContext _context;
         private readonly BlockfrostServices _blockfrostServices;
         private readonly TokenBoutyService _tokenBountyService;
-        private readonly TwitterService _twitterService;
-        private readonly TelegramService _telegramService;
-        private readonly IDiscordService _discordService;
 
         public IndexModel(DatabaseContext context
                             ,BlockfrostServices blockfrostServices
-                            ,TokenBoutyService tokenBountyService
-                            ,TwitterService twitterService
-                            ,TelegramService telegramService
-                            ,IDiscordService discordService)
+                            ,TokenBoutyService tokenBountyService)
         {
             _context = context;
             _blockfrostServices = blockfrostServices;
             _tokenBountyService = tokenBountyService;
-            _twitterService = twitterService;
-            _telegramService = telegramService;
-            _discordService = discordService;
         }
 
         public IList<database.entities.User> Users { get; set; }
@@ -205,48 +196,6 @@ namespace com.initiativec.webpages.Pages.dashboard
             return cardSaldoAtualAtualizado;
         }
 
-
-        //ACESSAR https://developer.twitter.com/ PARA IMPLEMENTAR
-        private void GetCardFriedShipTwitter()
-        {
-            string targetUsername = "SeuUsername";
-            string sourceUsername = "UsernameDoUsuario";
-
-            // Obter os IDs dos usuários
-            long targetUserId = (long)_twitterService.GetUserIdByUsernameAsync(targetUsername).Result;
-            long sourceUserId = (long)_twitterService.GetUserIdByUsernameAsync(sourceUsername).Result;
-
-
-            if (targetUserId != null && sourceUserId != null)
-            {
-                bool isFollowing = _twitterService.IsFollowingAsync(sourceUserId, targetUserId).Result;
-                FollowStatus = new FollowStatusCard
-                {
-                    SourceUsername = sourceUsername,
-                    TargetUsername = targetUsername,
-                    IsFollowing = isFollowing
-                };
-            }
-            else
-            {
-                // Trate o caso onde um dos usuários não foi encontrado
-                FollowStatus = new FollowStatusCard
-                {
-                    SourceUsername = sourceUsername,
-                    TargetUsername = targetUsername,
-                    IsFollowing = false,
-                    ErrorMessage = "Um dos usuários não foi encontrado."
-                };
-            }
-        }
-
-
-        private void GetCardParticipaGrupoTelegram()
-        {
-            long userTelegramId = 123456789; // Substitua pelo ID real do usuário
-
-            IsUserInGroup = _telegramService.IsUserInGroupAsync(userTelegramId).Result;
-        }
 
 
         // Handler para Aprovar
